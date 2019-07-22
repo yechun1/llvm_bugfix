@@ -1,0 +1,32 @@
+
+In principle, you compile some piece of code with and without –g, and see if there is any difference in the generated instructions. My experience is that you want to compile to a .o file, and then use a disassembler to dump the text sections. This will give you a cleaner diff than using –S to generate assembler files.
+
+# -g
+# .o
+# not -S
+
+I also recommend compiling with `-ffunction-sections` and probably `-fexceptions`.  The former will put each compiled function into its own object-file section, so that differences in one function won't affect the disassembly of a later function.  The latter option should work around one fairly intractable known difference: -g will cause the compiler to emit directives to produce call-frame information, and these tend to act as instruction-scheduling barriers. Using –fexceptions (I am 95% sure that is the correct option) should cause the non-dash-g compilation to use the same directives, and avoid that known difference.
+
+You can repeat this experiment with different optimization levels, as differences are far more likely to show up with optimization.
+
+# -ffunction-sections
+# -fexceptions
+# non-dash-g compilation
+
+https://blog.csdn.net/pengfei240/article/details/55228228
+
+ 
+
+Once you find a difference, you can begin experimenting with ways to identify specific compiler passes that are contributing to the difference. A very useful tool here is the backend option `-opt-bisect-limit=N` where N is the number of passes to execute. Because it is a backend option, you would use it this way:
+
+    clang –c –O2 –mllvm –opt-bisect-limit=100 foo.c –o foo.o
+
+    clang –c –O2 –mllvm –opt-bisect-limit=100 foo.c –g –o foo-g.o
+
+Then disassemble and diff as usual.  After you have identified a problematic pass, you can try your hand at fixing it yourself, or you can file a bug (with a reduced reproducer if at all possible) and move on to another sample.
+
+# -O2
+# -mllvm
+# -opt-bisect-limit=100
+
+Of course you will need some sample source code to run experiments on.  This can be anything convenient. You could try it on any personal projects you have, or you could find a random code generator, or whatever you like.  Some people have recommended LLVM's own 'test-suite' project although I have not looked at it in any detail.
