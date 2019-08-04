@@ -26,9 +26,9 @@ class k {
   int fmap;
 };
 void k::l() {
-  e<char> o = (char *)"";
+  // e<char> o = (char *)"";
   for (;;) {
-    int p = 0;
+  //  int p = 0;
     for (;;) {
       if (m_fn4())
         break;
