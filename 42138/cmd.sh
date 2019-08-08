@@ -7,3 +7,5 @@ objdump -d a.o > a.obj
 
 clang++ PowerParser.cc -c -O1 -g -o b.o
 objdump -d b.o > b.obj
+
+rm -rf a.o b.o

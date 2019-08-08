@@ -26,7 +26,7 @@ class k {
   int fmap;
 };
 void k::l() {
-  e<char> o = (char *)"";
+  e<char> o = "";
   for (;;) {
     int p = 0;
     for (;;) {
