@@ -1,0 +1,42 @@
+
+a1.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <_ZN1k1lEv>:
+   0:	41 57                	push   %r15
+   2:	41 56                	push   %r14
+   4:	41 54                	push   %r12
+   6:	53                   	push   %rbx
+   7:	50                   	push   %rax
+   8:	48 89 fb             	mov    %rdi,%rbx
+   b:	4c 8d 77 08          	lea    0x8(%rdi),%r14
+   f:	4c 8d 7f 0c          	lea    0xc(%rdi),%r15
+  13:	49 89 e4             	mov    %rsp,%r12
+  16:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  1d:	00 00 00 
+  20:	48 89 df             	mov    %rbx,%rdi
+  23:	e8 00 00 00 00       	callq  28 <_ZN1k1lEv+0x28>
+  28:	84 c0                	test   %al,%al
+  2a:	75 f4                	jne    20 <_ZN1k1lEv+0x20>
+  2c:	44 8b 43 04          	mov    0x4(%rbx),%r8d
+  30:	44 8b 0d 00 00 00 00 	mov    0x0(%rip),%r9d        # 37 <_ZN1k1lEv+0x37>
+  37:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 3d <_ZN1k1lEv+0x3d>
+  3d:	4c 89 e7             	mov    %r12,%rdi
+  40:	4c 89 f6             	mov    %r14,%rsi
+  43:	4c 89 fa             	mov    %r15,%rdx
+  46:	48 89 d9             	mov    %rbx,%rcx
+  49:	6a 00                	pushq  $0x0
+  4b:	50                   	push   %rax
+  4c:	e8 00 00 00 00       	callq  51 <_ZN1k1lEv+0x51>
+  51:	48 83 c4 10          	add    $0x10,%rsp
+  55:	4c 89 e7             	mov    %r12,%rdi
+  58:	e8 00 00 00 00       	callq  5d <_ZN1k1lEv+0x5d>
+  5d:	bf 00 00 00 00       	mov    $0x0,%edi
+  62:	e8 00 00 00 00       	callq  67 <_ZN1k1lEv+0x67>
+  67:	84 c0                	test   %al,%al
+  69:	74 b5                	je     20 <_ZN1k1lEv+0x20>
+  6b:	4c 89 e7             	mov    %r12,%rdi
+  6e:	e8 00 00 00 00       	callq  73 <_ZN1k1lEv+0x73>
+  73:	eb ab                	jmp    20 <_ZN1k1lEv+0x20>
