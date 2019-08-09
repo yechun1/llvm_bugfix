@@ -3,12 +3,10 @@ class allocator {
 public:
   ~allocator();
 };
-
 template <typename, typename> class e {
 public:
   e(char *, allocator = allocator());
 };
-
 template <typename b, typename c, typename d> bool operator==(e<c, d>, b);
 class f {
 public:
@@ -26,7 +24,7 @@ class k {
   int fmap;
 };
 void k::l() {
-  e<char> o = (char *)"";
+  e<char> o = "";
   for (;;) {
     int p = 0;
     for (;;) {
