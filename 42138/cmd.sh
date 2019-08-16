@@ -4,12 +4,26 @@
 
 NUM=3000
 
-clang++ -mllvm -opt-bisect-limit=$NUM PowerParser.cc -c -O3 -o a.o
-objdump -d a.o > a.obj
+# 132 vs 133
+#clang++ -mllvm -opt-bisect-limit=132 PowerParser.cc -c -O1 -o a.o
+#clang++ -mllvm -opt-bisect-limit=133 PowerParser.cc -c -O1 -o b.o
 
-clang++ -mllvm -opt-bisect-limit=$NUM PowerParser.cc -c -O3 -g -o b.o
-objdump -d b.o > b.obj
+# 132 vs 137(g)
+#clang++ -mllvm -opt-bisect-limit=132 PowerParser.cc -c -O1 -o a.o
+#clang++ -mllvm -opt-bisect-limit=137 PowerParser.cc -c -O1 -g -o b.o
 
-rm -rf a.o b.o
+# 133 vs 137(g)
+#clang++ -mllvm -opt-bisect-limit=130 PowerParser.cc -c -O1 -o a.o
+#clang++ -mllvm -opt-bisect-limit=134 PowerParser.cc -c -O1 -g -o b.o
+clang++ -S -mllvm -opt-bisect-limit=130 PowerParser.cc -c -O1 -o - 1>a.o 2>&1
+clang++ -S -mllvm -opt-bisect-limit=134 PowerParser.cc -c -O1 -g -o - 1>b.o 2>&1
 
-colordiff a.obj b.obj
+# self
+#clang++ -mllvm -opt-bisect-limit=137 PowerParser.cc -c -O1 -g -o a.o
+#clang++ -mllvm -opt-bisect-limit=137 PowerParser.cc -c -O1 -g -o b.o -gmodules
+
+#objdump -d a.o > a.obj
+#objdump -d b.o > b.obj
+#rm -rf a.o b.o; meld a.obj b.obj
+
+meld a.o b.o
