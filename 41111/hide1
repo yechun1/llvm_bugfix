@@ -1,0 +1,676 @@
+
+nodi:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	55                   	push   %rbp
+   1:	41 57                	push   %r15
+   3:	41 56                	push   %r14
+   5:	41 55                	push   %r13
+   7:	41 54                	push   %r12
+   9:	53                   	push   %rbx
+   a:	50                   	push   %rax
+   b:	66 83 64 24 02 00    	andw   $0x0,0x2(%rsp)
+  11:	c6 44 24 01 00       	movb   $0x0,0x1(%rsp)
+  16:	31 ed                	xor    %ebp,%ebp
+  18:	83 ff 02             	cmp    $0x2,%edi
+  1b:	75 16                	jne    33 <main+0x33>
+  1d:	48 8b 7e 08          	mov    0x8(%rsi),%rdi
+  21:	be 00 00 00 00       	mov    $0x0,%esi
+  26:	e8 00 00 00 00       	callq  2b <main+0x2b>
+  2b:	31 ed                	xor    %ebp,%ebp
+  2d:	85 c0                	test   %eax,%eax
+  2f:	40 0f 94 c5          	sete   %bpl
+  33:	31 c0                	xor    %eax,%eax
+  35:	6a f8                	pushq  $0xfffffffffffffff8
+  37:	59                   	pop    %rcx
+  38:	eb 2a                	jmp    64 <main+0x64>
+  3a:	89 ca                	mov    %ecx,%edx
+  3c:	89 c3                	mov    %eax,%ebx
+  3e:	eb 16                	jmp    56 <main+0x56>
+  40:	89 de                	mov    %ebx,%esi
+  42:	d1 ee                	shr    %esi
+  44:	89 f7                	mov    %esi,%edi
+  46:	81 f7 20 83 b8 ed    	xor    $0xedb88320,%edi
+  4c:	f6 c3 01             	test   $0x1,%bl
+  4f:	0f 44 fe             	cmove  %esi,%edi
+  52:	ff c2                	inc    %edx
+  54:	89 fb                	mov    %edi,%ebx
+  56:	85 d2                	test   %edx,%edx
+  58:	75 e6                	jne    40 <main+0x40>
+  5a:	89 1c 85 00 00 00 00 	mov    %ebx,0x0(,%rax,4)
+  61:	48 ff c0             	inc    %rax
+  64:	48 3d 00 01 00 00    	cmp    $0x100,%rax
+  6a:	75 ce                	jne    3a <main+0x3a>
+  6c:	0f be 1d 00 00 00 00 	movsbl 0x0(%rip),%ebx        # 73 <main+0x73>
+  73:	66 c7 05 00 00 00 00 	movw   $0xffef,0x0(%rip)        # 7c <main+0x7c>
+  7a:	ef ff 
+  7c:	e8 57 08 00 00       	callq  8d8 <_ZL7func_52PiS_S_>
+  81:	e8 52 08 00 00       	callq  8d8 <_ZL7func_52PiS_S_>
+  86:	48 8b 0d 00 00 00 00 	mov    0x0(%rip),%rcx        # 8d <main+0x8d>
+  8d:	48 8b 09             	mov    (%rcx),%rcx
+  90:	48 89 01             	mov    %rax,(%rcx)
+  93:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 9a <main+0x9a>
+  9a:	83 3e 00             	cmpl   $0x0,(%rsi)
+  9d:	78 1f                	js     be <main+0xbe>
+  9f:	6a 06                	pushq  $0x6
+  a1:	59                   	pop    %rcx
+  a2:	89 d8                	mov    %ebx,%eax
+  a4:	99                   	cltd   
+  a5:	f7 f9                	idiv   %ecx
+  a7:	89 d1                	mov    %edx,%ecx
+  a9:	c0 e9 04             	shr    $0x4,%cl
+  ac:	f6 d1                	not    %cl
+  ae:	80 e1 08             	and    $0x8,%cl
+  b1:	d3 fa                	sar    %cl,%edx
+  b3:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # ba <main+0xba>
+  ba:	21 10                	and    %edx,(%rax)
+  bc:	eb 16                	jmp    d4 <main+0xd4>
+  be:	c7 05 00 00 00 00 f4 	movl   $0x1f4,0x0(%rip)        # c8 <main+0xc8>
+  c5:	01 00 00 
+  c8:	e8 0b 08 00 00       	callq  8d8 <_ZL7func_52PiS_S_>
+  cd:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # d4 <main+0xd4>
+  d4:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # db <main+0xdb>
+  db:	c7 06 34 00 00 00    	movl   $0x34,(%rsi)
+  e1:	f6 05 00 00 00 00 01 	testb  $0x1,0x0(%rip)        # e8 <main+0xe8>
+  e8:	0f 85 bb 01 00 00    	jne    2a9 <main+0x2a9>
+  ee:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # f5 <main+0xf5>
+  f5:	48 8b 00             	mov    (%rax),%rax
+  f8:	48 8b 00             	mov    (%rax),%rax
+  fb:	8b 00                	mov    (%rax),%eax
+  fd:	48 8b 0d 00 00 00 00 	mov    0x0(%rip),%rcx        # 104 <main+0x104>
+ 104:	66 81 39 65 7c       	cmpw   $0x7c65,(%rcx)
+ 109:	75 07                	jne    112 <main+0x112>
+ 10b:	48 8b 0d 00 00 00 00 	mov    0x0(%rip),%rcx        # 112 <main+0x112>
+ 112:	31 c9                	xor    %ecx,%ecx
+ 114:	85 c0                	test   %eax,%eax
+ 116:	0f 95 c1             	setne  %cl
+ 119:	0f b7 05 00 00 00 00 	movzwl 0x0(%rip),%eax        # 120 <main+0x120>
+ 120:	21 c1                	and    %eax,%ecx
+ 122:	66 89 0d 00 00 00 00 	mov    %cx,0x0(%rip)        # 129 <main+0x129>
+ 129:	83 f1 f9             	xor    $0xfffffff9,%ecx
+ 12c:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 133 <main+0x133>
+ 133:	48 8b 00             	mov    (%rax),%rax
+ 136:	48 8b 00             	mov    (%rax),%rax
+ 139:	89 08                	mov    %ecx,(%rax)
+ 13b:	66 c7 05 00 00 00 00 	movw   $0x12,0x0(%rip)        # 144 <main+0x144>
+ 142:	12 00 
+ 144:	0f b7 05 00 00 00 00 	movzwl 0x0(%rip),%eax        # 14b <main+0x14b>
+ 14b:	6a 05                	pushq  $0x5
+ 14d:	58                   	pop    %rax
+ 14e:	eb 0e                	jmp    15e <main+0x15e>
+ 150:	48 8b 0d 00 00 00 00 	mov    0x0(%rip),%rcx        # 157 <main+0x157>
+ 157:	48 8b 09             	mov    (%rcx),%rcx
+ 15a:	48 83 21 00          	andq   $0x0,(%rcx)
+ 15e:	83 e8 01             	sub    $0x1,%eax
+ 161:	73 ed                	jae    150 <main+0x150>
+ 163:	44 8a 0d 00 00 00 00 	mov    0x0(%rip),%r9b        # 16a <main+0x16a>
+ 16a:	44 8b 35 00 00 00 00 	mov    0x0(%rip),%r14d        # 171 <main+0x171>
+ 171:	44 8b 2d 00 00 00 00 	mov    0x0(%rip),%r13d        # 178 <main+0x178>
+ 178:	44 0f b7 3d 00 00 00 	movzwl 0x0(%rip),%r15d        # 180 <main+0x180>
+ 17f:	00 
+ 180:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 186 <main+0x186>
+ 186:	83 f9 1f             	cmp    $0x1f,%ecx
+ 189:	0f 97 c0             	seta   %al
+ 18c:	6a 7f                	pushq  $0x7f
+ 18e:	5a                   	pop    %rdx
+ 18f:	d3 ea                	shr    %cl,%edx
+ 191:	85 d2                	test   %edx,%edx
+ 193:	0f 9e c2             	setle  %dl
+ 196:	08 c2                	or     %al,%dl
+ 198:	6a 01                	pushq  $0x1
+ 19a:	58                   	pop    %rax
+ 19b:	d3 e0                	shl    %cl,%eax
+ 19d:	3c 09                	cmp    $0x9,%al
+ 19f:	0f 95 c0             	setne  %al
+ 1a2:	08 d0                	or     %dl,%al
+ 1a4:	44 0f b6 e0          	movzbl %al,%r12d
+ 1a8:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 1af <main+0x1af>
+ 1af:	8a 1d 00 00 00 00    	mov    0x0(%rip),%bl        # 1b5 <main+0x1b5>
+ 1b5:	44 8b 05 00 00 00 00 	mov    0x0(%rip),%r8d        # 1bc <main+0x1bc>
+ 1bc:	41 8d 47 ff          	lea    -0x1(%r15),%eax
+ 1c0:	89 44 24 04          	mov    %eax,0x4(%rsp)
+ 1c4:	45 8d 5f 06          	lea    0x6(%r15),%r11d
+ 1c8:	6a 19                	pushq  $0x19
+ 1ca:	5e                   	pop    %rsi
+ 1cb:	31 d2                	xor    %edx,%edx
+ 1cd:	b8 ff ff 00 00       	mov    $0xffff,%eax
+ 1d2:	e9 8e 00 00 00       	jmpq   265 <main+0x265>
+ 1d7:	b1 01                	mov    $0x1,%cl
+ 1d9:	30 0d 00 00 00 00    	xor    %cl,0x0(%rip)        # 1df <main+0x1df>
+ 1df:	0f b7 0d 00 00 00 00 	movzwl 0x0(%rip),%ecx        # 1e6 <main+0x1e6>
+ 1e6:	31 c9                	xor    %ecx,%ecx
+ 1e8:	45 39 e2             	cmp    %r12d,%r10d
+ 1eb:	0f 92 c1             	setb   %cl
+ 1ee:	89 0f                	mov    %ecx,(%rdi)
+ 1f0:	44 8a 0d 00 00 00 00 	mov    0x0(%rip),%r9b        # 1f7 <main+0x1f7>
+ 1f7:	0f b7 0d 00 00 00 00 	movzwl 0x0(%rip),%ecx        # 1fe <main+0x1fe>
+ 1fe:	83 27 00             	andl   $0x0,(%rdi)
+ 201:	48 8b 0d 00 00 00 00 	mov    0x0(%rip),%rcx        # 208 <main+0x208>
+ 208:	8b 09                	mov    (%rcx),%ecx
+ 20a:	41 8d 0c 07          	lea    (%r15,%rax,1),%ecx
+ 20e:	66 89 0d 00 00 00 00 	mov    %cx,0x0(%rip)        # 215 <main+0x215>
+ 215:	41 ff c2             	inc    %r10d
+ 218:	74 15                	je     22f <main+0x22f>
+ 21a:	31 c9                	xor    %ecx,%ecx
+ 21c:	66 39 54 24 04       	cmp    %dx,0x4(%rsp)
+ 221:	0f 94 c1             	sete   %cl
+ 224:	81 c9 f6 e7 de 15    	or     $0x15dee7f6,%ecx
+ 22a:	41 39 ca             	cmp    %ecx,%r10d
+ 22d:	77 0d                	ja     23c <main+0x23c>
+ 22f:	31 c9                	xor    %ecx,%ecx
+ 231:	66 41 39 d3          	cmp    %dx,%r11w
+ 235:	0f 94 c1             	sete   %cl
+ 238:	f7 d1                	not    %ecx
+ 23a:	89 0f                	mov    %ecx,(%rdi)
+ 23c:	80 f3 01             	xor    $0x1,%bl
+ 23f:	48 8b 0d 00 00 00 00 	mov    0x0(%rip),%rcx        # 246 <main+0x246>
+ 246:	0f b6 09             	movzbl (%rcx),%ecx
+ 249:	6b c9 fd             	imul   $0xfffffffd,%ecx,%ecx
+ 24c:	0f be c9             	movsbl %cl,%ecx
+ 24f:	89 0f                	mov    %ecx,(%rdi)
+ 251:	fe 05 00 00 00 00    	incb   0x0(%rip)        # 257 <main+0x257>
+ 257:	83 c6 07             	add    $0x7,%esi
+ 25a:	ff c2                	inc    %edx
+ 25c:	ff c8                	dec    %eax
+ 25e:	45 31 ed             	xor    %r13d,%r13d
+ 261:	6a 01                	pushq  $0x1
+ 263:	41 58                	pop    %r8
+ 265:	45 8d 14 16          	lea    (%r14,%rdx,1),%r10d
+ 269:	83 fe 1c             	cmp    $0x1c,%esi
+ 26c:	0f 86 65 ff ff ff    	jbe    1d7 <main+0x1d7>
+ 272:	88 1d 00 00 00 00    	mov    %bl,0x0(%rip)        # 278 <main+0x278>
+ 278:	44 89 05 00 00 00 00 	mov    %r8d,0x0(%rip)        # 27f <main+0x27f>
+ 27f:	44 89 15 00 00 00 00 	mov    %r10d,0x0(%rip)        # 286 <main+0x286>
+ 286:	44 89 2d 00 00 00 00 	mov    %r13d,0x0(%rip)        # 28d <main+0x28d>
+ 28d:	41 29 d7             	sub    %edx,%r15d
+ 290:	66 44 89 3d 00 00 00 	mov    %r15w,0x0(%rip)        # 298 <main+0x298>
+ 297:	00 
+ 298:	44 88 0d 00 00 00 00 	mov    %r9b,0x0(%rip)        # 29f <main+0x29f>
+ 29f:	48 8b 35 00 00 00 00 	mov    0x0(%rip),%rsi        # 2a6 <main+0x2a6>
+ 2a6:	83 26 00             	andl   $0x0,(%rsi)
+ 2a9:	83 26 00             	andl   $0x0,(%rsi)
+ 2ac:	e8 27 06 00 00       	callq  8d8 <_ZL7func_52PiS_S_>
+ 2b1:	e8 22 06 00 00       	callq  8d8 <_ZL7func_52PiS_S_>
+ 2b6:	e8 1d 06 00 00       	callq  8d8 <_ZL7func_52PiS_S_>
+ 2bb:	e8 18 06 00 00       	callq  8d8 <_ZL7func_52PiS_S_>
+ 2c0:	e8 13 06 00 00       	callq  8d8 <_ZL7func_52PiS_S_>
+ 2c5:	e8 0e 06 00 00       	callq  8d8 <_ZL7func_52PiS_S_>
+ 2ca:	e8 09 06 00 00       	callq  8d8 <_ZL7func_52PiS_S_>
+ 2cf:	48 8b 0d 00 00 00 00 	mov    0x0(%rip),%rcx        # 2d6 <main+0x2d6>
+ 2d6:	48 8b 09             	mov    (%rcx),%rcx
+ 2d9:	48 89 01             	mov    %rax,(%rcx)
+ 2dc:	31 c0                	xor    %eax,%eax
+ 2de:	39 05 00 00 00 00    	cmp    %eax,0x0(%rip)        # 2e4 <main+0x2e4>
+ 2e4:	75 07                	jne    2ed <main+0x2ed>
+ 2e6:	c6 05 00 00 00 00 08 	movb   $0x8,0x0(%rip)        # 2ed <main+0x2ed>
+ 2ed:	b0 01                	mov    $0x1,%al
+ 2ef:	88 44 24 01          	mov    %al,0x1(%rsp)
+ 2f3:	88 05 00 00 00 00    	mov    %al,0x0(%rip)        # 2f9 <main+0x2f9>
+ 2f9:	66 b8 01 00          	mov    $0x1,%ax
+ 2fd:	66 89 44 24 02       	mov    %ax,0x2(%rsp)
+ 302:	48 c7 05 00 00 00 00 	movq   $0x0,0x0(%rip)        # 30d <main+0x30d>
+ 309:	00 00 00 00 
+ 30d:	48 8b 0d 00 00 00 00 	mov    0x0(%rip),%rcx        # 314 <main+0x314>
+ 314:	c7 05 00 00 00 00 34 	movl   $0x34,0x0(%rip)        # 31e <main+0x31e>
+ 31b:	00 00 00 
+ 31e:	48 8b 0d 00 00 00 00 	mov    0x0(%rip),%rcx        # 325 <main+0x325>
+ 325:	48 8b 09             	mov    (%rcx),%rcx
+ 328:	66 89 01             	mov    %ax,(%rcx)
+ 32b:	31 c9                	xor    %ecx,%ecx
+ 32d:	83 3d 00 00 00 00 57 	cmpl   $0x57,0x0(%rip)        # 334 <main+0x334>
+ 334:	0f 95 c1             	setne  %cl
+ 337:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 33e <main+0x33e>
+ 33e:	2b 08                	sub    (%rax),%ecx
+ 340:	0f bf c1             	movswl %cx,%eax
+ 343:	c1 e9 0f             	shr    $0xf,%ecx
+ 346:	f6 d1                	not    %cl
+ 348:	80 e1 01             	and    $0x1,%cl
+ 34b:	d3 f8                	sar    %cl,%eax
+ 34d:	23 05 00 00 00 00    	and    0x0(%rip),%eax        # 353 <main+0x353>
+ 353:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 359 <main+0x359>
+ 359:	0f b6 3d 00 00 00 00 	movzbl 0x0(%rip),%edi        # 360 <main+0x360>
+ 360:	be 00 00 00 00       	mov    $0x0,%esi
+ 365:	89 ea                	mov    %ebp,%edx
+ 367:	e8 16 05 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 36c:	8b 3d 00 00 00 00    	mov    0x0(%rip),%edi        # 372 <main+0x372>
+ 372:	be 00 00 00 00       	mov    $0x0,%esi
+ 377:	89 ea                	mov    %ebp,%edx
+ 379:	e8 04 05 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 37e:	8b 3d 00 00 00 00    	mov    0x0(%rip),%edi        # 384 <main+0x384>
+ 384:	be 00 00 00 00       	mov    $0x0,%esi
+ 389:	89 ea                	mov    %ebp,%edx
+ 38b:	e8 f2 04 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 390:	31 db                	xor    %ebx,%ebx
+ 392:	eb 28                	jmp    3bc <main+0x3bc>
+ 394:	8b 3c 9d 00 00 00 00 	mov    0x0(,%rbx,4),%edi
+ 39b:	be 00 00 00 00       	mov    $0x0,%esi
+ 3a0:	89 ea                	mov    %ebp,%edx
+ 3a2:	e8 db 04 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 3a7:	85 ed                	test   %ebp,%ebp
+ 3a9:	74 0e                	je     3b9 <main+0x3b9>
+ 3ab:	bf 00 00 00 00       	mov    $0x0,%edi
+ 3b0:	89 de                	mov    %ebx,%esi
+ 3b2:	31 c0                	xor    %eax,%eax
+ 3b4:	e8 00 00 00 00       	callq  3b9 <main+0x3b9>
+ 3b9:	48 ff c3             	inc    %rbx
+ 3bc:	48 83 fb 05          	cmp    $0x5,%rbx
+ 3c0:	75 d2                	jne    394 <main+0x394>
+ 3c2:	0f bf 3d 00 00 00 00 	movswl 0x0(%rip),%edi        # 3c9 <main+0x3c9>
+ 3c9:	be 00 00 00 00       	mov    $0x0,%esi
+ 3ce:	89 ea                	mov    %ebp,%edx
+ 3d0:	e8 ad 04 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 3d5:	8b 3d 00 00 00 00    	mov    0x0(%rip),%edi        # 3db <main+0x3db>
+ 3db:	be 00 00 00 00       	mov    $0x0,%esi
+ 3e0:	89 ea                	mov    %ebp,%edx
+ 3e2:	e8 9b 04 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 3e7:	0f b7 3d 00 00 00 00 	movzwl 0x0(%rip),%edi        # 3ee <main+0x3ee>
+ 3ee:	be 00 00 00 00       	mov    $0x0,%esi
+ 3f3:	89 ea                	mov    %ebp,%edx
+ 3f5:	e8 88 04 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 3fa:	be 00 00 00 00       	mov    $0x0,%esi
+ 3ff:	bf f6 e7 de 15       	mov    $0x15dee7f6,%edi
+ 404:	89 ea                	mov    %ebp,%edx
+ 406:	e8 77 04 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 40b:	8b 3d 00 00 00 00    	mov    0x0(%rip),%edi        # 411 <main+0x411>
+ 411:	be 00 00 00 00       	mov    $0x0,%esi
+ 416:	89 ea                	mov    %ebp,%edx
+ 418:	e8 65 04 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 41d:	8b 3d 00 00 00 00    	mov    0x0(%rip),%edi        # 423 <main+0x423>
+ 423:	be 00 00 00 00       	mov    $0x0,%esi
+ 428:	89 ea                	mov    %ebp,%edx
+ 42a:	e8 53 04 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 42f:	8b 3d 00 00 00 00    	mov    0x0(%rip),%edi        # 435 <main+0x435>
+ 435:	be 00 00 00 00       	mov    $0x0,%esi
+ 43a:	89 ea                	mov    %ebp,%edx
+ 43c:	e8 41 04 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 441:	8b 3d 00 00 00 00    	mov    0x0(%rip),%edi        # 447 <main+0x447>
+ 447:	be 00 00 00 00       	mov    $0x0,%esi
+ 44c:	89 ea                	mov    %ebp,%edx
+ 44e:	e8 2f 04 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 453:	0f be 3d 00 00 00 00 	movsbl 0x0(%rip),%edi        # 45a <main+0x45a>
+ 45a:	be 00 00 00 00       	mov    $0x0,%esi
+ 45f:	89 ea                	mov    %ebp,%edx
+ 461:	e8 1c 04 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 466:	85 ed                	test   %ebp,%ebp
+ 468:	74 0e                	je     478 <main+0x478>
+ 46a:	bf 00 00 00 00       	mov    $0x0,%edi
+ 46f:	31 f6                	xor    %esi,%esi
+ 471:	31 c0                	xor    %eax,%eax
+ 473:	e8 00 00 00 00       	callq  478 <main+0x478>
+ 478:	0f bf 3d 00 00 00 00 	movswl 0x0(%rip),%edi        # 47f <main+0x47f>
+ 47f:	be 00 00 00 00       	mov    $0x0,%esi
+ 484:	89 ea                	mov    %ebp,%edx
+ 486:	e8 f7 03 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 48b:	6a 02                	pushq  $0x2
+ 48d:	5f                   	pop    %rdi
+ 48e:	be 00 00 00 00       	mov    $0x0,%esi
+ 493:	89 ea                	mov    %ebp,%edx
+ 495:	e8 e8 03 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 49a:	31 db                	xor    %ebx,%ebx
+ 49c:	eb 29                	jmp    4c7 <main+0x4c7>
+ 49e:	0f b7 bc 1b 00 00 00 	movzwl 0x0(%rbx,%rbx,1),%edi
+ 4a5:	00 
+ 4a6:	be 00 00 00 00       	mov    $0x0,%esi
+ 4ab:	89 ea                	mov    %ebp,%edx
+ 4ad:	e8 d0 03 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 4b2:	85 ed                	test   %ebp,%ebp
+ 4b4:	74 0e                	je     4c4 <main+0x4c4>
+ 4b6:	bf 00 00 00 00       	mov    $0x0,%edi
+ 4bb:	89 de                	mov    %ebx,%esi
+ 4bd:	31 c0                	xor    %eax,%eax
+ 4bf:	e8 00 00 00 00       	callq  4c4 <main+0x4c4>
+ 4c4:	48 ff c3             	inc    %rbx
+ 4c7:	48 83 fb 04          	cmp    $0x4,%rbx
+ 4cb:	75 d1                	jne    49e <main+0x49e>
+ 4cd:	8b 3d 00 00 00 00    	mov    0x0(%rip),%edi        # 4d3 <main+0x4d3>
+ 4d3:	be 00 00 00 00       	mov    $0x0,%esi
+ 4d8:	89 ea                	mov    %ebp,%edx
+ 4da:	e8 a3 03 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 4df:	be 00 00 00 00       	mov    $0x0,%esi
+ 4e4:	bf fa c3 5e a2       	mov    $0xa25ec3fa,%edi
+ 4e9:	89 ea                	mov    %ebp,%edx
+ 4eb:	e8 92 03 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 4f0:	6a 01                	pushq  $0x1
+ 4f2:	5f                   	pop    %rdi
+ 4f3:	be 00 00 00 00       	mov    $0x0,%esi
+ 4f8:	89 ea                	mov    %ebp,%edx
+ 4fa:	e8 83 03 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 4ff:	0f b7 3d 00 00 00 00 	movzwl 0x0(%rip),%edi        # 506 <main+0x506>
+ 506:	be 00 00 00 00       	mov    $0x0,%esi
+ 50b:	89 ea                	mov    %ebp,%edx
+ 50d:	e8 70 03 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 512:	31 db                	xor    %ebx,%ebx
+ 514:	eb 28                	jmp    53e <main+0x53e>
+ 516:	8b 3c 9d 00 00 00 00 	mov    0x0(,%rbx,4),%edi
+ 51d:	be 00 00 00 00       	mov    $0x0,%esi
+ 522:	89 ea                	mov    %ebp,%edx
+ 524:	e8 59 03 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 529:	85 ed                	test   %ebp,%ebp
+ 52b:	74 0e                	je     53b <main+0x53b>
+ 52d:	bf 00 00 00 00       	mov    $0x0,%edi
+ 532:	89 de                	mov    %ebx,%esi
+ 534:	31 c0                	xor    %eax,%eax
+ 536:	e8 00 00 00 00       	callq  53b <main+0x53b>
+ 53b:	48 ff c3             	inc    %rbx
+ 53e:	48 83 fb 03          	cmp    $0x3,%rbx
+ 542:	75 d2                	jne    516 <main+0x516>
+ 544:	8b 3d 00 00 00 00    	mov    0x0(%rip),%edi        # 54a <main+0x54a>
+ 54a:	be 00 00 00 00       	mov    $0x0,%esi
+ 54f:	89 ea                	mov    %ebp,%edx
+ 551:	e8 2c 03 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 556:	8b 3d 00 00 00 00    	mov    0x0(%rip),%edi        # 55c <main+0x55c>
+ 55c:	be 00 00 00 00       	mov    $0x0,%esi
+ 561:	89 ea                	mov    %ebp,%edx
+ 563:	e8 1a 03 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 568:	31 db                	xor    %ebx,%ebx
+ 56a:	eb 23                	jmp    58f <main+0x58f>
+ 56c:	be 00 00 00 00       	mov    $0x0,%esi
+ 571:	31 ff                	xor    %edi,%edi
+ 573:	89 ea                	mov    %ebp,%edx
+ 575:	e8 08 03 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 57a:	85 ed                	test   %ebp,%ebp
+ 57c:	74 0e                	je     58c <main+0x58c>
+ 57e:	bf 00 00 00 00       	mov    $0x0,%edi
+ 583:	89 de                	mov    %ebx,%esi
+ 585:	31 c0                	xor    %eax,%eax
+ 587:	e8 00 00 00 00       	callq  58c <main+0x58c>
+ 58c:	48 ff c3             	inc    %rbx
+ 58f:	48 83 fb 05          	cmp    $0x5,%rbx
+ 593:	75 d7                	jne    56c <main+0x56c>
+ 595:	31 db                	xor    %ebx,%ebx
+ 597:	eb 28                	jmp    5c1 <main+0x5c1>
+ 599:	8b 3c 9d 00 00 00 00 	mov    0x0(,%rbx,4),%edi
+ 5a0:	be 00 00 00 00       	mov    $0x0,%esi
+ 5a5:	89 ea                	mov    %ebp,%edx
+ 5a7:	e8 d6 02 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 5ac:	85 ed                	test   %ebp,%ebp
+ 5ae:	74 0e                	je     5be <main+0x5be>
+ 5b0:	bf 00 00 00 00       	mov    $0x0,%edi
+ 5b5:	89 de                	mov    %ebx,%esi
+ 5b7:	31 c0                	xor    %eax,%eax
+ 5b9:	e8 00 00 00 00       	callq  5be <main+0x5be>
+ 5be:	48 ff c3             	inc    %rbx
+ 5c1:	48 83 fb 04          	cmp    $0x4,%rbx
+ 5c5:	75 d2                	jne    599 <main+0x599>
+ 5c7:	0f bf 7c 24 02       	movswl 0x2(%rsp),%edi
+ 5cc:	be 00 00 00 00       	mov    $0x0,%esi
+ 5d1:	89 ea                	mov    %ebp,%edx
+ 5d3:	e8 aa 02 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 5d8:	0f bf 3d 00 00 00 00 	movswl 0x0(%rip),%edi        # 5df <main+0x5df>
+ 5df:	be 00 00 00 00       	mov    $0x0,%esi
+ 5e4:	89 ea                	mov    %ebp,%edx
+ 5e6:	e8 97 02 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 5eb:	31 db                	xor    %ebx,%ebx
+ 5ed:	eb 28                	jmp    617 <main+0x617>
+ 5ef:	8b 3c 9d 00 00 00 00 	mov    0x0(,%rbx,4),%edi
+ 5f6:	be 00 00 00 00       	mov    $0x0,%esi
+ 5fb:	89 ea                	mov    %ebp,%edx
+ 5fd:	e8 80 02 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 602:	85 ed                	test   %ebp,%ebp
+ 604:	74 0e                	je     614 <main+0x614>
+ 606:	bf 00 00 00 00       	mov    $0x0,%edi
+ 60b:	89 de                	mov    %ebx,%esi
+ 60d:	31 c0                	xor    %eax,%eax
+ 60f:	e8 00 00 00 00       	callq  614 <main+0x614>
+ 614:	48 ff c3             	inc    %rbx
+ 617:	48 83 fb 07          	cmp    $0x7,%rbx
+ 61b:	75 d2                	jne    5ef <main+0x5ef>
+ 61d:	be 00 00 00 00       	mov    $0x0,%esi
+ 622:	31 ff                	xor    %edi,%edi
+ 624:	89 ea                	mov    %ebp,%edx
+ 626:	e8 57 02 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 62b:	31 db                	xor    %ebx,%ebx
+ 62d:	eb 28                	jmp    657 <main+0x657>
+ 62f:	0f be bb 00 00 00 00 	movsbl 0x0(%rbx),%edi
+ 636:	be 00 00 00 00       	mov    $0x0,%esi
+ 63b:	89 ea                	mov    %ebp,%edx
+ 63d:	e8 40 02 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 642:	85 ed                	test   %ebp,%ebp
+ 644:	74 0e                	je     654 <main+0x654>
+ 646:	bf 00 00 00 00       	mov    $0x0,%edi
+ 64b:	89 de                	mov    %ebx,%esi
+ 64d:	31 c0                	xor    %eax,%eax
+ 64f:	e8 00 00 00 00       	callq  654 <main+0x654>
+ 654:	48 ff c3             	inc    %rbx
+ 657:	48 83 fb 06          	cmp    $0x6,%rbx
+ 65b:	75 d2                	jne    62f <main+0x62f>
+ 65d:	6a ff                	pushq  $0xffffffffffffffff
+ 65f:	5f                   	pop    %rdi
+ 660:	be 00 00 00 00       	mov    $0x0,%esi
+ 665:	89 ea                	mov    %ebp,%edx
+ 667:	e8 16 02 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 66c:	0f b7 3d 00 00 00 00 	movzwl 0x0(%rip),%edi        # 673 <main+0x673>
+ 673:	be 00 00 00 00       	mov    $0x0,%esi
+ 678:	89 ea                	mov    %ebp,%edx
+ 67a:	e8 03 02 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 67f:	6a 47                	pushq  $0x47
+ 681:	5f                   	pop    %rdi
+ 682:	be 00 00 00 00       	mov    $0x0,%esi
+ 687:	89 ea                	mov    %ebp,%edx
+ 689:	e8 f4 01 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 68e:	6a fd                	pushq  $0xfffffffffffffffd
+ 690:	5f                   	pop    %rdi
+ 691:	be 00 00 00 00       	mov    $0x0,%esi
+ 696:	89 ea                	mov    %ebp,%edx
+ 698:	e8 e5 01 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 69d:	0f b6 3d 00 00 00 00 	movzbl 0x0(%rip),%edi        # 6a4 <main+0x6a4>
+ 6a4:	be 00 00 00 00       	mov    $0x0,%esi
+ 6a9:	89 ea                	mov    %ebp,%edx
+ 6ab:	e8 d2 01 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 6b0:	31 db                	xor    %ebx,%ebx
+ 6b2:	eb 28                	jmp    6dc <main+0x6dc>
+ 6b4:	8b 3c 9d 00 00 00 00 	mov    0x0(,%rbx,4),%edi
+ 6bb:	be 00 00 00 00       	mov    $0x0,%esi
+ 6c0:	89 ea                	mov    %ebp,%edx
+ 6c2:	e8 bb 01 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 6c7:	85 ed                	test   %ebp,%ebp
+ 6c9:	74 0e                	je     6d9 <main+0x6d9>
+ 6cb:	bf 00 00 00 00       	mov    $0x0,%edi
+ 6d0:	89 de                	mov    %ebx,%esi
+ 6d2:	31 c0                	xor    %eax,%eax
+ 6d4:	e8 00 00 00 00       	callq  6d9 <main+0x6d9>
+ 6d9:	48 ff c3             	inc    %rbx
+ 6dc:	48 83 fb 0a          	cmp    $0xa,%rbx
+ 6e0:	75 d2                	jne    6b4 <main+0x6b4>
+ 6e2:	6a 04                	pushq  $0x4
+ 6e4:	5f                   	pop    %rdi
+ 6e5:	be 00 00 00 00       	mov    $0x0,%esi
+ 6ea:	89 ea                	mov    %ebp,%edx
+ 6ec:	e8 91 01 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 6f1:	0f b7 3d 00 00 00 00 	movzwl 0x0(%rip),%edi        # 6f8 <main+0x6f8>
+ 6f8:	be 00 00 00 00       	mov    $0x0,%esi
+ 6fd:	89 ea                	mov    %ebp,%edx
+ 6ff:	e8 7e 01 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 704:	0f be 3d 00 00 00 00 	movsbl 0x0(%rip),%edi        # 70b <main+0x70b>
+ 70b:	be 00 00 00 00       	mov    $0x0,%esi
+ 710:	89 ea                	mov    %ebp,%edx
+ 712:	e8 6b 01 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 717:	be 00 00 00 00       	mov    $0x0,%esi
+ 71c:	bf 60 fc ff ff       	mov    $0xfffffc60,%edi
+ 721:	89 ea                	mov    %ebp,%edx
+ 723:	e8 5a 01 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 728:	be 00 00 00 00       	mov    $0x0,%esi
+ 72d:	bf ee 3a 00 00       	mov    $0x3aee,%edi
+ 732:	89 ea                	mov    %ebp,%edx
+ 734:	e8 49 01 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 739:	be 00 00 00 00       	mov    $0x0,%esi
+ 73e:	bf 8a 15 00 00       	mov    $0x158a,%edi
+ 743:	89 ea                	mov    %ebp,%edx
+ 745:	e8 38 01 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 74a:	be 00 00 00 00       	mov    $0x0,%esi
+ 74f:	bf 70 18 98 f8       	mov    $0xf8981870,%edi
+ 754:	89 ea                	mov    %ebp,%edx
+ 756:	e8 27 01 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 75b:	0f be 3d 00 00 00 00 	movsbl 0x0(%rip),%edi        # 762 <main+0x762>
+ 762:	be 00 00 00 00       	mov    $0x0,%esi
+ 767:	89 ea                	mov    %ebp,%edx
+ 769:	e8 14 01 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 76e:	80 7c 24 01 00       	cmpb   $0x0,0x1(%rsp)
+ 773:	6a 09                	pushq  $0x9
+ 775:	58                   	pop    %rax
+ 776:	bf a2 22 34 87       	mov    $0x873422a2,%edi
+ 77b:	0f 45 f8             	cmovne %eax,%edi
+ 77e:	be 00 00 00 00       	mov    $0x0,%esi
+ 783:	89 ea                	mov    %ebp,%edx
+ 785:	e8 f8 00 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 78a:	be 00 00 00 00       	mov    $0x0,%esi
+ 78f:	bf 8b 00 00 00       	mov    $0x8b,%edi
+ 794:	89 ea                	mov    %ebp,%edx
+ 796:	e8 e7 00 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 79b:	6a ff                	pushq  $0xffffffffffffffff
+ 79d:	5f                   	pop    %rdi
+ 79e:	be 00 00 00 00       	mov    $0x0,%esi
+ 7a3:	89 ea                	mov    %ebp,%edx
+ 7a5:	e8 d8 00 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 7aa:	8b 3d 00 00 00 00    	mov    0x0(%rip),%edi        # 7b0 <main+0x7b0>
+ 7b0:	be 00 00 00 00       	mov    $0x0,%esi
+ 7b5:	89 ea                	mov    %ebp,%edx
+ 7b7:	e8 c6 00 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 7bc:	be 00 00 00 00       	mov    $0x0,%esi
+ 7c1:	bf dd 6b 00 00       	mov    $0x6bdd,%edi
+ 7c6:	89 ea                	mov    %ebp,%edx
+ 7c8:	e8 b5 00 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 7cd:	be 00 00 00 00       	mov    $0x0,%esi
+ 7d2:	bf 90 b3 ce 58       	mov    $0x58ceb390,%edi
+ 7d7:	89 ea                	mov    %ebp,%edx
+ 7d9:	e8 a4 00 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 7de:	31 db                	xor    %ebx,%ebx
+ 7e0:	eb 28                	jmp    80a <main+0x80a>
+ 7e2:	8b 3c 9d 00 00 00 00 	mov    0x0(,%rbx,4),%edi
+ 7e9:	be 00 00 00 00       	mov    $0x0,%esi
+ 7ee:	89 ea                	mov    %ebp,%edx
+ 7f0:	e8 8d 00 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 7f5:	85 ed                	test   %ebp,%ebp
+ 7f7:	74 0e                	je     807 <main+0x807>
+ 7f9:	bf 00 00 00 00       	mov    $0x0,%edi
+ 7fe:	89 de                	mov    %ebx,%esi
+ 800:	31 c0                	xor    %eax,%eax
+ 802:	e8 00 00 00 00       	callq  807 <main+0x807>
+ 807:	48 ff c3             	inc    %rbx
+ 80a:	48 83 fb 08          	cmp    $0x8,%rbx
+ 80e:	75 d2                	jne    7e2 <main+0x7e2>
+ 810:	31 db                	xor    %ebx,%ebx
+ 812:	eb 22                	jmp    836 <main+0x836>
+ 814:	be 00 00 00 00       	mov    $0x0,%esi
+ 819:	31 ff                	xor    %edi,%edi
+ 81b:	89 ea                	mov    %ebp,%edx
+ 81d:	e8 60 00 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 822:	85 ed                	test   %ebp,%ebp
+ 824:	74 0e                	je     834 <main+0x834>
+ 826:	bf 00 00 00 00       	mov    $0x0,%edi
+ 82b:	89 de                	mov    %ebx,%esi
+ 82d:	31 c0                	xor    %eax,%eax
+ 82f:	e8 00 00 00 00       	callq  834 <main+0x834>
+ 834:	ff c3                	inc    %ebx
+ 836:	83 fb 04             	cmp    $0x4,%ebx
+ 839:	75 d9                	jne    814 <main+0x814>
+ 83b:	be 00 00 00 00       	mov    $0x0,%esi
+ 840:	bf 0c 99 6f 74       	mov    $0x746f990c,%edi
+ 845:	89 ea                	mov    %ebp,%edx
+ 847:	e8 36 00 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 84c:	be 00 00 00 00       	mov    $0x0,%esi
+ 851:	bf ff 00 00 00       	mov    $0xff,%edi
+ 856:	89 ea                	mov    %ebp,%edx
+ 858:	e8 25 00 00 00       	callq  882 <_ZL15transparent_crcjPci>
+ 85d:	8b 35 00 00 00 00    	mov    0x0(%rip),%esi        # 863 <main+0x863>
+ 863:	f7 d6                	not    %esi
+ 865:	bf 00 00 00 00       	mov    $0x0,%edi
+ 86a:	31 c0                	xor    %eax,%eax
+ 86c:	e8 00 00 00 00       	callq  871 <main+0x871>
+ 871:	31 c0                	xor    %eax,%eax
+ 873:	48 83 c4 08          	add    $0x8,%rsp
+ 877:	5b                   	pop    %rbx
+ 878:	41 5c                	pop    %r12
+ 87a:	41 5d                	pop    %r13
+ 87c:	41 5e                	pop    %r14
+ 87e:	41 5f                	pop    %r15
+ 880:	5d                   	pop    %rbp
+ 881:	c3                   	retq   
+
+0000000000000882 <_ZL15transparent_crcjPci>:
+ 882:	55                   	push   %rbp
+ 883:	41 56                	push   %r14
+ 885:	53                   	push   %rbx
+ 886:	89 d5                	mov    %edx,%ebp
+ 888:	49 89 f6             	mov    %rsi,%r14
+ 88b:	89 fb                	mov    %edi,%ebx
+ 88d:	0f b6 fb             	movzbl %bl,%edi
+ 890:	e8 bb 00 00 00       	callq  950 <_ZL10crc32_byteh>
+ 895:	0f b6 ff             	movzbl %bh,%edi
+ 898:	e8 b3 00 00 00       	callq  950 <_ZL10crc32_byteh>
+ 89d:	89 d8                	mov    %ebx,%eax
+ 89f:	c1 e8 10             	shr    $0x10,%eax
+ 8a2:	0f b6 f8             	movzbl %al,%edi
+ 8a5:	e8 a6 00 00 00       	callq  950 <_ZL10crc32_byteh>
+ 8aa:	c1 eb 18             	shr    $0x18,%ebx
+ 8ad:	89 df                	mov    %ebx,%edi
+ 8af:	e8 9c 00 00 00       	callq  950 <_ZL10crc32_byteh>
+ 8b4:	85 ed                	test   %ebp,%ebp
+ 8b6:	74 1b                	je     8d3 <_ZL15transparent_crcjPci+0x51>
+ 8b8:	8b 15 00 00 00 00    	mov    0x0(%rip),%edx        # 8be <_ZL15transparent_crcjPci+0x3c>
+ 8be:	f7 d2                	not    %edx
+ 8c0:	bf 00 00 00 00       	mov    $0x0,%edi
+ 8c5:	4c 89 f6             	mov    %r14,%rsi
+ 8c8:	31 c0                	xor    %eax,%eax
+ 8ca:	5b                   	pop    %rbx
+ 8cb:	41 5e                	pop    %r14
+ 8cd:	5d                   	pop    %rbp
+ 8ce:	e9 00 00 00 00       	jmpq   8d3 <_ZL15transparent_crcjPci+0x51>
+ 8d3:	5b                   	pop    %rbx
+ 8d4:	41 5e                	pop    %r14
+ 8d6:	5d                   	pop    %rbp
+ 8d7:	c3                   	retq   
+
+00000000000008d8 <_ZL7func_52PiS_S_>:
+ 8d8:	53                   	push   %rbx
+ 8d9:	80 0d 00 00 00 00 04 	orb    $0x4,0x0(%rip)        # 8e0 <_ZL7func_52PiS_S_+0x8>
+ 8e0:	8b 1d 00 00 00 00    	mov    0x0(%rip),%ebx        # 8e6 <_ZL7func_52PiS_S_+0xe>
+ 8e6:	31 c0                	xor    %eax,%eax
+ 8e8:	85 db                	test   %ebx,%ebx
+ 8ea:	0f 95 c0             	setne  %al
+ 8ed:	31 f6                	xor    %esi,%esi
+ 8ef:	39 c3                	cmp    %eax,%ebx
+ 8f1:	40 0f 9d c6          	setge  %sil
+ 8f5:	89 35 00 00 00 00    	mov    %esi,0x0(%rip)        # 8fb <_ZL7func_52PiS_S_+0x23>
+ 8fb:	6a 01                	pushq  $0x1
+ 8fd:	5f                   	pop    %rdi
+ 8fe:	e8 2f 00 00 00       	callq  932 <_ZL25safe_sub_func_int32_t_s_sii>
+ 903:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 909 <_ZL7func_52PiS_S_+0x31>
+ 909:	89 d8                	mov    %ebx,%eax
+ 90b:	25 f3 ee 00 00       	and    $0xeef3,%eax
+ 910:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 916 <_ZL7func_52PiS_S_+0x3e>
+ 916:	31 c0                	xor    %eax,%eax
+ 918:	83 fb 01             	cmp    $0x1,%ebx
+ 91b:	0f 9f c0             	setg   %al
+ 91e:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 924 <_ZL7func_52PiS_S_+0x4c>
+ 924:	c6 05 00 00 00 00 00 	movb   $0x0,0x0(%rip)        # 92b <_ZL7func_52PiS_S_+0x53>
+ 92b:	b8 00 00 00 00       	mov    $0x0,%eax
+ 930:	5b                   	pop    %rbx
+ 931:	c3                   	retq   
+
+0000000000000932 <_ZL25safe_sub_func_int32_t_s_sii>:
+ 932:	89 f8                	mov    %edi,%eax
+ 934:	89 f1                	mov    %esi,%ecx
+ 936:	31 f9                	xor    %edi,%ecx
+ 938:	89 ca                	mov    %ecx,%edx
+ 93a:	81 e2 00 00 00 80    	and    $0x80000000,%edx
+ 940:	31 fa                	xor    %edi,%edx
+ 942:	29 f2                	sub    %esi,%edx
+ 944:	31 f2                	xor    %esi,%edx
+ 946:	31 ff                	xor    %edi,%edi
+ 948:	85 ca                	test   %ecx,%edx
+ 94a:	0f 49 fe             	cmovns %esi,%edi
+ 94d:	29 f8                	sub    %edi,%eax
+ 94f:	c3                   	retq   
+
+0000000000000950 <_ZL10crc32_byteh>:
+ 950:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # 956 <_ZL10crc32_byteh+0x6>
+ 956:	0f b6 c8             	movzbl %al,%ecx
+ 959:	c1 e8 08             	shr    $0x8,%eax
+ 95c:	31 f9                	xor    %edi,%ecx
+ 95e:	33 04 8d 00 00 00 00 	xor    0x0(,%rcx,4),%eax
+ 965:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 96b <_ZL10crc32_byteh+0x1b>
+ 96b:	c3                   	retq   
