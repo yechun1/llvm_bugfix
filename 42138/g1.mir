@@ -309,6 +309,7 @@ body:             |
   
     DBG_VALUE 0, $noreg, !49, !DIExpression(), debug-location !76
     CFI_INSTRUCTION def_cfa_offset 64, debug-location !77
+    ; CHECK: bb.3 (%ir-block.9):
     $rdi = COPY renamable $rbx, debug-location !77
     CALL64pcrel32 @_ZN1k5m_fn4Ev, csr_64, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $al, debug-location !77
     TEST8rr killed renamable $al, renamable $al, implicit-def $eflags, debug-location !79
