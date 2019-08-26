@@ -22,8 +22,17 @@
 
 #clang++ -g -w -O1 -S -emit-llvm test.cc -o test.ll
 #llc -stop-before=branch-folder test.ll -o test.mir
-llc -o - g1.mir -mtriple=x86_64-- -run-pass=branch-folder | FileCheck g1.mir
-#llc -o - branch-folder-skip-debug-instr.mir -mtriple=x86_64-- -run-pass=branch-folder | FileCheck branch-folder-skip-debug-instr.mir
+#llc -o - g1.mir -mtriple=x86_64-- -run-pass=branch-folder | FileCheck g1.mir
+llc -o - branch-folder-skip-debug-instr.mir -mtriple=x86_64-- -run-pass=branch-folder | FileCheck branch-folder-skip-debug-instr.mir
+
+#clang++ -w -O1 -S -emit-llvm test.cc -o a.ll
+#llc -stop-before=branch-folder a.ll -o a.mir
+#llc -o - a.mir -mtriple=x86_64-- -run-pass=branch-folder > a1.mir
+
+#clang++ -g -w -O1 -S -emit-llvm test.cc -o b.ll
+#llc -stop-before=branch-folder b.ll -o b.mir
+#llc -o - b.mir -mtriple=x86_64-- -run-pass=branch-folder > b1.mir
+#llc -o - b.mir -mtriple=x86_64-- -run-pass=branch-folder | FileCheck b.mir
 
 
 ###########
@@ -49,9 +58,6 @@ llc -o - g1.mir -mtriple=x86_64-- -run-pass=branch-folder | FileCheck g1.mir
 # llc -o - test.mir -mtriple=x86_64-- -run-pass=branch-folder
 # clang++ -S test.cc a
 
-#clang++ -g -w -O1 -S -emit-llvm test.cc -o a.ll
-#llc -stop-before=branch-folder a.ll -o a.mir
-#llc -o - a.mir -mtriple=x86_64-- -run-pass=branch-folder
 
 
 #llc -stop-after=branch-folder test.ll -o b
