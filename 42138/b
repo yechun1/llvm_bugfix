@@ -1,0 +1,88 @@
+--- |
+  ; ModuleID = 'a.mir'
+  source_filename = "a.mir"
+  target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+  target triple = "x86_64-unknown-unknown"
+  
+  define dso_local void @l() {
+    ret void
+  }
+
+...
+---
+name:            l
+alignment:       4
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: false
+hasWinCFI:       false
+registers:       []
+liveins:         []
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 4294967295
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0:
+    successors: %bb.1(0x40000000), %bb.7(0x40000000)
+  
+  
+  bb.1:
+    successors: %bb.2(0x80000000)
+  
+    $rdi = MOV64rr $rsp
+  
+  bb.2:
+    successors: %bb.3(0x80000000)
+  
+    DBG_VALUE
+    CFI_INSTRUCTION def_cfa_offset 8
+  
+  bb.3:
+    successors: %bb.2(0x40000000), %bb.4(0x40000000)
+  
+    TEST8rr killed renamable $al, renamable $al, implicit-def $eflags
+    JCC_1 %bb.2, 5, implicit $eflags
+  
+  bb.4:
+    successors: %bb.5(0x40000000), %bb.6(0x40000000)
+  
+    JCC_1 %bb.6, 4, implicit $eflags
+  
+  bb.5:
+    successors: %bb.6(0x80000000)
+  
+    $rdi = COPY renamable $r12
+  
+  bb.6:
+    successors: %bb.3(0x80000000)
+  
+    $rdi = COPY renamable $rbx
+    JMP_1 %bb.3
+  
+  bb.7 (landing-pad):
+
+...

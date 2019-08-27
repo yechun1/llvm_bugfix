@@ -1,6 +1,9 @@
 # ../../llvm-project/clang/utils/check_cfc/clang++ test.cc -w -c -O1 -o tmp.ll
 # clang++ PowerParser.ii.cc -c -O1
-# ../../llvm-project/clang/utils/check_cfc/clang++ test.cc -c -O1
+#../../llvm-project/clang/utils/check_cfc/clang++ test.cc -c -O1
+
+#llvm-lit ../../llvm-project/llvm/test/CodeGen/MIR/X86/branch-folder-with-debug.mir
+#llvm-lit ../../llvm-project.release/llvm/test/CodeGen/MIR/X86/branch-folder-with-debug.mir
 
 #NUM=$1
 
@@ -20,10 +23,12 @@
 # -run-pass=
 
 
-#clang++ -g -w -O1 -S -emit-llvm test.cc -o test.ll
-#llc -stop-before=branch-folder test.ll -o test.mir
-#llc -o - g1.mir -mtriple=x86_64-- -run-pass=branch-folder | FileCheck g1.mir
-llc -o - branch-folder-skip-debug-instr.mir -mtriple=x86_64-- -run-pass=branch-folder | FileCheck branch-folder-skip-debug-instr.mir
+#clang++ -g -w -O1 -S -emit-llvm test.cc -o a.ll
+#llc -stop-before=branch-folder -simplify-mir a.ll -o b.mir
+#clang++ -g -w -O1 -S -emit-llvm test.cc -o b.ll
+#llc -stop-before=branch-folder -simplify-mir a.ll -o b.mir
+llc -o - a.mir -mtriple=x86_64-- -run-pass=branch-folder | FileCheck a.mir
+#llc -o - branch-folder-with-debug.mir -mtriple=x86_64-- -run-pass=branch-folder | FileCheck branch-folder-with-debug.mir
 
 #clang++ -w -O1 -S -emit-llvm test.cc -o a.ll
 #llc -stop-before=branch-folder a.ll -o a.mir
@@ -53,9 +58,9 @@ llc -o - branch-folder-skip-debug-instr.mir -mtriple=x86_64-- -run-pass=branch-f
 
 
 #debug
-# clang++ -S -emit-llvm test.cc -o test.ll
-# llc -stop-before=branch-folder test.ll -opt-bisect-limit=0 -o test.mir
-# llc -o - test.mir -mtriple=x86_64-- -run-pass=branch-folder
+#clang++ -S -emit-llvm test.cc -o a.ll
+#llc -stop-before=branch-folder a.ll -opt-bisect-limit=0 -o a.mir
+# llc -o - a.mir -mtriple=x86_64-- -run-pass=branch-folder
 # clang++ -S test.cc a
 
 

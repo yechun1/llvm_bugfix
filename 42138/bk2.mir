@@ -44,7 +44,7 @@
 
 # RUN: llc -o - %s -mtriple=x86_64-- -run-pass=branch-folder | FileCheck %s
 --- |
-  ; ModuleID = 'a.ll'
+  ; ModuleID = 'test.ll'
   source_filename = "test.cc"
   target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
   target triple = "x86_64-unknown-linux-gnu"
@@ -152,13 +152,6 @@
   
   ; Function Attrs: nounwind
   declare void @llvm.stackprotector(i8*, i8**) #5
-  
-  attributes #0 = { noreturn uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "frame-pointer"="none" "less-precise-fpmad"="false" "min-legal-vector-width"="0" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
-  attributes #1 = { argmemonly nounwind willreturn }
-  attributes #2 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "frame-pointer"="none" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
-  attributes #3 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "frame-pointer"="none" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
-  attributes #4 = { nounwind readnone speculatable willreturn }
-  attributes #5 = { nounwind }
   
   !llvm.dbg.cu = !{!2}
   !llvm.module.flags = !{!9, !10, !11}
@@ -274,27 +267,10 @@ alignment:       4
 tracksRegLiveness: true
 liveins:
   - { reg: '$rdi' }
-frameInfo:
-  stackSize:       56
-  offsetAdjustment: -56
-  maxAlignment:    8
-  adjustsStack:    true
-  hasCalls:        true
-  maxCallFrameSize: 16
-  cvBytesOfCalleeSavedRegisters: 32
-fixedStack:
-  - { id: 0, type: spill-slot, offset: -40, size: 8, alignment: 8, callee-saved-register: '$rbx' }
-  - { id: 1, type: spill-slot, offset: -32, size: 8, alignment: 16, callee-saved-register: '$r12' }
-  - { id: 2, type: spill-slot, offset: -24, size: 8, alignment: 8, callee-saved-register: '$r14' }
-  - { id: 3, type: spill-slot, offset: -16, size: 8, alignment: 16, callee-saved-register: '$r15' }
-stack:
-  - { id: 0, name: '<unnamed alloca>', offset: -48, size: 1, alignment: 8 }
-  - { id: 1, name: '<unnamed alloca>', offset: -64, size: 1, alignment: 8 }
-  - { id: 2, name: '<unnamed alloca>', offset: -56, size: 1, alignment: 8 }
-machineFunctionInfo: {}
 body:             |
   bb.0 (%ir-block.1):
-    successors: %bb.1(0x7ffff800), %bb.3(0x00000800)
+    ; CHECK: successors: %bb.1(0x40000000), %bb.7(0x40000000)
+    successors: %bb.1, %bb.3
     liveins: $rdi, $r15, $r14, $r12, $rbx
   
     DBG_VALUE $rdi, $noreg, !29, !DIExpression(), debug-location !70
@@ -315,7 +291,7 @@ body:             |
     renamable $rbx = COPY $rdi
     DBG_VALUE $rbx, $noreg, !29, !DIExpression(), debug-location !70
     EH_LABEL <mcsymbol .Ltmp0>, debug-location !72
-    CFI_INSTRUCTION <unserializable cfi directive>, debug-location !72
+    CFI_INSTRUCTION def_cfa_offset 8, debug-location !72
     renamable $rdi = LEA64r $rsp, 1, $noreg, 16, $noreg
     $rdx = MOV64rr $rsp
     $rsi = MOV32ri64 @.str, debug-location !72
@@ -326,7 +302,7 @@ body:             |
   bb.1 (%ir-block.6):
     liveins: $rbx
   
-    CFI_INSTRUCTION <unserializable cfi directive>, debug-location !73
+    CFI_INSTRUCTION def_cfa_offset 8, debug-location !73
     $rdi = MOV64rr $rsp
     CALL64pcrel32 @_ZN9allocatorD1Ev, csr_64, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, debug-location !73
     renamable $r14 = LEA64r renamable $rbx, 1, $noreg, 8, $noreg, debug-location !74
@@ -334,26 +310,33 @@ body:             |
     renamable $r12 = LEA64r $rsp, 1, $noreg, 8, $noreg
   
   bb.2 (%ir-block.9):
+    ; CHECK: successors: %bb.3(0x80000000)
+    successors: %bb.2, %bb.4
     liveins: $rbx, $r12, $r14, $r15
   
     DBG_VALUE 0, $noreg, !49, !DIExpression(), debug-location !76
-    CFI_INSTRUCTION <unserializable cfi directive>, debug-location !77
+    CFI_INSTRUCTION def_cfa_offset 8, debug-location !77
+    ; CHECK: bb.3 (%ir-block.9):
+    ; CHECK: successors: %bb.2(0x40000000), %bb.4(0x40000000)
+    ; CHECK: liveins: $rbx, $r12, $r14, $r15
     $rdi = COPY renamable $rbx, debug-location !77
     CALL64pcrel32 @_ZN1k5m_fn4Ev, csr_64, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $al, debug-location !77
     TEST8rr killed renamable $al, renamable $al, implicit-def $eflags, debug-location !79
     JCC_1 %bb.2, 5, implicit killed $eflags, debug-location !79
     JMP_1 %bb.4, debug-location !79
   
+  ; CHECK: bb.4 (%ir-block.14):
+  ; CHECK: successors: %bb.5(0x40000000), %bb.6(0x40000000)
   bb.3 (%ir-block.11, landing-pad):
     successors: 
     liveins: $rax, $rdx
   
     EH_LABEL <mcsymbol .Ltmp2>
     renamable $rbx = COPY $rax
-    CFI_INSTRUCTION <unserializable cfi directive>, debug-location !73
+    CFI_INSTRUCTION def_cfa_offset 8, debug-location !73
     $rdi = MOV64rr $rsp
     CALL64pcrel32 @_ZN9allocatorD1Ev, csr_64, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, debug-location !73
-    CFI_INSTRUCTION <unserializable cfi directive>
+    CFI_INSTRUCTION def_cfa_offset 8
     $rdi = COPY killed renamable $rbx
     CALL64pcrel32 @_Unwind_Resume, csr_64, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp
   
@@ -365,7 +348,7 @@ body:             |
     renamable $r9d = MOV32rm $rip, 1, $noreg, @h, $noreg, debug-location !89 :: (dereferenceable load 4 from @h, !tbaa !90)
     renamable $eax = MOV32rm $rip, 1, $noreg, @i, $noreg, implicit-def $rax, debug-location !91 :: (dereferenceable load 4 from @i, !tbaa !90)
     DBG_VALUE $rsp, $noreg, !53, !DIExpression(DW_OP_plus_uconst, 8, DW_OP_deref), debug-location !74
-    CFI_INSTRUCTION <unserializable cfi directive>, debug-location !92
+    CFI_INSTRUCTION def_cfa_offset 8, debug-location !92
     $rdi = COPY renamable $r12, debug-location !92
     $rsi = COPY renamable $r14, debug-location !92
     $rdx = COPY renamable $r15, debug-location !92
@@ -377,33 +360,40 @@ body:             |
     CALL64pcrel32 @_ZN1fC1EPiS0_S0_iiii, csr_64, implicit $rsp, implicit $ssp, implicit $rdi, implicit killed $rsi, implicit $rdx, implicit killed $rcx, implicit $r8d, implicit $r9d, implicit-def $rsp, implicit-def $ssp, debug-location !92
     $rsp = ADD64ri8 $rsp, 16, implicit-def dead $eflags, debug-location !92
     CFI_INSTRUCTION adjust_cfa_offset -16, debug-location !92
-    CFI_INSTRUCTION <unserializable cfi directive>, debug-location !93
+    CFI_INSTRUCTION def_cfa_offset 8, debug-location !93
     $rdi = COPY renamable $r12, debug-location !93
     CALL64pcrel32 @_ZN1f1gEv, csr_64, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, debug-location !93
-    CFI_INSTRUCTION <unserializable cfi directive>, debug-location !95
+    CFI_INSTRUCTION def_cfa_offset 8, debug-location !95
     $rdi = MOV32ri64 @.str, debug-location !95
     CALL64pcrel32 @_ZeqIPKcciEb1eIT0_T1_ET_, csr_64, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $al, debug-location !95
     TEST8rr killed renamable $al, renamable $al, implicit-def $eflags, debug-location !96
+    ; CHECK: JCC_1 %bb.6, 4, implicit $eflags
     JCC_1 %bb.6, 4, implicit killed $eflags, debug-location !96
     JMP_1 %bb.5, debug-location !96
-  
+
+  ; CHECK: bb.5 (%ir-block.23):
+  ; CHECK: successors: %bb.6(0x80000000)  
   bb.5 (%ir-block.23):
     liveins: $rbx, $r12, $r14, $r15
   
     DBG_VALUE $rsp, $noreg, !53, !DIExpression(DW_OP_plus_uconst, 8, DW_OP_deref), debug-location !74
-    CFI_INSTRUCTION <unserializable cfi directive>, debug-location !97
+    CFI_INSTRUCTION def_cfa_offset 8, debug-location !97
     $rdi = COPY renamable $r12, debug-location !97
     CALL64pcrel32 @_ZN1f1jEv, csr_64, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, debug-location !97
-  
+ 
+  ; CHECK: bb.6 (%ir-block.24):
+  ; CHECK: successors: %bb.3(0x80000000)
   bb.6 (%ir-block.24):
-    successors: %bb.2(0x04000000), %bb.4(0x7c000000)
+    successors: %bb.2, %bb.4
     liveins: $rbx, $r12, $r14, $r15
   
-    CFI_INSTRUCTION <unserializable cfi directive>, debug-location !77
+    CFI_INSTRUCTION def_cfa_offset 8, debug-location !77
+    ; CHECK: JMP_1 %bb.3
+  ; CHECK: bb.7 (%ir-block.11, landing-pad):
     $rdi = COPY renamable $rbx, debug-location !77
     CALL64pcrel32 @_ZN1k5m_fn4Ev, csr_64, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $al, debug-location !77
     TEST8rr killed renamable $al, renamable $al, implicit-def $eflags, debug-location !79
-    JCC_1 %bb.2, 5, implicit killed $eflags, debug-location !79
+    JCC_1 %bb.2, 5, implicit killed $eflags, debug-location !79  
     JMP_1 %bb.4, debug-location !79
 
 ...
