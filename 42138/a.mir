@@ -62,6 +62,7 @@ body:             |
   
   bb.2:
     ; CHECK: successors: %bb.3(0x80000000)
+    successors: %bb.2, %bb.4
     DBG_VALUE
     CFI_INSTRUCTION def_cfa_offset 8
     ; CHECK: bb.3:
@@ -89,6 +90,7 @@ body:             |
   ; CHECK: bb.6:
   ; CHECK: successors: %bb.3(0x80000000)
   bb.6:
+    successors: %bb.2, %bb.4
     ; CHECK: JMP_1 %bb.3
   ; CHECK: bb.7 (landing-pad):
     $rdi = COPY renamable $rbx
