@@ -4,41 +4,30 @@
 	.p2align	2
 	.type	test,@function
 test:                                   // @test
-.Lfunc_begin0:
-	.cfi_sections .debug_frame
-	.cfi_startproc
 // %bb.0:                               // %entry
-	stp	x23, x22, [sp, #-48]!   // 16-byte Folded Spill
-	stp	x21, x20, [sp, #16]     // 16-byte Folded Spill
-	stp	x19, x30, [sp, #32]     // 16-byte Folded Spill
-	.cfi_def_cfa_offset 48
-	.cfi_offset w30, -8
-	.cfi_offset w19, -16
-	.cfi_offset w20, -24
-	.cfi_offset w21, -32
-	.cfi_offset w22, -40
-	.cfi_offset w23, -48
+	str	x30, [sp, #-48]!        // 8-byte Folded Spill
+	stp	x20, x19, [sp, #32]     // 16-byte Folded Spill
 	adrp	x19, X1
-	ldr	w8, [x19, :lo12:X1]
-	add	w20, w8, #1             // =1
-	add	w21, w8, #2             // =2
-	add	w22, w8, #3             // =3
-	add	w23, w8, #4             // =4
+	ldr	w20, [x19, :lo12:X1]
+	stp	x22, x21, [sp, #16]     // 16-byte Folded Spill
+	adrp	x22, X4
+	add	w21, w20, #4            // =4
 	bl	foo
-	adrp	x8, X2
-	str	w20, [x19, :lo12:X1]
-	str	w21, [x8, :lo12:X2]
-	ldp	x19, x30, [sp, #32]     // 16-byte Folded Reload
-	ldp	x21, x20, [sp, #16]     // 16-byte Folded Reload
+	add	w10, w20, #1            // =1
+	str	w21, [x22, :lo12:X4]
+	add	w8, w20, #3             // =3
+	add	w11, w20, #2            // =2
+	str	w10, [x19, :lo12:X1]
+	ldp	x20, x19, [sp, #32]     // 16-byte Folded Reload
+	ldp	x22, x21, [sp, #16]     // 16-byte Folded Reload
 	adrp	x9, X3
-	adrp	x10, X4
-	str	w22, [x9, :lo12:X3]
-	str	w23, [x10, :lo12:X4]
-	ldp	x23, x22, [sp], #48     // 16-byte Folded Reload
+	adrp	x12, X2
+	str	w8, [x9, :lo12:X3]
+	str	w11, [x12, :lo12:X2]
+	ldr	x30, [sp], #48          // 8-byte Folded Reload
 	ret
 .Lfunc_end0:
 	.size	test, .Lfunc_end0-test
-	.cfi_endproc
                                         // -- End function
 	.type	X1,@object              // @X1
 	.bss
