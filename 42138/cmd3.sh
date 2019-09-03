@@ -16,4 +16,5 @@
 
 
 
-clang++ test.cc -emit-llvm -O1 -Xclang -disable-llvm-passes -c -o foo.bc
+#clang++ test.cc -emit-llvm -O1 -Xclang -disable-llvm-passes -c -o foo.bc
+#opt -O1 -debug-pass=Arguments foo.bc -disable-output

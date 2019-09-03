@@ -27,8 +27,9 @@
 #llc -stop-before=branch-folder -simplify-mir a.ll -o b.mir
 #clang++ -g -w -O1 -S -emit-llvm test.cc -o b.ll
 #llc -stop-before=branch-folder -simplify-mir a.ll -o b.mir
-llc -o - a.mir -mtriple=x86_64-- -run-pass=branch-folder | FileCheck a.mir
-#llc -o - branch-folder-with-debug.mir -mtriple=x86_64-- -run-pass=branch-folder | FileCheck branch-folder-with-debug.mir
+#llc -o - a.mir -mtriple=x86_64-- -run-pass=branch-folder | FileCheck a.mir
+llc -o - branch-folder-with-debug.mir -mtriple=x86_64-- -run-pass=branch-folder > tmp.mir
+llc -o - branch-folder-with-debug.mir -mtriple=x86_64-- -run-pass=branch-folder | FileCheck branch-folder-with-debug.mir
 
 #clang++ -w -O1 -S -emit-llvm test.cc -o a.ll
 #llc -stop-before=branch-folder a.ll -o a.mir

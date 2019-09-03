@@ -1,6 +1,6 @@
 # ../../llvm-project/clang/utils/check_cfc/clang++ test.cc -w -c -O1 -o tmp.ll
 # clang++ PowerParser.ii.cc -c -O1
-../../llvm-project/clang/utils/check_cfc/clang++ test.cc -c -O1
+#../../llvm-project/clang/utils/check_cfc/clang++ test.cc -c -O1
 
 
 # 132 vs 133
@@ -23,7 +23,7 @@
 #rm -rf a.o b.o; colordiff a.obj b.obj
 
 # debug
-#clang++ -S -mllvm -opt-bisect-limit=133 test.cc -c -O1 -o - 1>a.o 2>&1
-#clang++ -S -mllvm -opt-bisect-limit=137 test.cc -c -O1 -g -o - 1>b.o 2>&1
-#meld a.o b.o
+clang++ -S -mllvm -opt-bisect-limit=133 test.cc -c -O1 -o - 1>a.o 2>&1
+clang++ -S -mllvm -opt-bisect-limit=137 test.cc -c -O1 -g -o - 1>b.o 2>&1
+colordiff a.o b.o
 
