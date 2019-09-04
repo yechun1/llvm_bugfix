@@ -1,0 +1,90 @@
+diff --git a/llvm/lib/CodeGen/MachineScheduler.cpp b/llvm/lib/CodeGen/MachineScheduler.cpp
+index a46ded954af..224823bc345 100644
+--- a/llvm/lib/CodeGen/MachineScheduler.cpp
++++ b/llvm/lib/CodeGen/MachineScheduler.cpp
+@@ -122,8 +122,9 @@ static cl::opt<bool> EnableMemOpCluster("misched-cluster", cl::Hidden,
+                                         cl::desc("Enable memop clustering."),
+                                         cl::init(true));
+ 
+-static cl::opt<bool> VerifyScheduling("verify-misched", cl::Hidden,
+-  cl::desc("Verify machine instrs before and after machine scheduling"));
++//static cl::opt<bool> VerifyScheduling("verify-misched", cl::Hidden,
++//  cl::desc("Verify machine instrs before and after machine scheduling"));
++static const bool VerifyScheduling = true;
+ 
+ // DAG subtrees must have at least this many nodes.
+ static const unsigned MinSubtreeSize = 8;
+@@ -276,7 +277,7 @@ priorNonDebug(MachineBasicBlock::const_iterator I,
+               MachineBasicBlock::const_iterator Beg) {
+   assert(I != Beg && "reached the top of the region, cannot decrement");
+   while (--I != Beg) {
+-    if (!I->isDebugInstr())
++    if (!(I->isDebugInstr()||I->isCFIInstruction()))
+       break;
+   }
+   return I;
+@@ -296,7 +297,7 @@ static MachineBasicBlock::const_iterator
+ nextIfDebug(MachineBasicBlock::const_iterator I,
+             MachineBasicBlock::const_iterator End) {
+   for(; I != End; ++I) {
+-    if (!I->isDebugInstr())
++    if (!(I->isDebugInstr()||I->isCFIInstruction()))
+       break;
+   }
+   return I;
+@@ -472,6 +473,12 @@ getSchedRegions(MachineBasicBlock *MBB,
+   for(MachineBasicBlock::iterator RegionEnd = MBB->end();
+       RegionEnd != MBB->begin(); RegionEnd = I) {
+ 
++      if (RegionEnd != nullptr)
++      {
++        dbgs() << "chris-RegionEnd: " << *RegionEnd << "\n";
++        if(RegionEnd->isCFIInstruction())
++          continue;
++      }
+     // Avoid decrementing RegionEnd for blocks with no terminator.
+     if (RegionEnd != MBB->end() ||
+         isSchedBoundary(&*std::prev(RegionEnd), &*MBB, MF, TII)) {
+@@ -483,6 +490,7 @@ getSchedRegions(MachineBasicBlock *MBB,
+     unsigned NumRegionInstrs = 0;
+     I = RegionEnd;
+     for (;I != MBB->begin(); --I) {
++      dbgs() << "chris-num: " << NumRegionInstrs << "\n";
+       MachineInstr &MI = *std::prev(I);
+       if (isSchedBoundary(&MI, &*MBB, MF, TII))
+         break;
+@@ -491,6 +499,7 @@ getSchedRegions(MachineBasicBlock *MBB,
+         // count as a single instruction.
+         ++NumRegionInstrs;
+       }
++      dbgs() << "chris-RegionEnd: " << *RegionEnd<< "\n";
+     }
+ 
+     // It's possible we found a scheduling region that only has debug
+@@ -513,6 +522,7 @@ void MachineSchedulerBase::scheduleRegions(ScheduleDAGInstrs &Scheduler,
+   for (MachineFunction::iterator MBB = MF->begin(), MBBEnd = MF->end();
+        MBB != MBBEnd; ++MBB) {
+ 
++    dbgs() << "LOOP1\n";
+     Scheduler.startBlock(&*MBB);
+ 
+ #ifndef NDEBUG
+@@ -550,12 +560,18 @@ void MachineSchedulerBase::scheduleRegions(ScheduleDAGInstrs &Scheduler,
+       Scheduler.enterRegion(&*MBB, I, RegionEnd, NumRegionInstrs);
+ 
+       // Skip empty scheduling regions (0 or 1 schedulable instructions).
++      dbgs() << "LOOP2a\n";
++      dbgs() << "chris-I: " << *I << "\n";
++      dbgs() << "chris-RegionEnd: " << *RegionEnd << "\n";
++      dbgs() << "chris-pre-RegionEnd: " << *std::prev(RegionEnd) << "\n";
+       if (I == RegionEnd || I == std::prev(RegionEnd)) {
+         // Close the current region. Bundle the terminator if needed.
+         // This invalidates 'RegionEnd' and 'I'.
+         Scheduler.exitRegion();
++        dbgs() << "skip\n";
+         continue;
+       }
++      dbgs() << "LOOP2b\n";
+       LLVM_DEBUG(dbgs() << "********** MI Scheduling **********\n");
+       LLVM_DEBUG(dbgs() << MF->getName() << ":" << printMBBReference(*MBB)
+                         << " " << MBB->getName() << "\n  From: " << *I
