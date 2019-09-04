@@ -34,11 +34,21 @@ bb.0.entry:
 
 # End machine code for function test.
 
+LOOP1
+LOOP2a
+chris-I: STRWui killed renamable $w20, killed renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (store 4 into @X1)
+
+chris-RegionEnd: early-clobber $sp, $lr, $x23 = frame-destroy LDPXpost $sp(tied-def 0), 6 :: (load 8 from %stack.5), (load 8 from %stack.4)
+
+chris-pre-RegionEnd: $x22, $x21 = frame-destroy LDPXi $sp, 2 :: (load 8 from %stack.3), (load 8 from %stack.2)
+
+LOOP2b
 ********** MI Scheduling **********
 test:%bb.0 entry
   From: STRWui killed renamable $w20, killed renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (store 4 into @X1)
     To: early-clobber $sp, $lr, $x23 = frame-destroy LDPXpost $sp(tied-def 0), 6 :: (load 8 from %stack.5), (load 8 from %stack.4)
  RegionInstrs: 9
+test:%bb. 0 entry 
 ScheduleDAGMI::schedule starting
 SU(0):   STRWui renamable $w20, renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (store 4 into @X1)
   # preds left       : 0
@@ -144,6 +154,7 @@ ExitSU:   early-clobber $sp, $lr, $x23 = frame-destroy LDPXpost $sp(tied-def 0),
     SU(7): Ord  Latency=3 Artificial
 Disabled scoreboard hazard recognizer
 Critical Path: (PGS-RR) 4
+Critical Path(PGS-RR ): 4 
 ** ScheduleDAGMI::schedule picking next node
 Queue TopQ.P: 
 Queue TopQ.A: 0 1 2 3 
@@ -306,11 +317,20 @@ SU(8):   $x22, $x21 = frame-destroy LDPXi $sp, 2 :: (load 8 from %stack.3), (loa
 SU(3):   renamable $x10 = ADRP target-flags(aarch64-page) @X4
 SU(6):   STRWui renamable $w23, renamable $x10, target-flags(aarch64-pageoff, aarch64-nc) @X4 :: (store 4 into @X4)
 
+LOOP2a
+chris-I: frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
+
+chris-RegionEnd: BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
+
+chris-pre-RegionEnd: renamable $w23 = ADDWri killed renamable $w8, 4, 0
+
+LOOP2b
 ********** MI Scheduling **********
 test:%bb.0 entry
   From: frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
     To: BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
  RegionInstrs: 8
+test:%bb. 0 entry 
 ScheduleDAGMI::schedule starting
 SU(0):   frame-setup STPXi $x22, $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
   # preds left       : 0
@@ -404,6 +424,7 @@ ExitSU:   BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d
   Depth              : 0
   Height             : 0
 Critical Path: (PGS-RR) 5
+Critical Path(PGS-RR ): 5 
 ** ScheduleDAGMI::schedule picking next node
 Queue TopQ.P: 
 Queue TopQ.A: 0 1 

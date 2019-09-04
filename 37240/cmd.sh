@@ -46,5 +46,5 @@ opt --strip-debug test.ll -S > test2.ll
 #colordiff test.s test2.s
 
 ### debug5 ###
-llc test.mir -run-pass=postmisched -debug-only='machine-scheduler' -o - 1>test.log 2>&1
-llc test2.mir -run-pass=postmisched -debug-only='machine-scheduler' -o - 1>test2.log 2>&1
+llc test.mir -run-pass=postmisched -misched-dcpl -debug-only='machine-scheduler' -o - 1>test.log 2>&1
+llc test2.mir -run-pass=postmisched -misched-dcpl -debug-only='machine-scheduler' -o - 1>test2.log 2>&1
