@@ -41,21 +41,94 @@ bb.0.entry:
 
 # End machine code for function test.
 
-LOOP1
-LOOP2a
-chris-I: STRWui killed renamable $w20, killed renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (store 4 into @X1)
+chris-line1:test:%bb.0
+getScheduRegions
+chris-MBB-b: early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp(tied-def 0), -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
 
-chris-RegionEnd: early-clobber $sp, $lr, $x23 = frame-destroy LDPXpost $sp(tied-def 0), 6 :: (load 8 from %stack.5), (load 8 from %stack.4)
+chris-MBB-e: UNKNOWN
 
-chris-pre-RegionEnd: $x22, $x21 = frame-destroy LDPXi $sp, 2 :: (load 8 from %stack.3), (load 8 from %stack.2)
+chris-RegionEnd: UNKNOWN
 
-LOOP2b
-********** MI Scheduling **********
+chris-MBB-b: early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp(tied-def 0), -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
+
+chris-MBB-e: UNKNOWN
+
+chris-RegionEnd: RET undef $lr
+
+chris-MBB-b: early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp(tied-def 0), -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
+
+chris-MBB-e: UNKNOWN
+
+chris-RegionEnd: STRWui killed renamable $w20, killed renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (store 4 into @X1)
+
+chris-MBB-b: early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp(tied-def 0), -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
+
+chris-MBB-e: UNKNOWN
+
+chris-RegionEnd: renamable $x19 = ADRP target-flags(aarch64-page) @X1
+
+chris-MBB-b: early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp(tied-def 0), -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
+
+chris-MBB-e: UNKNOWN
+
+chris-RegionEnd: frame-setup CFI_INSTRUCTION offset $w30, -48
+
+chris-MBB-b: early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp(tied-def 0), -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
+
+chris-MBB-e: UNKNOWN
+
+chris-RegionEnd: frame-setup CFI_INSTRUCTION offset $w23, -40
+
+chris-MBB-b: early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp(tied-def 0), -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
+
+chris-MBB-e: UNKNOWN
+
+chris-RegionEnd: frame-setup CFI_INSTRUCTION offset $w22, -32
+
+chris-MBB-b: early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp(tied-def 0), -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
+
+chris-MBB-e: UNKNOWN
+
+chris-RegionEnd: frame-setup CFI_INSTRUCTION offset $w21, -24
+
+chris-MBB-b: early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp(tied-def 0), -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
+
+chris-MBB-e: UNKNOWN
+
+chris-RegionEnd: frame-setup CFI_INSTRUCTION offset $w20, -16
+
+chris-MBB-b: early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp(tied-def 0), -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
+
+chris-MBB-e: UNKNOWN
+
+chris-RegionEnd: frame-setup CFI_INSTRUCTION offset $w19, -8
+
+chris-MBB-b: early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp(tied-def 0), -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
+
+chris-MBB-e: UNKNOWN
+
+chris-RegionEnd: frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
+
+num:9
+chris-begin:STRWui killed renamable $w20, killed renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (store 4 into @X1)
+
+chris-end:early-clobber $sp, $lr, $x23 = frame-destroy LDPXpost $sp(tied-def 0), 6 :: (load 8 from %stack.5), (load 8 from %stack.4)
+
+num:6
+chris-begin:renamable $x19 = ADRP target-flags(aarch64-page) @X1
+
+chris-end:BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
+
+num:2
+chris-begin:frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
+
+chris-end:frame-setup CFI_INSTRUCTION def_cfa_offset 48
+
+********** T MI Scheduling **********
 test:%bb.0 entry
   From: STRWui killed renamable $w20, killed renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (store 4 into @X1)
     To: early-clobber $sp, $lr, $x23 = frame-destroy LDPXpost $sp(tied-def 0), 6 :: (load 8 from %stack.5), (load 8 from %stack.4)
  RegionInstrs: 9
-test:%bb. 0 entry 
 ScheduleDAGMI::schedule starting
 SU(0):   STRWui renamable $w20, renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (store 4 into @X1)
   # preds left       : 0
@@ -159,9 +232,7 @@ ExitSU:   early-clobber $sp, $lr, $x23 = frame-destroy LDPXpost $sp(tied-def 0),
   Predecessors:
     SU(8): Ord  Latency=3 Artificial
     SU(7): Ord  Latency=3 Artificial
-Disabled scoreboard hazard recognizer
 Critical Path: (PGS-RR) 4
-Critical Path(PGS-RR ): 4 
 ** ScheduleDAGMI::schedule picking next node
 Queue TopQ.P: 
 Queue TopQ.A: 0 1 2 3 
@@ -324,20 +395,11 @@ SU(8):   $x22, $x21 = frame-destroy LDPXi $sp, 2 :: (load 8 from %stack.3), (loa
 SU(3):   renamable $x10 = ADRP target-flags(aarch64-page) @X4
 SU(6):   STRWui renamable $w23, renamable $x10, target-flags(aarch64-pageoff, aarch64-nc) @X4 :: (store 4 into @X4)
 
-LOOP2a
-chris-I: renamable $x19 = ADRP target-flags(aarch64-page) @X1
-
-chris-RegionEnd: BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
-
-chris-pre-RegionEnd: renamable $w23 = ADDWri killed renamable $w8, 4, 0
-
-LOOP2b
-********** MI Scheduling **********
+********** T MI Scheduling **********
 test:%bb.0 entry
   From: renamable $x19 = ADRP target-flags(aarch64-page) @X1
     To: BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
  RegionInstrs: 6
-test:%bb. 0 entry 
 ScheduleDAGMI::schedule starting
 SU(0):   renamable $x19 = ADRP target-flags(aarch64-page) @X1
   # preds left       : 0
@@ -406,7 +468,6 @@ ExitSU:   BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d
   Depth              : 0
   Height             : 0
 Critical Path: (PGS-RR) 5
-Critical Path(PGS-RR ): 5 
 ** ScheduleDAGMI::schedule picking next node
 Queue TopQ.P: 
 Queue TopQ.A: 0 
@@ -514,20 +575,11 @@ SU(3):   renamable $w21 = ADDWri renamable $w8, 2, 0
 SU(4):   renamable $w22 = ADDWri renamable $w8, 3, 0
 SU(5):   renamable $w23 = ADDWri renamable $w8, 4, 0
 
-LOOP2a
-chris-I: frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
-
-chris-RegionEnd: frame-setup CFI_INSTRUCTION def_cfa_offset 48
-
-chris-pre-RegionEnd: frame-setup STPXi killed $x20, killed $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
-
-LOOP2b
-********** MI Scheduling **********
+********** T MI Scheduling **********
 test:%bb.0 entry
   From: frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
     To: frame-setup CFI_INSTRUCTION def_cfa_offset 48
  RegionInstrs: 2
-test:%bb. 0 entry 
 ScheduleDAGMI::schedule starting
 SU(0):   frame-setup STPXi $x22, $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
   # preds left       : 0
@@ -551,7 +603,6 @@ ExitSU:   frame-setup CFI_INSTRUCTION def_cfa_offset 48
   Depth              : 0
   Height             : 0
 Critical Path: (PGS-RR) 0
-Critical Path(PGS-RR ): 0 
 ** ScheduleDAGMI::schedule picking next node
 Queue TopQ.P: 
 Queue TopQ.A: 0 1 
@@ -587,7 +638,6 @@ TopQ.A @2c
 SU(0):   frame-setup STPXi $x22, $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
 SU(1):   frame-setup STPXi $x20, $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
 
-Fixup kills for %bb.0
 --- |
   ; ModuleID = 'test.mir'
   source_filename = "test.ll"
