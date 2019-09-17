@@ -1,5 +1,5 @@
 --- |
-  ; ModuleID = 'test1.mir'
+  ; ModuleID = 'test.mir'
   source_filename = "test.ll"
   target datalayout = "e-m:e-i8:8:32-i16:16:32-i64:64-i128:128-n32:64-S128"
   target triple = "aarch64-linux-gnu"
@@ -102,10 +102,8 @@ body:             |
     liveins: $x23, $lr, $x21, $x22, $x19, $x20
   
     early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp, -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
-    frame-setup STPXi killed $x20, killed $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
-    renamable $x19 = ADRP target-flags(aarch64-page) @X1
-    renamable $w8 = LDRWui renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (dereferenceable load 4 from @X1)
     frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
+    frame-setup STPXi killed $x20, killed $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
     frame-setup CFI_INSTRUCTION def_cfa_offset 48
     frame-setup CFI_INSTRUCTION offset $w19, -8
     frame-setup CFI_INSTRUCTION offset $w20, -16
@@ -113,6 +111,8 @@ body:             |
     frame-setup CFI_INSTRUCTION offset $w22, -32
     frame-setup CFI_INSTRUCTION offset $w23, -40
     frame-setup CFI_INSTRUCTION offset $w30, -48
+    renamable $x19 = ADRP target-flags(aarch64-page) @X1
+    renamable $w8 = LDRWui renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (dereferenceable load 4 from @X1)
     renamable $w20 = ADDWri renamable $w8, 1, 0
     renamable $w21 = ADDWri renamable $w8, 2, 0
     renamable $w22 = ADDWri renamable $w8, 3, 0

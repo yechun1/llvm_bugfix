@@ -23,7 +23,7 @@
 # -run-pass=
 
 
-#clang++ -g -w -O1 -S -emit-llvm test.cc -o a.ll
+#clang++ -w -O1 -S -emit-llvm test.cc -o a.ll
 #llc -stop-before=branch-folder -simplify-mir a.ll -o b.mir
 #clang++ -g -w -O1 -S -emit-llvm test.cc -o b.ll
 #llc -stop-before=branch-folder -simplify-mir a.ll -o b.mir

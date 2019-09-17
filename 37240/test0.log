@@ -13,13 +13,6 @@ bb.0.entry:
   early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp(tied-def 0), -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
   frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
   frame-setup STPXi killed $x20, killed $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
-  frame-setup CFI_INSTRUCTION def_cfa_offset 48
-  frame-setup CFI_INSTRUCTION offset $w19, -8
-  frame-setup CFI_INSTRUCTION offset $w20, -16
-  frame-setup CFI_INSTRUCTION offset $w21, -24
-  frame-setup CFI_INSTRUCTION offset $w22, -32
-  frame-setup CFI_INSTRUCTION offset $w23, -40
-  frame-setup CFI_INSTRUCTION offset $w30, -48
   renamable $x19 = ADRP target-flags(aarch64-page) @X1
   renamable $w8 = LDRWui renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (dereferenceable load 4 from @X1)
   renamable $w20 = ADDWri renamable $w8, 1, 0
@@ -53,7 +46,7 @@ chris-I: RET undef $lr
 
 chris-MI: early-clobber $sp, $lr, $x23 = frame-destroy LDPXpost $sp(tied-def 0), 6 :: (load 8 from %stack.5), (load 8 from %stack.4)
 
-chris-Regions.push_back: begin=0x7ffc3b979d80chris-Regions.push_back: end=0x7ffc3b979d80chris-RegionEnd: RET undef $lr
+chris-Regions.push_back: begin=0x7fff447c0800chris-Regions.push_back: end=0x7fff447c0800chris-RegionEnd: RET undef $lr
 
 chris-RegionEnd -- is: early-clobber $sp, $lr, $x23 = frame-destroy LDPXpost $sp(tied-def 0), 6 :: (load 8 from %stack.5), (load 8 from %stack.4)
 
@@ -106,7 +99,7 @@ chris-I: STRWui killed renamable $w20, killed renamable $x19, target-flags(aarch
 
 chris-MI: BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
 
-chris-Regions.push_back: begin=0x7ffc3b979d80chris-Regions.push_back: end=0x7ffc3b979d98here num:9
+chris-Regions.push_back: begin=0x7fff447c0800chris-Regions.push_back: end=0x7fff447c0818here num:9
 chris-begin:STRWui killed renamable $w20, killed renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (store 4 into @X1)
 
 chris-end:early-clobber $sp, $lr, $x23 = frame-destroy LDPXpost $sp(tied-def 0), 6 :: (load 8 from %stack.5), (load 8 from %stack.4)
@@ -165,54 +158,19 @@ chris-MI: renamable $x19 = ADRP target-flags(aarch64-page) @X1
 chris-Num: 6
 chris-I: renamable $x19 = ADRP target-flags(aarch64-page) @X1
 
-chris-MI: frame-setup CFI_INSTRUCTION offset $w30, -48
-
-chris-Num: 7
-chris-I: frame-setup CFI_INSTRUCTION offset $w30, -48
-
-chris-MI: frame-setup CFI_INSTRUCTION offset $w23, -40
-
-chris-Num: 8
-chris-I: frame-setup CFI_INSTRUCTION offset $w23, -40
-
-chris-MI: frame-setup CFI_INSTRUCTION offset $w22, -32
-
-chris-Num: 9
-chris-I: frame-setup CFI_INSTRUCTION offset $w22, -32
-
-chris-MI: frame-setup CFI_INSTRUCTION offset $w21, -24
-
-chris-Num: 10
-chris-I: frame-setup CFI_INSTRUCTION offset $w21, -24
-
-chris-MI: frame-setup CFI_INSTRUCTION offset $w20, -16
-
-chris-Num: 11
-chris-I: frame-setup CFI_INSTRUCTION offset $w20, -16
-
-chris-MI: frame-setup CFI_INSTRUCTION offset $w19, -8
-
-chris-Num: 12
-chris-I: frame-setup CFI_INSTRUCTION offset $w19, -8
-
-chris-MI: frame-setup CFI_INSTRUCTION def_cfa_offset 48
-
-chris-Num: 13
-chris-I: frame-setup CFI_INSTRUCTION def_cfa_offset 48
-
 chris-MI: frame-setup STPXi killed $x20, killed $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
 
-chris-Num: 14
+chris-Num: 7
 chris-I: frame-setup STPXi killed $x20, killed $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
 
 chris-MI: frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
 
-chris-Num: 15
+chris-Num: 8
 chris-I: frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
 
 chris-MI: early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp(tied-def 0), -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
 
-chris-Regions.push_back: begin=0x7ffc3b979d80chris-Regions.push_back: end=0x7ffc3b979db0here num:9
+chris-Regions.push_back: begin=0x7fff447c0800chris-Regions.push_back: end=0x7fff447c0830here num:9
 chris-begin:STRWui killed renamable $w20, killed renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (store 4 into @X1)
 
 chris-end:early-clobber $sp, $lr, $x23 = frame-destroy LDPXpost $sp(tied-def 0), 6 :: (load 8 from %stack.5), (load 8 from %stack.4)
@@ -235,7 +193,7 @@ chris-test1:$x20, $x19 = frame-destroy LDPXi $sp, 4 :: (load 8 from %stack.1), (
 
 chris-test1:$x22, $x21 = frame-destroy LDPXi $sp, 2 :: (load 8 from %stack.3), (load 8 from %stack.2)
 
-here num:15
+here num:8
 chris-begin:frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
 
 chris-end:BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
@@ -243,20 +201,6 @@ chris-end:BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d
 chris-test1:frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
 
 chris-test1:frame-setup STPXi killed $x20, killed $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
-
-chris-test1:frame-setup CFI_INSTRUCTION def_cfa_offset 48
-
-chris-test1:frame-setup CFI_INSTRUCTION offset $w19, -8
-
-chris-test1:frame-setup CFI_INSTRUCTION offset $w20, -16
-
-chris-test1:frame-setup CFI_INSTRUCTION offset $w21, -24
-
-chris-test1:frame-setup CFI_INSTRUCTION offset $w22, -32
-
-chris-test1:frame-setup CFI_INSTRUCTION offset $w23, -40
-
-chris-test1:frame-setup CFI_INSTRUCTION offset $w30, -48
 
 chris-test1:renamable $x19 = ADRP target-flags(aarch64-page) @X1
 
@@ -274,7 +218,7 @@ chris-RegionEnd: frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 
 
 chris-RegionEnd -- is: early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp(tied-def 0), -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
 
-chris-Regions.push_back: begin=0x7ffc3b979d80chris-Regions.push_back: end=0x7ffc3b979db0here num:9
+chris-Regions.push_back: begin=0x7fff447c0800chris-Regions.push_back: end=0x7fff447c0830here num:9
 chris-begin:STRWui killed renamable $w20, killed renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (store 4 into @X1)
 
 chris-end:early-clobber $sp, $lr, $x23 = frame-destroy LDPXpost $sp(tied-def 0), 6 :: (load 8 from %stack.5), (load 8 from %stack.4)
@@ -297,7 +241,7 @@ chris-test1:$x20, $x19 = frame-destroy LDPXi $sp, 4 :: (load 8 from %stack.1), (
 
 chris-test1:$x22, $x21 = frame-destroy LDPXi $sp, 2 :: (load 8 from %stack.3), (load 8 from %stack.2)
 
-here num:15
+here num:8
 chris-begin:frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
 
 chris-end:BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
@@ -305,20 +249,6 @@ chris-end:BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d
 chris-test1:frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
 
 chris-test1:frame-setup STPXi killed $x20, killed $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
-
-chris-test1:frame-setup CFI_INSTRUCTION def_cfa_offset 48
-
-chris-test1:frame-setup CFI_INSTRUCTION offset $w19, -8
-
-chris-test1:frame-setup CFI_INSTRUCTION offset $w20, -16
-
-chris-test1:frame-setup CFI_INSTRUCTION offset $w21, -24
-
-chris-test1:frame-setup CFI_INSTRUCTION offset $w22, -32
-
-chris-test1:frame-setup CFI_INSTRUCTION offset $w23, -40
-
-chris-test1:frame-setup CFI_INSTRUCTION offset $w30, -48
 
 chris-test1:renamable $x19 = ADRP target-flags(aarch64-page) @X1
 
@@ -337,7 +267,7 @@ chris-begin:STRWui killed renamable $w20, killed renamable $x19, target-flags(aa
 
 chris-end:early-clobber $sp, $lr, $x23 = frame-destroy LDPXpost $sp(tied-def 0), 6 :: (load 8 from %stack.5), (load 8 from %stack.4)
 
-num:15
+num:8
 chris-begin:frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
 
 chris-end:BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
@@ -1076,20 +1006,6 @@ chris-test:frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %
 
 chris-test:frame-setup STPXi killed $x20, killed $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
 
-chris-test:frame-setup CFI_INSTRUCTION def_cfa_offset 48
-
-chris-test:frame-setup CFI_INSTRUCTION offset $w19, -8
-
-chris-test:frame-setup CFI_INSTRUCTION offset $w20, -16
-
-chris-test:frame-setup CFI_INSTRUCTION offset $w21, -24
-
-chris-test:frame-setup CFI_INSTRUCTION offset $w22, -32
-
-chris-test:frame-setup CFI_INSTRUCTION offset $w23, -40
-
-chris-test:frame-setup CFI_INSTRUCTION offset $w30, -48
-
 chris-test:renamable $x19 = ADRP target-flags(aarch64-page) @X1
 
 chris-test:renamable $w8 = LDRWui renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (dereferenceable load 4 from @X1)
@@ -1111,34 +1027,13 @@ end=BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10
 test:%bb.0 entry
   From: frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
     To: BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
- RegionInstrs: 15
+ RegionInstrs: 8
 ScheduleDAGMI::schedule starting
 ScheduleDAGMI::schedule starting done.
 MI=frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
 
 chris-initSUnits
 MI=frame-setup STPXi killed $x20, killed $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
-
-chris-initSUnits
-MI=frame-setup CFI_INSTRUCTION def_cfa_offset 48
-
-chris-initSUnits
-MI=frame-setup CFI_INSTRUCTION offset $w19, -8
-
-chris-initSUnits
-MI=frame-setup CFI_INSTRUCTION offset $w20, -16
-
-chris-initSUnits
-MI=frame-setup CFI_INSTRUCTION offset $w21, -24
-
-chris-initSUnits
-MI=frame-setup CFI_INSTRUCTION offset $w22, -32
-
-chris-initSUnits
-MI=frame-setup CFI_INSTRUCTION offset $w23, -40
-
-chris-initSUnits
-MI=frame-setup CFI_INSTRUCTION offset $w30, -48
 
 chris-initSUnits
 MI=renamable $x19 = ADRP target-flags(aarch64-page) @X1
@@ -1171,20 +1066,6 @@ chris-buildSchedGraph: renamable $w8 = LDRWui renamable $x19, target-flags(aarch
 
 chris-buildSchedGraph: renamable $x19 = ADRP target-flags(aarch64-page) @X1
 
-chris-buildSchedGraph: frame-setup CFI_INSTRUCTION offset $w30, -48
-
-chris-buildSchedGraph: frame-setup CFI_INSTRUCTION offset $w23, -40
-
-chris-buildSchedGraph: frame-setup CFI_INSTRUCTION offset $w22, -32
-
-chris-buildSchedGraph: frame-setup CFI_INSTRUCTION offset $w21, -24
-
-chris-buildSchedGraph: frame-setup CFI_INSTRUCTION offset $w20, -16
-
-chris-buildSchedGraph: frame-setup CFI_INSTRUCTION offset $w19, -8
-
-chris-buildSchedGraph: frame-setup CFI_INSTRUCTION def_cfa_offset 48
-
 chris-buildSchedGraph: frame-setup STPXi killed $x20, killed $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
 
 chris-buildSchedGraph: frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
@@ -1192,34 +1073,6 @@ chris-buildSchedGraph: frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (st
 chris-findTopRoots:frame-setup STPXi $x22, $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
 
 chris-findTopRoots:frame-setup STPXi $x20, $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
-
-chris-findTopRoots:frame-setup CFI_INSTRUCTION def_cfa_offset 48
-
-chris-findBotRoots:frame-setup CFI_INSTRUCTION def_cfa_offset 48
-
-chris-findTopRoots:frame-setup CFI_INSTRUCTION offset $w19, -8
-
-chris-findBotRoots:frame-setup CFI_INSTRUCTION offset $w19, -8
-
-chris-findTopRoots:frame-setup CFI_INSTRUCTION offset $w20, -16
-
-chris-findBotRoots:frame-setup CFI_INSTRUCTION offset $w20, -16
-
-chris-findTopRoots:frame-setup CFI_INSTRUCTION offset $w21, -24
-
-chris-findBotRoots:frame-setup CFI_INSTRUCTION offset $w21, -24
-
-chris-findTopRoots:frame-setup CFI_INSTRUCTION offset $w22, -32
-
-chris-findBotRoots:frame-setup CFI_INSTRUCTION offset $w22, -32
-
-chris-findTopRoots:frame-setup CFI_INSTRUCTION offset $w23, -40
-
-chris-findBotRoots:frame-setup CFI_INSTRUCTION offset $w23, -40
-
-chris-findTopRoots:frame-setup CFI_INSTRUCTION offset $w30, -48
-
-chris-findBotRoots:frame-setup CFI_INSTRUCTION offset $w30, -48
 
 chris-findBotRoots:renamable $w20 = ADDWri renamable $w8, 1, 0
 
@@ -1237,8 +1090,8 @@ SU(0):   frame-setup STPXi $x22, $x21, $sp, 2 :: (store 8 into %stack.3), (store
   Depth              : 0
   Height             : 0
   Successors:
-    SU(13): Anti Latency=0
-    SU(12): Anti Latency=0
+    SU(6): Anti Latency=0
+    SU(5): Anti Latency=0
 SU(1):   frame-setup STPXi $x20, $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
   # preds left       : 0
   # succs left       : 2
@@ -1247,58 +1100,9 @@ SU(1):   frame-setup STPXi $x20, $x19, $sp, 4 :: (store 8 into %stack.1), (store
   Depth              : 0
   Height             : 5
   Successors:
-    SU(11): Anti Latency=0
-    SU(9): Anti Latency=0
-SU(2):   frame-setup CFI_INSTRUCTION def_cfa_offset 48
-  # preds left       : 0
-  # succs left       : 0
-  # rdefs left       : 0
-  Latency            : 0
-  Depth              : 0
-  Height             : 0
-SU(3):   frame-setup CFI_INSTRUCTION offset $w19, -8
-  # preds left       : 0
-  # succs left       : 0
-  # rdefs left       : 0
-  Latency            : 0
-  Depth              : 0
-  Height             : 0
-SU(4):   frame-setup CFI_INSTRUCTION offset $w20, -16
-  # preds left       : 0
-  # succs left       : 0
-  # rdefs left       : 0
-  Latency            : 0
-  Depth              : 0
-  Height             : 0
-SU(5):   frame-setup CFI_INSTRUCTION offset $w21, -24
-  # preds left       : 0
-  # succs left       : 0
-  # rdefs left       : 0
-  Latency            : 0
-  Depth              : 0
-  Height             : 0
-SU(6):   frame-setup CFI_INSTRUCTION offset $w22, -32
-  # preds left       : 0
-  # succs left       : 0
-  # rdefs left       : 0
-  Latency            : 0
-  Depth              : 0
-  Height             : 0
-SU(7):   frame-setup CFI_INSTRUCTION offset $w23, -40
-  # preds left       : 0
-  # succs left       : 0
-  # rdefs left       : 0
-  Latency            : 0
-  Depth              : 0
-  Height             : 0
-SU(8):   frame-setup CFI_INSTRUCTION offset $w30, -48
-  # preds left       : 0
-  # succs left       : 0
-  # rdefs left       : 0
-  Latency            : 0
-  Depth              : 0
-  Height             : 0
-SU(9):   renamable $x19 = ADRP target-flags(aarch64-page) @X1
+    SU(4): Anti Latency=0
+    SU(2): Anti Latency=0
+SU(2):   renamable $x19 = ADRP target-flags(aarch64-page) @X1
   # preds left       : 1
   # succs left       : 1
   # rdefs left       : 0
@@ -1308,8 +1112,8 @@ SU(9):   renamable $x19 = ADRP target-flags(aarch64-page) @X1
   Predecessors:
     SU(1): Anti Latency=0
   Successors:
-    SU(10): Data Latency=1 Reg=$x19
-SU(10):   renamable $w8 = LDRWui renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (dereferenceable load 4 from @X1)
+    SU(3): Data Latency=1 Reg=$x19
+SU(3):   renamable $w8 = LDRWui renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (dereferenceable load 4 from @X1)
   # preds left       : 1
   # succs left       : 4
   # rdefs left       : 0
@@ -1317,13 +1121,13 @@ SU(10):   renamable $w8 = LDRWui renamable $x19, target-flags(aarch64-pageoff, a
   Depth              : 1
   Height             : 4
   Predecessors:
-    SU(9): Data Latency=1 Reg=$x19
+    SU(2): Data Latency=1 Reg=$x19
   Successors:
-    SU(14): Data Latency=4 Reg=$w8
-    SU(13): Data Latency=4 Reg=$w8
-    SU(12): Data Latency=4 Reg=$w8
-    SU(11): Data Latency=4 Reg=$w8
-SU(11):   renamable $w20 = ADDWri renamable $w8, 1, 0
+    SU(7): Data Latency=4 Reg=$w8
+    SU(6): Data Latency=4 Reg=$w8
+    SU(5): Data Latency=4 Reg=$w8
+    SU(4): Data Latency=4 Reg=$w8
+SU(4):   renamable $w20 = ADDWri renamable $w8, 1, 0
   # preds left       : 2
   # succs left       : 0
   # rdefs left       : 0
@@ -1331,9 +1135,9 @@ SU(11):   renamable $w20 = ADDWri renamable $w8, 1, 0
   Depth              : 5
   Height             : 0
   Predecessors:
-    SU(10): Data Latency=4 Reg=$w8
+    SU(3): Data Latency=4 Reg=$w8
     SU(1): Anti Latency=0
-SU(12):   renamable $w21 = ADDWri renamable $w8, 2, 0
+SU(5):   renamable $w21 = ADDWri renamable $w8, 2, 0
   # preds left       : 2
   # succs left       : 0
   # rdefs left       : 0
@@ -1341,9 +1145,9 @@ SU(12):   renamable $w21 = ADDWri renamable $w8, 2, 0
   Depth              : 5
   Height             : 0
   Predecessors:
-    SU(10): Data Latency=4 Reg=$w8
+    SU(3): Data Latency=4 Reg=$w8
     SU(0): Anti Latency=0
-SU(13):   renamable $w22 = ADDWri renamable $w8, 3, 0
+SU(6):   renamable $w22 = ADDWri renamable $w8, 3, 0
   # preds left       : 2
   # succs left       : 0
   # rdefs left       : 0
@@ -1351,9 +1155,9 @@ SU(13):   renamable $w22 = ADDWri renamable $w8, 3, 0
   Depth              : 5
   Height             : 0
   Predecessors:
-    SU(10): Data Latency=4 Reg=$w8
+    SU(3): Data Latency=4 Reg=$w8
     SU(0): Anti Latency=0
-SU(14):   renamable $w23 = ADDWri renamable $w8, 4, 0
+SU(7):   renamable $w23 = ADDWri renamable $w8, 4, 0
   # preds left       : 1
   # succs left       : 0
   # rdefs left       : 0
@@ -1361,7 +1165,7 @@ SU(14):   renamable $w23 = ADDWri renamable $w8, 4, 0
   Depth              : 5
   Height             : 0
   Predecessors:
-    SU(10): Data Latency=4 Reg=$w8
+    SU(3): Data Latency=4 Reg=$w8
 ExitSU:   BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
   # preds left       : 0
   # succs left       : 0
@@ -1369,13 +1173,6 @@ ExitSU:   BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d
   Latency            : 0
   Depth              : 0
   Height             : 0
-chris-releaseNode: ReadyCycle= 0
-chris-releaseNode: ReadyCycle= 0
-chris-releaseNode: ReadyCycle= 0
-chris-releaseNode: ReadyCycle= 0
-chris-releaseNode: ReadyCycle= 0
-chris-releaseNode: ReadyCycle= 0
-chris-releaseNode: ReadyCycle= 0
 chris-releaseNode: ReadyCycle= 0
 chris-releaseNode: ReadyCycle= 0
 Critical Path: (PGS-RR) 5
@@ -1411,7 +1208,7 @@ bumpCycle
 Queue TopQ.P: 
 ******************************** Pending.dump done *********************
 ******************************** Available.dump *********************
-Queue TopQ.A: 0 1 2 3 4 5 6 7 8 
+Queue TopQ.A: 0 1 
 ******************************** Available.dump done *********************
 debug5
   TopQ.A RemainingLatency 0 + 0c > CritPath 5
@@ -1463,15 +1260,15 @@ bumpCycle
 Queue TopQ.P: 
 ******************************** Pending.dump done *********************
 ******************************** Available.dump *********************
-Queue TopQ.A: 0 8 2 3 4 5 6 7 9 
+Queue TopQ.A: 0 2 
 ******************************** Available.dump done *********************
 debug5
   TopQ.A RemainingLatency 0 + 1c > CritPath 5
   Cand SU(0) ORDER                              
-  Cand SU(9) TOP-PATH                  5 cycles 
+  Cand SU(2) TOP-PATH                  5 cycles 
 Pick Top TOP-PATH  
 debug6
-Scheduling SU(9) renamable $x19 = ADRP target-flags(aarch64-page) @X1
+Scheduling SU(2) renamable $x19 = ADRP target-flags(aarch64-page) @X1
 chris: check SU break
 chris-checkSchedLimit
 true
@@ -1479,7 +1276,7 @@ chris-schedule: renamable $x19 = ADRP target-flags(aarch64-page) @X1
 
 chris: scheduleNode
   Ready @1c
-  TopQ.A BotLatency SU(9) 5c
+  TopQ.A BotLatency SU(2) 5c
   *** Max MOps 1 at cycle 1
 MinReadyCycl = 0
 std::numeric_limits<unsigned>::max() = 4294967295
@@ -1515,15 +1312,15 @@ bumpCycle
 Queue TopQ.P: 
 ******************************** Pending.dump done *********************
 ******************************** Available.dump *********************
-Queue TopQ.A: 0 8 2 3 4 5 6 7 10 
+Queue TopQ.A: 0 3 
 ******************************** Available.dump done *********************
 debug5
   TopQ.A RemainingLatency 0 + 2c > CritPath 5
   Cand SU(0) ORDER                              
-  Cand SU(10) TOP-PATH                  4 cycles 
+  Cand SU(3) TOP-PATH                  4 cycles 
 Pick Top TOP-PATH  
 debug6
-Scheduling SU(10) renamable $w8 = LDRWui renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (dereferenceable load 4 from @X1)
+Scheduling SU(3) renamable $w8 = LDRWui renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (dereferenceable load 4 from @X1)
 chris: check SU break
 chris-checkSchedLimit
 true
@@ -1531,7 +1328,7 @@ chris-schedule: renamable $w8 = LDRWui renamable $x19, target-flags(aarch64-page
 
 chris: scheduleNode
   Ready @2c
-  TopQ.A TopLatency SU(10) 1c
+  TopQ.A TopLatency SU(3) 1c
   *** Max MOps 1 at cycle 2
 MinReadyCycl = 0
 std::numeric_limits<unsigned>::max() = 4294967295
@@ -1571,15 +1368,13 @@ CurrMops=0
 available not empty
 bumpCycle
 ******************************** Pending.dump *********************
-Queue TopQ.P: 14 11 
+Queue TopQ.P: 7 4 
 ******************************** Pending.dump done *********************
 ******************************** Available.dump *********************
-Queue TopQ.A: 0 8 2 3 4 5 6 7 
+Queue TopQ.A: 0 
 ******************************** Available.dump done *********************
-debug5
-  TopQ.A RemainingLatency 0 + 3c > CritPath 5
-  Cand SU(0) ORDER                              
-Pick Top ORDER     
+debug4
+Pick Top ONLY1     
 debug6
 Scheduling SU(0) frame-setup STPXi $x22, $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
 chris: check SU break
@@ -1588,14 +1383,14 @@ true
 chris-schedule: frame-setup STPXi $x22, $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
 
 chris-nextIfDebug1
-I: frame-setup CFI_INSTRUCTION def_cfa_offset 48
+I: renamable $w20 = ADDWri renamable $w8, 1, 0
 
 End: BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
 
-I is: frame-setup CFI_INSTRUCTION def_cfa_offset 48
+I is: renamable $w20 = ADDWri renamable $w8, 1, 0
 
 break
-chris-nextIfDebug1: return: frame-setup CFI_INSTRUCTION def_cfa_offset 48
+chris-nextIfDebug1: return: renamable $w20 = ADDWri renamable $w8, 1, 0
 
 chris: scheduleNode
   Ready @3c
@@ -1618,407 +1413,13 @@ SU is Scheduled: frame-setup STPXi $x22, $x21, $sp, 2 :: (store 8 into %stack.3)
 chris: IsTopNode:1
 PostGenericScheduler::pickNode
 debug1
-DAG->top(): frame-setup CFI_INSTRUCTION def_cfa_offset 48
-
-DAG->bottom(): BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
-
-debug2
-debug3
-pickOnlyChoice: CheckPending=1
-chris-releasePending: MinReadyCycle=0
-pending.size=4
-i:0 su: renamable $w23 = ADDWri renamable $w8, 4, 0
-
-chris-releasePending: ReadyCycle= 6
-i:1 su: renamable $w20 = ADDWri renamable $w8, 1, 0
-
-chris-releasePending: ReadyCycle= 6
-i:2 su: renamable $w22 = ADDWri renamable $w8, 3, 0
-
-chris-releasePending: ReadyCycle= 6
-i:3 su: renamable $w21 = ADDWri renamable $w8, 2, 0
-
-chris-releasePending: ReadyCycle= 6
-CheckPending set to false
-CurrMops=0
-available not empty
-bumpCycle
-******************************** Pending.dump *********************
-Queue TopQ.P: 14 11 13 12 
-******************************** Pending.dump done *********************
-******************************** Available.dump *********************
-Queue TopQ.A: 7 8 2 3 4 5 6 
-******************************** Available.dump done *********************
-debug5
-  TopQ.A RemainingLatency 0 + 4c > CritPath 5
-  Cand SU(7) ORDER                              
-  Cand SU(2) ORDER                              
-Pick Top ORDER     
-debug6
-Scheduling SU(2) frame-setup CFI_INSTRUCTION def_cfa_offset 48
-chris: check SU break
-chris-checkSchedLimit
-true
-chris-schedule: frame-setup CFI_INSTRUCTION def_cfa_offset 48
-
-chris-nextIfDebug1
-I: frame-setup CFI_INSTRUCTION offset $w19, -8
-
-End: BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
-
-I is: frame-setup CFI_INSTRUCTION offset $w19, -8
-
-break
-chris-nextIfDebug1: return: frame-setup CFI_INSTRUCTION offset $w19, -8
-
-chris: scheduleNode
-  Ready @4c
-TopQ.A @4c
-  Retired: 4
-  Executed: 4c
-  Critical: 4c, 4 MOps
-  ExpectedLatency: 1c
-  - Latency limited.
-chris: updateQueues
-SU is Scheduled: frame-setup CFI_INSTRUCTION def_cfa_offset 48
-
-** ScheduleDAGMI::schedule picking next node
-chris: IsTopNode:1
-PostGenericScheduler::pickNode
-debug1
-DAG->top(): frame-setup CFI_INSTRUCTION offset $w19, -8
-
-DAG->bottom(): BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
-
-debug2
-debug3
-pickOnlyChoice: CheckPending=0
-CurrMops=0
-available not empty
-bumpCycle
-******************************** Pending.dump *********************
-Queue TopQ.P: 14 11 13 12 
-******************************** Pending.dump done *********************
-******************************** Available.dump *********************
-Queue TopQ.A: 7 8 6 3 4 5 
-******************************** Available.dump done *********************
-debug5
-  TopQ.A RemainingLatency 0 + 4c > CritPath 5
-  Cand SU(7) ORDER                              
-  Cand SU(6) ORDER                              
-  Cand SU(3) ORDER                              
-Pick Top ORDER     
-debug6
-Scheduling SU(3) frame-setup CFI_INSTRUCTION offset $w19, -8
-chris: check SU break
-chris-checkSchedLimit
-true
-chris-schedule: frame-setup CFI_INSTRUCTION offset $w19, -8
-
-chris-nextIfDebug1
-I: frame-setup CFI_INSTRUCTION offset $w20, -16
-
-End: BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
-
-I is: frame-setup CFI_INSTRUCTION offset $w20, -16
-
-break
-chris-nextIfDebug1: return: frame-setup CFI_INSTRUCTION offset $w20, -16
-
-chris: scheduleNode
-  Ready @4c
-TopQ.A @4c
-  Retired: 4
-  Executed: 4c
-  Critical: 4c, 4 MOps
-  ExpectedLatency: 1c
-  - Latency limited.
-chris: updateQueues
-SU is Scheduled: frame-setup CFI_INSTRUCTION offset $w19, -8
-
-** ScheduleDAGMI::schedule picking next node
-chris: IsTopNode:1
-PostGenericScheduler::pickNode
-debug1
-DAG->top(): frame-setup CFI_INSTRUCTION offset $w20, -16
-
-DAG->bottom(): BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
-
-debug2
-debug3
-pickOnlyChoice: CheckPending=0
-CurrMops=0
-available not empty
-bumpCycle
-******************************** Pending.dump *********************
-Queue TopQ.P: 14 11 13 12 
-******************************** Pending.dump done *********************
-******************************** Available.dump *********************
-Queue TopQ.A: 7 8 6 5 4 
-******************************** Available.dump done *********************
-debug5
-  TopQ.A RemainingLatency 0 + 4c > CritPath 5
-  Cand SU(7) ORDER                              
-  Cand SU(6) ORDER                              
-  Cand SU(5) ORDER                              
-  Cand SU(4) ORDER                              
-Pick Top ORDER     
-debug6
-Scheduling SU(4) frame-setup CFI_INSTRUCTION offset $w20, -16
-chris: check SU break
-chris-checkSchedLimit
-true
-chris-schedule: frame-setup CFI_INSTRUCTION offset $w20, -16
-
-chris-nextIfDebug1
-I: frame-setup CFI_INSTRUCTION offset $w21, -24
-
-End: BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
-
-I is: frame-setup CFI_INSTRUCTION offset $w21, -24
-
-break
-chris-nextIfDebug1: return: frame-setup CFI_INSTRUCTION offset $w21, -24
-
-chris: scheduleNode
-  Ready @4c
-TopQ.A @4c
-  Retired: 4
-  Executed: 4c
-  Critical: 4c, 4 MOps
-  ExpectedLatency: 1c
-  - Latency limited.
-chris: updateQueues
-SU is Scheduled: frame-setup CFI_INSTRUCTION offset $w20, -16
-
-** ScheduleDAGMI::schedule picking next node
-chris: IsTopNode:1
-PostGenericScheduler::pickNode
-debug1
-DAG->top(): frame-setup CFI_INSTRUCTION offset $w21, -24
-
-DAG->bottom(): BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
-
-debug2
-debug3
-pickOnlyChoice: CheckPending=0
-CurrMops=0
-available not empty
-bumpCycle
-******************************** Pending.dump *********************
-Queue TopQ.P: 14 11 13 12 
-******************************** Pending.dump done *********************
-******************************** Available.dump *********************
-Queue TopQ.A: 7 8 6 5 
-******************************** Available.dump done *********************
-debug5
-  TopQ.A RemainingLatency 0 + 4c > CritPath 5
-  Cand SU(7) ORDER                              
-  Cand SU(6) ORDER                              
-  Cand SU(5) ORDER                              
-Pick Top ORDER     
-debug6
-Scheduling SU(5) frame-setup CFI_INSTRUCTION offset $w21, -24
-chris: check SU break
-chris-checkSchedLimit
-true
-chris-schedule: frame-setup CFI_INSTRUCTION offset $w21, -24
-
-chris-nextIfDebug1
-I: frame-setup CFI_INSTRUCTION offset $w22, -32
-
-End: BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
-
-I is: frame-setup CFI_INSTRUCTION offset $w22, -32
-
-break
-chris-nextIfDebug1: return: frame-setup CFI_INSTRUCTION offset $w22, -32
-
-chris: scheduleNode
-  Ready @4c
-TopQ.A @4c
-  Retired: 4
-  Executed: 4c
-  Critical: 4c, 4 MOps
-  ExpectedLatency: 1c
-  - Latency limited.
-chris: updateQueues
-SU is Scheduled: frame-setup CFI_INSTRUCTION offset $w21, -24
-
-** ScheduleDAGMI::schedule picking next node
-chris: IsTopNode:1
-PostGenericScheduler::pickNode
-debug1
-DAG->top(): frame-setup CFI_INSTRUCTION offset $w22, -32
-
-DAG->bottom(): BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
-
-debug2
-debug3
-pickOnlyChoice: CheckPending=0
-CurrMops=0
-available not empty
-bumpCycle
-******************************** Pending.dump *********************
-Queue TopQ.P: 14 11 13 12 
-******************************** Pending.dump done *********************
-******************************** Available.dump *********************
-Queue TopQ.A: 7 8 6 
-******************************** Available.dump done *********************
-debug5
-  TopQ.A RemainingLatency 0 + 4c > CritPath 5
-  Cand SU(7) ORDER                              
-  Cand SU(6) ORDER                              
-Pick Top ORDER     
-debug6
-Scheduling SU(6) frame-setup CFI_INSTRUCTION offset $w22, -32
-chris: check SU break
-chris-checkSchedLimit
-true
-chris-schedule: frame-setup CFI_INSTRUCTION offset $w22, -32
-
-chris-nextIfDebug1
-I: frame-setup CFI_INSTRUCTION offset $w23, -40
-
-End: BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
-
-I is: frame-setup CFI_INSTRUCTION offset $w23, -40
-
-break
-chris-nextIfDebug1: return: frame-setup CFI_INSTRUCTION offset $w23, -40
-
-chris: scheduleNode
-  Ready @4c
-TopQ.A @4c
-  Retired: 4
-  Executed: 4c
-  Critical: 4c, 4 MOps
-  ExpectedLatency: 1c
-  - Latency limited.
-chris: updateQueues
-SU is Scheduled: frame-setup CFI_INSTRUCTION offset $w22, -32
-
-** ScheduleDAGMI::schedule picking next node
-chris: IsTopNode:1
-PostGenericScheduler::pickNode
-debug1
-DAG->top(): frame-setup CFI_INSTRUCTION offset $w23, -40
-
-DAG->bottom(): BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
-
-debug2
-debug3
-pickOnlyChoice: CheckPending=0
-CurrMops=0
-available not empty
-bumpCycle
-******************************** Pending.dump *********************
-Queue TopQ.P: 14 11 13 12 
-******************************** Pending.dump done *********************
-******************************** Available.dump *********************
-Queue TopQ.A: 7 8 
-******************************** Available.dump done *********************
-debug5
-  TopQ.A RemainingLatency 0 + 4c > CritPath 5
-  Cand SU(7) ORDER                              
-Pick Top ORDER     
-debug6
-Scheduling SU(7) frame-setup CFI_INSTRUCTION offset $w23, -40
-chris: check SU break
-chris-checkSchedLimit
-true
-chris-schedule: frame-setup CFI_INSTRUCTION offset $w23, -40
-
-chris-nextIfDebug1
-I: frame-setup CFI_INSTRUCTION offset $w30, -48
-
-End: BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
-
-I is: frame-setup CFI_INSTRUCTION offset $w30, -48
-
-break
-chris-nextIfDebug1: return: frame-setup CFI_INSTRUCTION offset $w30, -48
-
-chris: scheduleNode
-  Ready @4c
-TopQ.A @4c
-  Retired: 4
-  Executed: 4c
-  Critical: 4c, 4 MOps
-  ExpectedLatency: 1c
-  - Latency limited.
-chris: updateQueues
-SU is Scheduled: frame-setup CFI_INSTRUCTION offset $w23, -40
-
-** ScheduleDAGMI::schedule picking next node
-chris: IsTopNode:1
-PostGenericScheduler::pickNode
-debug1
-DAG->top(): frame-setup CFI_INSTRUCTION offset $w30, -48
-
-DAG->bottom(): BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
-
-debug2
-debug3
-pickOnlyChoice: CheckPending=0
-CurrMops=0
-available not empty
-bumpCycle
-******************************** Pending.dump *********************
-Queue TopQ.P: 14 11 13 12 
-******************************** Pending.dump done *********************
-******************************** Available.dump *********************
-Queue TopQ.A: 8 
-******************************** Available.dump done *********************
-debug4
-Pick Top ONLY1     
-debug6
-Scheduling SU(8) frame-setup CFI_INSTRUCTION offset $w30, -48
-chris: check SU break
-chris-checkSchedLimit
-true
-chris-schedule: frame-setup CFI_INSTRUCTION offset $w30, -48
-
-chris-nextIfDebug1
-I: renamable $w20 = ADDWri renamable $w8, 1, 0
-
-End: BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
-
-I is: renamable $w20 = ADDWri renamable $w8, 1, 0
-
-break
-chris-nextIfDebug1: return: renamable $w20 = ADDWri renamable $w8, 1, 0
-
-chris: scheduleNode
-  Ready @4c
-TopQ.A @4c
-  Retired: 4
-  Executed: 4c
-  Critical: 4c, 4 MOps
-  ExpectedLatency: 1c
-  - Latency limited.
-chris: updateQueues
-SU is Scheduled: frame-setup CFI_INSTRUCTION offset $w30, -48
-
-** ScheduleDAGMI::schedule picking next node
-chris: IsTopNode:1
-PostGenericScheduler::pickNode
-debug1
 DAG->top(): renamable $w20 = ADDWri renamable $w8, 1, 0
 
 DAG->bottom(): BL @foo, <regmask $fp $lr $b8 $b9 $b10 $b11 $b12 $b13 $b14 $b15 $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $h8 $h9 $h10 $h11 $h12 $h13 $h14 $h15 $s8 $s9 $s10 $s11 $s12 $s13 $s14 and 51 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp
 
 debug2
 debug3
-pickOnlyChoice: CheckPending=0
-CurrMops=0
-doublecheck: Available.empty
-bumpCycle
-bumpCycle: 4
-MinReadyCycl = 0
-std::numeric_limits<unsigned>::max() = 4294967295
-Cycle: 5 TopQ.A
-releasePending 
+pickOnlyChoice: CheckPending=1
 releasePending: Available.empty
 chris-releasePending: MinReadyCycle=4294967295
 pending.size=4
@@ -2035,7 +1436,10 @@ i:3 su: renamable $w21 = ADDWri renamable $w8, 2, 0
 
 chris-releasePending: ReadyCycle= 6
 CheckPending set to false
-bumpCycle: 5
+CurrMops=0
+doublecheck: Available.empty
+bumpCycle
+bumpCycle: 4
 MinReadyCycl = 6
 std::numeric_limits<unsigned>::max() = 4294967295
 Cycle: 6 TopQ.A
@@ -2060,16 +1464,16 @@ CheckPending set to false
 Queue TopQ.P: 
 ******************************** Pending.dump done *********************
 ******************************** Available.dump *********************
-Queue TopQ.A: 14 12 13 11 
+Queue TopQ.A: 7 5 6 4 
 ******************************** Available.dump done *********************
 debug5
   TopQ.A RemainingLatency 0 + 6c > CritPath 5
-  Cand SU(14) ORDER                              
-  Cand SU(12) ORDER                              
-  Cand SU(11) ORDER                              
+  Cand SU(7) ORDER                              
+  Cand SU(5) ORDER                              
+  Cand SU(4) ORDER                              
 Pick Top ORDER     
 debug6
-Scheduling SU(11) renamable $w20 = ADDWri renamable $w8, 1, 0
+Scheduling SU(4) renamable $w20 = ADDWri renamable $w8, 1, 0
 chris: check SU break
 chris-checkSchedLimit
 true
@@ -2087,7 +1491,7 @@ chris-nextIfDebug1: return: renamable $w21 = ADDWri renamable $w8, 2, 0
 
 chris: scheduleNode
   Ready @6c
-  TopQ.A TopLatency SU(11) 5c
+  TopQ.A TopLatency SU(4) 5c
   *** Max MOps 1 at cycle 6
 MinReadyCycl = 6
 std::numeric_limits<unsigned>::max() = 4294967295
@@ -2122,15 +1526,15 @@ bumpCycle
 Queue TopQ.P: 
 ******************************** Pending.dump done *********************
 ******************************** Available.dump *********************
-Queue TopQ.A: 14 12 13 
+Queue TopQ.A: 7 5 6 
 ******************************** Available.dump done *********************
 debug5
   TopQ.A RemainingLatency 0 + 7c > CritPath 5
-  Cand SU(14) ORDER                              
-  Cand SU(12) ORDER                              
+  Cand SU(7) ORDER                              
+  Cand SU(5) ORDER                              
 Pick Top ORDER     
 debug6
-Scheduling SU(12) renamable $w21 = ADDWri renamable $w8, 2, 0
+Scheduling SU(5) renamable $w21 = ADDWri renamable $w8, 2, 0
 chris: check SU break
 chris-checkSchedLimit
 true
@@ -2182,15 +1586,15 @@ bumpCycle
 Queue TopQ.P: 
 ******************************** Pending.dump done *********************
 ******************************** Available.dump *********************
-Queue TopQ.A: 14 13 
+Queue TopQ.A: 7 6 
 ******************************** Available.dump done *********************
 debug5
   TopQ.A RemainingLatency 0 + 8c > CritPath 5
-  Cand SU(14) ORDER                              
-  Cand SU(13) ORDER                              
+  Cand SU(7) ORDER                              
+  Cand SU(6) ORDER                              
 Pick Top ORDER     
 debug6
-Scheduling SU(13) renamable $w22 = ADDWri renamable $w8, 3, 0
+Scheduling SU(6) renamable $w22 = ADDWri renamable $w8, 3, 0
 chris: check SU break
 chris-checkSchedLimit
 true
@@ -2242,12 +1646,12 @@ bumpCycle
 Queue TopQ.P: 
 ******************************** Pending.dump done *********************
 ******************************** Available.dump *********************
-Queue TopQ.A: 14 
+Queue TopQ.A: 7 
 ******************************** Available.dump done *********************
 debug4
 Pick Top ONLY1     
 debug6
-Scheduling SU(14) renamable $w23 = ADDWri renamable $w8, 4, 0
+Scheduling SU(7) renamable $w23 = ADDWri renamable $w8, 4, 0
 chris: check SU break
 chris-checkSchedLimit
 true
@@ -2292,50 +1696,29 @@ chris-final:MI = frame-setup STPXi $x20, $x19, $sp, 4 :: (store 8 into %stack.1)
 SU(1):   frame-setup STPXi $x20, $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
 chris-final:MI = renamable $x19 = ADRP target-flags(aarch64-page) @X1
 
-SU(9):   renamable $x19 = ADRP target-flags(aarch64-page) @X1
+SU(2):   renamable $x19 = ADRP target-flags(aarch64-page) @X1
 chris-final:MI = renamable $w8 = LDRWui renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (dereferenceable load 4 from @X1)
 
-SU(10):   renamable $w8 = LDRWui renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (dereferenceable load 4 from @X1)
+SU(3):   renamable $w8 = LDRWui renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (dereferenceable load 4 from @X1)
 chris-final:MI = frame-setup STPXi $x22, $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
 
 SU(0):   frame-setup STPXi $x22, $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
-chris-final:MI = frame-setup CFI_INSTRUCTION def_cfa_offset 48
-
-SU(2):   frame-setup CFI_INSTRUCTION def_cfa_offset 48
-chris-final:MI = frame-setup CFI_INSTRUCTION offset $w19, -8
-
-SU(3):   frame-setup CFI_INSTRUCTION offset $w19, -8
-chris-final:MI = frame-setup CFI_INSTRUCTION offset $w20, -16
-
-SU(4):   frame-setup CFI_INSTRUCTION offset $w20, -16
-chris-final:MI = frame-setup CFI_INSTRUCTION offset $w21, -24
-
-SU(5):   frame-setup CFI_INSTRUCTION offset $w21, -24
-chris-final:MI = frame-setup CFI_INSTRUCTION offset $w22, -32
-
-SU(6):   frame-setup CFI_INSTRUCTION offset $w22, -32
-chris-final:MI = frame-setup CFI_INSTRUCTION offset $w23, -40
-
-SU(7):   frame-setup CFI_INSTRUCTION offset $w23, -40
-chris-final:MI = frame-setup CFI_INSTRUCTION offset $w30, -48
-
-SU(8):   frame-setup CFI_INSTRUCTION offset $w30, -48
 chris-final:MI = renamable $w20 = ADDWri renamable $w8, 1, 0
 
-SU(11):   renamable $w20 = ADDWri renamable $w8, 1, 0
+SU(4):   renamable $w20 = ADDWri renamable $w8, 1, 0
 chris-final:MI = renamable $w21 = ADDWri renamable $w8, 2, 0
 
-SU(12):   renamable $w21 = ADDWri renamable $w8, 2, 0
+SU(5):   renamable $w21 = ADDWri renamable $w8, 2, 0
 chris-final:MI = renamable $w22 = ADDWri renamable $w8, 3, 0
 
-SU(13):   renamable $w22 = ADDWri renamable $w8, 3, 0
+SU(6):   renamable $w22 = ADDWri renamable $w8, 3, 0
 chris-final:MI = renamable $w23 = ADDWri renamable $w8, 4, 0
 
-SU(14):   renamable $w23 = ADDWri renamable $w8, 4, 0
+SU(7):   renamable $w23 = ADDWri renamable $w8, 4, 0
 
 Fixup kills for %bb.0
 --- |
-  ; ModuleID = 'test.mir'
+  ; ModuleID = 'test0.mir'
   source_filename = "test.ll"
   target datalayout = "e-m:e-i8:8:32-i16:16:32-i64:64-i128:128-n32:64-S128"
   target triple = "aarch64-linux-gnu"
@@ -2368,15 +1751,11 @@ Fixup kills for %bb.0
   
   attributes #0 = { nounwind }
   
-  !llvm.dbg.cu = !{!0}
-  !llvm.module.flags = !{!3, !4, !5}
+  !llvm.module.flags = !{!0, !1, !2}
   
-  !0 = distinct !DICompileUnit(language: DW_LANG_C99, file: !1, producer: "clang version 7.0.0 (trunk 330790) (llvm/trunk 330787)", isOptimized: true, runtimeVersion: 0, emissionKind: LineTablesOnly, enums: !2)
-  !1 = !DIFile(filename: "test.c", directory: "")
-  !2 = !{}
-  !3 = !{i32 2, !"Dwarf Version", i32 4}
-  !4 = !{i32 2, !"Debug Info Version", i32 3}
-  !5 = !{i32 1, !"wchar_size", i32 4}
+  !0 = !{i32 2, !"Dwarf Version", i32 4}
+  !1 = !{i32 2, !"Debug Info Version", i32 3}
+  !2 = !{i32 1, !"wchar_size", i32 4}
 
 ...
 ---
@@ -2442,13 +1821,6 @@ body:             |
     renamable $x19 = ADRP target-flags(aarch64-page) @X1
     renamable $w8 = LDRWui renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (dereferenceable load 4 from @X1)
     frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
-    frame-setup CFI_INSTRUCTION def_cfa_offset 48
-    frame-setup CFI_INSTRUCTION offset $w19, -8
-    frame-setup CFI_INSTRUCTION offset $w20, -16
-    frame-setup CFI_INSTRUCTION offset $w21, -24
-    frame-setup CFI_INSTRUCTION offset $w22, -32
-    frame-setup CFI_INSTRUCTION offset $w23, -40
-    frame-setup CFI_INSTRUCTION offset $w30, -48
     renamable $w20 = ADDWri renamable $w8, 1, 0
     renamable $w21 = ADDWri renamable $w8, 2, 0
     renamable $w22 = ADDWri renamable $w8, 3, 0
