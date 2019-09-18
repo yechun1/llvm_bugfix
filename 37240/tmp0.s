@@ -1,5 +1,5 @@
 --- |
-  ; ModuleID = 'test.ll'
+  ; ModuleID = 'test0.mir'
   source_filename = "test.ll"
   target datalayout = "e-m:e-i8:8:32-i16:16:32-i64:64-i128:128-n32:64-S128"
   target triple = "aarch64-linux-gnu"
@@ -32,15 +32,11 @@
   
   attributes #0 = { nounwind }
   
-  !llvm.dbg.cu = !{!0}
-  !llvm.module.flags = !{!3, !4, !5}
+  !llvm.module.flags = !{!0, !1, !2}
   
-  !0 = distinct !DICompileUnit(language: DW_LANG_C99, file: !1, producer: "clang version 7.0.0 (trunk 330790) (llvm/trunk 330787)", isOptimized: true, runtimeVersion: 0, emissionKind: LineTablesOnly, enums: !2)
-  !1 = !DIFile(filename: "test.c", directory: "")
-  !2 = !{}
-  !3 = !{i32 2, !"Dwarf Version", i32 4}
-  !4 = !{i32 2, !"Debug Info Version", i32 3}
-  !5 = !{i32 1, !"wchar_size", i32 4}
+  !0 = !{i32 2, !"Dwarf Version", i32 4}
+  !1 = !{i32 2, !"Debug Info Version", i32 3}
+  !2 = !{i32 1, !"wchar_size", i32 4}
 
 ...
 ---
@@ -102,31 +98,24 @@ body:             |
     liveins: $x23, $lr, $x21, $x22, $x19, $x20
   
     early-clobber $sp = frame-setup STPXpre killed $lr, killed $x23, $sp, -6 :: (store 8 into %stack.5), (store 8 into %stack.4)
-    frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
     frame-setup STPXi killed $x20, killed $x19, $sp, 4 :: (store 8 into %stack.1), (store 8 into %stack.0)
-    frame-setup CFI_INSTRUCTION def_cfa_offset 48
-    frame-setup CFI_INSTRUCTION offset $w19, -8
-    frame-setup CFI_INSTRUCTION offset $w20, -16
-    frame-setup CFI_INSTRUCTION offset $w21, -24
-    frame-setup CFI_INSTRUCTION offset $w22, -32
-    frame-setup CFI_INSTRUCTION offset $w23, -40
-    frame-setup CFI_INSTRUCTION offset $w30, -48
     renamable $x19 = ADRP target-flags(aarch64-page) @X1
     renamable $w8 = LDRWui renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (dereferenceable load 4 from @X1)
+    frame-setup STPXi killed $x22, killed $x21, $sp, 2 :: (store 8 into %stack.3), (store 8 into %stack.2)
     renamable $w20 = ADDWri renamable $w8, 1, 0
     renamable $w21 = ADDWri renamable $w8, 2, 0
     renamable $w22 = ADDWri renamable $w8, 3, 0
     renamable $w23 = ADDWri killed renamable $w8, 4, 0
     BL @foo, csr_aarch64_aapcs, implicit-def dead $lr, implicit $sp, implicit-def $sp
-    STRWui killed renamable $w20, killed renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (store 4 into @X1)
     renamable $x8 = ADRP target-flags(aarch64-page) @X2
     renamable $x9 = ADRP target-flags(aarch64-page) @X3
-    renamable $x10 = ADRP target-flags(aarch64-page) @X4
+    STRWui killed renamable $w20, killed renamable $x19, target-flags(aarch64-pageoff, aarch64-nc) @X1 :: (store 4 into @X1)
     STRWui killed renamable $w21, killed renamable $x8, target-flags(aarch64-pageoff, aarch64-nc) @X2 :: (store 4 into @X2)
     STRWui killed renamable $w22, killed renamable $x9, target-flags(aarch64-pageoff, aarch64-nc) @X3 :: (store 4 into @X3)
-    STRWui killed renamable $w23, killed renamable $x10, target-flags(aarch64-pageoff, aarch64-nc) @X4 :: (store 4 into @X4)
     $x20, $x19 = frame-destroy LDPXi $sp, 4 :: (load 8 from %stack.1), (load 8 from %stack.0)
     $x22, $x21 = frame-destroy LDPXi $sp, 2 :: (load 8 from %stack.3), (load 8 from %stack.2)
+    renamable $x10 = ADRP target-flags(aarch64-page) @X4
+    STRWui killed renamable $w23, killed renamable $x10, target-flags(aarch64-pageoff, aarch64-nc) @X4 :: (store 4 into @X4)
     early-clobber $sp, $lr, $x23 = frame-destroy LDPXpost $sp, 6 :: (load 8 from %stack.5), (load 8 from %stack.4)
     RET undef $lr
 
