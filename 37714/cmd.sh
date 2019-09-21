@@ -10,5 +10,10 @@
 # colordiff test0.ll test2.ll
 
 ### debug2
- opt -O1 call-guard.ll -o - -debug 2>tmp1.log | opt -S -o test1.ll
- opt -O1 call-guard.ll -o - -debugify-each -debug 2>tmp2.log | opt -S -o test2.ll
+# opt -O1 call-guard.ll -o - -debug 2>tmp1.log | opt -S -o test1.ll
+# opt -O1 call-guard.ll -o - -debugify-each -debug 2>tmp2.log | opt -S -o test2.ll
+
+rm -rf tmp1.log tmp2.log test1.ll test2.ll
+
+ opt -O1 call-guard.ll -o - 2>tmp1.log | opt -S -o test1.ll
+ opt -O1 call-guard.ll -o - -debugify-each 2>tmp2.log | opt -S -o test2.ll
