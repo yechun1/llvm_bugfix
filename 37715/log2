@@ -1,0 +1,153 @@
+; ModuleID = 'range-check-merging.ll'
+source_filename = "range-check-merging.ll"
+
+declare void @llvm.experimental.guard(i1, ...)
+
+define void @f_0(i32 %0, i32* nocapture readonly %1) local_unnamed_addr {
+  %3 = load i32, i32* %1, align 4, !range !1
+  %4 = icmp ugt i32 %3, %0
+  call void (i1, ...) @llvm.experimental.guard(i1 %4) [ "deopt"() ]
+  %5 = add nuw nsw i32 %0, 1
+  %6 = icmp ult i32 %5, %3
+  call void (i1, ...) @llvm.experimental.guard(i1 %6) [ "deopt"() ]
+  %7 = add nuw nsw i32 %0, 2
+  %8 = icmp ult i32 %7, %3
+  call void (i1, ...) @llvm.experimental.guard(i1 %8) [ "deopt"() ]
+  %9 = add nuw nsw i32 %0, 3
+  %10 = icmp ult i32 %9, %3
+  call void (i1, ...) @llvm.experimental.guard(i1 %10) [ "deopt"() ]
+  ret void
+}
+
+define void @f_1(i32 %0, i32* nocapture readonly %1) local_unnamed_addr {
+  %3 = load i32, i32* %1, align 4, !range !1
+  %4 = icmp ugt i32 %3, %0
+  call void (i1, ...) @llvm.experimental.guard(i1 %4) [ "deopt"() ]
+  %5 = add nuw nsw i32 %0, 1
+  %6 = icmp ult i32 %5, %3
+  call void (i1, ...) @llvm.experimental.guard(i1 %6) [ "deopt"() ]
+  %7 = add nuw i32 %0, 3
+  %8 = icmp ult i32 %7, %3
+  call void (i1, ...) @llvm.experimental.guard(i1 %8) [ "deopt"() ]
+  %9 = add nuw i32 %0, 6
+  %10 = icmp ult i32 %9, %3
+  call void (i1, ...) @llvm.experimental.guard(i1 %10) [ "deopt"() ]
+  ret void
+}
+
+define void @f_2(i32 %0, i32* nocapture readonly %1) local_unnamed_addr {
+  %3 = and i32 %0, -256
+  %4 = load i32, i32* %1, align 4, !range !1
+  %5 = icmp ult i32 %3, %4
+  call void (i1, ...) @llvm.experimental.guard(i1 %5) [ "deopt"() ]
+  %6 = or i32 %3, 1
+  %7 = icmp ult i32 %6, %4
+  call void (i1, ...) @llvm.experimental.guard(i1 %7) [ "deopt"() ]
+  %8 = or i32 %3, 2
+  %9 = icmp ult i32 %8, %4
+  call void (i1, ...) @llvm.experimental.guard(i1 %9) [ "deopt"() ]
+  %10 = or i32 %3, 3
+  %11 = icmp ult i32 %10, %4
+  call void (i1, ...) @llvm.experimental.guard(i1 %11) [ "deopt"() ]
+  ret void
+}
+
+define void @f_3(i32 %0, i32* nocapture readonly %1) local_unnamed_addr {
+  %3 = and i32 %0, -256
+  %4 = load i32, i32* %1, align 4, !range !1
+  %5 = icmp ult i32 %3, %4
+  call void (i1, ...) @llvm.experimental.guard(i1 %5) [ "deopt"() ]
+  %6 = or i32 %3, 1
+  %7 = icmp ult i32 %6, %4
+  call void (i1, ...) @llvm.experimental.guard(i1 %7) [ "deopt"() ]
+  %8 = or i32 %3, 3
+  %9 = icmp ult i32 %8, %4
+  call void (i1, ...) @llvm.experimental.guard(i1 %9) [ "deopt"() ]
+  %10 = add nuw nsw i32 %8, 3
+  %11 = icmp ult i32 %10, %4
+  call void (i1, ...) @llvm.experimental.guard(i1 %11) [ "deopt"() ]
+  ret void
+}
+
+define void @f_4(i32 %0, i32* nocapture readonly %1) local_unnamed_addr {
+  %3 = load i32, i32* %1, align 4, !range !1
+  %4 = icmp ugt i32 %3, %0
+  call void (i1, ...) @llvm.experimental.guard(i1 %4) [ "deopt"() ]
+  %5 = add nsw i32 %0, -1024
+  %6 = icmp ult i32 %5, %3
+  call void (i1, ...) @llvm.experimental.guard(i1 %6) [ "deopt"() ]
+  %7 = add nuw i32 %0, 2
+  %8 = icmp ult i32 %7, %3
+  call void (i1, ...) @llvm.experimental.guard(i1 %8) [ "deopt"() ]
+  %9 = add nuw nsw i32 %0, 3
+  %10 = icmp ult i32 %9, %3
+  call void (i1, ...) @llvm.experimental.guard(i1 %10) [ "deopt"() ]
+  ret void
+}
+
+define void @f_5(i32 %0, i32* nocapture readonly %1) local_unnamed_addr {
+  %3 = load i32, i32* %1, align 4, !range !1
+  %4 = icmp ugt i32 %3, %0
+  call void (i1, ...) @llvm.experimental.guard(i1 %4) [ "deopt"() ]
+  %5 = add nuw nsw i32 %0, 1
+  %6 = icmp ult i32 %5, %3
+  call void (i1, ...) @llvm.experimental.guard(i1 %6) [ "deopt"() ]
+  %7 = add nsw i32 %0, -199
+  %8 = icmp ult i32 %7, %3
+  call void (i1, ...) @llvm.experimental.guard(i1 %8) [ "deopt"() ]
+  %9 = add nsw i32 %0, -196
+  %10 = icmp ult i32 %9, %3
+  call void (i1, ...) @llvm.experimental.guard(i1 %10) [ "deopt"() ]
+  ret void
+}
+
+define void @f_6(i32 %0, i32* nocapture readonly %1) local_unnamed_addr {
+  %3 = load i32, i32* %1, align 4, !range !1
+  %4 = icmp ugt i32 %3, %0
+  call void (i1, ...) @llvm.experimental.guard(i1 %4) [ "deopt"() ]
+  %5 = add nuw nsw i32 %0, -2147483647
+  %6 = icmp ult i32 %5, %3
+  call void (i1, ...) @llvm.experimental.guard(i1 %6) [ "deopt"() ]
+  %7 = add i32 %0, 2
+  %8 = icmp ult i32 %7, %3
+  call void (i1, ...) @llvm.experimental.guard(i1 %8) [ "deopt"() ]
+  %9 = add nuw i32 %0, 3
+  %10 = icmp ult i32 %9, %3
+  call void (i1, ...) @llvm.experimental.guard(i1 %10) [ "deopt"() ]
+  ret void
+}
+
+define void @f_7(i32 %0, i32* %1) local_unnamed_addr {
+  %3 = load volatile i32, i32* %1, align 4, !range !1
+  %4 = load volatile i32, i32* %1, align 4, !range !1
+  %5 = icmp ugt i32 %3, %0
+  %6 = icmp ugt i32 %4, %0
+  %7 = and i1 %5, %6
+  call void (i1, ...) @llvm.experimental.guard(i1 %7) [ "deopt"() ]
+  %8 = add nuw nsw i32 %0, 1
+  %9 = icmp ult i32 %8, %3
+  %10 = icmp ult i32 %8, %4
+  %11 = and i1 %9, %10
+  call void (i1, ...) @llvm.experimental.guard(i1 %11) [ "deopt"() ]
+  %12 = add nuw nsw i32 %0, 2
+  %13 = icmp ult i32 %12, %3
+  %14 = icmp ult i32 %12, %4
+  %15 = and i1 %13, %14
+  call void (i1, ...) @llvm.experimental.guard(i1 %15) [ "deopt"() ]
+  %16 = add nuw nsw i32 %0, 3
+  %17 = icmp ult i32 %16, %3
+  %18 = icmp ult i32 %16, %4
+  %19 = and i1 %17, %18
+  call void (i1, ...) @llvm.experimental.guard(i1 %19) [ "deopt"() ]
+  ret void
+}
+
+; Function Attrs: nounwind readnone speculatable willreturn
+declare void @llvm.dbg.value(metadata, metadata, metadata) #0
+
+attributes #0 = { nounwind readnone speculatable willreturn }
+
+!llvm.module.flags = !{!0}
+
+!0 = !{i32 2, !"Debug Info Version", i32 3}
+!1 = !{i32 0, i32 -2147483648}

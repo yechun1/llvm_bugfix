@@ -1,4 +1,4 @@
-From f57d397a36a788b614bdfeddca0bbb1a77ee6c5d Mon Sep 17 00:00:00 2001
+From 9ebed3104629f30f12a1f3e391c767397a89d6a5 Mon Sep 17 00:00:00 2001
 From: Chris Ye <yechunliangcn@163.com>
 Date: Wed, 25 Sep 2019 08:16:22 +0800
 Subject: [PATCH] [InstCombine] Fix call guard difference with dbg
