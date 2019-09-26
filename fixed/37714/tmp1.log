@@ -1,0 +1,1601 @@
+BISECT: running pass (1) Simplify the CFG on function (test_guard_adjacent_same_cond)
+BISECT: running pass (2) SROA on function (test_guard_adjacent_same_cond)
+BISECT: running pass (3) Early CSE on function (test_guard_adjacent_same_cond)
+BISECT: running pass (4) Simplify the CFG on function (test_guard_adjacent_diff_cond)
+BISECT: running pass (5) SROA on function (test_guard_adjacent_diff_cond)
+BISECT: running pass (6) Early CSE on function (test_guard_adjacent_diff_cond)
+BISECT: running pass (7) Simplify the CFG on function (test_guard_adjacent_diff_cond2)
+BISECT: running pass (8) SROA on function (test_guard_adjacent_diff_cond2)
+BISECT: running pass (9) Early CSE on function (test_guard_adjacent_diff_cond2)
+BISECT: running pass (10) Simplify the CFG on function (negative_load)
+BISECT: running pass (11) SROA on function (negative_load)
+BISECT: running pass (12) Early CSE on function (negative_load)
+BISECT: running pass (13) Simplify the CFG on function (deref_load)
+BISECT: running pass (14) SROA on function (deref_load)
+BISECT: running pass (15) Early CSE on function (deref_load)
+BISECT: running pass (16) Simplify the CFG on function (negative_div)
+BISECT: running pass (17) SROA on function (negative_div)
+BISECT: running pass (18) Early CSE on function (negative_div)
+BISECT: running pass (19) Simplify the CFG on function (negative_window)
+BISECT: running pass (20) SROA on function (negative_window)
+BISECT: running pass (21) Early CSE on function (negative_window)
+BISECT: running pass (22) Infer set function attributes on module (call-guard.ll)
+BISECT: running pass (23) Interprocedural Sparse Conditional Constant Propagation on module (call-guard.ll)
+BISECT: running pass (24) Called Value Propagation on module (call-guard.ll)
+BISECT: running pass (25) Deduce and propagate attributes on module (call-guard.ll)
+BISECT: running pass (26) Global Variable Optimizer on module (call-guard.ll)
+BISECT: running pass (27) Promote Memory to Register on function (test_guard_adjacent_same_cond)
+BISECT: running pass (28) Promote Memory to Register on function (test_guard_adjacent_diff_cond)
+BISECT: running pass (29) Promote Memory to Register on function (test_guard_adjacent_diff_cond2)
+BISECT: running pass (30) Promote Memory to Register on function (negative_load)
+BISECT: running pass (31) Promote Memory to Register on function (deref_load)
+BISECT: running pass (32) Promote Memory to Register on function (negative_div)
+BISECT: running pass (33) Promote Memory to Register on function (negative_window)
+BISECT: running pass (34) Dead Argument Elimination on module (call-guard.ll)
+BISECT: running pass (35) Combine redundant instructions on function (test_guard_adjacent_same_cond)
+chris-InstructionCombiningPass::runOnFunction
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+runOnFunction: I:  ret void
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  ret void
+
+
+INSTCOMBINE ITERATION #1 on test_guard_adjacent_same_cond
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  ret void
+chris-worklist-bb: bb: 
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB: 
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   ret void
+IC: ADDING: 11 instrs to worklist
+chris-AddInitialGroup: I:   ret void
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+ ok, break
+Inst[end]:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: ERASE   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+visit: nullptr 
+test3
+RemoveOne!!!
+run: WorkList: null
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+ ok, break
+Inst[end]:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: ERASE   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+visit: nullptr 
+test3
+RemoveOne!!!
+run: WorkList: null
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+ ok, break
+Inst[end]:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: ERASE   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+visit: nullptr 
+test3
+RemoveOne!!!
+run: WorkList: null
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+ ok, break
+Inst[end]:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: ERASE   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+visit: nullptr 
+test3
+RemoveOne!!!
+run: WorkList: null
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+ ok, break
+Inst[end]:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: ERASE   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+visit: nullptr 
+test3
+RemoveOne!!!
+run: WorkList: null
+RemoveOne!!!
+chris-RemoveOne:   ret void
+chris-RemoveOne: return I  ret void
+run: WorkList:   ret void
+chris-run: I=  ret void
+chris-run: I-end=  ret void
+IC: Visiting:   ret void
+test1: I=  ret void
+visit: nullptr 
+test3
+test4
+
+
+INSTCOMBINE ITERATION #2 on test_guard_adjacent_same_cond
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  ret void
+chris-worklist-bb: bb: 
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB: 
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   ret void
+IC: ADDING: 6 instrs to worklist
+chris-AddInitialGroup: I:   ret void
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+ ok, break
+Inst[end]:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: ERASE   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+visit: nullptr 
+test3
+RemoveOne!!!
+run: WorkList: null
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+ ok, break
+Inst[end]:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: ERASE   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+visit: nullptr 
+test3
+RemoveOne!!!
+run: WorkList: null
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  ret void
+ ok, break
+Inst[end]:   ret void
+chris-debug7-8
+chris-debug4
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   ret void
+chris-RemoveOne: return I  ret void
+run: WorkList:   ret void
+chris-run: I=  ret void
+chris-run: I-end=  ret void
+IC: Visiting:   ret void
+test1: I=  ret void
+visit: nullptr 
+test3
+test4
+
+
+INSTCOMBINE ITERATION #3 on test_guard_adjacent_same_cond
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  ret void
+chris-worklist-bb: bb: 
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB: 
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   ret void
+IC: ADDING: 4 instrs to worklist
+chris-AddInitialGroup: I:   ret void
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+ ok, break
+Inst[end]:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: ERASE   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+visit: nullptr 
+test3
+RemoveOne!!!
+run: WorkList: null
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  ret void
+ ok, break
+Inst[end]:   ret void
+chris-debug7-8
+chris-debug4
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   ret void
+chris-RemoveOne: return I  ret void
+run: WorkList:   ret void
+chris-run: I=  ret void
+chris-run: I-end=  ret void
+IC: Visiting:   ret void
+test1: I=  ret void
+visit: nullptr 
+test3
+test4
+
+
+INSTCOMBINE ITERATION #4 on test_guard_adjacent_same_cond
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  ret void
+chris-worklist-bb: bb: 
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB: 
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   ret void
+IC: ADDING: 3 instrs to worklist
+chris-AddInitialGroup: I:   ret void
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+ ok, break
+Inst[end]:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: ERASE   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+visit: nullptr 
+test3
+RemoveOne!!!
+run: WorkList: null
+RemoveOne!!!
+chris-RemoveOne:   ret void
+chris-RemoveOne: return I  ret void
+run: WorkList:   ret void
+chris-run: I=  ret void
+chris-run: I-end=  ret void
+IC: Visiting:   ret void
+test1: I=  ret void
+visit: nullptr 
+test3
+test4
+
+
+INSTCOMBINE ITERATION #5 on test_guard_adjacent_same_cond
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  ret void
+chris-worklist-bb: bb: 
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB: 
+  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-worklist-bb: BB end:   ret void
+IC: ADDING: 2 instrs to worklist
+chris-AddInitialGroup: I:   ret void
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %A) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  ret void
+ ok, break
+Inst[end]:   ret void
+chris-debug7-8
+chris-debug4
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   ret void
+chris-RemoveOne: return I  ret void
+run: WorkList:   ret void
+chris-run: I=  ret void
+chris-run: I-end=  ret void
+IC: Visiting:   ret void
+test1: I=  ret void
+visit: nullptr 
+test3
+test4
+BISECT: running pass (36) Simplify the CFG on function (test_guard_adjacent_same_cond)
+BISECT: running pass (37) Combine redundant instructions on function (test_guard_adjacent_diff_cond)
+chris-InstructionCombiningPass::runOnFunction
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+runOnFunction: I:  ret void
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  ret void
+
+
+INSTCOMBINE ITERATION #1 on test_guard_adjacent_diff_cond
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  ret void
+chris-worklist-bb: bb: 
+  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB: 
+  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+chris-worklist-bb: BB end:   ret void
+IC: ADDING: 4 instrs to worklist
+chris-AddInitialGroup: I:   ret void
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+ ok, break
+Inst[end]:   call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+MoveI:   call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+chris add g: I:  %1 = and i1 %A, %B
+IC: ADD:   %1 = and i1 %A, %B
+IC: ERASE   call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %1 = and i1 %A, %B
+chris-RemoveOne: return I  %1 = and i1 %A, %B
+run: WorkList:   %1 = and i1 %A, %B
+chris-run: I=  %1 = and i1 %A, %B
+chris-run: I-end=  %1 = and i1 %A, %B
+IC: Visiting:   %1 = and i1 %A, %B
+test1: I=  %1 = and i1 %A, %B
+visit: nullptr 
+test3
+RemoveOne!!!
+run: WorkList: null
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  ret void
+ ok, break
+Inst[end]:   ret void
+chris-debug7-8
+chris-debug4
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   ret void
+chris-RemoveOne: return I  ret void
+run: WorkList:   ret void
+chris-run: I=  ret void
+chris-run: I-end=  ret void
+IC: Visiting:   ret void
+test1: I=  ret void
+visit: nullptr 
+test3
+test4
+
+
+INSTCOMBINE ITERATION #2 on test_guard_adjacent_diff_cond
+INSTCOMBINE ITERATION: Inst(end):  %1 = and i1 %A, %B
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %1, i32 123) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  ret void
+chris-worklist-bb: bb: 
+  %1 = and i1 %A, %B
+  call void (i1, ...) @llvm.experimental.guard(i1 %1, i32 123) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB: 
+  %1 = and i1 %A, %B
+  call void (i1, ...) @llvm.experimental.guard(i1 %1, i32 123) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB end:   %1 = and i1 %A, %B
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %1, i32 123) [ "deopt"() ]
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+chris-worklist-bb: BB end:   ret void
+IC: ADDING: 4 instrs to worklist
+chris-AddInitialGroup: I:   ret void
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %1, i32 123) [ "deopt"() ]
+chris-AddInitialGroup: I:   %1 = and i1 %A, %B
+RemoveOne!!!
+chris-RemoveOne:   %1 = and i1 %A, %B
+chris-RemoveOne: return I  %1 = and i1 %A, %B
+run: WorkList:   %1 = and i1 %A, %B
+chris-run: I=  %1 = and i1 %A, %B
+chris-run: I-end=  %1 = and i1 %A, %B
+IC: Visiting:   %1 = and i1 %A, %B
+test1: I=  %1 = and i1 %A, %B
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %1, i32 123) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %1, i32 123) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %1, i32 123) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %1, i32 123) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %1, i32 123) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %1, i32 123) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %1, i32 123) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %1, i32 123) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+ ok, break
+Inst[end]:   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+MoveI:   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+chris add g: I:  %2 = and i1 %1, %C
+IC: ADD:   %2 = and i1 %1, %C
+IC: ERASE   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %2 = and i1 %1, %C
+chris-RemoveOne: return I  %2 = and i1 %1, %C
+run: WorkList:   %2 = and i1 %1, %C
+chris-run: I=  %2 = and i1 %1, %C
+chris-run: I-end=  %2 = and i1 %1, %C
+IC: Visiting:   %2 = and i1 %1, %C
+test1: I=  %2 = and i1 %1, %C
+visit: nullptr 
+test3
+RemoveOne!!!
+run: WorkList: null
+RemoveOne!!!
+chris-RemoveOne:   ret void
+chris-RemoveOne: return I  ret void
+run: WorkList:   ret void
+chris-run: I=  ret void
+chris-run: I-end=  ret void
+IC: Visiting:   ret void
+test1: I=  ret void
+visit: nullptr 
+test3
+test4
+
+
+INSTCOMBINE ITERATION #3 on test_guard_adjacent_diff_cond
+INSTCOMBINE ITERATION: Inst(end):  %1 = and i1 %A, %B
+INSTCOMBINE ITERATION: Inst(end):  %2 = and i1 %1, %C
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %2, i32 123) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  ret void
+chris-worklist-bb: bb: 
+  %1 = and i1 %A, %B
+  %2 = and i1 %1, %C
+  call void (i1, ...) @llvm.experimental.guard(i1 %2, i32 123) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB: 
+  %1 = and i1 %A, %B
+  %2 = and i1 %1, %C
+  call void (i1, ...) @llvm.experimental.guard(i1 %2, i32 123) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB end:   %1 = and i1 %A, %B
+chris-worklist-bb: BB end:   %2 = and i1 %1, %C
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %2, i32 123) [ "deopt"() ]
+chris-worklist-bb: BB end:   ret void
+IC: ADDING: 4 instrs to worklist
+chris-AddInitialGroup: I:   ret void
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %2, i32 123) [ "deopt"() ]
+chris-AddInitialGroup: I:   %2 = and i1 %1, %C
+chris-AddInitialGroup: I:   %1 = and i1 %A, %B
+RemoveOne!!!
+chris-RemoveOne:   %1 = and i1 %A, %B
+chris-RemoveOne: return I  %1 = and i1 %A, %B
+run: WorkList:   %1 = and i1 %A, %B
+chris-run: I=  %1 = and i1 %A, %B
+chris-run: I-end=  %1 = and i1 %A, %B
+IC: Visiting:   %1 = and i1 %A, %B
+test1: I=  %1 = and i1 %A, %B
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %2 = and i1 %1, %C
+chris-RemoveOne: return I  %2 = and i1 %1, %C
+run: WorkList:   %2 = and i1 %1, %C
+chris-run: I=  %2 = and i1 %1, %C
+chris-run: I-end=  %2 = and i1 %1, %C
+IC: Visiting:   %2 = and i1 %1, %C
+test1: I=  %2 = and i1 %1, %C
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %2, i32 123) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %2, i32 123) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %2, i32 123) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %2, i32 123) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %2, i32 123) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %2, i32 123) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %2, i32 123) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %2, i32 123) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  ret void
+ ok, break
+Inst[end]:   ret void
+chris-debug7-8
+chris-debug4
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   ret void
+chris-RemoveOne: return I  ret void
+run: WorkList:   ret void
+chris-run: I=  ret void
+chris-run: I-end=  ret void
+IC: Visiting:   ret void
+test1: I=  ret void
+visit: nullptr 
+test3
+test4
+BISECT: running pass (38) Simplify the CFG on function (test_guard_adjacent_diff_cond)
+BISECT: running pass (39) Combine redundant instructions on function (test_guard_adjacent_diff_cond2)
+chris-InstructionCombiningPass::runOnFunction
+runOnFunction: I:  %A = icmp slt i32 %V1, 0
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+runOnFunction: I:  %B = icmp slt i32 %V2, 0
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+runOnFunction: I:  %and = and i32 %V1, 255
+runOnFunction: I:  %C = icmp sle i32 %and, 128
+runOnFunction: I:  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+runOnFunction: I:  ret void
+INSTCOMBINE ITERATION: Inst(start):  %A = icmp slt i32 %V1, 0
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  %B = icmp slt i32 %V2, 0
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  %and = and i32 %V1, 255
+INSTCOMBINE ITERATION: Inst(start):  %C = icmp sle i32 %and, 128
+INSTCOMBINE ITERATION: Inst(start):  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(start):  ret void
+
+
+INSTCOMBINE ITERATION #1 on test_guard_adjacent_diff_cond2
+INSTCOMBINE ITERATION: Inst(end):  %A = icmp slt i32 %V1, 0
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  %B = icmp slt i32 %V2, 0
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  %and = and i32 %V1, 255
+INSTCOMBINE ITERATION: Inst(end):  %C = icmp sle i32 %and, 128
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  ret void
+chris-worklist-bb: bb: 
+  %A = icmp slt i32 %V1, 0
+  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+  %B = icmp slt i32 %V2, 0
+  call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+  %and = and i32 %V1, 255
+  %C = icmp sle i32 %and, 128
+  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB: 
+  %A = icmp slt i32 %V1, 0
+  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+  %B = icmp slt i32 %V2, 0
+  call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+  %and = and i32 %V1, 255
+  %C = icmp sle i32 %and, 128
+  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB end:   %A = icmp slt i32 %V1, 0
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+chris-worklist-bb: BB end:   %B = icmp slt i32 %V2, 0
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+chris-worklist-bb: BB end:   %and = and i32 %V1, 255
+chris-worklist-bb: BB end:   %C = icmp sle i32 %and, 128
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+chris-worklist-bb: BB end:   ret void
+IC: ADDING: 8 instrs to worklist
+chris-AddInitialGroup: I:   ret void
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+chris-AddInitialGroup: I:   %C = icmp sle i32 %and, 128
+chris-AddInitialGroup: I:   %and = and i32 %V1, 255
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+chris-AddInitialGroup: I:   %B = icmp slt i32 %V2, 0
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+chris-AddInitialGroup: I:   %A = icmp slt i32 %V1, 0
+RemoveOne!!!
+chris-RemoveOne:   %A = icmp slt i32 %V1, 0
+chris-RemoveOne: return I  %A = icmp slt i32 %V1, 0
+run: WorkList:   %A = icmp slt i32 %V1, 0
+chris-run: I=  %A = icmp slt i32 %V1, 0
+chris-run: I-end=  %A = icmp slt i32 %V1, 0
+IC: Visiting:   %A = icmp slt i32 %V1, 0
+test1: I=  %A = icmp slt i32 %V1, 0
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %A, i32 123) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  %B = icmp slt i32 %V2, 0
+NextInst[0]   call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+ ok, break
+Inst[end]:   call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+MoveI:   %B = icmp slt i32 %V2, 0
+chris add g: I:  %1 = and i1 %A, %B
+IC: ADD:   %1 = and i1 %A, %B
+IC: ERASE   call void (i1, ...) @llvm.experimental.guard(i1 %B, i32 456) [ "deopt"() ]
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %1 = and i1 %A, %B
+chris-RemoveOne: return I  %1 = and i1 %A, %B
+run: WorkList:   %1 = and i1 %A, %B
+chris-run: I=  %1 = and i1 %A, %B
+chris-run: I-end=  %1 = and i1 %A, %B
+IC: Visiting:   %1 = and i1 %A, %B
+test1: I=  %1 = and i1 %A, %B
+chris add g: I:  %1 = and i32 %V1, %V2
+IC: ADD:   %1 = and i32 %V1, %V2
+chris add g: I:  %2 = and i32 -2147483648, %1
+IC: ADD:   %2 = and i32 -2147483648, %1
+chris add g: I:  %3 = icmp eq i32 %2, -2147483648
+IC: ADD:   %3 = icmp eq i32 %2, -2147483648
+chris-add2:   call void (i1, ...) @llvm.experimental.guard(i1 %4, i32 123) [ "deopt"() ]
+IC: ADD:   call void (i1, ...) @llvm.experimental.guard(i1 %4, i32 123) [ "deopt"() ]
+IC: Replacing   %4 = and i1 %A, %B
+    with   %3 = icmp eq i32 %2, -2147483648
+visit: has:   %4 = and i1 %A, %B
+test2
+after visiting: Result =   %4 = and i1 %A, %B
+after visiting: I =   %4 = and i1 %A, %B
+IC: Mod =   %1 = and i1 %A, %B
+    New =   %4 = and i1 %A, %B
+chris-Worklist.AddUsersToWorkList 3:   %4 = and i1 %A, %B
+IC: ERASE   %4 = and i1 %A, %B
+IC: ADD:   %A = icmp slt i32 %V1, 0
+test3
+RemoveOne!!!
+chris-RemoveOne:   %A = icmp slt i32 %V1, 0
+chris-RemoveOne: return I  %A = icmp slt i32 %V1, 0
+run: WorkList:   %A = icmp slt i32 %V1, 0
+chris-run: I=  %A = icmp slt i32 %V1, 0
+IC: DCE:   %A = icmp slt i32 %V1, 0
+IC: ERASE   %A = icmp slt i32 %V1, 0
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  %and = and i32 %V1, 255
+NextInst[0]   %C = icmp sle i32 %and, 128
+NextInst[1]   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+ ok, break
+Inst[end]:   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+MoveI:   %and = and i32 %V1, 255
+chris add g: I:  %4 = and i1 %3, %C
+IC: ADD:   %4 = and i1 %3, %C
+IC: ERASE   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ]
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %4 = and i1 %3, %C
+chris-RemoveOne: return I  %4 = and i1 %3, %C
+run: WorkList:   %4 = and i1 %3, %C
+chris-run: I=  %4 = and i1 %3, %C
+chris-run: I-end=  %4 = and i1 %3, %C
+IC: Visiting:   %4 = and i1 %3, %C
+test1: I=  %4 = and i1 %3, %C
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %3 = icmp eq i32 %2, -2147483648
+chris-RemoveOne: return I  %3 = icmp eq i32 %2, -2147483648
+run: WorkList:   %3 = icmp eq i32 %2, -2147483648
+chris-run: I=  %3 = icmp eq i32 %2, -2147483648
+chris-run: I-end=  %3 = icmp eq i32 %2, -2147483648
+IC: Visiting:   %3 = icmp eq i32 %2, -2147483648
+test1: I=  %3 = icmp eq i32 %2, -2147483648
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %2 = and i32 -2147483648, %1
+chris-RemoveOne: return I  %2 = and i32 -2147483648, %1
+run: WorkList:   %2 = and i32 -2147483648, %1
+chris-run: I=  %2 = and i32 -2147483648, %1
+chris-run: I-end=  %2 = and i32 -2147483648, %1
+IC: Visiting:   %2 = and i32 -2147483648, %1
+test1: I=  %2 = and i32 -2147483648, %1
+visit: has:   %2 = and i32 %1, -2147483648
+test2
+after visiting: Result =   %2 = and i32 %1, -2147483648
+after visiting: I =   %2 = and i32 %1, -2147483648
+IC: Mod =   %2 = and i32 -2147483648, %1
+    New =   %2 = and i32 %1, -2147483648
+chris-Worklist.AddUsersToWorkList 2:   %2 = and i32 %1, -2147483648
+chris-add2:   %3 = icmp eq i32 %2, -2147483648
+IC: ADD:   %3 = icmp eq i32 %2, -2147483648
+chris add f
+IC: ADD:   %2 = and i32 %1, -2147483648
+test3
+RemoveOne!!!
+chris-RemoveOne:   %2 = and i32 %1, -2147483648
+chris-RemoveOne: return I  %2 = and i32 %1, -2147483648
+run: WorkList:   %2 = and i32 %1, -2147483648
+chris-run: I=  %2 = and i32 %1, -2147483648
+chris-run: I-end=  %2 = and i32 %1, -2147483648
+IC: Visiting:   %2 = and i32 %1, -2147483648
+test1: I=  %2 = and i32 %1, -2147483648
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %3 = icmp eq i32 %2, -2147483648
+chris-RemoveOne: return I  %3 = icmp eq i32 %2, -2147483648
+run: WorkList:   %3 = icmp eq i32 %2, -2147483648
+chris-run: I=  %3 = icmp eq i32 %2, -2147483648
+chris-run: I-end=  %3 = icmp eq i32 %2, -2147483648
+IC: Visiting:   %3 = icmp eq i32 %2, -2147483648
+test1: I=  %3 = icmp eq i32 %2, -2147483648
+visit: has:   <badref> = icmp ugt i32 %1, 2147483647
+test2
+after visiting: Result =   <badref> = icmp ugt i32 %1, 2147483647
+after visiting: I =   %3 = icmp eq i32 %2, -2147483648
+IC: Old =   %3 = icmp eq i32 %2, -2147483648
+    New =   <badref> = icmp ugt i32 %1, 2147483647
+chris-Worklist.AddUsersToWorkList 1
+chris-add2:   %4 = and i1 <badref>, %C
+IC: ADD:   %4 = and i1 <badref>, %C
+chris add e
+IC: ADD:   <badref> = icmp ugt i32 %1, 2147483647
+IC: ERASE   %4 = icmp eq i32 %2, -2147483648
+IC: ADD:   %2 = and i32 %1, -2147483648
+test3
+RemoveOne!!!
+chris-RemoveOne:   %2 = and i32 %1, -2147483648
+chris-RemoveOne: return I  %2 = and i32 %1, -2147483648
+run: WorkList:   %2 = and i32 %1, -2147483648
+chris-run: I=  %2 = and i32 %1, -2147483648
+IC: DCE:   %2 = and i32 %1, -2147483648
+IC: ERASE   %2 = and i32 %1, -2147483648
+RemoveOne!!!
+chris-RemoveOne:   %2 = icmp ugt i32 %1, 2147483647
+chris-RemoveOne: return I  %2 = icmp ugt i32 %1, 2147483647
+run: WorkList:   %2 = icmp ugt i32 %1, 2147483647
+chris-run: I=  %2 = icmp ugt i32 %1, 2147483647
+chris-run: I-end=  %2 = icmp ugt i32 %1, 2147483647
+IC: Visiting:   %2 = icmp ugt i32 %1, 2147483647
+test1: I=  %2 = icmp ugt i32 %1, 2147483647
+visit: has:   <badref> = icmp slt i32 %1, 0
+test2
+after visiting: Result =   <badref> = icmp slt i32 %1, 0
+after visiting: I =   %2 = icmp ugt i32 %1, 2147483647
+IC: Old =   %2 = icmp ugt i32 %1, 2147483647
+    New =   <badref> = icmp slt i32 %1, 0
+chris-Worklist.AddUsersToWorkList 1
+chris-add2:   %3 = and i1 <badref>, %C
+chris add e
+IC: ADD:   <badref> = icmp slt i32 %1, 0
+IC: ERASE   %3 = icmp ugt i32 %1, 2147483647
+test3
+RemoveOne!!!
+chris-RemoveOne:   %2 = icmp slt i32 %1, 0
+chris-RemoveOne: return I  %2 = icmp slt i32 %1, 0
+run: WorkList:   %2 = icmp slt i32 %1, 0
+chris-run: I=  %2 = icmp slt i32 %1, 0
+chris-run: I-end=  %2 = icmp slt i32 %1, 0
+IC: Visiting:   %2 = icmp slt i32 %1, 0
+test1: I=  %2 = icmp slt i32 %1, 0
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %3 = and i1 %2, %C
+chris-RemoveOne: return I  %3 = and i1 %2, %C
+run: WorkList:   %3 = and i1 %2, %C
+chris-run: I=  %3 = and i1 %2, %C
+chris-run: I-end=  %3 = and i1 %2, %C
+IC: Visiting:   %3 = and i1 %2, %C
+test1: I=  %3 = and i1 %2, %C
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %1 = and i32 %V1, %V2
+chris-RemoveOne: return I  %1 = and i32 %V1, %V2
+run: WorkList:   %1 = and i32 %V1, %V2
+chris-run: I=  %1 = and i32 %V1, %V2
+chris-run: I-end=  %1 = and i32 %V1, %V2
+IC: Visiting:   %1 = and i32 %V1, %V2
+test1: I=  %1 = and i32 %V1, %V2
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %B = icmp slt i32 %V2, 0
+chris-RemoveOne: return I  %B = icmp slt i32 %V2, 0
+run: WorkList:   %B = icmp slt i32 %V2, 0
+chris-run: I=  %B = icmp slt i32 %V2, 0
+IC: DCE:   %B = icmp slt i32 %V2, 0
+IC: ERASE   %B = icmp slt i32 %V2, 0
+RemoveOne!!!
+run: WorkList: null
+RemoveOne!!!
+chris-RemoveOne:   %and = and i32 %V1, 255
+chris-RemoveOne: return I  %and = and i32 %V1, 255
+run: WorkList:   %and = and i32 %V1, 255
+chris-run: I=  %and = and i32 %V1, 255
+chris-run: I-end=  %and = and i32 %V1, 255
+IC: Visiting:   %and = and i32 %V1, 255
+test1: I=  %and = and i32 %V1, 255
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %C = icmp sle i32 %and, 128
+chris-RemoveOne: return I  %C = icmp sle i32 %and, 128
+run: WorkList:   %C = icmp sle i32 %and, 128
+chris-run: I=  %C = icmp sle i32 %and, 128
+chris-run: I-end=  %C = icmp sle i32 %and, 128
+IC: Visiting:   %C = icmp sle i32 %and, 128
+test1: I=  %C = icmp sle i32 %and, 128
+visit: has:   <badref> = icmp slt i32 %and, 129
+test2
+after visiting: Result =   <badref> = icmp slt i32 %and, 129
+after visiting: I =   %C = icmp sle i32 %and, 128
+IC: Old =   %C = icmp sle i32 %and, 128
+    New =   <badref> = icmp slt i32 %and, 129
+chris-Worklist.AddUsersToWorkList 1
+chris-add2:   %4 = and i1 %2, %C
+IC: ADD:   %4 = and i1 %2, %C
+chris add e
+IC: ADD:   %C = icmp slt i32 %and, 129
+IC: ERASE   %3 = icmp sle i32 %and, 128
+IC: ADD:   %and = and i32 %V1, 255
+test3
+RemoveOne!!!
+chris-RemoveOne:   %and = and i32 %V1, 255
+chris-RemoveOne: return I  %and = and i32 %V1, 255
+run: WorkList:   %and = and i32 %V1, 255
+chris-run: I=  %and = and i32 %V1, 255
+chris-run: I-end=  %and = and i32 %V1, 255
+IC: Visiting:   %and = and i32 %V1, 255
+test1: I=  %and = and i32 %V1, 255
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %C = icmp slt i32 %and, 129
+chris-RemoveOne: return I  %C = icmp slt i32 %and, 129
+run: WorkList:   %C = icmp slt i32 %and, 129
+chris-run: I=  %C = icmp slt i32 %and, 129
+chris-run: I-end=  %C = icmp slt i32 %and, 129
+IC: Visiting:   %C = icmp slt i32 %and, 129
+test1: I=  %C = icmp slt i32 %and, 129
+visit: has:   <badref> = icmp ult i32 %and, 129
+test2
+after visiting: Result =   <badref> = icmp ult i32 %and, 129
+after visiting: I =   %C = icmp slt i32 %and, 129
+IC: Old =   %C = icmp slt i32 %and, 129
+    New =   <badref> = icmp ult i32 %and, 129
+chris-Worklist.AddUsersToWorkList 1
+chris-add2:   %4 = and i1 %2, %C
+chris add e
+IC: ADD:   %C = icmp ult i32 %and, 129
+IC: ERASE   %3 = icmp slt i32 %and, 129
+IC: ADD:   %and = and i32 %V1, 255
+test3
+RemoveOne!!!
+chris-RemoveOne:   %and = and i32 %V1, 255
+chris-RemoveOne: return I  %and = and i32 %V1, 255
+run: WorkList:   %and = and i32 %V1, 255
+chris-run: I=  %and = and i32 %V1, 255
+chris-run: I-end=  %and = and i32 %V1, 255
+IC: Visiting:   %and = and i32 %V1, 255
+test1: I=  %and = and i32 %V1, 255
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %C = icmp ult i32 %and, 129
+chris-RemoveOne: return I  %C = icmp ult i32 %and, 129
+run: WorkList:   %C = icmp ult i32 %and, 129
+chris-run: I=  %C = icmp ult i32 %and, 129
+chris-run: I-end=  %C = icmp ult i32 %and, 129
+IC: Visiting:   %C = icmp ult i32 %and, 129
+test1: I=  %C = icmp ult i32 %and, 129
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %3 = and i1 %2, %C
+chris-RemoveOne: return I  %3 = and i1 %2, %C
+run: WorkList:   %3 = and i1 %2, %C
+chris-run: I=  %3 = and i1 %2, %C
+chris-run: I-end=  %3 = and i1 %2, %C
+IC: Visiting:   %3 = and i1 %2, %C
+test1: I=  %3 = and i1 %2, %C
+visit: nullptr 
+test3
+RemoveOne!!!
+run: WorkList: null
+RemoveOne!!!
+chris-RemoveOne:   ret void
+chris-RemoveOne: return I  ret void
+run: WorkList:   ret void
+chris-run: I=  ret void
+chris-run: I-end=  ret void
+IC: Visiting:   ret void
+test1: I=  ret void
+visit: nullptr 
+test3
+test4
+
+
+INSTCOMBINE ITERATION #2 on test_guard_adjacent_diff_cond2
+INSTCOMBINE ITERATION: Inst(end):  %1 = and i32 %V1, %V2
+INSTCOMBINE ITERATION: Inst(end):  %2 = icmp slt i32 %1, 0
+INSTCOMBINE ITERATION: Inst(end):  %and = and i32 %V1, 255
+INSTCOMBINE ITERATION: Inst(end):  %C = icmp ult i32 %and, 129
+INSTCOMBINE ITERATION: Inst(end):  %3 = and i1 %2, %C
+INSTCOMBINE ITERATION: Inst(end):  call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+INSTCOMBINE ITERATION: Inst(end):  ret void
+chris-worklist-bb: bb: 
+  %1 = and i32 %V1, %V2
+  %2 = icmp slt i32 %1, 0
+  %and = and i32 %V1, 255
+  %C = icmp ult i32 %and, 129
+  %3 = and i1 %2, %C
+  call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB: 
+  %1 = and i32 %V1, %V2
+  %2 = icmp slt i32 %1, 0
+  %and = and i32 %V1, 255
+  %C = icmp ult i32 %and, 129
+  %3 = and i1 %2, %C
+  call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+  ret void
+
+chris-worklist-bb: BB end:   %1 = and i32 %V1, %V2
+chris-worklist-bb: BB end:   %2 = icmp slt i32 %1, 0
+chris-worklist-bb: BB end:   %and = and i32 %V1, 255
+chris-worklist-bb: BB end:   %C = icmp ult i32 %and, 129
+chris-worklist-bb: BB end:   %3 = and i1 %2, %C
+chris-worklist-bb: BB end:   call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+chris-worklist-bb: BB end:   ret void
+IC: ADDING: 7 instrs to worklist
+chris-AddInitialGroup: I:   ret void
+chris-AddInitialGroup: I:   call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+chris-AddInitialGroup: I:   %3 = and i1 %2, %C
+chris-AddInitialGroup: I:   %C = icmp ult i32 %and, 129
+chris-AddInitialGroup: I:   %and = and i32 %V1, 255
+chris-AddInitialGroup: I:   %2 = icmp slt i32 %1, 0
+chris-AddInitialGroup: I:   %1 = and i32 %V1, %V2
+RemoveOne!!!
+chris-RemoveOne:   %1 = and i32 %V1, %V2
+chris-RemoveOne: return I  %1 = and i32 %V1, %V2
+run: WorkList:   %1 = and i32 %V1, %V2
+chris-run: I=  %1 = and i32 %V1, %V2
+chris-run: I-end=  %1 = and i32 %V1, %V2
+IC: Visiting:   %1 = and i32 %V1, %V2
+test1: I=  %1 = and i32 %V1, %V2
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %2 = icmp slt i32 %1, 0
+chris-RemoveOne: return I  %2 = icmp slt i32 %1, 0
+run: WorkList:   %2 = icmp slt i32 %1, 0
+chris-run: I=  %2 = icmp slt i32 %1, 0
+chris-run: I-end=  %2 = icmp slt i32 %1, 0
+IC: Visiting:   %2 = icmp slt i32 %1, 0
+test1: I=  %2 = icmp slt i32 %1, 0
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %and = and i32 %V1, 255
+chris-RemoveOne: return I  %and = and i32 %V1, 255
+run: WorkList:   %and = and i32 %V1, 255
+chris-run: I=  %and = and i32 %V1, 255
+chris-run: I-end=  %and = and i32 %V1, 255
+IC: Visiting:   %and = and i32 %V1, 255
+test1: I=  %and = and i32 %V1, 255
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %C = icmp ult i32 %and, 129
+chris-RemoveOne: return I  %C = icmp ult i32 %and, 129
+run: WorkList:   %C = icmp ult i32 %and, 129
+chris-run: I=  %C = icmp ult i32 %and, 129
+chris-run: I-end=  %C = icmp ult i32 %and, 129
+IC: Visiting:   %C = icmp ult i32 %and, 129
+test1: I=  %C = icmp ult i32 %and, 129
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   %3 = and i1 %2, %C
+chris-RemoveOne: return I  %3 = and i1 %2, %C
+run: WorkList:   %3 = and i1 %2, %C
+chris-run: I=  %3 = and i1 %2, %C
+chris-run: I-end=  %3 = and i1 %2, %C
+IC: Visiting:   %3 = and i1 %2, %C
+test1: I=  %3 = and i1 %2, %C
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+chris-RemoveOne: return I  call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+run: WorkList:   call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+chris-run: I=  call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+chris-run: I-end=  call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+IC: Visiting:   call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+test1: I=  call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+chris-debug7
+  II:   call void (i1, ...) @llvm.experimental.guard(i1 %3, i32 123) [ "deopt"() ]
+  IID: 96
+  experimental_guard: 96
+GuardWideningWindow: 10
+Inst[start]:  ret void
+ ok, break
+Inst[end]:   ret void
+chris-debug7-8
+chris-debug4
+visit: nullptr 
+test3
+RemoveOne!!!
+chris-RemoveOne:   ret void
+chris-RemoveOne: return I  ret void
+run: WorkList:   ret void
+chris-run: I=  ret void
+chris-run: I-end=  ret void
+IC: Visiting:   ret void
+test1: I=  ret void
+visit: nullptr 
+test3
+test4
+BISECT: NOT running pass (40) Simplify the CFG on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (41) Combine redundant instructions on function (negative_load)
+BISECT: NOT running pass (42) Simplify the CFG on function (negative_load)
+BISECT: NOT running pass (43) Combine redundant instructions on function (deref_load)
+BISECT: NOT running pass (44) Simplify the CFG on function (deref_load)
+BISECT: NOT running pass (45) Combine redundant instructions on function (negative_div)
+BISECT: NOT running pass (46) Simplify the CFG on function (negative_div)
+BISECT: NOT running pass (47) Combine redundant instructions on function (negative_window)
+BISECT: NOT running pass (48) Simplify the CFG on function (negative_window)
+BISECT: NOT running pass (49) Remove unused exception handling info on SCC (llvm.experimental.guard)
+BISECT: NOT running pass (50) Deduce function attributes on SCC (llvm.experimental.guard)
+BISECT: NOT running pass (51) Remove unused exception handling info on SCC (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (52) Deduce function attributes on SCC (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (53) SROA on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (54) Early CSE w/ MemorySSA on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (55) Speculatively execute instructions if target has divergent branches on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (56) Jump Threading on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (57) Value Propagation on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (58) Simplify the CFG on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (59) Combine redundant instructions on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (60) Tail Call Elimination on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (61) Simplify the CFG on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (62) Reassociate expressions on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (63) Simplify the CFG on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (64) Combine redundant instructions on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (65) MemCpy Optimization on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (66) Sparse Conditional Constant Propagation on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (67) Bit-Tracking Dead Code Elimination on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (68) Combine redundant instructions on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (69) Jump Threading on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (70) Value Propagation on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (71) Dead Store Elimination on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (72) Aggressive Dead Code Elimination on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (73) Simplify the CFG on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (74) Combine redundant instructions on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (75) Remove unused exception handling info on SCC (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (76) Deduce function attributes on SCC (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (77) SROA on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (78) Early CSE w/ MemorySSA on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (79) Speculatively execute instructions if target has divergent branches on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (80) Jump Threading on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (81) Value Propagation on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (82) Simplify the CFG on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (83) Combine redundant instructions on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (84) Tail Call Elimination on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (85) Simplify the CFG on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (86) Reassociate expressions on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (87) Simplify the CFG on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (88) Combine redundant instructions on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (89) MemCpy Optimization on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (90) Sparse Conditional Constant Propagation on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (91) Bit-Tracking Dead Code Elimination on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (92) Combine redundant instructions on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (93) Jump Threading on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (94) Value Propagation on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (95) Dead Store Elimination on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (96) Aggressive Dead Code Elimination on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (97) Simplify the CFG on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (98) Combine redundant instructions on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (99) Remove unused exception handling info on SCC (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (100) Deduce function attributes on SCC (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (101) SROA on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (102) Early CSE w/ MemorySSA on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (103) Speculatively execute instructions if target has divergent branches on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (104) Jump Threading on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (105) Value Propagation on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (106) Simplify the CFG on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (107) Combine redundant instructions on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (108) Tail Call Elimination on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (109) Simplify the CFG on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (110) Reassociate expressions on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (111) Simplify the CFG on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (112) Combine redundant instructions on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (113) MemCpy Optimization on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (114) Sparse Conditional Constant Propagation on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (115) Bit-Tracking Dead Code Elimination on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (116) Combine redundant instructions on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (117) Jump Threading on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (118) Value Propagation on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (119) Dead Store Elimination on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (120) Aggressive Dead Code Elimination on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (121) Simplify the CFG on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (122) Combine redundant instructions on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (123) Remove unused exception handling info on SCC (negative_load)
+BISECT: NOT running pass (124) Deduce function attributes on SCC (negative_load)
+BISECT: NOT running pass (125) SROA on function (negative_load)
+BISECT: NOT running pass (126) Early CSE w/ MemorySSA on function (negative_load)
+BISECT: NOT running pass (127) Speculatively execute instructions if target has divergent branches on function (negative_load)
+BISECT: NOT running pass (128) Jump Threading on function (negative_load)
+BISECT: NOT running pass (129) Value Propagation on function (negative_load)
+BISECT: NOT running pass (130) Simplify the CFG on function (negative_load)
+BISECT: NOT running pass (131) Combine redundant instructions on function (negative_load)
+BISECT: NOT running pass (132) Tail Call Elimination on function (negative_load)
+BISECT: NOT running pass (133) Simplify the CFG on function (negative_load)
+BISECT: NOT running pass (134) Reassociate expressions on function (negative_load)
+BISECT: NOT running pass (135) Simplify the CFG on function (negative_load)
+BISECT: NOT running pass (136) Combine redundant instructions on function (negative_load)
+BISECT: NOT running pass (137) MemCpy Optimization on function (negative_load)
+BISECT: NOT running pass (138) Sparse Conditional Constant Propagation on function (negative_load)
+BISECT: NOT running pass (139) Bit-Tracking Dead Code Elimination on function (negative_load)
+BISECT: NOT running pass (140) Combine redundant instructions on function (negative_load)
+BISECT: NOT running pass (141) Jump Threading on function (negative_load)
+BISECT: NOT running pass (142) Value Propagation on function (negative_load)
+BISECT: NOT running pass (143) Dead Store Elimination on function (negative_load)
+BISECT: NOT running pass (144) Aggressive Dead Code Elimination on function (negative_load)
+BISECT: NOT running pass (145) Simplify the CFG on function (negative_load)
+BISECT: NOT running pass (146) Combine redundant instructions on function (negative_load)
+BISECT: NOT running pass (147) Remove unused exception handling info on SCC (deref_load)
+BISECT: NOT running pass (148) Deduce function attributes on SCC (deref_load)
+BISECT: NOT running pass (149) SROA on function (deref_load)
+BISECT: NOT running pass (150) Early CSE w/ MemorySSA on function (deref_load)
+BISECT: NOT running pass (151) Speculatively execute instructions if target has divergent branches on function (deref_load)
+BISECT: NOT running pass (152) Jump Threading on function (deref_load)
+BISECT: NOT running pass (153) Value Propagation on function (deref_load)
+BISECT: NOT running pass (154) Simplify the CFG on function (deref_load)
+BISECT: NOT running pass (155) Combine redundant instructions on function (deref_load)
+BISECT: NOT running pass (156) Tail Call Elimination on function (deref_load)
+BISECT: NOT running pass (157) Simplify the CFG on function (deref_load)
+BISECT: NOT running pass (158) Reassociate expressions on function (deref_load)
+BISECT: NOT running pass (159) Simplify the CFG on function (deref_load)
+BISECT: NOT running pass (160) Combine redundant instructions on function (deref_load)
+BISECT: NOT running pass (161) MemCpy Optimization on function (deref_load)
+BISECT: NOT running pass (162) Sparse Conditional Constant Propagation on function (deref_load)
+BISECT: NOT running pass (163) Bit-Tracking Dead Code Elimination on function (deref_load)
+BISECT: NOT running pass (164) Combine redundant instructions on function (deref_load)
+BISECT: NOT running pass (165) Jump Threading on function (deref_load)
+BISECT: NOT running pass (166) Value Propagation on function (deref_load)
+BISECT: NOT running pass (167) Dead Store Elimination on function (deref_load)
+BISECT: NOT running pass (168) Aggressive Dead Code Elimination on function (deref_load)
+BISECT: NOT running pass (169) Simplify the CFG on function (deref_load)
+BISECT: NOT running pass (170) Combine redundant instructions on function (deref_load)
+BISECT: NOT running pass (171) Remove unused exception handling info on SCC (negative_div)
+BISECT: NOT running pass (172) Deduce function attributes on SCC (negative_div)
+BISECT: NOT running pass (173) SROA on function (negative_div)
+BISECT: NOT running pass (174) Early CSE w/ MemorySSA on function (negative_div)
+BISECT: NOT running pass (175) Speculatively execute instructions if target has divergent branches on function (negative_div)
+BISECT: NOT running pass (176) Jump Threading on function (negative_div)
+BISECT: NOT running pass (177) Value Propagation on function (negative_div)
+BISECT: NOT running pass (178) Simplify the CFG on function (negative_div)
+BISECT: NOT running pass (179) Combine redundant instructions on function (negative_div)
+BISECT: NOT running pass (180) Tail Call Elimination on function (negative_div)
+BISECT: NOT running pass (181) Simplify the CFG on function (negative_div)
+BISECT: NOT running pass (182) Reassociate expressions on function (negative_div)
+BISECT: NOT running pass (183) Simplify the CFG on function (negative_div)
+BISECT: NOT running pass (184) Combine redundant instructions on function (negative_div)
+BISECT: NOT running pass (185) MemCpy Optimization on function (negative_div)
+BISECT: NOT running pass (186) Sparse Conditional Constant Propagation on function (negative_div)
+BISECT: NOT running pass (187) Bit-Tracking Dead Code Elimination on function (negative_div)
+BISECT: NOT running pass (188) Combine redundant instructions on function (negative_div)
+BISECT: NOT running pass (189) Jump Threading on function (negative_div)
+BISECT: NOT running pass (190) Value Propagation on function (negative_div)
+BISECT: NOT running pass (191) Dead Store Elimination on function (negative_div)
+BISECT: NOT running pass (192) Aggressive Dead Code Elimination on function (negative_div)
+BISECT: NOT running pass (193) Simplify the CFG on function (negative_div)
+BISECT: NOT running pass (194) Combine redundant instructions on function (negative_div)
+BISECT: NOT running pass (195) Remove unused exception handling info on SCC (negative_window)
+BISECT: NOT running pass (196) Deduce function attributes on SCC (negative_window)
+BISECT: NOT running pass (197) SROA on function (negative_window)
+BISECT: NOT running pass (198) Early CSE w/ MemorySSA on function (negative_window)
+BISECT: NOT running pass (199) Speculatively execute instructions if target has divergent branches on function (negative_window)
+BISECT: NOT running pass (200) Jump Threading on function (negative_window)
+BISECT: NOT running pass (201) Value Propagation on function (negative_window)
+BISECT: NOT running pass (202) Simplify the CFG on function (negative_window)
+BISECT: NOT running pass (203) Combine redundant instructions on function (negative_window)
+BISECT: NOT running pass (204) Tail Call Elimination on function (negative_window)
+BISECT: NOT running pass (205) Simplify the CFG on function (negative_window)
+BISECT: NOT running pass (206) Reassociate expressions on function (negative_window)
+BISECT: NOT running pass (207) Simplify the CFG on function (negative_window)
+BISECT: NOT running pass (208) Combine redundant instructions on function (negative_window)
+BISECT: NOT running pass (209) MemCpy Optimization on function (negative_window)
+BISECT: NOT running pass (210) Sparse Conditional Constant Propagation on function (negative_window)
+BISECT: NOT running pass (211) Bit-Tracking Dead Code Elimination on function (negative_window)
+BISECT: NOT running pass (212) Combine redundant instructions on function (negative_window)
+BISECT: NOT running pass (213) Jump Threading on function (negative_window)
+BISECT: NOT running pass (214) Value Propagation on function (negative_window)
+BISECT: NOT running pass (215) Dead Store Elimination on function (negative_window)
+BISECT: NOT running pass (216) Aggressive Dead Code Elimination on function (negative_window)
+BISECT: NOT running pass (217) Simplify the CFG on function (negative_window)
+BISECT: NOT running pass (218) Combine redundant instructions on function (negative_window)
+BISECT: NOT running pass (219) Remove unused exception handling info on SCC (<<null function>>)
+BISECT: NOT running pass (220) Deduce function attributes on SCC (<<null function>>)
+BISECT: NOT running pass (221) Deduce function attributes in RPO on module (call-guard.ll)
+BISECT: NOT running pass (222) Global Variable Optimizer on module (call-guard.ll)
+BISECT: NOT running pass (223) Dead Global Elimination on module (call-guard.ll)
+BISECT: NOT running pass (224) Float to int on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (225) Loop Distribution on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (226) Loop Vectorization on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (227) Loop Load Elimination on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (228) Combine redundant instructions on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (229) Simplify the CFG on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (230) Combine redundant instructions on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (231) Combine redundant instructions on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (232) Warn about non-applied transformations on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (233) Alignment from assumptions on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (234) Float to int on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (235) Loop Distribution on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (236) Loop Vectorization on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (237) Loop Load Elimination on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (238) Combine redundant instructions on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (239) Simplify the CFG on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (240) Combine redundant instructions on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (241) Combine redundant instructions on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (242) Warn about non-applied transformations on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (243) Alignment from assumptions on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (244) Float to int on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (245) Loop Distribution on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (246) Loop Vectorization on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (247) Loop Load Elimination on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (248) Combine redundant instructions on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (249) Simplify the CFG on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (250) Combine redundant instructions on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (251) Combine redundant instructions on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (252) Warn about non-applied transformations on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (253) Alignment from assumptions on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (254) Float to int on function (negative_load)
+BISECT: NOT running pass (255) Loop Distribution on function (negative_load)
+BISECT: NOT running pass (256) Loop Vectorization on function (negative_load)
+BISECT: NOT running pass (257) Loop Load Elimination on function (negative_load)
+BISECT: NOT running pass (258) Combine redundant instructions on function (negative_load)
+BISECT: NOT running pass (259) Simplify the CFG on function (negative_load)
+BISECT: NOT running pass (260) Combine redundant instructions on function (negative_load)
+BISECT: NOT running pass (261) Combine redundant instructions on function (negative_load)
+BISECT: NOT running pass (262) Warn about non-applied transformations on function (negative_load)
+BISECT: NOT running pass (263) Alignment from assumptions on function (negative_load)
+BISECT: NOT running pass (264) Float to int on function (deref_load)
+BISECT: NOT running pass (265) Loop Distribution on function (deref_load)
+BISECT: NOT running pass (266) Loop Vectorization on function (deref_load)
+BISECT: NOT running pass (267) Loop Load Elimination on function (deref_load)
+BISECT: NOT running pass (268) Combine redundant instructions on function (deref_load)
+BISECT: NOT running pass (269) Simplify the CFG on function (deref_load)
+BISECT: NOT running pass (270) Combine redundant instructions on function (deref_load)
+BISECT: NOT running pass (271) Combine redundant instructions on function (deref_load)
+BISECT: NOT running pass (272) Warn about non-applied transformations on function (deref_load)
+BISECT: NOT running pass (273) Alignment from assumptions on function (deref_load)
+BISECT: NOT running pass (274) Float to int on function (negative_div)
+BISECT: NOT running pass (275) Loop Distribution on function (negative_div)
+BISECT: NOT running pass (276) Loop Vectorization on function (negative_div)
+BISECT: NOT running pass (277) Loop Load Elimination on function (negative_div)
+BISECT: NOT running pass (278) Combine redundant instructions on function (negative_div)
+BISECT: NOT running pass (279) Simplify the CFG on function (negative_div)
+BISECT: NOT running pass (280) Combine redundant instructions on function (negative_div)
+BISECT: NOT running pass (281) Combine redundant instructions on function (negative_div)
+BISECT: NOT running pass (282) Warn about non-applied transformations on function (negative_div)
+BISECT: NOT running pass (283) Alignment from assumptions on function (negative_div)
+BISECT: NOT running pass (284) Float to int on function (negative_window)
+BISECT: NOT running pass (285) Loop Distribution on function (negative_window)
+BISECT: NOT running pass (286) Loop Vectorization on function (negative_window)
+BISECT: NOT running pass (287) Loop Load Elimination on function (negative_window)
+BISECT: NOT running pass (288) Combine redundant instructions on function (negative_window)
+BISECT: NOT running pass (289) Simplify the CFG on function (negative_window)
+BISECT: NOT running pass (290) Combine redundant instructions on function (negative_window)
+BISECT: NOT running pass (291) Combine redundant instructions on function (negative_window)
+BISECT: NOT running pass (292) Warn about non-applied transformations on function (negative_window)
+BISECT: NOT running pass (293) Alignment from assumptions on function (negative_window)
+BISECT: NOT running pass (294) Strip Unused Function Prototypes on module (call-guard.ll)
+BISECT: NOT running pass (295) Remove redundant instructions on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (296) Hoist/decompose integer division and remainder on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (297) Simplify the CFG on function (test_guard_adjacent_same_cond)
+BISECT: NOT running pass (298) Remove redundant instructions on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (299) Hoist/decompose integer division and remainder on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (300) Simplify the CFG on function (test_guard_adjacent_diff_cond)
+BISECT: NOT running pass (301) Remove redundant instructions on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (302) Hoist/decompose integer division and remainder on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (303) Simplify the CFG on function (test_guard_adjacent_diff_cond2)
+BISECT: NOT running pass (304) Remove redundant instructions on function (negative_load)
+BISECT: NOT running pass (305) Hoist/decompose integer division and remainder on function (negative_load)
+BISECT: NOT running pass (306) Simplify the CFG on function (negative_load)
+BISECT: NOT running pass (307) Remove redundant instructions on function (deref_load)
+BISECT: NOT running pass (308) Hoist/decompose integer division and remainder on function (deref_load)
+BISECT: NOT running pass (309) Simplify the CFG on function (deref_load)
+BISECT: NOT running pass (310) Remove redundant instructions on function (negative_div)
+BISECT: NOT running pass (311) Hoist/decompose integer division and remainder on function (negative_div)
+BISECT: NOT running pass (312) Simplify the CFG on function (negative_div)
+BISECT: NOT running pass (313) Remove redundant instructions on function (negative_window)
+BISECT: NOT running pass (314) Hoist/decompose integer division and remainder on function (negative_window)
+BISECT: NOT running pass (315) Simplify the CFG on function (negative_window)

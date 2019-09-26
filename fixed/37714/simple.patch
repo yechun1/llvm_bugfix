@@ -1,0 +1,44 @@
+commit abb7a63c9e1e3d642c0045dd9bcbc3f618347d89
+Author: Chris Ye <yechunliangcn@163.com>
+Date:   Wed Sep 25 08:16:22 2019 +0800
+
+    [InstCombine] Fix call guard difference with dbg
+    
+    While using "opt -debugify-each", the dbg instructions will exceed GuardWideningWindow, so that the instructions will be different with and without "-debugify-each" after optimization. We should just skip debug instructions while looking for the guard in the window. Just use getNextNonDebugInstruction instead of current getNextNode.
+    
+    Original CommitID: 79e917d1 - [InstCombine] Widen guards with conditions between
+    
+    Fix for https://bugs.llvm.org/show_bug.cgi?id=37714
+
+diff --git a/llvm/lib/Transforms/InstCombine/InstCombineCalls.cpp b/llvm/lib/Transforms/InstCombine/InstCombineCalls.cpp
+index 5c0e648f490..78986c0580c 100644
+--- a/llvm/lib/Transforms/InstCombine/InstCombineCalls.cpp
++++ b/llvm/lib/Transforms/InstCombine/InstCombineCalls.cpp
+@@ -4007,12 +4007,12 @@ Instruction *InstCombiner::visitCallInst(CallInst &CI) {
+     // Is this guard followed by another guard?  We scan forward over a small
+     // fixed window of instructions to handle common cases with conditions
+     // computed between guards.
+-    Instruction *NextInst = II->getNextNode();
++    Instruction *NextInst = II->getNextNonDebugInstruction();
+     for (unsigned i = 0; i < GuardWideningWindow; i++) {
+       // Note: Using context-free form to avoid compile time blow up
+       if (!isSafeToSpeculativelyExecute(NextInst))
+         break;
+-      NextInst = NextInst->getNextNode();
++      NextInst = NextInst->getNextNonDebugInstruction();
+     }
+     Value *NextCond = nullptr;
+     if (match(NextInst,
+@@ -4024,10 +4024,10 @@ Instruction *InstCombiner::visitCallInst(CallInst &CI) {
+         return eraseInstFromFunction(*NextInst);
+ 
+       // Otherwise canonicalize guard(a); guard(b) -> guard(a & b).
+-      Instruction* MoveI = II->getNextNode();
++      Instruction* MoveI = II->getNextNonDebugInstruction();
+       while (MoveI != NextInst) {
+         auto *Temp = MoveI;
+-        MoveI = MoveI->getNextNode();
++        MoveI = MoveI->getNextNonDebugInstruction();
+         Temp->moveBefore(II);
+       }
+       II->setArgOperand(0, Builder.CreateAnd(CurrCond, NextCond));

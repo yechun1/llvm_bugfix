@@ -1,0 +1,34 @@
+
+InstructionCombiningPass::runOnFunction
+INSTCOMBINE ITERATION #1 on test_guard_adjacent_diff_cond2
+  %and = and i32 %V1, 255, !dbg !19
+  call void @llvm.dbg.value(metadata i32 %and, metadata !12, metadata !DIExpression()), !dbg !19
+  %C = icmp sle i32 %and, 128, !dbg !20
+  call void @llvm.dbg.value(metadata i1 %C, metadata !14, metadata !DIExpression()), !dbg !20
+  call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ], !dbg !21
+  ret void, !dbg !22
+
+
+
+before code change
+-----------------------------------------------------
+GuardWideningWindow: 3
+Inst[start]:  %and = and i32 %V1, 255, !dbg !16
+NextInst[0]   call void @llvm.dbg.value(metadata i32 %and, metadata !12, metadata !DIExpression()), !dbg !16
+NextInst[1]   %C = icmp ult i32 %and, 129, !dbg !17
+NextInst[2]   call void @llvm.dbg.value(metadata i1 %C, metadata !14, metadata !DIExpression()), !dbg !17
+Inst[end]:   call void @llvm.dbg.value(metadata i1 %C, metadata !14, metadata !DIExpression()), !dbg !17
+-----------------------------------------------------
+
+
+-----------------------------------------------------
+After code change
+GuardWideningWindow: 10
+Start Inst:  %and = and i32 %V1, 255, !dbg !18
+NextInst[0]   call void @llvm.dbg.value(metadata i32 %and, metadata !12, metadata !DIExpression()), !dbg !18
+NextInst[1]   %C = icmp sle i32 %and, 128, !dbg !19
+NextInst[2]   call void @llvm.dbg.value(metadata i1 %C, metadata !14, metadata !DIExpression()), !dbg !19
+NextInst[3]   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ], !dbg !20
+ ok, break
+NextInst end:   call void (i1, ...) @llvm.experimental.guard(i1 %C, i32 789) [ "deopt"() ], !dbg !20
+-----------------------------------------------------
