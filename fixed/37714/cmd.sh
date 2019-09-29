@@ -35,7 +35,7 @@ NUM=39
 
 ### testcase
  llvm-lit /data/proj/compiler/llvm/llvm-project.release/llvm/test/Transforms/InstCombine/call-guard.ll
- llvm-lit /data/proj/compiler/llvm/llvm-project.release/llvm/test/Transforms/InstCombine/call-guard-dbg.ll
+# llvm-lit /data/proj/compiler/llvm/llvm-project.release/llvm/test/Transforms/InstCombine/call-guard-dbg.ll
 # opt < call-guard-with-debug.ll -instcombine -S | FileCheck call-guard-with-debug.ll
 
 # opt < call-guard-dbg.ll -instcombine -debugify-each -S >a.ll

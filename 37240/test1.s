@@ -1,25 +1,15 @@
 	.text
-	.file	"test.ll"
+	.file	"test2.ll"
 	.globl	test                    // -- Begin function test
 	.p2align	2
 	.type	test,@function
 test:                                   // @test
-.Lfunc_begin0:
-	.cfi_sections .debug_frame
-	.cfi_startproc
 // %bb.0:                               // %entry
 	stp	x30, x23, [sp, #-48]!   // 16-byte Folded Spill
-	stp	x22, x21, [sp, #16]     // 16-byte Folded Spill
 	stp	x20, x19, [sp, #32]     // 16-byte Folded Spill
-	.cfi_def_cfa_offset 48
-	.cfi_offset w19, -8
-	.cfi_offset w20, -16
-	.cfi_offset w21, -24
-	.cfi_offset w22, -32
-	.cfi_offset w23, -40
-	.cfi_offset w30, -48
 	adrp	x19, X1
 	ldr	w8, [x19, :lo12:X1]
+	stp	x22, x21, [sp, #16]     // 16-byte Folded Spill
 	add	w20, w8, #1             // =1
 	add	w21, w8, #2             // =2
 	add	w22, w8, #3             // =3
@@ -38,7 +28,6 @@ test:                                   // @test
 	ret
 .Lfunc_end0:
 	.size	test, .Lfunc_end0-test
-	.cfi_endproc
                                         // -- End function
 	.type	X1,@object              // @X1
 	.bss

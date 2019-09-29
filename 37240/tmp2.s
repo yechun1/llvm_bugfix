@@ -25,15 +25,15 @@ test:                                   // @test
 	add	w22, w8, #3             // =3
 	add	w23, w8, #4             // =4
 	bl	foo
-	str	w20, [x19, :lo12:X1]
 	adrp	x8, X2
 	adrp	x9, X3
-	adrp	x10, X4
+	str	w20, [x19, :lo12:X1]
 	str	w21, [x8, :lo12:X2]
 	str	w22, [x9, :lo12:X3]
-	str	w23, [x10, :lo12:X4]
 	ldp	x20, x19, [sp, #32]     // 16-byte Folded Reload
 	ldp	x22, x21, [sp, #16]     // 16-byte Folded Reload
+	adrp	x10, X4
+	str	w23, [x10, :lo12:X4]
 	ldp	x30, x23, [sp], #48     // 16-byte Folded Reload
 	ret
 .Lfunc_end0:

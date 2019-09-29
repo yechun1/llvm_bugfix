@@ -7,16 +7,16 @@ define void @f_0(i32 %x, i32* nocapture readonly %length_buf) local_unnamed_addr
 entry:
   %length = load i32, i32* %length_buf, align 4, !range !1
   %chk0 = icmp ugt i32 %length, %x
-  %x.inc1 = add i32 %x, 1
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk0) [ "deopt"() ]
+  %x.inc1 = add nuw nsw i32 %x, 1
   %chk1 = icmp ult i32 %x.inc1, %length
-  %0 = and i1 %chk0, %chk1
-  call void (i1, ...) @llvm.experimental.guard(i1 %0) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk1) [ "deopt"() ]
   %x.inc2 = add nuw nsw i32 %x, 2
   %chk2 = icmp ult i32 %x.inc2, %length
-  %x.inc3 = add nuw i32 %x, 3
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk2) [ "deopt"() ]
+  %x.inc3 = add nuw nsw i32 %x, 3
   %chk3 = icmp ult i32 %x.inc3, %length
-  %1 = and i1 %chk2, %chk3
-  call void (i1, ...) @llvm.experimental.guard(i1 %1) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk3) [ "deopt"() ]
   ret void
 }
 
@@ -24,16 +24,16 @@ define void @f_1(i32 %x, i32* nocapture readonly %length_buf) local_unnamed_addr
 entry:
   %length = load i32, i32* %length_buf, align 4, !range !1
   %chk0 = icmp ugt i32 %length, %x
-  %x.inc1 = add i32 %x, 1
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk0) [ "deopt"() ]
+  %x.inc1 = add nuw nsw i32 %x, 1
   %chk1 = icmp ult i32 %x.inc1, %length
-  %0 = and i1 %chk0, %chk1
-  call void (i1, ...) @llvm.experimental.guard(i1 %0) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk1) [ "deopt"() ]
   %x.inc2 = add nuw i32 %x, 3
   %chk2 = icmp ult i32 %x.inc2, %length
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk2) [ "deopt"() ]
   %x.inc3 = add nuw i32 %x, 6
   %chk3 = icmp ult i32 %x.inc3, %length
-  %1 = and i1 %chk2, %chk3
-  call void (i1, ...) @llvm.experimental.guard(i1 %1) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk3) [ "deopt"() ]
   ret void
 }
 
@@ -42,16 +42,16 @@ entry:
   %x = and i32 %a, -256
   %length = load i32, i32* %length_buf, align 4, !range !1
   %chk0 = icmp ult i32 %x, %length
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk0) [ "deopt"() ]
   %x.inc1 = or i32 %x, 1
   %chk1 = icmp ult i32 %x.inc1, %length
-  %0 = and i1 %chk0, %chk1
-  call void (i1, ...) @llvm.experimental.guard(i1 %0) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk1) [ "deopt"() ]
   %x.inc2 = or i32 %x, 2
   %chk2 = icmp ult i32 %x.inc2, %length
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk2) [ "deopt"() ]
   %x.inc3 = or i32 %x, 3
   %chk3 = icmp ult i32 %x.inc3, %length
-  %1 = and i1 %chk2, %chk3
-  call void (i1, ...) @llvm.experimental.guard(i1 %1) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk3) [ "deopt"() ]
   ret void
 }
 
@@ -60,16 +60,16 @@ entry:
   %x = and i32 %a, -256
   %length = load i32, i32* %length_buf, align 4, !range !1
   %chk0 = icmp ult i32 %x, %length
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk0) [ "deopt"() ]
   %x.inc1 = or i32 %x, 1
   %chk1 = icmp ult i32 %x.inc1, %length
-  %0 = and i1 %chk0, %chk1
-  call void (i1, ...) @llvm.experimental.guard(i1 %0) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk1) [ "deopt"() ]
   %x.inc2 = or i32 %x, 3
   %chk2 = icmp ult i32 %x.inc2, %length
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk2) [ "deopt"() ]
   %x.inc3 = add nuw nsw i32 %x.inc2, 3
   %chk3 = icmp ult i32 %x.inc3, %length
-  %1 = and i1 %chk2, %chk3
-  call void (i1, ...) @llvm.experimental.guard(i1 %1) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk3) [ "deopt"() ]
   ret void
 }
 
@@ -77,16 +77,16 @@ define void @f_4(i32 %x, i32* nocapture readonly %length_buf) local_unnamed_addr
 entry:
   %length = load i32, i32* %length_buf, align 4, !range !1
   %chk0 = icmp ugt i32 %length, %x
-  %x.inc1 = add i32 %x, -1024
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk0) [ "deopt"() ]
+  %x.inc1 = add nsw i32 %x, -1024
   %chk1 = icmp ult i32 %x.inc1, %length
-  %0 = and i1 %chk0, %chk1
-  call void (i1, ...) @llvm.experimental.guard(i1 %0) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk1) [ "deopt"() ]
   %x.inc2 = add nuw i32 %x, 2
   %chk2 = icmp ult i32 %x.inc2, %length
-  %x.inc3 = add nuw i32 %x, 3
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk2) [ "deopt"() ]
+  %x.inc3 = add nuw nsw i32 %x, 3
   %chk3 = icmp ult i32 %x.inc3, %length
-  %1 = and i1 %chk2, %chk3
-  call void (i1, ...) @llvm.experimental.guard(i1 %1) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk3) [ "deopt"() ]
   ret void
 }
 
@@ -94,16 +94,16 @@ define void @f_5(i32 %x, i32* nocapture readonly %length_buf) local_unnamed_addr
 entry:
   %length = load i32, i32* %length_buf, align 4, !range !1
   %chk0 = icmp ugt i32 %length, %x
-  %x.inc1 = add i32 %x, 1
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk0) [ "deopt"() ]
+  %x.inc1 = add nuw nsw i32 %x, 1
   %chk1 = icmp ult i32 %x.inc1, %length
-  %0 = and i1 %chk0, %chk1
-  call void (i1, ...) @llvm.experimental.guard(i1 %0) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk1) [ "deopt"() ]
   %x.inc2 = add nsw i32 %x, -199
   %chk2 = icmp ult i32 %x.inc2, %length
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk2) [ "deopt"() ]
   %x.inc3 = add nsw i32 %x, -196
   %chk3 = icmp ult i32 %x.inc3, %length
-  %1 = and i1 %chk2, %chk3
-  call void (i1, ...) @llvm.experimental.guard(i1 %1) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk3) [ "deopt"() ]
   ret void
 }
 
@@ -111,16 +111,16 @@ define void @f_6(i32 %x, i32* nocapture readonly %length_buf) local_unnamed_addr
 entry:
   %length = load i32, i32* %length_buf, align 4, !range !1
   %chk0 = icmp ugt i32 %length, %x
-  %x.inc1 = add i32 %x, -2147483647
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk0) [ "deopt"() ]
+  %x.inc1 = add nuw nsw i32 %x, -2147483647
   %chk1 = icmp ult i32 %x.inc1, %length
-  %0 = and i1 %chk0, %chk1
-  call void (i1, ...) @llvm.experimental.guard(i1 %0) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk1) [ "deopt"() ]
   %x.inc2 = add i32 %x, 2
   %chk2 = icmp ult i32 %x.inc2, %length
-  %x.inc3 = add i32 %x, 3
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk2) [ "deopt"() ]
+  %x.inc3 = add nuw i32 %x, 3
   %chk3 = icmp ult i32 %x.inc3, %length
-  %1 = and i1 %chk2, %chk3
-  call void (i1, ...) @llvm.experimental.guard(i1 %1) [ "deopt"() ]
+  call void (i1, ...) @llvm.experimental.guard(i1 %chk3) [ "deopt"() ]
   ret void
 }
 

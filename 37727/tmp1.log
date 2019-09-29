@@ -1,0 +1,308 @@
+BISECT: running pass (1) Loop Vectorization on function (_Z3fooR1s)
+
+LV: Checking a loop in "_Z3fooR1s" from example.ll
+LV: Loop hints: force=? width=0 unroll=0
+*********************
+chris-Funcion: 
+; Function Attrs: nounwind uwtable
+define void @_Z3fooR1s(%struct.s* nocapture readonly dereferenceable(8) %x) #0 {
+entry:
+  %a = getelementptr inbounds %struct.s, %struct.s* %x, i64 0, i32 0
+  %0 = load double*, double** %a, align 8
+  %ptrint = ptrtoint double* %0 to i64
+  %maskedptr = and i64 %ptrint, 31
+  %maskcond = icmp eq i64 %maskedptr, 0
+  br label %for.body
+
+for.body:                                         ; preds = %for.body, %entry
+  %indvars.iv = phi i64 [ 0, %entry ], [ %indvars.iv.next.1, %for.body ]
+  tail call void @llvm.assume(i1 %maskcond)
+  %arrayidx = getelementptr inbounds double, double* %0, i64 %indvars.iv
+  %1 = load double, double* %arrayidx, align 16
+  %add = fadd double %1, 1.000000e+00
+  tail call void @llvm.assume(i1 %maskcond)
+  %mul = fmul double %add, 2.000000e+00
+  store double %mul, double* %arrayidx, align 16
+  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1
+  tail call void @llvm.assume(i1 %maskcond)
+  %arrayidx.1 = getelementptr inbounds double, double* %0, i64 %indvars.iv.next
+  %2 = load double, double* %arrayidx.1, align 8
+  %add.1 = fadd double %2, 1.000000e+00
+  tail call void @llvm.assume(i1 %maskcond)
+  %mul.1 = fmul double %add.1, 2.000000e+00
+  store double %mul.1, double* %arrayidx.1, align 8
+  %indvars.iv.next.1 = add nuw nsw i64 %indvars.iv.next, 1
+  %exitcond.1 = icmp eq i64 %indvars.iv.next, 1599
+  br i1 %exitcond.1, label %for.end, label %for.body
+
+for.end:                                          ; preds = %for.body
+  ret void
+}
+
+*********************
+LV: Found trip count: 800
+LV: The Smallest and Widest types: 64 / 64 bits.
+LV: The Widest register safe to use is: 128 bits.
+LV: Found uniform instruction:   %exitcond.1 = icmp eq i64 %indvars.iv.next, 1599
+LV: Found uniform instruction:   %arrayidx = getelementptr inbounds double, double* %0, i64 %indvars.iv
+LV: Found uniform instruction:   %arrayidx.1 = getelementptr inbounds double, double* %0, i64 %indvars.iv.next
+LV: Scalarizing:  tail call void @llvm.assume(i1 %maskcond)
+LV: Scalarizing:  %arrayidx = getelementptr inbounds double, double* %0, i64 %indvars.iv
+LV: Scalarizing:  %1 = load double, double* %arrayidx, align 16
+LV: Scalarizing:  %add = fadd double %1, 1.000000e+00
+LV: Scalarizing:  tail call void @llvm.assume(i1 %maskcond)
+LV: Scalarizing:  %mul = fmul double %add, 2.000000e+00
+LV: Scalarizing:  store double %mul, double* %arrayidx, align 16
+LV: Scalarizing:  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1
+LV: Scalarizing:  tail call void @llvm.assume(i1 %maskcond)
+LV: Scalarizing:  %arrayidx.1 = getelementptr inbounds double, double* %0, i64 %indvars.iv.next
+LV: Scalarizing:  %2 = load double, double* %arrayidx.1, align 8
+LV: Scalarizing:  %add.1 = fadd double %2, 1.000000e+00
+LV: Scalarizing:  tail call void @llvm.assume(i1 %maskcond)
+LV: Scalarizing:  %mul.1 = fmul double %add.1, 2.000000e+00
+LV: Scalarizing:  store double %mul.1, double* %arrayidx.1, align 8
+LV: Scalarizing:  tail call void @llvm.assume(i1 %maskcond)
+LV: Scalarizing:  %arrayidx = getelementptr inbounds double, double* %0, i64 %indvars.iv
+LV: Scalarizing:  tail call void @llvm.assume(i1 %maskcond)
+LV: Scalarizing:  tail call void @llvm.assume(i1 %maskcond)
+LV: Scalarizing:  %arrayidx.1 = getelementptr inbounds double, double* %0, i64 %indvars.iv.next
+LV: Scalarizing:  tail call void @llvm.assume(i1 %maskcond)
+digraph VPlan {
+graph [labelloc=t, fontsize=30; label="Vectorization Plan\nInitial VPlan for VF=\{1\},UF\>=1"]
+node [shape=rect, fontname=Courier, fontsize=30]
+edge [fontname=Courier, fontsize=30]
+compound=true
+  N0 [label =
+    "for.body:\n" +
+      "WIDEN-INDUCTION %indvars.iv = phi 0, %indvars.iv.next.1\l" +
+      "CLONE call %maskcond, @llvm.assume\l" +
+      "CLONE %arrayidx = getelementptr %0, %indvars.iv\l" +
+      "CLONE %1 = load %arrayidx\l" +
+      "CLONE %add = fadd %1, 1.000000e+00\l" +
+      "CLONE call %maskcond, @llvm.assume\l" +
+      "CLONE %mul = fmul %add, 2.000000e+00\l" +
+      "CLONE store %mul, %arrayidx\l" +
+      "CLONE %indvars.iv.next = add %indvars.iv, 1\l" +
+      "CLONE call %maskcond, @llvm.assume\l" +
+      "CLONE %arrayidx.1 = getelementptr %0, %indvars.iv.next\l" +
+      "CLONE %2 = load %arrayidx.1\l" +
+      "CLONE %add.1 = fadd %2, 1.000000e+00\l" +
+      "CLONE call %maskcond, @llvm.assume\l" +
+      "CLONE %mul.1 = fmul %add.1, 2.000000e+00\l" +
+      "CLONE store %mul.1, %arrayidx.1\l"
+  ]
+}
+digraph VPlan {
+graph [labelloc=t, fontsize=30; label="Vectorization Plan\nInitial VPlan for VF=\{2\},UF\>=1"]
+node [shape=rect, fontname=Courier, fontsize=30]
+edge [fontname=Courier, fontsize=30]
+compound=true
+  N0 [label =
+    "for.body:\n" +
+      "WIDEN-INDUCTION %indvars.iv = phi 0, %indvars.iv.next.1\l" +
+      "REPLICATE call %maskcond, @llvm.assume\l" +
+      "CLONE %arrayidx = getelementptr %0, %indvars.iv\l" +
+      "INTERLEAVE-GROUP with factor 2 at %1\l" +
+      "  %1 = load %arrayidx 0\l" +
+      "  %2 = load %arrayidx.1 1\l" +
+      "WIDEN\l" +
+      "  %add = fadd %1, 1.000000e+00\l" +
+      "REPLICATE call %maskcond, @llvm.assume\l" +
+      "WIDEN\l" +
+      "  %mul = fmul %add, 2.000000e+00\l" +
+      "WIDEN\l" +
+      "  %indvars.iv.next = add %indvars.iv, 1\l" +
+      "REPLICATE call %maskcond, @llvm.assume\l" +
+      "CLONE %arrayidx.1 = getelementptr %0, %indvars.iv.next\l" +
+      "WIDEN\l" +
+      "  %add.1 = fadd %2, 1.000000e+00\l" +
+      "REPLICATE call %maskcond, @llvm.assume\l" +
+      "WIDEN\l" +
+      "  %mul.1 = fmul %add.1, 2.000000e+00\l" +
+      "INTERLEAVE-GROUP with factor 2 at <badref>\l" +
+      "  store %mul, %arrayidx 0\l" +
+      "  store %mul.1, %arrayidx.1 1\l"
+  ]
+}
+LV: Found an estimated cost of 0 for VF 1 For instruction:   %indvars.iv = phi i64 [ 0, %entry ], [ %indvars.iv.next.1, %for.body ]
+LV: Found an estimated cost of 0 for VF 1 For instruction:   %arrayidx = getelementptr inbounds double, double* %0, i64 %indvars.iv
+LV: Found an estimated cost of 1 for VF 1 For instruction:   %1 = load double, double* %arrayidx, align 16
+LV: Found an estimated cost of 2 for VF 1 For instruction:   %add = fadd double %1, 1.000000e+00
+LV: Found an estimated cost of 2 for VF 1 For instruction:   %mul = fmul double %add, 2.000000e+00
+LV: Found an estimated cost of 1 for VF 1 For instruction:   store double %mul, double* %arrayidx, align 16
+LV: Found an estimated cost of 1 for VF 1 For instruction:   %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1
+LV: Found an estimated cost of 0 for VF 1 For instruction:   %arrayidx.1 = getelementptr inbounds double, double* %0, i64 %indvars.iv.next
+LV: Found an estimated cost of 1 for VF 1 For instruction:   %2 = load double, double* %arrayidx.1, align 8
+LV: Found an estimated cost of 2 for VF 1 For instruction:   %add.1 = fadd double %2, 1.000000e+00
+LV: Found an estimated cost of 2 for VF 1 For instruction:   %mul.1 = fmul double %add.1, 2.000000e+00
+LV: Found an estimated cost of 1 for VF 1 For instruction:   store double %mul.1, double* %arrayidx.1, align 8
+LV: Found an estimated cost of 1 for VF 1 For instruction:   %indvars.iv.next.1 = add nuw nsw i64 %indvars.iv.next, 1
+LV: Found an estimated cost of 1 for VF 1 For instruction:   %exitcond.1 = icmp eq i64 %indvars.iv.next, 1599
+LV: Found an estimated cost of 0 for VF 1 For instruction:   br i1 %exitcond.1, label %for.end, label %for.body
+LV: Scalar loop costs: 15.
+LV: Found an estimated cost of 0 for VF 2 For instruction:   %indvars.iv = phi i64 [ 0, %entry ], [ %indvars.iv.next.1, %for.body ]
+LV: Found an estimated cost of 0 for VF 2 For instruction:   %arrayidx = getelementptr inbounds double, double* %0, i64 %indvars.iv
+LV: Found an estimated cost of 6 for VF 2 For instruction:   %1 = load double, double* %arrayidx, align 16
+LV: Found an estimated cost of 2 for VF 2 For instruction:   %add = fadd double %1, 1.000000e+00
+LV: Found an estimated cost of 2 for VF 2 For instruction:   %mul = fmul double %add, 2.000000e+00
+LV: Found an estimated cost of 0 for VF 2 For instruction:   store double %mul, double* %arrayidx, align 16
+LV: Found an estimated cost of 1 for VF 2 For instruction:   %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1
+LV: Found an estimated cost of 0 for VF 2 For instruction:   %arrayidx.1 = getelementptr inbounds double, double* %0, i64 %indvars.iv.next
+LV: Found an estimated cost of 0 for VF 2 For instruction:   %2 = load double, double* %arrayidx.1, align 8
+LV: Found an estimated cost of 2 for VF 2 For instruction:   %add.1 = fadd double %2, 1.000000e+00
+LV: Found an estimated cost of 2 for VF 2 For instruction:   %mul.1 = fmul double %add.1, 2.000000e+00
+LV: Found an estimated cost of 6 for VF 2 For instruction:   store double %mul.1, double* %arrayidx.1, align 8
+LV: Found an estimated cost of 1 for VF 2 For instruction:   %indvars.iv.next.1 = add nuw nsw i64 %indvars.iv.next, 1
+LV: Found an estimated cost of 1 for VF 2 For instruction:   %exitcond.1 = icmp eq i64 %indvars.iv.next, 1599
+LV: Found an estimated cost of 0 for VF 2 For instruction:   br i1 %exitcond.1, label %for.end, label %for.body
+LV: Vector loop of width 2 costs: 11.
+LV: Selecting VF: 2.
+LV: The target has 16 registers
+LV(REG): Calculating max register usage:
+LV(REG): At #0 Interval # 0
+LV(REG): At #2 Interval # 1
+LV(REG): At #3 Interval # 2
+LV(REG): At #4 Interval # 3
+LV(REG): At #6 Interval # 3
+LV(REG): At #8 Interval # 1
+LV(REG): At #10 Interval # 1
+LV(REG): At #11 Interval # 2
+LV(REG): At #12 Interval # 3
+LV(REG): At #14 Interval # 3
+LV(REG): At #16 Interval # 1
+LV(REG): At #17 Interval # 2
+LV(REG): VF = 2
+LV(REG): Found max usage: 2
+LV(REG): Found invariant usage: 2
+LV: Loop cost is 23
+LV: Not Interleaving.
+LV: Interleaving is not beneficial.
+LV: Found a vectorizable loop (2) in example.ll
+Setting best plan to VF=2, UF=1
+chris-LoopBypassBlocks 2: 
+entry:
+  %a = getelementptr inbounds %struct.s, %struct.s* %x, i64 0, i32 0
+  %0 = load double*, double** %a, align 8
+  %ptrint = ptrtoint double* %0 to i64
+  %maskedptr = and i64 %ptrint, 31
+  %maskcond = icmp eq i64 %maskedptr, 0
+  br i1 false, label %scalar.ph, label %vector.ph
+
+######## 
+*********************
+chris-before BB: 
+vector.ph:                                        ; preds = %entry
+  br label %vector.body
+
+*********************
+chris-expandCodeForPredicate:in: IP:  br label %vector.body
+union
+chris-expandUnionPredicate in:   br label %vector.body
+chris-expandCodeForPredicate:in: IP:  br label %vector.body
+wrap
+chris-expandWrapPredicate in:   br label %vector.body
+chris-InsertNoopCastOfTo: I:   %scevgep = getelementptr double, double* %0, i64 1
+chris-findInsertPointAfter I: <<   %scevgep = getelementptr double, double* %0, i64 1
+chris:IP   br label %vector.body
+chris 2 IP   br label %vector.body
+chris-Builder.SetInsertPoint(Loc): in:   br label %vector.body
+chris-Builder.SetInsertPoint(Loc): out:   br label %vector.body
+chris-expandWrapPredicate out1:   br label %vector.body
+chris-expandWrapPredicate out2:   br label %vector.body
+chris-expandWrapPredicate out3:   br label %vector.body
+chris-Builder.SetInsertPoint: in:   br label %vector.body
+chris-Builder.SetInsertPoint: out:   br label %vector.body
+chris-Builder.SetInsertPoint: out2:   br label %vector.body
+chris-expandCodeForPredicate:in: IP:  br label %vector.body
+wrap
+chris-expandWrapPredicate in:   br label %vector.body
+chris-InsertNoopCastOfTo: I:   %0 = load double*, double** %a, align 8
+chris-findInsertPointAfter I: <<   %0 = load double*, double** %a, align 8
+chris:IP   %ptrint = ptrtoint double* %0 to i64
+chris 2 IP   %ptrint = ptrtoint double* %0 to i64
+chris-Builder.SetInsertPoint(Loc): in:   br label %vector.body
+chris-Builder.SetInsertPoint(Loc): out:   br label %vector.body
+chris-expandWrapPredicate out1:   br label %vector.body
+chris-expandWrapPredicate out2:   br label %vector.body
+chris-expandWrapPredicate out3:   br label %vector.body
+chris-Builder.SetInsertPoint: in:   br label %vector.body
+chris-Builder.SetInsertPoint: out:   br label %vector.body
+chris-Builder.SetInsertPoint: out2:   br label %vector.body
+chris-expandUnionPredicate out:   br label %vector.body
+*********************
+chris-after: 
+vector.ph:                                        ; preds = %entry
+  %scevgep = getelementptr double, double* %0, i64 1
+  %scevgep1 = ptrtoint double* %scevgep to i64
+  %mul2 = call { i64, i1 } @llvm.umul.with.overflow.i64(i64 16, i64 799)
+  %mul.result = extractvalue { i64, i1 } %mul2, 0
+  %mul.overflow = extractvalue { i64, i1 } %mul2, 1
+  %1 = add i64 %scevgep1, %mul.result
+  %2 = sub i64 %scevgep1, %mul.result
+  %3 = icmp ugt i64 %2, %scevgep1
+  %4 = icmp ult i64 %1, %scevgep1
+  %5 = select i1 false, i1 %3, i1 %4
+  %6 = or i1 %5, %mul.overflow
+  %7 = or i1 false, %6
+  %mul3 = call { i64, i1 } @llvm.umul.with.overflow.i64(i64 16, i64 799)
+  %mul.result4 = extractvalue { i64, i1 } %mul3, 0
+  %mul.overflow5 = extractvalue { i64, i1 } %mul3, 1
+  %8 = add i64 %ptrint, %mul.result4
+  %9 = sub i64 %ptrint, %mul.result4
+  %10 = icmp ugt i64 %9, %ptrint
+  %11 = icmp ult i64 %8, %ptrint
+  %12 = select i1 false, i1 %10, i1 %11
+  %13 = or i1 %12, %mul.overflow5
+  %14 = or i1 %7, %13
+  br label %vector.body
+
+*********************
+chris-LoopBypassBlocks 3: 
+entry:
+  %a = getelementptr inbounds %struct.s, %struct.s* %x, i64 0, i32 0
+  %0 = load double*, double** %a, align 8
+  %ptrint = ptrtoint double* %0 to i64
+  %maskedptr = and i64 %ptrint, 31
+  %maskcond = icmp eq i64 %maskedptr, 0
+  br i1 false, label %scalar.ph, label %vector.ph
+
+######## 
+chris-LoopBypassBlocks 8: 
+entry:
+  %a = getelementptr inbounds %struct.s, %struct.s* %x, i64 0, i32 0
+  %0 = load double*, double** %a, align 8
+  %ptrint = ptrtoint double* %0 to i64
+  %maskedptr = and i64 %ptrint, 31
+  %maskcond = icmp eq i64 %maskedptr, 0
+  br i1 false, label %scalar.ph, label %vector.scevcheck
+
+######## 
+chris-LoopBypassBlocks 8: 
+vector.scevcheck:                                 ; preds = %entry
+  %scevgep = getelementptr double, double* %0, i64 1
+  %scevgep1 = ptrtoint double* %scevgep to i64
+  %mul2 = call { i64, i1 } @llvm.umul.with.overflow.i64(i64 16, i64 799)
+  %mul.result = extractvalue { i64, i1 } %mul2, 0
+  %mul.overflow = extractvalue { i64, i1 } %mul2, 1
+  %1 = add i64 %scevgep1, %mul.result
+  %2 = sub i64 %scevgep1, %mul.result
+  %3 = icmp ugt i64 %2, %scevgep1
+  %4 = icmp ult i64 %1, %scevgep1
+  %5 = select i1 false, i1 %3, i1 %4
+  %6 = or i1 %5, %mul.overflow
+  %7 = or i1 false, %6
+  %mul3 = call { i64, i1 } @llvm.umul.with.overflow.i64(i64 16, i64 799)
+  %mul.result4 = extractvalue { i64, i1 } %mul3, 0
+  %mul.overflow5 = extractvalue { i64, i1 } %mul3, 1
+  %8 = add i64 %ptrint, %mul.result4
+  %9 = sub i64 %ptrint, %mul.result4
+  %10 = icmp ugt i64 %9, %ptrint
+  %11 = icmp ult i64 %8, %ptrint
+  %12 = select i1 false, i1 %10, i1 %11
+  %13 = or i1 %12, %mul.overflow5
+  %14 = or i1 %7, %13
+  br i1 %14, label %scalar.ph, label %vector.ph
+
+######## 
+BISECT: NOT running pass (2) Loop Vectorization on function (test1)
+BISECT: NOT running pass (3) Loop Vectorization on function (test3)

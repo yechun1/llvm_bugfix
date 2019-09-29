@@ -1,5 +1,3 @@
-; ModuleID = 'test2.ll'
-source_filename = "test2.ll"
 target triple = "aarch64-linux-gnu"
 
 @X1 = global i32 0, align 4
@@ -7,7 +5,6 @@ target triple = "aarch64-linux-gnu"
 @X3 = global i32 0, align 4
 @X4 = global i32 0, align 4
 
-; Function Attrs: nounwind
 define void @test(i32 %i) #0 {
 entry:
   %0 = load i32, i32* @X1, align 4
@@ -27,8 +24,11 @@ declare void @foo()
 
 attributes #0 = { nounwind }
 
-!llvm.module.flags = !{!0, !1, !2}
-
-!0 = !{i32 2, !"Dwarf Version", i32 4}
-!1 = !{i32 2, !"Debug Info Version", i32 3}
-!2 = !{i32 1, !"wchar_size", i32 4}
+!llvm.dbg.cu = !{!0}
+!llvm.module.flags = !{!3, !4, !5}
+!0 = distinct !DICompileUnit(language: DW_LANG_C99, file: !1, producer: "clang version 7.0.0 (trunk 330790) (llvm/trunk 330787)", isOptimized: true, runtimeVersion: 0, emissionKind: LineTablesOnly, enums: !2)
+!1 = !DIFile(filename: "test.c", directory: "")
+!2 = !{}
+!3 = !{i32 2, !"Dwarf Version", i32 4}
+!4 = !{i32 2, !"Debug Info Version", i32 3}
+!5 = !{i32 1, !"wchar_size", i32 4}
