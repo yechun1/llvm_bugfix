@@ -1,3 +1,6 @@
+# https://bugs.llvm.org/show_bug.cgi?id=41111
+
+
 clang++ -c -o2 -Wno-everything -I /usr/include/csmith/ hit2.cpp -o a.o
 clang++ -c -g -o2 -Wno-everything -I /usr/include/csmith/ hit2.cpp -o b.o
 
