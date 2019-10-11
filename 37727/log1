@@ -2,44 +2,13 @@ BISECT: running pass (1) Loop Vectorization on function (_Z3fooR1s)
 
 LV: Checking a loop in "_Z3fooR1s" from example.ll
 LV: Loop hints: force=? width=0 unroll=0
-*********************
-chris-Funcion: 
-; Function Attrs: nounwind uwtable
-define void @_Z3fooR1s(%struct.s* nocapture readonly dereferenceable(8) %x) #0 {
-entry:
-  %a = getelementptr inbounds %struct.s, %struct.s* %x, i64 0, i32 0
-  %0 = load double*, double** %a, align 8
-  %ptrint = ptrtoint double* %0 to i64
-  %maskedptr = and i64 %ptrint, 31
-  %maskcond = icmp eq i64 %maskedptr, 0
-  br label %for.body
-
-for.body:                                         ; preds = %for.body, %entry
-  %indvars.iv = phi i64 [ 0, %entry ], [ %indvars.iv.next.1, %for.body ]
-  tail call void @llvm.assume(i1 %maskcond)
-  %arrayidx = getelementptr inbounds double, double* %0, i64 %indvars.iv
-  %1 = load double, double* %arrayidx, align 16
-  %add = fadd double %1, 1.000000e+00
-  tail call void @llvm.assume(i1 %maskcond)
-  %mul = fmul double %add, 2.000000e+00
-  store double %mul, double* %arrayidx, align 16
-  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1
-  tail call void @llvm.assume(i1 %maskcond)
-  %arrayidx.1 = getelementptr inbounds double, double* %0, i64 %indvars.iv.next
-  %2 = load double, double* %arrayidx.1, align 8
-  %add.1 = fadd double %2, 1.000000e+00
-  tail call void @llvm.assume(i1 %maskcond)
-  %mul.1 = fmul double %add.1, 2.000000e+00
-  store double %mul.1, double* %arrayidx.1, align 8
-  %indvars.iv.next.1 = add nuw nsw i64 %indvars.iv.next, 1
-  %exitcond.1 = icmp eq i64 %indvars.iv.next, 1599
-  br i1 %exitcond.1, label %for.end, label %for.body
-
-for.end:                                          ; preds = %for.body
-  ret void
-}
-
-*********************
+LV: Analyzing interleaved accesses...
+LV: Creating an interleave group with:  store double %mul.1, double* %arrayidx.1, align 8
+LV: Inserted:  store double %mul, double* %arrayidx, align 16
+    into the interleave group with  store double %mul.1, double* %arrayidx.1, align 8
+LV: Creating an interleave group with:  %2 = load double, double* %arrayidx.1, align 8
+LV: Inserted:  %1 = load double, double* %arrayidx, align 16
+    into the interleave group with  %2 = load double, double* %arrayidx.1, align 8
 LV: Found trip count: 800
 LV: The Smallest and Widest types: 64 / 64 bits.
 LV: The Widest register safe to use is: 128 bits.
@@ -179,130 +148,5 @@ LV: Not Interleaving.
 LV: Interleaving is not beneficial.
 LV: Found a vectorizable loop (2) in example.ll
 Setting best plan to VF=2, UF=1
-chris-LoopBypassBlocks 2: 
-entry:
-  %a = getelementptr inbounds %struct.s, %struct.s* %x, i64 0, i32 0
-  %0 = load double*, double** %a, align 8
-  %ptrint = ptrtoint double* %0 to i64
-  %maskedptr = and i64 %ptrint, 31
-  %maskcond = icmp eq i64 %maskedptr, 0
-  br i1 false, label %scalar.ph, label %vector.ph
-
-######## 
-*********************
-chris-before BB: 
-vector.ph:                                        ; preds = %entry
-  br label %vector.body
-
-*********************
-chris-expandCodeForPredicate:in: IP:  br label %vector.body
-union
-chris-expandUnionPredicate in:   br label %vector.body
-chris-expandCodeForPredicate:in: IP:  br label %vector.body
-wrap
-chris-expandWrapPredicate in:   br label %vector.body
-chris-InsertNoopCastOfTo: I:   %scevgep = getelementptr double, double* %0, i64 1
-chris-findInsertPointAfter I: <<   %scevgep = getelementptr double, double* %0, i64 1
-chris:IP   br label %vector.body
-chris 2 IP   br label %vector.body
-chris-Builder.SetInsertPoint(Loc): in:   br label %vector.body
-chris-Builder.SetInsertPoint(Loc): out:   br label %vector.body
-chris-expandWrapPredicate out1:   br label %vector.body
-chris-expandWrapPredicate out2:   br label %vector.body
-chris-expandWrapPredicate out3:   br label %vector.body
-chris-Builder.SetInsertPoint: in:   br label %vector.body
-chris-Builder.SetInsertPoint: out:   br label %vector.body
-chris-Builder.SetInsertPoint: out2:   br label %vector.body
-chris-expandCodeForPredicate:in: IP:  br label %vector.body
-wrap
-chris-expandWrapPredicate in:   br label %vector.body
-chris-InsertNoopCastOfTo: I:   %0 = load double*, double** %a, align 8
-chris-findInsertPointAfter I: <<   %0 = load double*, double** %a, align 8
-chris:IP   %ptrint = ptrtoint double* %0 to i64
-chris 2 IP   %ptrint = ptrtoint double* %0 to i64
-chris-Builder.SetInsertPoint(Loc): in:   br label %vector.body
-chris-Builder.SetInsertPoint(Loc): out:   br label %vector.body
-chris-expandWrapPredicate out1:   br label %vector.body
-chris-expandWrapPredicate out2:   br label %vector.body
-chris-expandWrapPredicate out3:   br label %vector.body
-chris-Builder.SetInsertPoint: in:   br label %vector.body
-chris-Builder.SetInsertPoint: out:   br label %vector.body
-chris-Builder.SetInsertPoint: out2:   br label %vector.body
-chris-expandUnionPredicate out:   br label %vector.body
-*********************
-chris-after: 
-vector.ph:                                        ; preds = %entry
-  %scevgep = getelementptr double, double* %0, i64 1
-  %scevgep1 = ptrtoint double* %scevgep to i64
-  %mul2 = call { i64, i1 } @llvm.umul.with.overflow.i64(i64 16, i64 799)
-  %mul.result = extractvalue { i64, i1 } %mul2, 0
-  %mul.overflow = extractvalue { i64, i1 } %mul2, 1
-  %1 = add i64 %scevgep1, %mul.result
-  %2 = sub i64 %scevgep1, %mul.result
-  %3 = icmp ugt i64 %2, %scevgep1
-  %4 = icmp ult i64 %1, %scevgep1
-  %5 = select i1 false, i1 %3, i1 %4
-  %6 = or i1 %5, %mul.overflow
-  %7 = or i1 false, %6
-  %mul3 = call { i64, i1 } @llvm.umul.with.overflow.i64(i64 16, i64 799)
-  %mul.result4 = extractvalue { i64, i1 } %mul3, 0
-  %mul.overflow5 = extractvalue { i64, i1 } %mul3, 1
-  %8 = add i64 %ptrint, %mul.result4
-  %9 = sub i64 %ptrint, %mul.result4
-  %10 = icmp ugt i64 %9, %ptrint
-  %11 = icmp ult i64 %8, %ptrint
-  %12 = select i1 false, i1 %10, i1 %11
-  %13 = or i1 %12, %mul.overflow5
-  %14 = or i1 %7, %13
-  br label %vector.body
-
-*********************
-chris-LoopBypassBlocks 3: 
-entry:
-  %a = getelementptr inbounds %struct.s, %struct.s* %x, i64 0, i32 0
-  %0 = load double*, double** %a, align 8
-  %ptrint = ptrtoint double* %0 to i64
-  %maskedptr = and i64 %ptrint, 31
-  %maskcond = icmp eq i64 %maskedptr, 0
-  br i1 false, label %scalar.ph, label %vector.ph
-
-######## 
-chris-LoopBypassBlocks 8: 
-entry:
-  %a = getelementptr inbounds %struct.s, %struct.s* %x, i64 0, i32 0
-  %0 = load double*, double** %a, align 8
-  %ptrint = ptrtoint double* %0 to i64
-  %maskedptr = and i64 %ptrint, 31
-  %maskcond = icmp eq i64 %maskedptr, 0
-  br i1 false, label %scalar.ph, label %vector.scevcheck
-
-######## 
-chris-LoopBypassBlocks 8: 
-vector.scevcheck:                                 ; preds = %entry
-  %scevgep = getelementptr double, double* %0, i64 1
-  %scevgep1 = ptrtoint double* %scevgep to i64
-  %mul2 = call { i64, i1 } @llvm.umul.with.overflow.i64(i64 16, i64 799)
-  %mul.result = extractvalue { i64, i1 } %mul2, 0
-  %mul.overflow = extractvalue { i64, i1 } %mul2, 1
-  %1 = add i64 %scevgep1, %mul.result
-  %2 = sub i64 %scevgep1, %mul.result
-  %3 = icmp ugt i64 %2, %scevgep1
-  %4 = icmp ult i64 %1, %scevgep1
-  %5 = select i1 false, i1 %3, i1 %4
-  %6 = or i1 %5, %mul.overflow
-  %7 = or i1 false, %6
-  %mul3 = call { i64, i1 } @llvm.umul.with.overflow.i64(i64 16, i64 799)
-  %mul.result4 = extractvalue { i64, i1 } %mul3, 0
-  %mul.overflow5 = extractvalue { i64, i1 } %mul3, 1
-  %8 = add i64 %ptrint, %mul.result4
-  %9 = sub i64 %ptrint, %mul.result4
-  %10 = icmp ugt i64 %9, %ptrint
-  %11 = icmp ult i64 %8, %ptrint
-  %12 = select i1 false, i1 %10, i1 %11
-  %13 = or i1 %12, %mul.overflow5
-  %14 = or i1 %7, %13
-  br i1 %14, label %scalar.ph, label %vector.ph
-
-######## 
 BISECT: NOT running pass (2) Loop Vectorization on function (test1)
 BISECT: NOT running pass (3) Loop Vectorization on function (test3)
