@@ -1,21 +1,27 @@
-; ModuleID = 'bbi-32603-2.ll'
-source_filename = "bbi-32603-2.ll"
+; RUN: opt < %s -S -inline | FileCheck %s
+; RUN: opt < %s -S -strip-debug -inline | FileCheck %s
+
+; https://bugs.llvm.org/show_bug.cgi?id=43291
+; The purpose of this test is to check that debug info doesn't influence
+; inlining decisions.
 
 %rec1198 = type { i32, i32 }
 
-; Function Attrs: nounwind readnone speculatable willreturn
-declare void @llvm.dbg.declare(metadata, metadata, metadata) #0
-
-define void @func(i16 %k.4.par) !dbg !23 {
+define void @f(i16 %k.4.par) !dbg !23 {
   %volatileloadslot = alloca %rec1198
   call void @llvm.dbg.value(metadata i16 %k.4.par, metadata !30, metadata !DIExpression()), !dbg !31
   %l.6 = alloca [3 x i32]
+  call void @llvm.dbg.value(metadata i16 %k.4.par, metadata !30, metadata !DIExpression()), !dbg !31
+  %tmp = alloca [3 x i32]
+  call void @llvm.dbg.value(metadata i16 %k.4.par, metadata !30, metadata !DIExpression()), !dbg !31
   %volatileloadslot.0..sroa_cast = bitcast %rec1198* %volatileloadslot to i8*, !dbg !32
   call void @llvm.lifetime.start.p0i8(i64 4, i8* %volatileloadslot.0..sroa_cast)
   %volatileloadslot.0..sroa_cast1 = bitcast %rec1198* %volatileloadslot to i8*
   call void @llvm.lifetime.end.p0i8(i64 4, i8* %volatileloadslot.0..sroa_cast1)
   %_tmp23 = icmp ne i16 %k.4.par, 0
+  call void @llvm.dbg.value(metadata i16 %k.4.par, metadata !30, metadata !DIExpression()), !dbg !31
   br i1 %_tmp23, label %bb1, label %bb2
+  call void @llvm.dbg.value(metadata i16 %k.4.par, metadata !30, metadata !DIExpression()), !dbg !31
 
 bb1:                                              ; preds = %0
   %_tmp28 = getelementptr [3 x i32], [3 x i32]* %l.6, i16 0, i64 0
@@ -26,30 +32,35 @@ bb2:                                              ; preds = %bb1, %0
   ret void
 }
 
-define i16 @great() !dbg !33 {
-  %volatileloadslot.i = alloca %rec1198
-  call void @llvm.dbg.value(metadata i16 0, metadata !30, metadata !DIExpression()), !dbg !36
-  %volatileloadslot.0..sroa_cast.i = bitcast %rec1198* %volatileloadslot.i to i8*, !dbg !38
-  call void @llvm.lifetime.start.p0i8(i64 4, i8* %volatileloadslot.0..sroa_cast.i)
-  %volatileloadslot.0..sroa_cast1.i = bitcast %rec1198* %volatileloadslot.i to i8*
-  call void @llvm.lifetime.end.p0i8(i64 4, i8* %volatileloadslot.0..sroa_cast1.i)
+define i16 @g() !dbg !33 {
+  ; CHECK-LABEL: g
+  ; CHECK: %l.6.i = alloca [3 x i32]
+  ; CHECK: %tmp.i = alloca [3 x i32]
+  ; CHECK-NEXT: %1 = bitcast [3 x i32]* %l.6.i to i8*
+  ; CHECK-NEXT: call void @llvm.lifetime.start.p0i8(i64 12, i8* %1)
+  ; CHECK-NEXT: %2 = bitcast [3 x i32]* %tmp.i to i8*
+  ; CHECK-NEXT: call void @llvm.lifetime.start.p0i8(i64 12, i8* %2)
+
+  ; CHECK: call void @llvm.lifetime.end.p0i8(i64 4, i8* %volatileloadslot.0..sroa_cast1.i)
+  ; CHECK-NEXT: %3 = bitcast [3 x i32]* %l.6.i to i8*
+  ; CHECK-NEXT: call void @llvm.lifetime.end.p0i8(i64 12, i8* %3)
+  ; CHECK-NEXT: %4 = bitcast [3 x i32]* %tmp.i to i8*
+  ; CHECK-NEXT: call void @llvm.lifetime.end.p0i8(i64 12, i8* %4)
+  call void @f(i16 0), !dbg !36
   br label %bb1
 
 bb1:                                              ; preds = %0
   ret i16 0
 }
 
-; Function Attrs: argmemonly nounwind willreturn
-declare void @llvm.lifetime.start.p0i8(i64 immarg, i8* nocapture) #1
+; Function Attrs: argmemonly nounwind
+declare void @llvm.lifetime.start.p0i8(i64, i8* nocapture)
 
-; Function Attrs: argmemonly nounwind willreturn
-declare void @llvm.lifetime.end.p0i8(i64 immarg, i8* nocapture) #1
+; Function Attrs: argmemonly nounwind
+declare void @llvm.lifetime.end.p0i8(i64, i8* nocapture)
 
-; Function Attrs: nounwind readnone speculatable willreturn
-declare void @llvm.dbg.value(metadata, metadata, metadata) #0
-
-attributes #0 = { nounwind readnone speculatable willreturn }
-attributes #1 = { argmemonly nounwind willreturn }
+; Function Attrs: nounwind readnone speculatable
+declare void @llvm.dbg.value(metadata, metadata, metadata)
 
 !llvm.dbg.cu = !{!0}
 !llvm.module.flags = !{!20, !21}
@@ -91,6 +102,4 @@ attributes #1 = { argmemonly nounwind willreturn }
 !33 = distinct !DISubprogram(name: "g", scope: !1, file: !1, line: 8, type: !34, scopeLine: 8, spFlags: DISPFlagDefinition, unit: !0, retainedNodes: !2)
 !34 = !DISubroutineType(types: !35)
 !35 = !{!29}
-!36 = !DILocation(line: 0, scope: !23, inlinedAt: !37)
-!37 = distinct !DILocation(line: 8, column: 7, scope: !33)
-!38 = !DILocation(line: 19, column: 3, scope: !23, inlinedAt: !37)
+!36 = !DILocation(line: 8, column: 7, scope: !33)

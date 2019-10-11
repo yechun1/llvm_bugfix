@@ -1,13 +1,19 @@
-%rec1198 = type { i32, i32 }
+; RUN: opt < %s -S -inline | FileCheck %s
+; RUN: opt < %s -S -strip-debug -inline | FileCheck %s
 
-; Function Attrs: nounwind readnone speculatable
-declare void @llvm.dbg.declare(metadata, metadata, metadata) #0
+; https://bugs.llvm.org/show_bug.cgi?id=43291
+; The purpose of this test is to check that debug info doesn't influence
+; inlining decisions.
+
+%rec1198 = type { i32, i32 }
 
 define void @f(i16 %k.4.par) !dbg !23 {
   %volatileloadslot = alloca %rec1198
   call void @llvm.dbg.value(metadata i16 %k.4.par, metadata !30, metadata !DIExpression()), !dbg !31
   %l.6 = alloca [3 x i32]
-  %volatileloadslot.0..sroa_cast = bitcast %rec1198* %volatileloadslot to i8*
+  call void @llvm.dbg.value(metadata i16 %k.4.par, metadata !30, metadata !DIExpression()), !dbg !31
+  %tmp = alloca [3 x i32]
+  %volatileloadslot.0..sroa_cast = bitcast %rec1198* %volatileloadslot to i8*, !dbg !32
   call void @llvm.lifetime.start.p0i8(i64 4, i8* %volatileloadslot.0..sroa_cast)
   %volatileloadslot.0..sroa_cast1 = bitcast %rec1198* %volatileloadslot to i8*
   call void @llvm.lifetime.end.p0i8(i64 4, i8* %volatileloadslot.0..sroa_cast1)
@@ -24,6 +30,19 @@ bb2:                                              ; preds = %bb1, %0
 }
 
 define i16 @g() !dbg !33 {
+  ; CHECK-LABEL: g
+  ; CHECK: %l.6.i = alloca [3 x i32]
+  ; CHECK: %tmp.i = alloca [3 x i32]
+  ; CHECK-NEXT: %1 = bitcast [3 x i32]* %l.6.i to i8*
+  ; CHECK-NEXT: call void @llvm.lifetime.start.p0i8(i64 12, i8* %1)
+  ; CHECK-NEXT: %2 = bitcast [3 x i32]* %tmp.i to i8*
+  ; CHECK-NEXT: call void @llvm.lifetime.start.p0i8(i64 12, i8* %2)
+
+  ; CHECK: call void @llvm.lifetime.end.p0i8(i64 4, i8* %volatileloadslot.0..sroa_cast1.i)
+  ; CHECK-NEXT: %3 = bitcast [3 x i32]* %l.6.i to i8*
+  ; CHECK-NEXT: call void @llvm.lifetime.end.p0i8(i64 12, i8* %3)
+  ; CHECK-NEXT: %4 = bitcast [3 x i32]* %tmp.i to i8*
+  ; CHECK-NEXT: call void @llvm.lifetime.end.p0i8(i64 12, i8* %4)
   call void @f(i16 0), !dbg !36
   br label %bb1
 
@@ -32,17 +51,13 @@ bb1:                                              ; preds = %0
 }
 
 ; Function Attrs: argmemonly nounwind
-declare void @llvm.lifetime.start.p0i8(i64, i8* nocapture) #2
+declare void @llvm.lifetime.start.p0i8(i64, i8* nocapture)
 
 ; Function Attrs: argmemonly nounwind
-declare void @llvm.lifetime.end.p0i8(i64, i8* nocapture) #2
+declare void @llvm.lifetime.end.p0i8(i64, i8* nocapture)
 
 ; Function Attrs: nounwind readnone speculatable
-declare void @llvm.dbg.value(metadata, metadata, metadata) #3
-
-attributes #0 = { nounwind readnone speculatable }
-attributes #2 = { argmemonly nounwind }
-attributes #3 = { nounwind readnone speculatable }
+declare void @llvm.dbg.value(metadata, metadata, metadata)
 
 !llvm.dbg.cu = !{!0}
 !llvm.module.flags = !{!20, !21}
