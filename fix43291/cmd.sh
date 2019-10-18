@@ -43,14 +43,14 @@ NUM=3
 
 ### case1
 #$OPT_ORIG < inline-with-debuginfo.ll -S -inline -o out0.ll 2>log0
-$OPT < inline-with-debuginfo.ll -S -inline -o out1.ll 2>log1
+#$OPT < inline-with-debuginfo.ll -S -inline -o out1.ll 2>log1
 #$OPT_ORIG < inline-with-debuginfo.ll -S -strip-debug -inline -o out02.ll 2>log02
-$OPT < inline-with-debuginfo.ll -S -strip-debug -inline -o out2.ll 2>log2
+#$OPT < inline-with-debuginfo.ll -S -strip-debug -inline -o out2.ll 2>log2
 
 ### case2
 #$OPT < inline-with-debuginfo.ll -S -inline | FileCheck inline-with-debuginfo.ll
 #$OPT < inline-with-debuginfo.ll -S -strip-debug -inline | FileCheck inline-with-debuginfo.ll
 
 ### test3
-#$LIT /data/proj/compiler/llvm/llvm-project.release/llvm/test/Transforms/Inline/inline-with-debuginfo.ll -vv
+$LIT /data/proj/compiler/llvm/llvm-project.release/llvm/test/Transforms/Inline/inline-with-debuginfo.ll -vv
 

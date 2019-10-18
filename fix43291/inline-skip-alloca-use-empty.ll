@@ -2,27 +2,24 @@
 ; RUN: opt < %s -S -strip-debug -inline | FileCheck %s
 
 ; https://bugs.llvm.org/show_bug.cgi?id=43291
-; The purpose of this test is to check that debug info doesn't influence
-; inlining decisions.
+; The purpose of this test is to check that use_empty alloca will remove when inline pass,
+; and debug info will not influence inlining decisions.
 
 define void @f(i16 %k) !dbg !23 {
   call void @llvm.dbg.value(metadata i16 %k, metadata !30, metadata !DIExpression()), !dbg !31
-  %alloca1 = alloca i32
+  %a1 = alloca i32
   call void @llvm.dbg.value(metadata i16 %k, metadata !30, metadata !DIExpression()), !dbg !31
-  %alloca2 = alloca i32
+  %a2 = alloca [3 x i32]
   call void @llvm.dbg.value(metadata i16 %k, metadata !30, metadata !DIExpression()), !dbg !31
-  %alloca3 = alloca [3 x i32]
+  %a3 = alloca i32
   call void @llvm.dbg.value(metadata i16 %k, metadata !30, metadata !DIExpression()), !dbg !31
-  %alloca4 = alloca i32
-  call void @llvm.dbg.value(metadata i16 %k, metadata !30, metadata !DIExpression()), !dbg !31
-  %alloca1..1 = bitcast i32* %alloca1 to i8**, !dbg !32
-  %alloca2..1 = bitcast i32* %alloca2 to i8**
-  %alloca4..1 = bitcast i32* %alloca4 to i8**, !dbg !32
+  %a1..1 = bitcast i32* %a1 to i8**, !dbg !32
+  %a3..1 = bitcast i32* %a3 to i8**, !dbg !32
   %_tmp23 = icmp ne i16 %k, 0
   br i1 %_tmp23, label %bb1, label %bb2
 
 bb1:                                              ; preds = %0
-  %_tmp28 = getelementptr [3 x i32], [3 x i32]* %alloca3, i16 0, i64 0
+  %_tmp28 = getelementptr [3 x i32], [3 x i32]* %a2, i16 0, i64 0
   store i32 0, i32* %_tmp28
   br label %bb2
 
@@ -32,10 +29,9 @@ bb2:                                              ; preds = %bb1, %0
 
 define i16 @g() !dbg !33 {
   ; CHECK-LABEL: g
-  ; CHECK: %alloca1.i = alloca i32
-  ; CHECK: %alloca2.i = alloca i32
-  ; CHECK-NOT: %alloca3.i = alloca [3 x i32]
-  ; CHECK: %alloca4.i = alloca i32
+  ; CHECK: %a1.i = alloca i32
+  ; CHECK-NOT: %a2.i = alloca [3 x i32]
+  ; CHECK: %a3.i = alloca i32
   call void @f(i16 0), !dbg !36
   br label %bb1
 
