@@ -1,28 +1,21 @@
-; RUN: opt < %s -S -inline | FileCheck %s
-; RUN: opt < %s -S -strip-debug -inline | FileCheck %s
+%rec1198 = type { i32, i32 }
 
-; https://bugs.llvm.org/show_bug.cgi?id=43291
-; The purpose of this test is to check that debug info doesn't influence
-; inlining decisions.
+; Function Attrs: nounwind readnone speculatable
+declare void @llvm.dbg.declare(metadata, metadata, metadata) #0
 
-define void @f(i16 %k) !dbg !23 {
-  call void @llvm.dbg.value(metadata i16 %k, metadata !30, metadata !DIExpression()), !dbg !31
-  %alloca1 = alloca i32
-  call void @llvm.dbg.value(metadata i16 %k, metadata !30, metadata !DIExpression()), !dbg !31
-  %alloca2 = alloca i32
-  call void @llvm.dbg.value(metadata i16 %k, metadata !30, metadata !DIExpression()), !dbg !31
-  %alloca3 = alloca [3 x i32]
-  call void @llvm.dbg.value(metadata i16 %k, metadata !30, metadata !DIExpression()), !dbg !31
-  %alloca4 = alloca i32
-  call void @llvm.dbg.value(metadata i16 %k, metadata !30, metadata !DIExpression()), !dbg !31
-  %alloca1..1 = bitcast i32* %alloca1 to i8**, !dbg !32
-  %alloca2..1 = bitcast i32* %alloca2 to i8**
-  %alloca4..1 = bitcast i32* %alloca4 to i8**, !dbg !32
-  %_tmp23 = icmp ne i16 %k, 0
+define void @func(i16 %k.4.par) !dbg !23 {
+  %volatileloadslot = alloca %rec1198
+  call void @llvm.dbg.value(metadata i16 %k.4.par, metadata !30, metadata !DIExpression()), !dbg !31
+  %l.6 = alloca [3 x i32]
+  %volatileloadslot.0..sroa_cast = bitcast %rec1198* %volatileloadslot to i8*, !dbg !32
+  call void @llvm.lifetime.start.p0i8(i64 4, i8* %volatileloadslot.0..sroa_cast)
+  %volatileloadslot.0..sroa_cast1 = bitcast %rec1198* %volatileloadslot to i8*
+  call void @llvm.lifetime.end.p0i8(i64 4, i8* %volatileloadslot.0..sroa_cast1)
+  %_tmp23 = icmp ne i16 %k.4.par, 0
   br i1 %_tmp23, label %bb1, label %bb2
 
 bb1:                                              ; preds = %0
-  %_tmp28 = getelementptr [3 x i32], [3 x i32]* %alloca3, i16 0, i64 0
+  %_tmp28 = getelementptr [3 x i32], [3 x i32]* %l.6, i16 0, i64 0
   store i32 0, i32* %_tmp28
   br label %bb2
 
@@ -30,13 +23,8 @@ bb2:                                              ; preds = %bb1, %0
   ret void
 }
 
-define i16 @g() !dbg !33 {
-  ; CHECK-LABEL: g
-  ; CHECK: %alloca1.i = alloca i32
-  ; CHECK: %alloca2.i = alloca i32
-  ; CHECK-NOT: %alloca3.i = alloca [3 x i32]
-  ; CHECK: %alloca4.i = alloca i32
-  call void @f(i16 0), !dbg !36
+define i16 @great() !dbg !33 {
+  call void @func(i16 0), !dbg !36
   br label %bb1
 
 bb1:                                              ; preds = %0
@@ -44,13 +32,17 @@ bb1:                                              ; preds = %0
 }
 
 ; Function Attrs: argmemonly nounwind
-declare void @llvm.lifetime.start.p0i8(i64, i8* nocapture)
+declare void @llvm.lifetime.start.p0i8(i64, i8* nocapture) #2
 
 ; Function Attrs: argmemonly nounwind
-declare void @llvm.lifetime.end.p0i8(i64, i8* nocapture)
+declare void @llvm.lifetime.end.p0i8(i64, i8* nocapture) #2
 
 ; Function Attrs: nounwind readnone speculatable
-declare void @llvm.dbg.value(metadata, metadata, metadata)
+declare void @llvm.dbg.value(metadata, metadata, metadata) #3
+
+attributes #0 = { nounwind readnone speculatable }
+attributes #2 = { argmemonly nounwind }
+attributes #3 = { nounwind readnone speculatable }
 
 !llvm.dbg.cu = !{!0}
 !llvm.module.flags = !{!20, !21}

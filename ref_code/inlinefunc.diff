@@ -1,0 +1,50 @@
+diff --git a/llvm/lib/Transforms/Utils/InlineFunction.cpp b/llvm/lib/Transforms/Utils/InlineFunction.cpp
+index a7f0f7ac5d6..49d42611ad5 100644
+--- a/llvm/lib/Transforms/Utils/InlineFunction.cpp
++++ b/llvm/lib/Transforms/Utils/InlineFunction.cpp
+@@ -1819,13 +1819,15 @@ llvm::InlineResult llvm::InlineFunction(CallSite CS, InlineFunctionInfo &IFI,
+   // block for the callee, move them to the entry block of the caller.  First
+   // calculate which instruction they should be inserted before.  We insert the
+   // instructions at the end of the current alloca list.
+   {
+     BasicBlock::iterator InsertPoint = Caller->begin()->begin();
+-    for (BasicBlock::iterator I = FirstNewBlock->begin(),
+-         E = FirstNewBlock->end(); I != E; ) {
+-      AllocaInst *AI = dyn_cast<AllocaInst>(I++);
++    auto FirstNewBlockInsts = FirstNewBlock->instructionsWithoutDebug();
++    for (auto I = FirstNewBlockInsts.begin(),
++         E = FirstNewBlockInsts.end(); I != E; ) {
++      AllocaInst *AI = dyn_cast<AllocaInst>(&*I);
++      ++I;
+       if (!AI) continue;
+ 
+       // If the alloca is now dead, remove it.  This often occurs due to code
+       // specialization.
+       if (AI->use_empty()) {
+@@ -1839,21 +1841,22 @@ llvm::InlineResult llvm::InlineFunction(CallSite CS, InlineFunctionInfo &IFI,
+       // Keep track of the static allocas that we inline into the caller.
+       IFI.StaticAllocas.push_back(AI);
+ 
+       // Scan for the block of allocas that we can move over, and move them
+       // all at once.
+-      while (isa<AllocaInst>(I) &&
+-             allocaWouldBeStaticInEntry(cast<AllocaInst>(I))) {
+-        IFI.StaticAllocas.push_back(cast<AllocaInst>(I));
++      while (isa<AllocaInst>(&*I) &&
++             allocaWouldBeStaticInEntry(cast<AllocaInst>(&*I))) {
++        IFI.StaticAllocas.push_back(cast<AllocaInst>(&*I));
+         ++I;
+       }
+ 
+       // Transfer all of the allocas over in a block.  Using splice means
+       // that the instructions aren't removed from the symbol table, then
+       // reinserted.
+       Caller->getEntryBlock().getInstList().splice(
+-          InsertPoint, FirstNewBlock->getInstList(), AI->getIterator(), I);
++          InsertPoint, FirstNewBlock->getInstList(), AI->getIterator(),
++          I->getIterator());
+     }
+     // Move any dbg.declares describing the allocas into the entry basic block.
+     DIBuilder DIB(*Caller->getParent());
+     for (auto &AI : IFI.StaticAllocas)
+       replaceDbgDeclareForAlloca(AI, AI, DIB, DIExpression::ApplyOffset, 0);

@@ -6,7 +6,9 @@ declare void @llvm.dbg.declare(metadata, metadata, metadata) #0
 define void @func(i16 %k.4.par) !dbg !23 {
   %volatileloadslot = alloca %rec1198
   call void @llvm.dbg.value(metadata i16 %k.4.par, metadata !30, metadata !DIExpression()), !dbg !31
+  %tmp = alloca i32
   %l.6 = alloca [3 x i32]
+  %c = bitcast i32* %tmp to i8**
   %volatileloadslot.0..sroa_cast = bitcast %rec1198* %volatileloadslot to i8*, !dbg !32
   call void @llvm.lifetime.start.p0i8(i64 4, i8* %volatileloadslot.0..sroa_cast)
   %volatileloadslot.0..sroa_cast1 = bitcast %rec1198* %volatileloadslot to i8*
