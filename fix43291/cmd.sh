@@ -1,8 +1,9 @@
 # https://bugs.llvm.org/show_bug.cgi?id=43291
 
-OPT=/data/proj/compiler/llvm/llvm-project/build/bin/opt
-OPT_DBG=/data/proj/compiler/llvm/llvm-project/build_debug/bin/opt
+#OPT=/data/proj/compiler/llvm/llvm-project/build/bin/opt
+OPT=/data/proj/compiler/llvm/llvm-project.release/build/bin/opt
 OPT_ORIG=/data/proj/compiler/llvm/llvm-project.orig/build/bin/opt
+OPT_DBG=/data/proj/compiler/llvm/llvm-project/build_debug/bin/opt
 LIT=/data/proj/compiler/llvm/llvm-project.release/build/bin/llvm-lit
 
 rm -rf log* out*
@@ -32,25 +33,25 @@ NUM=3
 #$OPT -S example.ll -inline -opt-bisect-limit=$NUM -strip-debug -o out1.ll 2>log1
 #$OPT -S example.ll -inline -opt-bisect-limit=$NUM -o out2.ll 2>log2
 
-
 #$OPT -S example.ll -inline -adce -o q2.ll
 #$OPT -S example.ll -o - -strip-debug | $OPT -S -  -o q1.ll
 #$OPT -S -o - example.ll -inline -adce | $OPT -S -strip-debug -o q2.ll
 #$OPT -S -o - example.ll -inline -adce | $OPT -S -strip-debug -o q2.ll
 #$OPT -S -o - example.ll -inline -adce | $OPT -S -strip-debug -o q2.ll
 
-#diff q1.ll q2.ll
 
 ### case1
-#$OPT_ORIG < inline-with-debuginfo.ll -S -inline -o out0.ll 2>log0
-#$OPT < inline-with-debuginfo.ll -S -inline -o out1.ll 2>log1
-#$OPT_ORIG < inline-with-debuginfo.ll -S -strip-debug -inline -o out02.ll 2>log02
-#$OPT < inline-with-debuginfo.ll -S -strip-debug -inline -o out2.ll 2>log2
+#$OPT_ORIG < inline-skip-use-empty-alloca.ll -S -inline -o out0.ll 2>log0
+#$OPT < inline-skip-use-empty-alloca.ll -S -inline -o out1.ll 2>log1
+$OPT_ORIG < inline-skip-use-empty-alloca.ll -S -strip-debug -inline -o out02.ll 2>log02
+$OPT < inline-skip-use-empty-alloca.ll -S -strip-debug -inline -o out2.ll 2>log2
 
 ### case2
-#$OPT < inline-with-debuginfo.ll -S -inline | FileCheck inline-with-debuginfo.ll
-#$OPT < inline-with-debuginfo.ll -S -strip-debug -inline | FileCheck inline-with-debuginfo.ll
+#$OPT < inline-skip-use-empty-alloca.ll -S -inline | $FILECHECK inline-skip-use-empty-alloca.ll
+#$OPT < inline-skip-use-empty-alloca.ll -S -strip-debug -inline | $FILECHECK inline-skip-use-empty-alloca.ll
 
 ### test3
-$LIT /data/proj/compiler/llvm/llvm-project.release/llvm/test/Transforms/Inline/inline-with-debuginfo.ll -vv
+#$LIT /data/proj/compiler/llvm/llvm-project.release/llvm/test/Transforms/Inline/inline-skip-use-empty-alloca.ll -vv
 
+### simplify testcase
+#$OPT -S -strip-dead-prototypes -strip-dead-debug-info inline-skip-use-empty-alloca.ll -o tmp.ll

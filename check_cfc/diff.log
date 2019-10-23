@@ -1,0 +1,809 @@
+########[DIFF: 4180]################
+--- out1.obj	2019-10-23 10:38:05.935193260 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:05.939193260 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+@@ -169,7 +169,7 @@[0;0m
+ 272:	00 [0;0m
+ 273:	c6 40 10 00          	movb   $0x0,0x10(%rax)[0;0m
+ 277:	4c 39 7c 24 28       	cmp    %r15,0x28(%rsp)[0;0m
+- 27c:	0f 84 3b 0b 00 00    	je     dbd <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0xbed>[0;0m
++ 27c:	0f 84 46 0b 00 00    	je     dc8 <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0xbf8>[0;0m
+ 282:	48 8d 7c 24 20       	lea    0x20(%rsp),%rdi[0;0m
+ 287:	be 00 00 00 00       	mov    $0x0,%esi[0;0m
+ 28c:	ba 01 00 00 00       	mov    $0x1,%edx[0;0m
+
+########[DIFF: 4145]################
+--- out1.obj	2019-10-23 10:38:07.019193281 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:07.027193281 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+@@ -169,7 +169,7 @@[0;0m
+ 272:	00 [0;0m
+ 273:	c6 40 10 00          	movb   $0x0,0x10(%rax)[0;0m
+ 277:	4c 39 7c 24 28       	cmp    %r15,0x28(%rsp)[0;0m
+- 27c:	0f 84 3b 0b 00 00    	je     dbd <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0xbed>[0;0m
++ 27c:	0f 84 46 0b 00 00    	je     dc8 <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0xbf8>[0;0m
+ 282:	48 8d 7c 24 20       	lea    0x20(%rsp),%rdi[0;0m
+ 287:	be 00 00 00 00       	mov    $0x0,%esi[0;0m
+ 28c:	ba 01 00 00 00       	mov    $0x1,%edx[0;0m
+
+########[DIFF: 4110]################
+--- out1.obj	2019-10-23 10:38:08.107193301 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:08.111193301 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+@@ -169,7 +169,7 @@[0;0m
+ 272:	00 [0;0m
+ 273:	c6 40 10 00          	movb   $0x0,0x10(%rax)[0;0m
+ 277:	4c 39 7c 24 28       	cmp    %r15,0x28(%rsp)[0;0m
+- 27c:	0f 84 3b 0b 00 00    	je     dbd <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0xbed>[0;0m
++ 27c:	0f 84 46 0b 00 00    	je     dc8 <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0xbf8>[0;0m
+ 282:	48 8d 7c 24 20       	lea    0x20(%rsp),%rdi[0;0m
+ 287:	be 00 00 00 00       	mov    $0x0,%esi[0;0m
+ 28c:	ba 01 00 00 00       	mov    $0x1,%edx[0;0m
+
+########[DIFF: 4075]################
+--- out1.obj	2019-10-23 10:38:09.235193322 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:09.239193322 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+@@ -143,870 +143,989 @@[0;0m
+ 207:	ba 00 00 00 00       	mov    $0x0,%edx[0;0m
+ 20c:	4c 89 ee             	mov    %r13,%rsi[0;0m
+ 20f:	e8 00 00 00 00       	callq  214 <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0x44>[0;0m
+- 214:	48 8b 75 58          	mov    0x58(%rbp),%rsi[0;0m
+- 218:	48 8b 55 60          	mov    0x60(%rbp),%rdx[0;0m
+- 21c:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi[0;0m
+- 221:	e8 00 00 00 00       	callq  226 <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0x56>[0;0m
+- 226:	48 8d 74 24 30       	lea    0x30(%rsp),%rsi[0;0m
+
+########[DIFF: 4039]################
+--- out1.obj	2019-10-23 10:38:10.275193342 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:10.279193342 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+@@ -98,29 +98,31 @@[0;0m
+     164:	48 8b bf b8 00 00 00 	mov    0xb8(%rdi),%rdi[0;0m
+     16b:	48 8d 83 c8 00 00 00 	lea    0xc8(%rbx),%rax[0;0m
+     172:	48 39 c7             	cmp    %rax,%rdi[0;0m
+-     175:	74 05                	je     17c <_ZN8YAML_DocD1Ev+0x1c>[0;0m
+-     177:	e8 00 00 00 00       	callq  17c <_ZN8YAML_DocD1Ev+0x1c>[0;0m
+-     17c:	48 8b bb 98 00 00 00 	mov    0x98(%rbx),%rdi[0;0m
+-     183:	48 8d 83 a8 00 00 00 	lea    0xa8(%rbx),%rax[0;0m
+-     18a:	48 39 c7             	cmp    %rax,%rdi[0;0m
+
+########[DIFF: 4004]################
+--- out1.obj	2019-10-23 10:38:11.307193361 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:11.311193361 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3969]################
+--- out1.obj	2019-10-23 10:38:12.347193381 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:12.347193381 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+@@ -50,1206 +50,1214 @@[0;0m
+      c3:	48 89 7c 24 28       	mov    %rdi,0x28(%rsp)[0;0m
+      c8:	4c 89 e6             	mov    %r12,%rsi[0;0m
+      cb:	e8 00 00 00 00       	callq  d0 <_ZN8YAML_DocC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_+0xd0>[0;0m
+-      d0:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi[0;0m
+-      d5:	4c 89 fe             	mov    %r15,%rsi[0;0m
+-      d8:	e8 00 00 00 00       	callq  dd <_ZN8YAML_DocC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_+0xdd>[0;0m
+-      dd:	48 8b 3c 24          	mov    (%rsp),%rdi[0;0m
+-      e1:	48 89 ee             	mov    %rbp,%rsi[0;0m
+
+########[DIFF: 3779]################
+--- out1.obj	2019-10-23 10:38:13.375193400 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:13.379193400 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3752]################
+--- out1.obj	2019-10-23 10:38:14.391193419 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:14.399193419 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3708]################
+--- out1.obj	2019-10-23 10:38:15.407193438 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:15.411193438 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+@@ -142,1209 +142,1278 @@[0;0m
+     1f7:	41 54                	push   %r12[0;0m
+     1f9:	53                   	push   %rbx[0;0m
+     1fa:	48 81 ec 18 03 00 00 	sub    $0x318,%rsp[0;0m
+-     201:	48 89 f3             	mov    %rsi,%rbx[0;0m
+-     204:	49 89 fc             	mov    %rdi,%r12[0;0m
+-     207:	4c 89 e0             	mov    %r12,%rax[0;0m
+-     20a:	48 83 c0 10          	add    $0x10,%rax[0;0m
+-     20e:	48 89 44 24 48       	mov    %rax,0x48(%rsp)[0;0m
+
+########[DIFF: 3678]################
+--- out1.obj	2019-10-23 10:38:16.355193456 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:16.359193456 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3651]################
+--- out1.obj	2019-10-23 10:38:17.295193474 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:17.299193474 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3624]################
+--- out1.obj	2019-10-23 10:38:18.239193491 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:18.243193491 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3594]################
+--- out1.obj	2019-10-23 10:38:19.175193509 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:19.179193509 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3567]################
+--- out1.obj	2019-10-23 10:38:20.111193527 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:20.115193527 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3540]################
+--- out1.obj	2019-10-23 10:38:21.067193544 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:21.071193545 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3513]################
+--- out1.obj	2019-10-23 10:38:22.019193562 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:22.023193562 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3486]################
+--- out1.obj	2019-10-23 10:38:22.955193580 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:22.959193580 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3459]################
+--- out1.obj	2019-10-23 10:38:23.903193598 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:23.907193598 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3426]################
+--- out1.obj	2019-10-23 10:38:24.847193615 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:24.851193616 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3399]################
+--- out1.obj	2019-10-23 10:38:25.783193633 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:25.787193633 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3372]################
+--- out1.obj	2019-10-23 10:38:26.731193651 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:26.735193651 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3345]################
+--- out1.obj	2019-10-23 10:38:27.687193669 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:27.691193669 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3318]################
+--- out1.obj	2019-10-23 10:38:28.635193687 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:28.639193687 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3291]################
+--- out1.obj	2019-10-23 10:38:29.587193704 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:29.591193704 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3264]################
+--- out1.obj	2019-10-23 10:38:30.531193722 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:30.535193722 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3237]################
+--- out1.obj	2019-10-23 10:38:31.479193740 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:31.479193740 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3210]################
+--- out1.obj	2019-10-23 10:38:32.423193758 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:32.427193758 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3183]################
+--- out1.obj	2019-10-23 10:38:33.387193776 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:33.391193776 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3156]################
+--- out1.obj	2019-10-23 10:38:34.331193793 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:34.335193794 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3129]################
+--- out1.obj	2019-10-23 10:38:35.275193811 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:35.279193811 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3090]################
+--- out1.obj	2019-10-23 10:38:36.215193829 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:36.219193829 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3063]################
+--- out1.obj	2019-10-23 10:38:37.159193847 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:37.163193847 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3036]################
+--- out1.obj	2019-10-23 10:38:38.111193864 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:38.115193865 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 3009]################
+--- out1.obj	2019-10-23 10:38:39.059193882 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:39.063193882 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2982]################
+--- out1.obj	2019-10-23 10:38:40.015193900 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:40.015193900 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2955]################
+--- out1.obj	2019-10-23 10:38:40.963193918 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:40.967193918 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2928]################
+--- out1.obj	2019-10-23 10:38:41.919193936 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:41.923193936 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2901]################
+--- out1.obj	2019-10-23 10:38:42.867193954 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:42.871193954 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2874]################
+--- out1.obj	2019-10-23 10:38:43.815193972 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:43.819193972 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2847]################
+--- out1.obj	2019-10-23 10:38:44.759193989 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:44.763193989 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2820]################
+--- out1.obj	2019-10-23 10:38:45.703194007 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:45.707194007 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2793]################
+--- out1.obj	2019-10-23 10:38:46.659194025 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:46.659194025 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2766]################
+--- out1.obj	2019-10-23 10:38:47.607194043 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:47.611194043 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2739]################
+--- out1.obj	2019-10-23 10:38:48.551194060 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:48.555194061 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2709]################
+--- out1.obj	2019-10-23 10:38:49.483194078 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:49.487194078 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2679]################
+--- out1.obj	2019-10-23 10:38:50.419194096 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:50.423194096 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2652]################
+--- out1.obj	2019-10-23 10:38:51.355194113 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:51.359194113 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2625]################
+--- out1.obj	2019-10-23 10:38:52.295194131 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:52.299194131 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2598]################
+--- out1.obj	2019-10-23 10:38:53.227194148 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:53.231194148 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2571]################
+--- out1.obj	2019-10-23 10:38:54.163194166 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:54.167194166 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2544]################
+--- out1.obj	2019-10-23 10:38:55.099194183 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:55.103194183 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2517]################
+--- out1.obj	2019-10-23 10:38:56.035194201 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:56.039194201 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2490]################
+--- out1.obj	2019-10-23 10:38:56.971194219 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:56.975194219 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2463]################
+--- out1.obj	2019-10-23 10:38:57.911194236 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:57.911194236 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2436]################
+--- out1.obj	2019-10-23 10:38:58.847194254 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:58.851194254 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2409]################
+--- out1.obj	2019-10-23 10:38:59.787194271 +0800[0;0m
++++ out2.obj	2019-10-23 10:38:59.791194271 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2382]################
+--- out1.obj	2019-10-23 10:39:00.739194289 +0800[0;0m
++++ out2.obj	2019-10-23 10:39:00.743194289 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2352]################
+--- out1.obj	2019-10-23 10:39:01.683194307 +0800[0;0m
++++ out2.obj	2019-10-23 10:39:01.687194307 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2325]################
+--- out1.obj	2019-10-23 10:39:02.627194325 +0800[0;0m
++++ out2.obj	2019-10-23 10:39:02.631194325 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2298]################
+--- out1.obj	2019-10-23 10:39:03.575194342 +0800[0;0m
++++ out2.obj	2019-10-23 10:39:03.579194343 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2268]################
+--- out1.obj	2019-10-23 10:39:04.519194360 +0800[0;0m
++++ out2.obj	2019-10-23 10:39:04.519194360 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2241]################
+--- out1.obj	2019-10-23 10:39:05.463194378 +0800[0;0m
++++ out2.obj	2019-10-23 10:39:05.467194378 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2214]################
+--- out1.obj	2019-10-23 10:39:06.411194396 +0800[0;0m
++++ out2.obj	2019-10-23 10:39:06.415194396 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2187]################
+--- out1.obj	2019-10-23 10:39:07.347194413 +0800[0;0m
++++ out2.obj	2019-10-23 10:39:07.351194413 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2160]################
+--- out1.obj	2019-10-23 10:39:08.283194431 +0800[0;0m
++++ out2.obj	2019-10-23 10:39:08.287194431 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+
+########[DIFF: 2133]################
+--- out1.obj	2019-10-23 10:39:09.219194448 +0800[0;0m
++++ out2.obj	2019-10-23 10:39:09.223194449 +0800[0;0m
+@@ -1,5 +1,5 @@[0;0m
+[0;0m
+-out1.o:     file format elf64-x86-64[0;0m
++out2.o:     file format elf64-x86-64[0;0m
+[0;0m
+[0;0m
+Disassembly of section .text:[0;0m
+@@ -105,448 +105,454 @@[0;0m
+0000000000000180 <_ZN8YAML_DocD1Ev>:[0;0m
+ 180:	53                   	push   %rbx[0;0m
+ 181:	48 89 fb             	mov    %rdi,%rbx[0;0m
+- 184:	48 8b bb b8 00 00 00 	mov    0xb8(%rbx),%rdi[0;0m
+- 18b:	48 89 d8             	mov    %rbx,%rax[0;0m
+- 18e:	48 05 c8 00 00 00    	add    $0xc8,%rax[0;0m
+- 194:	48 39 c7             	cmp    %rax,%rdi[0;0m
+- 197:	74 05                	je     19e <_ZN8YAML_DocD1Ev+0x1e>[0;0m
+
