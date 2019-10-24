@@ -1,0 +1,481 @@
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP/7zip/Archive/SwfHandler.cpp Code difference detected with -g
+--- /tmp/tmpU7hajC.o
+
++++ /tmp/tmpubLyV3.o
+
+@@ -1335,6 +1335,6 @@
+
+     1077:	41 54                	push   %r12
+     1079:	53                   	push   %rbx
+     107a:	48 83 ec 58          	sub    $0x58,%rsp
+-    107e:	4c 89 44 24 10       	mov    %r8,0x10(%rsp)
+-    1083:	89 4c 24 18          	mov    %ecx,0x18(%rsp)
++    107e:	4c 89 44 24 08       	mov    %r8,0x8(%rsp)
++    1083:	89 4c 24 10          	mov    %ecx,0x10(%rsp)
+     1087:	41 89 d6             	mov    %edx,%r14d
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP/7zip/Archive/Zip/ZipUpdate.cpp Code difference detected with -g
+--- /tmp/tmpf6W05P.o
+
++++ /tmp/tmpgFfpl8.o
+
+@@ -1439,6 +1439,6 @@
+
+     141a:	89 c3                	mov    %eax,%ebx
+     141c:	85 c0                	test   %eax,%eax
+     141e:	0f 84 31 01 00 00    	je     1555 <_ZN8NArchive4NZipL7Update2ERNS0_11COutArchiveEPNS0_10CInArchiveEP9IInStreamRK13CObjectVectorINS0_7CItemExEERKS7_INS0_11CUpdateItemEEPKNS0_22CCompressionMethodModeEPK7CBufferIhEP22IArchiveUpdateCallback+0xae5>
+-    1424:	e9 9f 03 00 00       	jmpq   17c8 <_ZN8NArchive4NZipL7Update2ERNS0_11COutArchiveEPNS0_10CInArchiveEP9IInStreamRK13CObjectVectorINS0_7CItemExEERKS7_INS0_11CUpdateItemEEPKNS0_22CCompressionMethodModeEPK7CBufferIhEP22IArchiveUpdateCallback+0xd58>
++    1424:	e9 9d 03 00 00       	jmpq   17c6 <_ZN8NArchive4NZipL7Update2ERNS0_11COutArchiveEPNS0_10CInArchiveEP9IInStreamRK13CObjectVectorINS0_7CItemExEERKS7_INS0_11CUpdateItemEEPKNS0_22CCompressionMethodModeEPK7CBufferIhEP22IArchiveUpdateCallback+0xd56>
+     1429:	4c 89 ef             	mov    %r13,%rdi
+     142c:	e8 00 00 00 00       	callq  1431 <_ZN8NArchive4NZipL7Update2ERNS0_11COutArchiveEPNS0_10CInArchiveEP9IInStreamRK13CObjectVectorINS0_7CItemExEERKS7_INS0_11CUpdateItemEEPKNS0_22CCompressionMethodModeEPK7CBufferIhEP22IArchiveUpdateCallback+0x9c1>
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP/7zip/Common/InBuffer.cpp Code difference detected with -g
+--- /tmp/tmp7MTZu8.o
+
++++ /tmp/tmp7_ZSa_.o
+
+@@ -6,6 +6,6 @@
+
+ 0000000000000000 <_ZN9CInBufferC1Ev>:
+    0:	53                   	push   %rbx
+    1:	48 89 fb             	mov    %rdi,%rbx
+-   4:	48 83 c7 18          	add    $0x18,%rdi
++   4:	48 8d 7f 18          	lea    0x18(%rdi),%rdi
+    8:	0f 57 c0             	xorps  %xmm0,%xmm0
+    b:	0f 11 03             	movups %xmm0,(%rbx)
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/btDbvt.cpp Code difference detected with -g
+--- /tmp/tmphbtMXa.o
+
++++ /tmp/tmp_Iu3Gp.o
+
+@@ -416,6 +416,6 @@
+
+      59e:	89 c1                	mov    %eax,%ecx
+      5a0:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+      5a5:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+-     5ab:	45 31 c0             	xor    %r8d,%r8d
+-     5ae:	41 0f 28 c1          	movaps %xmm9,%xmm0
+-     5b2:	bf ff ff ff ff       	mov    $0xffffffff,%edi
++     5ab:	41 b8 00 00 00 00    	mov    $0x0,%r8d
++     5b1:	41 0f 28 c1          	movaps %xmm9,%xmm0
++     5b5:	bf ff ff ff ff       	mov    $0xffffffff,%edi
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/btDbvt.cpp Code difference detected with -g
+--- /tmp/tmpohd7VT.o
+
++++ /tmp/tmpQh3XD8.o
+
+@@ -416,6 +416,6 @@
+
+      59e:	89 c1                	mov    %eax,%ecx
+      5a0:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+      5a5:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+-     5ab:	45 31 c0             	xor    %r8d,%r8d
+-     5ae:	41 0f 28 c1          	movaps %xmm9,%xmm0
+-     5b2:	bf ff ff ff ff       	mov    $0xffffffff,%edi
++     5ab:	41 b8 00 00 00 00    	mov    $0x0,%r8d
++     5b1:	41 0f 28 c1          	movaps %xmm9,%xmm0
++     5b5:	bf ff ff ff ff       	mov    $0xffffffff,%edi
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/PAQ8p/paq8p.cpp Code difference detected with -g
+--- /tmp/tmpeB3qwe.o
+
++++ /tmp/tmp9WDFRk.o
+
+@@ -21615,6 +21615,6 @@
+
+   1e:	48 63 d8             	movslq %eax,%rbx
+   21:	48 8d 04 1f          	lea    (%rdi,%rbx,1),%rax
+   25:	80 7c 1f 02 00       	cmpb   $0x0,0x2(%rdi,%rbx,1)
+-  2a:	0f 84 7d 01 00 00    	je     1ad <_ZN2BHILi9EEixEj+0x1ad>
++  2a:	0f 84 7b 01 00 00    	je     1ab <_ZN2BHILi9EEixEj+0x1ab>
+   30:	0f b7 08             	movzwl (%rax),%ecx
+   33:	39 ca                	cmp    %ecx,%edx
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/PAQ8p/paq8p.cpp Code difference detected with -g
+--- /tmp/tmpEVXUzq.o
+
++++ /tmp/tmpNJjqnv.o
+
+@@ -23561,6 +23561,6 @@
+
+   1e:	48 63 d8             	movslq %eax,%rbx
+   21:	48 8d 04 1f          	lea    (%rdi,%rbx,1),%rax
+   25:	80 7c 1f 02 00       	cmpb   $0x0,0x2(%rdi,%rbx,1)
+-  2a:	0f 84 7d 01 00 00    	je     1ad <_ZN2BHILi9EEixEj+0x1ad>
++  2a:	0f 84 7b 01 00 00    	je     1ab <_ZN2BHILi9EEixEj+0x1ab>
+   30:	0f b7 08             	movzwl (%rax),%ecx
+   33:	39 ca                	cmp    %ecx,%edx
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/PENNANT/GenMesh.cc Code difference detected with -g
+--- /tmp/tmp5gsXNv.o
+
++++ /tmp/tmpP9Wzft.o
+
+@@ -7115,6 +7115,6 @@
+
+     6703:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+     6708:	8d 0c 32             	lea    (%rdx,%rsi,1),%ecx
+     670b:	41 89 4f 14          	mov    %ecx,0x14(%r15)
+-    670f:	01 f2                	add    %esi,%edx
+-    6711:	83 c2 01             	add    $0x1,%edx
+-    6714:	41 89 57 0c          	mov    %edx,0xc(%r15)
++    670f:	8d 54 32 01          	lea    0x1(%rdx,%rsi,1),%edx
++    6713:	41 89 57 0c          	mov    %edx,0xc(%r15)
++    6717:	41 89 4f 10          	mov    %ecx,0x10(%r15)
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/PENNANT/GenMesh.cc Code difference detected with -g
+--- /tmp/tmpfIC6ij.o
+
++++ /tmp/tmpzM2uhO.o
+
+@@ -8510,6 +8510,6 @@
+
+     7c73:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+     7c78:	8d 0c 32             	lea    (%rdx,%rsi,1),%ecx
+     7c7b:	41 89 4e 14          	mov    %ecx,0x14(%r14)
+-    7c7f:	01 f2                	add    %esi,%edx
+-    7c81:	83 c2 01             	add    $0x1,%edx
+-    7c84:	41 89 56 0c          	mov    %edx,0xc(%r14)
++    7c7f:	8d 54 32 01          	lea    0x1(%rdx,%rsi,1),%edx
++    7c83:	41 89 56 0c          	mov    %edx,0xc(%r14)
++    7c87:	41 89 4e 10          	mov    %ecx,0x10(%r14)
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/miniFE/YAML_Doc.cpp Code difference detected with -g
+--- /tmp/tmp6eMY3f.o
+
++++ /tmp/tmpF8Tv81.o
+
+@@ -168,6 +168,6 @@
+
+  272:	00 
+  273:	c6 40 10 00          	movb   $0x0,0x10(%rax)
+  277:	4c 39 7c 24 28       	cmp    %r15,0x28(%rsp)
+- 27c:	0f 84 3b 0b 00 00    	je     dbd <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0xbed>
++ 27c:	0f 84 46 0b 00 00    	je     dc8 <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0xbf8>
+  282:	48 8d 7c 24 20       	lea    0x20(%rsp),%rdi
+  287:	be 00 00 00 00       	mov    $0x0,%esi
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/miniFE/YAML_Doc.cpp Code difference detected with -g
+--- /tmp/tmpF6tPv9.o
+
++++ /tmp/tmpC9Iddg.o
+
+@@ -185,6 +185,6 @@
+
+      2b2:	00 
+      2b3:	c6 40 10 00          	movb   $0x0,0x10(%rax)
+      2b7:	4c 39 7c 24 28       	cmp    %r15,0x28(%rsp)
+-     2bc:	0f 84 3b 0b 00 00    	je     dfd <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0xbed>
++     2bc:	0f 84 46 0b 00 00    	je     e08 <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0xbf8>
+      2c2:	48 8d 7c 24 20       	lea    0x20(%rsp),%rdi
+      2c7:	be 00 00 00 00       	mov    $0x0,%esi
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/CLAMR/Function.cc Code difference detected with -g
+--- /tmp/tmpRPj3D3.o
+
++++ /tmp/tmp6de8KQ.o
+
+@@ -393,6 +393,6 @@
+
+      5ae:	48 8b 7c 24 58       	mov    0x58(%rsp),%rdi
+      5b3:	66 0f 57 c0          	xorpd  %xmm0,%xmm0
+      5b7:	48 39 df             	cmp    %rbx,%rdi
+-     5ba:	0f 84 2c 01 00 00    	je     6ec <_ZN2PP8Function8evaluateERSt6vectorIdSaIdEERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERiiiNS5_12basic_stringIcS8_S9_EEPSt5dequeISE_SaISE_EE+0x50c>
+-     5c0:	e9 1e 01 00 00       	jmpq   6e3 <_ZN2PP8Function8evaluateERSt6vectorIdSaIdEERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERiiiNS5_12basic_stringIcS8_S9_EEPSt5dequeISE_SaISE_EE+0x503>
++     5ba:	0f 85 23 01 00 00    	jne    6e3 <_ZN2PP8Function8evaluateERSt6vectorIdSaIdEERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERiiiNS5_12basic_stringIcS8_S9_EEPSt5dequeISE_SaISE_EE+0x503>
++     5c0:	e9 27 01 00 00       	jmpq   6ec <_ZN2PP8Function8evaluateERSt6vectorIdSaIdEERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERiiiNS5_12basic_stringIcS8_S9_EEPSt5dequeISE_SaISE_EE+0x50c>
+      5c5:	f2 0f 10 05 00 00 00 	movsd  0x0(%rip),%xmm0        # 5cd <_ZN2PP8Function8evaluateERSt6vectorIdSaIdEERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERiiiNS5_12basic_stringIcS8_S9_EEPSt5dequeISE_SaISE_EE+0x3ed>
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/CLAMR/Function.cc Code difference detected with -g
+--- /tmp/tmpiqgyPe.o
+
++++ /tmp/tmprseoms.o
+
+@@ -408,6 +408,6 @@
+
+      5de:	48 8b 7c 24 58       	mov    0x58(%rsp),%rdi
+      5e3:	66 0f 57 c0          	xorpd  %xmm0,%xmm0
+      5e7:	48 39 df             	cmp    %rbx,%rdi
+-     5ea:	0f 84 2c 01 00 00    	je     71c <_ZN2PP8Function8evaluateERSt6vectorIdSaIdEERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERiiiNS5_12basic_stringIcS8_S9_EEPSt5dequeISE_SaISE_EE+0x50c>
+-     5f0:	e9 1e 01 00 00       	jmpq   713 <_ZN2PP8Function8evaluateERSt6vectorIdSaIdEERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERiiiNS5_12basic_stringIcS8_S9_EEPSt5dequeISE_SaISE_EE+0x503>
++     5ea:	0f 85 23 01 00 00    	jne    713 <_ZN2PP8Function8evaluateERSt6vectorIdSaIdEERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERiiiNS5_12basic_stringIcS8_S9_EEPSt5dequeISE_SaISE_EE+0x503>
++     5f0:	e9 27 01 00 00       	jmpq   71c <_ZN2PP8Function8evaluateERSt6vectorIdSaIdEERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERiiiNS5_12basic_stringIcS8_S9_EEPSt5dequeISE_SaISE_EE+0x50c>
+      5f5:	f2 0f 10 05 00 00 00 	movsd  0x0(%rip),%xmm0        # 5fd <_ZN2PP8Function8evaluateERSt6vectorIdSaIdEERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERiiiNS5_12basic_stringIcS8_S9_EEPSt5dequeISE_SaISE_EE+0x3ed>
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/CLAMR/PowerParser.cc Code difference detected with -g
+--- /tmp/tmpR34WuF.o
+
++++ /tmp/tmpKJ0eJ0.o
+
+@@ -14831,6 +14831,6 @@
+
+     e6e6:	e8 00 00 00 00       	callq  e6eb <_ZN2PP11PowerParser12parse_stringENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_+0x181b>
+     e6eb:	bf 00 00 00 00       	mov    $0x0,%edi
+     e6f0:	e8 00 00 00 00       	callq  e6f5 <_ZN2PP11PowerParser12parse_stringENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_+0x1825>
+-    e6f5:	e9 d8 03 00 00       	jmpq   ead2 <_ZN2PP11PowerParser12parse_stringENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_+0x1c02>
+-    e6fa:	e9 d3 03 00 00       	jmpq   ead2 <_ZN2PP11PowerParser12parse_stringENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_+0x1c02>
++    e6f5:	e9 d3 03 00 00       	jmpq   eacd <_ZN2PP11PowerParser12parse_stringENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_+0x1bfd>
++    e6fa:	e9 ce 03 00 00       	jmpq   eacd <_ZN2PP11PowerParser12parse_stringENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_+0x1bfd>
+     e6ff:	48 89 c3             	mov    %rax,%rbx
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/CLAMR/PowerParser.cc Code difference detected with -g
+--- /tmp/tmpJoDFV2.o
+
++++ /tmp/tmpj4fqU1.o
+
+@@ -15439,6 +15439,6 @@
+
+     f0c0:	e8 00 00 00 00       	callq  f0c5 <_ZN2PP11PowerParser12parse_stringENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_+0x1885>
+     f0c5:	bf 00 00 00 00       	mov    $0x0,%edi
+     f0ca:	e8 00 00 00 00       	callq  f0cf <_ZN2PP11PowerParser12parse_stringENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_+0x188f>
+-    f0cf:	e9 7b 04 00 00       	jmpq   f54f <_ZN2PP11PowerParser12parse_stringENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_+0x1d0f>
+-    f0d4:	e9 76 04 00 00       	jmpq   f54f <_ZN2PP11PowerParser12parse_stringENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_+0x1d0f>
+-    f0d9:	e9 71 04 00 00       	jmpq   f54f <_ZN2PP11PowerParser12parse_stringENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_+0x1d0f>
++    f0cf:	e9 7a 04 00 00       	jmpq   f54e <_ZN2PP11PowerParser12parse_stringENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_+0x1d0e>
++    f0d4:	e9 75 04 00 00       	jmpq   f54e <_ZN2PP11PowerParser12parse_stringENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_+0x1d0e>
++    f0d9:	e9 70 04 00 00       	jmpq   f54e <_ZN2PP11PowerParser12parse_stringENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_+0x1d0e>
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/CLAMR/Cmd.cc Code difference detected with -g
+--- /tmp/tmpSOd7F6.o
+
++++ /tmp/tmpUZRXap.o
+
+@@ -10742,6 +10742,6 @@
+
+     9ece:	e8 00 00 00 00       	callq  9ed3 <_ZN2PP3Cmd19check_for_dimensionERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERi+0x1033>
+     9ed3:	bf 00 00 00 00       	mov    $0x0,%edi
+     9ed8:	e8 00 00 00 00       	callq  9edd <_ZN2PP3Cmd19check_for_dimensionERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERi+0x103d>
+-    9edd:	e9 c1 01 00 00       	jmpq   a0a3 <_ZN2PP3Cmd19check_for_dimensionERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERi+0x1203>
+-    9ee2:	e9 bc 01 00 00       	jmpq   a0a3 <_ZN2PP3Cmd19check_for_dimensionERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERi+0x1203>
+-    9ee7:	e9 b7 01 00 00       	jmpq   a0a3 <_ZN2PP3Cmd19check_for_dimensionERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERi+0x1203>
++    9edd:	e9 b7 01 00 00       	jmpq   a099 <_ZN2PP3Cmd19check_for_dimensionERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERi+0x11f9>
++    9ee2:	e9 b2 01 00 00       	jmpq   a099 <_ZN2PP3Cmd19check_for_dimensionERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERi+0x11f9>
++    9ee7:	e9 ad 01 00 00       	jmpq   a099 <_ZN2PP3Cmd19check_for_dimensionERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERi+0x11f9>
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/CLAMR/Cmd.cc Code difference detected with -g
+--- /tmp/tmpYmZFiD.o
+
++++ /tmp/tmpalNcAG.o
+
+@@ -11323,6 +11323,6 @@
+
+     a760:	48 8b 7c 24 38       	mov    0x38(%rsp),%rdi
+     a765:	48 8d 44 24 48       	lea    0x48(%rsp),%rax
+     a76a:	48 39 c7             	cmp    %rax,%rdi
+-    a76d:	74 14                	je     a783 <_ZN2PP3Cmd19check_for_dimensionERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERi+0x1423>
+-    a76f:	eb 0d                	jmp    a77e <_ZN2PP3Cmd19check_for_dimensionERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERi+0x141e>
++    a76d:	75 0f                	jne    a77e <_ZN2PP3Cmd19check_for_dimensionERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERi+0x141e>
++    a76f:	eb 12                	jmp    a783 <_ZN2PP3Cmd19check_for_dimensionERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEERi+0x1423>
+     a771:	49 89 c6             	mov    %rax,%r14
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/CLAMR/Whenthen.cc Code difference detected with -g
+--- /tmp/tmp7OQ16D.o
+
++++ /tmp/tmpUhjLBb.o
+
+@@ -1232,6 +1232,6 @@
+
+     131a:	48 81 ec 08 02 00 00 	sub    $0x208,%rsp
+     1321:	41 c7 00 00 00 00 00 	movl   $0x0,(%r8)
+     1328:	80 bf 30 02 00 00 00 	cmpb   $0x0,0x230(%rdi)
+-    132f:	0f 85 53 04 00 00    	jne    1788 <_ZN2PP8Whenthen8check_wtERSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS7_EESA_RS1_IiSaIiEEPiRNS2_18basic_stringstreamIcS5_S6_EERi+0x478>
+-    1335:	4d 89 cc             	mov    %r9,%r12
+-    1338:	49 89 fe             	mov    %rdi,%r14
++    132f:	0f 85 59 04 00 00    	jne    178e <_ZN2PP8Whenthen8check_wtERSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS7_EESA_RS1_IiSaIiEEPiRNS2_18basic_stringstreamIcS5_S6_EERi+0x47e>
++    1335:	4d 89 ce             	mov    %r9,%r14
++    1338:	49 89 ff             	mov    %rdi,%r15
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp Code difference detected with -g
+--- /tmp/tmpvzyhDA.o
+
++++ /tmp/tmpD7IBHl.o
+
+@@ -216,6 +216,6 @@
+
+  321:	41 89 f6             	mov    %esi,%r14d
+  324:	48 8b b4 24 b8 00 00 	mov    0xb8(%rsp),%rsi
+  32b:	00 
+- 32c:	44 01 c6             	add    %r8d,%esi
+- 32f:	49 8b 53 38          	mov    0x38(%r11),%rdx
+- 333:	48 63 ce             	movslq %esi,%rcx
++ 32c:	42 8d 34 06          	lea    (%rsi,%r8,1),%esi
++ 330:	49 8b 53 38          	mov    0x38(%r11),%rdx
++ 334:	48 63 ce             	movslq %esi,%rcx
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/YAML_Doc.cpp Code difference detected with -g
+--- /tmp/tmpmKbWrE.o
+
++++ /tmp/tmp5A4Myl.o
+
+@@ -168,6 +168,6 @@
+
+  272:	00 
+  273:	c6 40 10 00          	movb   $0x0,0x10(%rax)
+  277:	4c 39 7c 24 28       	cmp    %r15,0x28(%rsp)
+- 27c:	0f 84 3b 0b 00 00    	je     dbd <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0xbed>
++ 27c:	0f 84 46 0b 00 00    	je     dc8 <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0xbf8>
+  282:	48 8d 7c 24 20       	lea    0x20(%rsp),%rdi
+  287:	be 00 00 00 00       	mov    $0x0,%esi
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/YAML_Doc.cpp Code difference detected with -g
+--- /tmp/tmpavfCaM.o
+
++++ /tmp/tmp0ozhVk.o
+
+@@ -185,6 +185,6 @@
+
+      2b2:	00 
+      2b3:	c6 40 10 00          	movb   $0x0,0x10(%rax)
+      2b7:	4c 39 7c 24 28       	cmp    %r15,0x28(%rsp)
+-     2bc:	0f 84 3b 0b 00 00    	je     dfd <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0xbed>
++     2bc:	0f 84 46 0b 00 00    	je     e08 <_ZN8YAML_Doc12generateYAMLB5cxx11Ev+0xbf8>
+      2c2:	48 8d 7c 24 20       	lea    0x20(%rsp),%rdi
+      2c7:	be 00 00 00 00       	mov    $0x0,%esi
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/tramp3d-v4/tramp3d-v4.cpp Code difference detected with -g
+--- /tmp/tmpfq1ytO.o
+
++++ /tmp/tmppiGC6q.o
+
+@@ -9199,6 +9199,6 @@
+
+     88c8:	e8 c3 8d ff ff       	callq  1690 <_ZN6Inform5flushEv>
+     88cd:	bf 00 00 00 00       	mov    $0x0,%edi
+     88d2:	e8 c9 83 ff ff       	callq  ca0 <_ZN5Pooma6pAbortEPKci>
+-    88d7:	e9 65 06 00 00       	jmpq   8f41 <main+0x4ad1>
++    88d7:	e9 d6 05 00 00       	jmpq   8eb2 <main+0x4a42>
+     88dc:	48 89 c7             	mov    %rax,%rdi
+     88df:	e8 00 00 00 00       	callq  88e4 <main+0x4474>
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/tramp3d-v4/tramp3d-v4.cpp Code difference detected with -g
+--- /tmp/tmpHJsKjh.o
+
++++ /tmp/tmpeYKgOG.o
+
+@@ -9628,6 +9628,6 @@
+
+     8f2a:	e8 51 89 ff ff       	callq  1880 <_ZN6Inform5flushEv>
+     8f2f:	bf 00 00 00 00       	mov    $0x0,%edi
+     8f34:	e8 97 7f ff ff       	callq  ed0 <_ZN5Pooma6pAbortEPKci>
+-    8f39:	e9 23 07 00 00       	jmpq   9661 <main+0x4cf1>
++    8f39:	e9 c9 06 00 00       	jmpq   9607 <main+0x4c97>
+     8f3e:	48 89 c7             	mov    %rax,%rdi
+     8f41:	e8 00 00 00 00       	callq  8f46 <main+0x45d6>
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/MicroBenchmarks/libs/benchmark-1.3.0/cmake/std_regex.cpp Code difference detected with -g
+--- /tmp/tmpt_vAhF.o
+
++++ /tmp/tmpM_b0Db.o
+
+@@ -12699,6 +12699,6 @@
+
+ Disassembly of section .text._ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPcSt6vectorIcSaIcEEEENS0_5__ops15_Iter_less_iterEEvT_S9_RT0_:
+ 
+ 0000000000000000 <_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPcSt6vectorIcSaIcEEEENS0_5__ops15_Iter_less_iterEEvT_S9_RT0_>:
+-   0:	41 57                	push   %r15
+-   2:	41 56                	push   %r14
+-   4:	41 55                	push   %r13
++   0:	55                   	push   %rbp
++   1:	41 57                	push   %r15
++   3:	41 56                	push   %r14
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/Bitcode/Benchmarks/Halide/bilateral_grid/driver.cpp Code difference detected with -g
+--- /tmp/tmphyx5aC.o
+
++++ /tmp/tmp9dcloJ.o
+
+@@ -459,6 +459,6 @@
+
+   8a:	41 5f                	pop    %r15
+   8c:	c3                   	retq   
+   8d:	bf 00 00 00 00       	mov    $0x0,%edi
+-  92:	e8 00 00 00 00       	callq  97 <GCC_except_table47+0x17>
++  92:	e8 00 00 00 00       	callq  97 <GCC_except_table48+0x17>
+ 
+ Disassembly of section .text._ZN9__gnu_cxx17__is_null_pointerIcEEbPT_:
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/Bitcode/Benchmarks/Halide/bilateral_grid/driver.cpp Code difference detected with -g
+--- /tmp/tmph5F9ld.o
+
++++ /tmp/tmp45kIUW.o
+
+@@ -486,6 +486,6 @@
+
+   d5:	74 05                	je     dc <_ZN6Halide5Tools4loadINS0_5ImageIfEEXadL_ZNS0_8Internal9CheckFailEbPKczEEEEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPT_+0xdc>
+   d7:	e8 00 00 00 00       	callq  dc <_ZN6Halide5Tools4loadINS0_5ImageIfEEXadL_ZNS0_8Internal9CheckFailEbPKczEEEEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPT_+0xdc>
+   dc:	48 89 df             	mov    %rbx,%rdi
+-  df:	e8 00 00 00 00       	callq  e4 <GCC_except_table3+0x44>
+-
+-Disassembly of section .text._ZN6Halide5Tools8Internal21ends_with_ignore_caseERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_:
++  df:	e8 00 00 00 00       	callq  e4 <GCC_except_table4+0x44>
++
++Disassembly of section .text._ZN6Halide5Tools8Internal9CheckFailEbPKcz:
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/Bitcode/Benchmarks/Halide/bilateral_grid/driver.cpp Code difference detected with -g
+--- /tmp/tmpCzWwhz.o
+
++++ /tmp/tmpexNS3B.o
+
+@@ -507,6 +507,6 @@
+
+   e2:	74 05                	je     e9 <_ZN6Halide5Tools4loadINS0_5ImageIfEEXadL_ZNS0_8Internal9CheckFailEbPKczEEEEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPT_+0xe9>
+   e4:	e8 00 00 00 00       	callq  e9 <_ZN6Halide5Tools4loadINS0_5ImageIfEEXadL_ZNS0_8Internal9CheckFailEbPKczEEEEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPT_+0xe9>
+   e9:	48 89 df             	mov    %rbx,%rdi
+-  ec:	e8 00 00 00 00       	callq  f1 <GCC_except_table4+0x1>
+-
+-Disassembly of section .text._ZN6Halide5Tools8Internal21ends_with_ignore_caseERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_:
++  ec:	e8 00 00 00 00       	callq  f1 <GCC_except_table5+0x1>
++
++Disassembly of section .text._ZN6Halide5Tools8Internal9CheckFailEbPKcz:
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/Bitcode/Benchmarks/Halide/local_laplacian/driver.cpp Code difference detected with -g
+--- /tmp/tmpieip_n.o
+
++++ /tmp/tmpSJXDTD.o
+
+@@ -486,6 +486,6 @@
+
+   8a:	41 5f                	pop    %r15
+   8c:	c3                   	retq   
+   8d:	bf 00 00 00 00       	mov    $0x0,%edi
+-  92:	e8 00 00 00 00       	callq  97 <GCC_except_table47+0x17>
++  92:	e8 00 00 00 00       	callq  97 <GCC_except_table48+0x17>
+ 
+ Disassembly of section .text._ZN9__gnu_cxx17__is_null_pointerIcEEbPT_:
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/Bitcode/Benchmarks/Halide/local_laplacian/driver.cpp Code difference detected with -g
+--- /tmp/tmpRE6dWY.o
+
++++ /tmp/tmpnA21S7.o
+
+@@ -447,6 +447,6 @@
+
+   d5:	74 05                	je     dc <_ZN6Halide5Tools4loadINS0_5ImageItEEXadL_ZNS0_8Internal9CheckFailEbPKczEEEEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPT_+0xdc>
+   d7:	e8 00 00 00 00       	callq  dc <_ZN6Halide5Tools4loadINS0_5ImageItEEXadL_ZNS0_8Internal9CheckFailEbPKczEEEEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPT_+0xdc>
+   dc:	48 89 df             	mov    %rbx,%rdi
+-  df:	e8 00 00 00 00       	callq  e4 <GCC_except_table3+0x44>
+-
+-Disassembly of section .text._ZN6Halide5Tools8Internal21ends_with_ignore_caseERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_:
++  df:	e8 00 00 00 00       	callq  e4 <GCC_except_table4+0x44>
++
++Disassembly of section .text._ZN6Halide5Tools8Internal9CheckFailEbPKcz:
+*** Diff truncated ***
+/data/proj/compiler/llvm/test-suite/Bitcode/Benchmarks/Halide/local_laplacian/driver.cpp Code difference detected with -g
+--- /tmp/tmpGFPa9U.o
+
++++ /tmp/tmpHJlIX0.o
+
+@@ -469,6 +469,6 @@
+
+   e2:	74 05                	je     e9 <_ZN6Halide5Tools4loadINS0_5ImageItEEXadL_ZNS0_8Internal9CheckFailEbPKczEEEEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPT_+0xe9>
+   e4:	e8 00 00 00 00       	callq  e9 <_ZN6Halide5Tools4loadINS0_5ImageItEEXadL_ZNS0_8Internal9CheckFailEbPKczEEEEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPT_+0xe9>
+   e9:	48 89 df             	mov    %rbx,%rdi
+-  ec:	e8 00 00 00 00       	callq  f1 <GCC_except_table4+0x1>
+-
+-Disassembly of section .text._ZN6Halide5Tools8Internal21ends_with_ignore_caseERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_:
++  ec:	e8 00 00 00 00       	callq  f1 <GCC_except_table5+0x1>
++
++Disassembly of section .text._ZN6Halide5Tools8Internal9CheckFailEbPKcz:
+*** Diff truncated ***

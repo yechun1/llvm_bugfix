@@ -2,18 +2,13 @@
 PATH=$PATH:/data/proj/compiler/llvm/llvm-project/build/bin
 
 ### Reproduce
-##/home/chris/llvm-project/clang/utils/check_cfc/clang++ /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp -w -c -O0 -o tmp.ll
-##/home/chris/llvm-project/clang/utils/check_cfc/clang++ /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp -w -c -O1 -o tmp.ll
-#/home/chris/llvm-project/clang/utils/check_cfc/clang++ /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp -w -c -O2 -o tmp.ll
-##/home/chris/llvm-project/clang/utils/check_cfc/clang++ /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp -w -c -O3 -o tmp.ll
+/home/chris/llvm-project/clang/utils/check_cfc/clang++ /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp -w -c -O2 -o tmp.ll 2>/dev/null
 
-rm -rf out* log*
 
 ### Reproduce 2
+#rm -rf out* log*
 #clang++ /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp -S -O2 -mllvm -opt-bisect-limit=317 -o out1.o 2>log1
 #clang++ /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp -S -O2 -mllvm -opt-bisect-limit=320 -o out2.o -g 2>log2
-clang++ /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp -S -O2 -mllvm -opt-bisect-limit=317 -o - 1>out1.ll 2>&1
-clang++ -g /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp -S -O2 -mllvm -opt-bisect-limit=320 -o - 1>out2.ll 2>&1
 #objdump -d -j .text out1.o > out1.obj
 #objdump -d -j .text out2.o > out2.obj
 #diff -u out1.obj out2.obj
@@ -21,6 +16,9 @@ clang++ -g /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG
 
 
 ### debug 1
+
+#clang++ /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp -S -O2 -mllvm -opt-bisect-limit=317 -o - 1>out1.ll 2>&1
+#clang++ -g /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp -S -O2 -mllvm -opt-bisect-limit=320 -o - 1>out2.ll 2>&1
 #FILE=/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp
 #clang++ $FILE -S -O2 -mllvm -opt-bisect-limit=316 -o out1.ll 2>log1
 #clang++ $FILE -S -O2 -mllvm -opt-bisect-limit=319 -o out2.ll -g 2>log2
