@@ -1,0 +1,1185 @@
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$eax = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $eax = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+  RETQ $eax
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$eax = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+###
+chris-before: $eax = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-begin: $eax = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-end: RETQ $eax
+
+chris-N down =: 4: $eax = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-N down =: 3: RETQ $eax
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $eax = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$eax = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $eax = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+  RETQ $eax
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$eax = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+###
+chris-before: $eax = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-begin: $eax = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-end: RETQ $eax
+
+chris-N down =: 4: $eax = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-N down =: 3: RETQ $eax
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $eax = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+FixLEA: Replaced by:   $eax = LEA64_32r killed $rax, 1, killed $rbp, 0, $noreg
+  $eax = ADD32ri8 $eax(tied-def 0), -5, implicit-def $eflags
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$ebp = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $ebp = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+  RETQ $ebp
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$ebp = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+###
+chris-before: $ebp = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-begin: $ebp = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-end: RETQ $ebp
+
+chris-N down =: 4: $ebp = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-N down =: 3: RETQ $ebp
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $ebp = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$ebp = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $ebp = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+  RETQ $ebp
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$ebp = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+###
+chris-before: $ebp = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-begin: $ebp = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-end: RETQ $ebp
+
+chris-N down =: 4: $ebp = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-N down =: 3: RETQ $ebp
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $ebp = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+FixLEA: Replaced by:   $ebp = LEA64_32r killed $rax, 1, killed $rbp, 0, $noreg
+  $ebp = ADD32ri8 $ebp(tied-def 0), -5, implicit-def $eflags
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$ebp = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $ebp = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+  RETQ $ebp
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$ebp = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+###
+chris-before: $ebp = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-begin: $ebp = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-end: RETQ $ebp
+
+chris-N down =: 4: $ebp = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-N down =: 3: RETQ $ebp
+
+chris-liveness: return4 Dead
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$rax = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $rax = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+  RETQ $eax
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rax = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+###
+chris-before: $rax = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-begin: $rax = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-end: RETQ $eax
+
+chris-N down =: 4: $rax = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-N down =: 3: RETQ $eax
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $rax = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$rax = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $rax = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+  RETQ $eax
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rax = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+###
+chris-before: $rax = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-begin: $rax = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-end: RETQ $eax
+
+chris-N down =: 4: $rax = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-N down =: 3: RETQ $eax
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $rax = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+FixLEA: Replaced by:   $rax = ADD64rr $rax(tied-def 0), killed $rbp, implicit-def $eflags
+  $rax = ADD64ri8 $rax(tied-def 0), -5, implicit-def $eflags
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$rbp = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $rbp = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+  RETQ $ebp
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbp = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+###
+chris-before: $rbp = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-begin: $rbp = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-end: RETQ $ebp
+
+chris-N down =: 4: $rbp = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-N down =: 3: RETQ $ebp
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $rbp = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$rbp = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $rbp = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+  RETQ $ebp
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbp = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+###
+chris-before: $rbp = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-begin: $rbp = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-end: RETQ $ebp
+
+chris-N down =: 4: $rbp = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-N down =: 3: RETQ $ebp
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $rbp = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+FixLEA: Replaced by:   $rbp = ADD64rr $rbp(tied-def 0), killed $rax, implicit-def $eflags
+  $rbp = ADD64ri8 $rbp(tied-def 0), -5, implicit-def $eflags
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$rbp = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $rbp = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+  RETQ $ebp
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbp = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+###
+chris-before: $rbp = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-begin: $rbp = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-end: RETQ $ebp
+
+chris-N down =: 4: $rbp = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-N down =: 3: RETQ $ebp
+
+chris-liveness: return4 Dead
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$ebx = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $ebx = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$ebx = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+###
+chris-before: $ebx = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-begin: $ebx = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $ebx = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $ebx = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$ebx = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $ebx = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$ebx = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+###
+chris-before: $ebx = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-begin: $ebx = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $ebx = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $ebx = LEA64_32r killed $rax, 1, killed $rbp, -5, $noreg
+FixLEA: Replaced by:   $ebx = LEA64_32r killed $rax, 1, killed $rbp, 0, $noreg
+  $ebx = ADD32ri8 $ebx(tied-def 0), -5, implicit-def $eflags
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$ebx = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $ebx = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$ebx = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+###
+chris-before: $ebx = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-begin: $ebx = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $ebx = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $ebx = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$ebx = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $ebx = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$ebx = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+###
+chris-before: $ebx = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-begin: $ebx = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $ebx = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $ebx = LEA64_32r killed $rbp, 1, killed $rax, -5, $noreg
+FixLEA: Replaced by:   $ebx = LEA64_32r killed $rax, 1, killed $rbp, 0, $noreg
+  $ebx = ADD32ri8 $ebx(tied-def 0), -5, implicit-def $eflags
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$ebx = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $ebx = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$ebx = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+###
+chris-before: $ebx = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-begin: $ebx = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $ebx = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $ebx = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$ebx = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $ebx = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$ebx = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+###
+chris-before: $ebx = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-begin: $ebx = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $ebx = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $ebx = LEA64_32r killed $rbp, 1, killed $rax, 0, $noreg
+FixLEA: Replaced by:   $ebx = LEA64_32r killed $rax, 1, killed $rbp, 0, $noreg
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$rbx = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $rbx = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbx = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+###
+chris-before: $rbx = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-begin: $rbx = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $rbx = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $rbx = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$rbx = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $rbx = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbx = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+###
+chris-before: $rbx = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-begin: $rbx = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $rbx = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $rbx = LEA64r killed $rax, 1, killed $rbp, -5, $noreg
+FixLEA: Replaced by:   $rbx = LEA64r killed $rax, 1, killed $rbp, 0, $noreg
+  $rbx = ADD64ri8 $rbx(tied-def 0), -5, implicit-def $eflags
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$rbx = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $rbx = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbx = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+###
+chris-before: $rbx = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-begin: $rbx = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $rbx = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $rbx = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$rbx = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $rbx = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbx = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+###
+chris-before: $rbx = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-begin: $rbx = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $rbx = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $rbx = LEA64r killed $rbp, 1, killed $rax, -5, $noreg
+FixLEA: Replaced by:   $rbx = LEA64r killed $rax, 1, killed $rbp, 0, $noreg
+  $rbx = ADD64ri8 $rbx(tied-def 0), -5, implicit-def $eflags
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$rbx = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $rbx = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbx = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+###
+chris-before: $rbx = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-begin: $rbx = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $rbx = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $rbx = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$rbx = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $rbx = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbx = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+###
+chris-before: $rbx = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-begin: $rbx = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $rbx = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $rbx = LEA64r killed $rbp, 1, killed $rax, 0, $noreg
+FixLEA: Replaced by:   $rbx = LEA64r killed $rax, 1, killed $rbp, 0, $noreg
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$r12 = LEA64r killed $rbp, 2, killed $r13, 5, $noreg
+
+optTwoAddrLEA: debug-after (I): $r12 = LEA64r killed $rbp, 2, killed $r13, 5, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$r12 = LEA64r killed $rbp, 2, killed $r13, 5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rdi, $rbp
+  $rbp = KILL $rbp, implicit-def $rbp
+  $r13 = KILL $rdi, implicit-def $r13
+  $r12 = LEA64r killed $rbp, 2, killed $r13, 5, $noreg
+  RETQ $r12
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$r12 = LEA64r killed $rbp, 2, killed $r13, 5, $noreg
+
+###
+chris-before: $r12 = LEA64r killed $rbp, 2, killed $r13, 5, $noreg
+
+chris-begin: $rbp = KILL $rbp, implicit-def $rbp
+
+chris-end: RETQ $r12
+
+chris-N down =: 4: $r12 = LEA64r killed $rbp, 2, killed $r13, 5, $noreg
+
+chris-N down =: 3: RETQ $r12
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $r12 = LEA64r killed $rbp, 2, killed $r13, 5, $noreg
+FixLEA: Replaced by:   $r12 = LEA64r $noreg, 2, killed $r13, 5, $noreg
+  $r12 = ADD64rr $r12(tied-def 0), killed $rbp, implicit-def $eflags
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$eax = LEA64_32r killed $rax, 1, killed $rbp, 129, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $eax = LEA64_32r killed $rax, 1, killed $rbp, 129, $noreg
+  RETQ $eax
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$eax = LEA64_32r killed $rax, 1, killed $rbp, 129, $noreg
+
+###
+chris-before: $eax = LEA64_32r killed $rax, 1, killed $rbp, 129, $noreg
+
+chris-begin: $eax = LEA64_32r killed $rax, 1, killed $rbp, 129, $noreg
+
+chris-end: RETQ $eax
+
+chris-N down =: 4: $eax = LEA64_32r killed $rax, 1, killed $rbp, 129, $noreg
+
+chris-N down =: 3: RETQ $eax
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $eax = LEA64_32r killed $rax, 1, killed $rbp, 129, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$eax = LEA64_32r killed $rax, 1, killed $rbp, 129, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $eax = LEA64_32r killed $rax, 1, killed $rbp, 129, $noreg
+  RETQ $eax
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$eax = LEA64_32r killed $rax, 1, killed $rbp, 129, $noreg
+
+###
+chris-before: $eax = LEA64_32r killed $rax, 1, killed $rbp, 129, $noreg
+
+chris-begin: $eax = LEA64_32r killed $rax, 1, killed $rbp, 129, $noreg
+
+chris-end: RETQ $eax
+
+chris-N down =: 4: $eax = LEA64_32r killed $rax, 1, killed $rbp, 129, $noreg
+
+chris-N down =: 3: RETQ $eax
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $eax = LEA64_32r killed $rax, 1, killed $rbp, 129, $noreg
+FixLEA: Replaced by:   $eax = LEA64_32r killed $rax, 1, killed $rbp, 0, $noreg
+  $eax = ADD32ri $eax(tied-def 0), 129, implicit-def $eflags
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$ebx = LEA64_32r killed $rbp, 1, killed $rbp, 0, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp, $rbx
+  $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 0, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$ebx = LEA64_32r killed $rbp, 1, killed $rbp, 0, $noreg
+
+###
+chris-before: $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 0, $noreg
+
+chris-begin: $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 0, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 0, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 0, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$ebx = LEA64_32r killed $rbp, 1, killed $rbp, 0, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp, $rbx
+  $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 0, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$ebx = LEA64_32r killed $rbp, 1, killed $rbp, 0, $noreg
+
+###
+chris-before: $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 0, $noreg
+
+chris-begin: $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 0, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 0, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$ebx = LEA64_32r killed $rbp, 1, killed $rbp, 5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp, $rbx
+  $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 5, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$ebx = LEA64_32r killed $rbp, 1, killed $rbp, 5, $noreg
+
+###
+chris-before: $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 5, $noreg
+
+chris-begin: $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 5, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 5, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 5, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$ebx = LEA64_32r killed $rbp, 1, killed $rbp, 5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp, $rbx
+  $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 5, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$ebx = LEA64_32r killed $rbp, 1, killed $rbp, 5, $noreg
+
+###
+chris-before: $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 5, $noreg
+
+chris-begin: $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 5, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 5, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$ebx = LEA64_32r killed $rbp, 4, killed $rbp, 5, $noreg
+
+optTwoAddrLEA: debug-after (I): $ebx = LEA64_32r killed $rbp, 4, killed $rbp, 5, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$ebx = LEA64_32r killed $rbp, 4, killed $rbp, 5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $eax, $ebp, $ebx
+  $ebx = LEA64_32r killed $rbp, 4, killed $rbp, 5, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$ebx = LEA64_32r killed $rbp, 4, killed $rbp, 5, $noreg
+
+###
+chris-before: $ebx = LEA64_32r killed $rbp, 4, killed $rbp, 5, $noreg
+
+chris-begin: $ebx = LEA64_32r killed $rbp, 4, killed $rbp, 5, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $ebx = LEA64_32r killed $rbp, 4, killed $rbp, 5, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$rax = LEA64r killed $rax, 1, killed $rbp, 129, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $rax = LEA64r killed $rax, 1, killed $rbp, 129, $noreg
+  RETQ $eax
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rax = LEA64r killed $rax, 1, killed $rbp, 129, $noreg
+
+###
+chris-before: $rax = LEA64r killed $rax, 1, killed $rbp, 129, $noreg
+
+chris-begin: $rax = LEA64r killed $rax, 1, killed $rbp, 129, $noreg
+
+chris-end: RETQ $eax
+
+chris-N down =: 4: $rax = LEA64r killed $rax, 1, killed $rbp, 129, $noreg
+
+chris-N down =: 3: RETQ $eax
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $rax = LEA64r killed $rax, 1, killed $rbp, 129, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$rax = LEA64r killed $rax, 1, killed $rbp, 129, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp
+  $rax = LEA64r killed $rax, 1, killed $rbp, 129, $noreg
+  RETQ $eax
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rax = LEA64r killed $rax, 1, killed $rbp, 129, $noreg
+
+###
+chris-before: $rax = LEA64r killed $rax, 1, killed $rbp, 129, $noreg
+
+chris-begin: $rax = LEA64r killed $rax, 1, killed $rbp, 129, $noreg
+
+chris-end: RETQ $eax
+
+chris-N down =: 4: $rax = LEA64r killed $rax, 1, killed $rbp, 129, $noreg
+
+chris-N down =: 3: RETQ $eax
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $rax = LEA64r killed $rax, 1, killed $rbp, 129, $noreg
+FixLEA: Replaced by:   $rax = ADD64rr $rax(tied-def 0), killed $rbp, implicit-def $eflags
+  $rax = ADD64ri32 $rax(tied-def 0), 129, implicit-def $eflags
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$rbx = LEA64r killed $rbp, 1, $rbp, 0, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp, $rbx
+  $rbx = LEA64r killed $rbp, 1, $rbp, 0, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbx = LEA64r killed $rbp, 1, $rbp, 0, $noreg
+
+###
+chris-before: $rbx = LEA64r killed $rbp, 1, $rbp, 0, $noreg
+
+chris-begin: $rbx = LEA64r killed $rbp, 1, $rbp, 0, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $rbx = LEA64r killed $rbp, 1, $rbp, 0, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $rbx = LEA64r killed $rbp, 1, $rbp, 0, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$rbx = LEA64r killed $rbp, 1, $rbp, 0, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp, $rbx
+  $rbx = LEA64r killed $rbp, 1, $rbp, 0, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbx = LEA64r killed $rbp, 1, $rbp, 0, $noreg
+
+###
+chris-before: $rbx = LEA64r killed $rbp, 1, $rbp, 0, $noreg
+
+chris-begin: $rbx = LEA64r killed $rbp, 1, $rbp, 0, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $rbx = LEA64r killed $rbp, 1, $rbp, 0, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $rbx = LEA64r killed $rbp, 1, $rbp, 0, $noreg
+FixLEA: Replaced by:   $rbx = MOV64rr $rbp
+  $rbx = ADD64rr $rbx(tied-def 0), $rbp, implicit-def $eflags
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$rbx = LEA64r $rbp, 1, $rbp, 5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp, $rbx
+  $rbx = LEA64r $rbp, 1, $rbp, 5, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbx = LEA64r $rbp, 1, $rbp, 5, $noreg
+
+###
+chris-before: $rbx = LEA64r $rbp, 1, $rbp, 5, $noreg
+
+chris-begin: $rbx = LEA64r $rbp, 1, $rbp, 5, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $rbx = LEA64r $rbp, 1, $rbp, 5, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): $rbx = LEA64r $rbp, 1, $rbp, 5, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$rbx = LEA64r $rbp, 1, $rbp, 5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp, $rbx
+  $rbx = LEA64r $rbp, 1, $rbp, 5, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbx = LEA64r $rbp, 1, $rbp, 5, $noreg
+
+###
+chris-before: $rbx = LEA64r $rbp, 1, $rbp, 5, $noreg
+
+chris-begin: $rbx = LEA64r $rbp, 1, $rbp, 5, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $rbx = LEA64r $rbp, 1, $rbp, 5, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $rbx = LEA64r $rbp, 1, $rbp, 5, $noreg
+FixLEA: Replaced by:   $rbx = LEA64r $noreg, 1, $rbp, 5, $noreg
+  $rbx = ADD64rr $rbx(tied-def 0), $rbp, implicit-def $eflags
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$rbx = LEA64r $rbp, 4, $rbp, 5, $noreg
+
+optTwoAddrLEA: debug-after (I): $rbx = LEA64r $rbp, 4, $rbp, 5, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$rbx = LEA64r $rbp, 4, $rbp, 5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp, $rbx
+  $rbx = LEA64r $rbp, 4, $rbp, 5, $noreg
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbx = LEA64r $rbp, 4, $rbp, 5, $noreg
+
+###
+chris-before: $rbx = LEA64r $rbp, 4, $rbp, 5, $noreg
+
+chris-begin: $rbx = LEA64r $rbp, 4, $rbp, 5, $noreg
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $rbx = LEA64r $rbp, 4, $rbp, 5, $noreg
+
+chris-N down =: 3: RETQ $ebx
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $rbx = LEA64r $rbp, 4, $rbp, 5, $noreg
+FixLEA: Replaced by:   $rbx = LEA64r $noreg, 4, $rbp, 5, $noreg
+  $rbx = ADD64rr $rbx(tied-def 0), $rbp, implicit-def $eflags
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$rbp = LEA64r killed $rbp, 4, killed $rbp, 0, $noreg
+
+optTwoAddrLEA: debug-after (I): $rbp = LEA64r killed $rbp, 4, killed $rbp, 0, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$rbp = LEA64r killed $rbp, 4, killed $rbp, 0, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp, $rbx
+  $rbp = LEA64r killed $rbp, 4, killed $rbp, 0, $noreg
+  RETQ $ebp
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbp = LEA64r killed $rbp, 4, killed $rbp, 0, $noreg
+
+###
+chris-before: $rbp = LEA64r killed $rbp, 4, killed $rbp, 0, $noreg
+
+chris-begin: $rbp = LEA64r killed $rbp, 4, killed $rbp, 0, $noreg
+
+chris-end: RETQ $ebp
+
+chris-N down =: 4: $rbp = LEA64r killed $rbp, 4, killed $rbp, 0, $noreg
+
+chris-N down =: 3: RETQ $ebp
+
+chris-liveness: return4 Dead
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$rbx = LEA64r killed $rax, 4, killed $rax, 5, $noreg
+
+optTwoAddrLEA: debug-after (I): $rbx = LEA64r killed $rax, 4, killed $rax, 5, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$rbx = LEA64r killed $rax, 4, killed $rax, 5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  successors: %bb.1(0x80000000); %bb.1(100.00%)
+  liveins: $rax, $rbp, $rbx
+  CMP64rr $rax, killed $rbx, implicit-def $eflags
+  $rbx = LEA64r killed $rax, 4, killed $rax, 5, $noreg
+  JCC_1 %bb.1, 4, implicit $eflags
+  RETQ $ebx
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbx = LEA64r killed $rax, 4, killed $rax, 5, $noreg
+
+###
+chris-before: $rbx = LEA64r killed $rax, 4, killed $rax, 5, $noreg
+
+chris-begin: CMP64rr $rax, killed $rbx, implicit-def $eflags
+
+chris-end: RETQ $ebx
+
+chris-N down =: 4: $rbx = LEA64r killed $rax, 4, killed $rax, 5, $noreg
+
+chris-N down =: 3: JCC_1 %bb.1, 4, implicit $eflags
+
+chris-liveness: return1 Live
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$rbp = LEA64r killed $rbx, 4, killed $rbx, 5, $noreg
+
+optTwoAddrLEA: debug-after (I): $rbp = LEA64r killed $rbx, 4, killed $rbx, 5, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$rbp = LEA64r killed $rbx, 4, killed $rbx, 5, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.1:
+; predecessors: %bb.0
+  liveins: $rax, $rbp, $rbx, $r8
+  DBG_VALUE 0, $noreg
+  $rbp = LEA64r killed $rbx, 4, killed $rbx, 5, $noreg
+  renamable $rbp = LEA64r renamable $r8, 1, $noreg, -1, $noreg
+  RETQ $ebp
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$rbp = LEA64r killed $rbx, 4, killed $rbx, 5, $noreg
+
+###
+chris-before: $rbp = LEA64r killed $rbx, 4, killed $rbx, 5, $noreg
+
+chris-begin: DBG_VALUE 0, $noreg
+
+chris-end: RETQ $ebp
+
+chris-N down =: 4: $rbp = LEA64r killed $rbx, 4, killed $rbx, 5, $noreg
+
+chris-N down =: 3: renamable $rbp = LEA64r renamable $r8, 1, $noreg, -1, $noreg
+
+chris-N down =: 2: RETQ $ebp
+
+chris-liveness: return4 Dead
+FixLEA: Candidate to replace:  $rbp = LEA64r killed $rbx, 4, killed $rbx, 5, $noreg
+FixLEA: Replaced by:   $rbp = LEA64r killed $rbx, 4, killed $rbx, 0, $noreg
+  $rbp = ADD64ri8 $rbp(tied-def 0), 5, implicit-def $eflags
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $rbp = LEA64r renamable $r8, 1, $noreg, -1, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.1:
+; predecessors: %bb.0
+  liveins: $rax, $rbp, $rbx, $r8
+  DBG_VALUE 0, $noreg
+  $rbp = LEA64r killed $rbx, 4, killed $rbx, 0, $noreg
+  $rbp = ADD64ri8 $rbp(tied-def 0), 5, implicit-def $eflags
+  renamable $rbp = LEA64r renamable $r8, 1, $noreg, -1, $noreg
+  RETQ $ebp
+
+###
+### chris_isSafeToClobberEFLAGS I:
+renamable $rbp = LEA64r renamable $r8, 1, $noreg, -1, $noreg
+
+###
+chris-before: renamable $rbp = LEA64r renamable $r8, 1, $noreg, -1, $noreg
+
+chris-begin: DBG_VALUE 0, $noreg
+
+chris-end: RETQ $ebp
+
+chris-N down =: 4: renamable $rbp = LEA64r renamable $r8, 1, $noreg, -1, $noreg
+
+chris-N down =: 3: RETQ $ebp
+
+chris-liveness: return4 Dead
+optTwoAddrLEA: debug-after (I): renamable $rbp = LEA64r renamable $r8, 1, $noreg, -1, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $rbp = LEA64r renamable $r8, 1, $noreg, -1, $noreg
+
+End X86FixupLEAs
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:$ebp = LEA64_32r killed $rbp, 4, killed $rbp, 0, $noreg
+
+optTwoAddrLEA: debug-after (I): $ebp = LEA64_32r killed $rbp, 4, killed $rbp, 0, $noreg
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:$ebp = LEA64_32r killed $rbp, 4, killed $rbp, 0, $noreg
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.0 (%ir-block.0):
+  liveins: $rax, $rbp, $rbx
+  $ebp = LEA64_32r killed $rbp, 4, killed $rbp, 0, $noreg
+  RETQ $ebp
+
+###
+### chris_isSafeToClobberEFLAGS I:
+$ebp = LEA64_32r killed $rbp, 4, killed $rbp, 0, $noreg
+
+###
+chris-before: $ebp = LEA64_32r killed $rbp, 4, killed $rbp, 0, $noreg
+
+chris-begin: $ebp = LEA64_32r killed $rbp, 4, killed $rbp, 0, $noreg
+
+chris-end: RETQ $ebp
+
+chris-N down =: 4: $ebp = LEA64_32r killed $rbp, 4, killed $rbp, 0, $noreg
+
+chris-N down =: 3: RETQ $ebp
+
+chris-liveness: return4 Dead
+End X86FixupLEAs
+Start X86FixupLEAs
+End X86FixupLEAs

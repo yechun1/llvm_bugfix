@@ -1,0 +1,1285 @@
+--- |
+  ; ModuleID = 'example2.mir'
+  source_filename = "lea-2.ll"
+  target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+  
+  define i32 @testleaadd_64_32_1() #0 {
+    ret i32 0
+  }
+  
+  define i32 @testleaadd_rbp_64_32_1() #0 {
+    ret i32 0
+  }
+  
+  define i32 @test1lea_rbp_64_32_1() #0 {
+    ret i32 0
+  }
+  
+  define i32 @test2add_64() #0 {
+    ret i32 0
+  }
+  
+  define i32 @test2add_rbp_64() #0 {
+    ret i32 0
+  }
+  
+  define i32 @test1add_rbp_64() #0 {
+    ret i32 0
+  }
+  
+  define i32 @testleaadd_64_32() #0 {
+    ret i32 0
+  }
+  
+  define i32 @testleaadd_rbp_64_32() #0 {
+    ret i32 0
+  }
+  
+  define i32 @test1lea_rbp_64_32() #0 {
+    ret i32 0
+  }
+  
+  define i32 @testleaadd_64() #0 {
+    ret i32 0
+  }
+  
+  define i32 @testleaadd_rbp_64() #0 {
+    ret i32 0
+  }
+  
+  define i32 @test1lea_rbp_64() #0 {
+    ret i32 0
+  }
+  
+  define i32 @test8() #0 {
+    ret i32 0
+  }
+  
+  define i32 @testleaaddi32_64_32() #0 {
+    ret i32 0
+  }
+  
+  define i32 @test1mov1add_rbp_64_32() #0 {
+    ret i32 0
+  }
+  
+  define i32 @testleaadd_rbp_index_64_32() #0 {
+    ret i32 0
+  }
+  
+  define i32 @testleaadd_rbp_index2_64_32() #0 {
+    ret i32 0
+  }
+  
+  define i32 @test2addi32_64() #0 {
+    ret i32 0
+  }
+  
+  define i32 @test1mov1add_rbp_64() #0 {
+    ret i32 0
+  }
+  
+  define i32 @testleaadd_rbp_index_64() #0 {
+    ret i32 0
+  }
+  
+  define i32 @testleaadd_rbp_index2_64() #0 {
+    ret i32 0
+  }
+  
+  define i32 @test_skip_opt_64() #0 {
+    ret i32 0
+  }
+  
+  define i32 @test_skip_eflags_64() #0 {
+    ret i32 0
+  }
+  
+  define i32 @test_skip_opt_64_32() #0 {
+    ret i32 0
+  }
+  
+  define i32 @test_skip_eflags_64_32() #0 {
+    ret i32 0
+  }
+  
+  attributes #0 = { "target-cpu"="corei7-avx" }
+
+...
+---
+name:            testleaadd_64_32_1
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp
+  
+    $eax = LEA64_32r killed $rax, 1, killed $rbp, 0, $noreg
+    $eax = ADD32ri8 $eax, -5, implicit-def $eflags
+    RETQ $eax
+
+...
+---
+name:            testleaadd_rbp_64_32_1
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp
+  
+    $ebp = LEA64_32r killed $rax, 1, killed $rbp, 0, $noreg
+    $ebp = ADD32ri8 $ebp, -5, implicit-def $eflags
+    RETQ $ebp
+
+...
+---
+name:            test1lea_rbp_64_32_1
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp
+  
+    $ebp = ADD32rr $ebp, $eax, implicit-def $eflags, implicit $rbp, implicit $rax
+    RETQ $ebp
+
+...
+---
+name:            test2add_64
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp
+  
+    $rax = ADD64rr $rax, killed $rbp, implicit-def $eflags
+    $rax = ADD64ri8 $rax, -5, implicit-def $eflags
+    RETQ $eax
+
+...
+---
+name:            test2add_rbp_64
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp
+  
+    $rbp = ADD64rr $rbp, killed $rax, implicit-def $eflags
+    $rbp = ADD64ri8 $rbp, -5, implicit-def $eflags
+    RETQ $ebp
+
+...
+---
+name:            test1add_rbp_64
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp
+  
+    $rbp = ADD64rr $rbp, $rax, implicit-def $eflags
+    RETQ $ebp
+
+...
+---
+name:            testleaadd_64_32
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+  - { reg: '$rbx', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp
+  
+    $ebx = LEA64_32r killed $rax, 1, killed $rbp, 0, $noreg
+    $ebx = ADD32ri8 $ebx, -5, implicit-def $eflags
+    RETQ $ebx
+
+...
+---
+name:            testleaadd_rbp_64_32
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+  - { reg: '$rbx', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp
+  
+    $ebx = LEA64_32r killed $rax, 1, killed $rbp, 0, $noreg
+    $ebx = ADD32ri8 $ebx, -5, implicit-def $eflags
+    RETQ $ebx
+
+...
+---
+name:            test1lea_rbp_64_32
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+  - { reg: '$rbx', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp
+  
+    $ebx = LEA64_32r killed $rax, 1, killed $rbp, 0, $noreg
+    RETQ $ebx
+
+...
+---
+name:            testleaadd_64
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+  - { reg: '$rbx', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp
+  
+    $rbx = LEA64r killed $rax, 1, killed $rbp, 0, $noreg
+    $rbx = ADD64ri8 $rbx, -5, implicit-def $eflags
+    RETQ $ebx
+
+...
+---
+name:            testleaadd_rbp_64
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+  - { reg: '$rbx', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp
+  
+    $rbx = LEA64r killed $rax, 1, killed $rbp, 0, $noreg
+    $rbx = ADD64ri8 $rbx, -5, implicit-def $eflags
+    RETQ $ebx
+
+...
+---
+name:            test1lea_rbp_64
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+  - { reg: '$rbx', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp
+  
+    $rbx = LEA64r killed $rax, 1, killed $rbp, 0, $noreg
+    RETQ $ebx
+
+...
+---
+name:            test8
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rdi', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rdi, $rbp
+  
+    $rbp = KILL $rbp, implicit-def $rbp
+    $r13 = KILL $rdi, implicit-def $r13
+    $r12 = LEA64r $noreg, 2, killed $r13, 5, $noreg
+    $r12 = ADD64rr $r12, killed $rbp, implicit-def $eflags
+    RETQ $r12
+
+...
+---
+name:            testleaaddi32_64_32
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp
+  
+    $eax = LEA64_32r killed $rax, 1, killed $rbp, 0, $noreg
+    $eax = ADD32ri $eax, 129, implicit-def $eflags
+    RETQ $eax
+
+...
+---
+name:            test1mov1add_rbp_64_32
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp, $rbx
+  
+    $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 0, $noreg
+    RETQ $ebx
+
+...
+---
+name:            testleaadd_rbp_index_64_32
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rbx', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp, $rbx
+  
+    $ebx = LEA64_32r killed $rbp, 1, killed $rbp, 5, $noreg
+    RETQ $ebx
+
+...
+---
+name:            testleaadd_rbp_index2_64_32
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rbx', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $eax, $ebp, $ebx
+  
+    $ebx = LEA64_32r killed $rbp, 4, killed $rbp, 5, $noreg
+    RETQ $ebx
+
+...
+---
+name:            test2addi32_64
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp
+  
+    $rax = ADD64rr $rax, killed $rbp, implicit-def $eflags
+    $rax = ADD64ri32 $rax, 129, implicit-def $eflags
+    RETQ $eax
+
+...
+---
+name:            test1mov1add_rbp_64
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rax', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp, $rbx
+  
+    $rbx = MOV64rr $rbp
+    $rbx = ADD64rr $rbx, $rbp, implicit-def $eflags
+    RETQ $ebx
+
+...
+---
+name:            testleaadd_rbp_index_64
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rbx', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp, $rbx
+  
+    $rbx = LEA64r $noreg, 1, $rbp, 5, $noreg
+    $rbx = ADD64rr $rbx, $rbp, implicit-def $eflags
+    RETQ $ebx
+
+...
+---
+name:            testleaadd_rbp_index2_64
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rbx', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp, $rbx
+  
+    $rbx = LEA64r $noreg, 4, $rbp, 5, $noreg
+    $rbx = ADD64rr $rbx, $rbp, implicit-def $eflags
+    RETQ $ebx
+
+...
+---
+name:            test_skip_opt_64
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rbx', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp, $rbx
+  
+    $rbp = LEA64r killed $rbp, 4, killed $rbp, 0, $noreg
+    RETQ $ebp
+
+...
+---
+name:            test_skip_eflags_64
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rbp', virtual-reg: '' }
+  - { reg: '$rax', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    successors: %bb.1(0x80000000)
+    liveins: $rax, $rbp, $rbx
+  
+    CMP64rr $rax, killed $rbx, implicit-def $eflags
+    $rbx = LEA64r killed $rax, 4, killed $rax, 5, $noreg
+    JCC_1 %bb.1, 4, implicit $eflags
+    RETQ $ebx
+  
+  bb.1:
+    liveins: $rax, $rbp, $rbx, $r8
+  
+    DBG_VALUE 0, $noreg
+    $rbp = LEA64r killed $rbx, 4, killed $rbx, 0, $noreg
+    $rbp = ADD64ri8 $rbp, 5, implicit-def $eflags
+    renamable $rbp = LEA64r renamable $r8, 1, $noreg, -1, $noreg
+    RETQ $ebp
+
+...
+---
+name:            test_skip_opt_64_32
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:
+  - { reg: '$rbx', virtual-reg: '' }
+  - { reg: '$rbp', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0 (%ir-block.0):
+    liveins: $rax, $rbp, $rbx
+  
+    $ebp = LEA64_32r killed $rbp, 4, killed $rbp, 0, $noreg
+    RETQ $ebp
+
+...
+---
+name:            test_skip_eflags_64_32
+alignment:       16
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+registers:       []
+liveins:         []
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 4294967295
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:           []
+callSites:       []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+
+...

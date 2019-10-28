@@ -1,0 +1,1122 @@
+BISECT: running pass (1) Simplify the CFG on function (__cxx_global_var_init)
+BISECT: running pass (2) SROA on function (__cxx_global_var_init)
+BISECT: running pass (3) Early CSE on function (__cxx_global_var_init)
+BISECT: running pass (4) Simplify the CFG on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (5) SROA on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (6) Early CSE on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (7) Simplify the CFG on function (_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc)
+BISECT: running pass (8) SROA on function (_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc)
+BISECT: running pass (9) Early CSE on function (_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc)
+BISECT: running pass (10) Simplify the CFG on function (_ZNSolsEPFRSoS_E)
+BISECT: running pass (11) SROA on function (_ZNSolsEPFRSoS_E)
+BISECT: running pass (12) Early CSE on function (_ZNSolsEPFRSoS_E)
+BISECT: running pass (13) Simplify the CFG on function (_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+BISECT: running pass (14) SROA on function (_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+BISECT: running pass (15) Early CSE on function (_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+BISECT: running pass (16) Simplify the CFG on function (_ZNSt9basic_iosIcSt11char_traitsIcEE8setstateESt12_Ios_Iostate)
+BISECT: running pass (17) SROA on function (_ZNSt9basic_iosIcSt11char_traitsIcEE8setstateESt12_Ios_Iostate)
+BISECT: running pass (18) Early CSE on function (_ZNSt9basic_iosIcSt11char_traitsIcEE8setstateESt12_Ios_Iostate)
+BISECT: running pass (19) Simplify the CFG on function (_ZNSt11char_traitsIcE6lengthEPKc)
+BISECT: running pass (20) SROA on function (_ZNSt11char_traitsIcE6lengthEPKc)
+BISECT: running pass (21) Early CSE on function (_ZNSt11char_traitsIcE6lengthEPKc)
+BISECT: running pass (22) Simplify the CFG on function (_ZStorSt12_Ios_IostateS_)
+BISECT: running pass (23) SROA on function (_ZStorSt12_Ios_IostateS_)
+BISECT: running pass (24) Early CSE on function (_ZStorSt12_Ios_IostateS_)
+BISECT: running pass (25) Simplify the CFG on function (_ZNKSt9basic_iosIcSt11char_traitsIcEE7rdstateEv)
+BISECT: running pass (26) SROA on function (_ZNKSt9basic_iosIcSt11char_traitsIcEE7rdstateEv)
+BISECT: running pass (27) Early CSE on function (_ZNKSt9basic_iosIcSt11char_traitsIcEE7rdstateEv)
+BISECT: running pass (28) Simplify the CFG on function (_ZSt5flushIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+BISECT: running pass (29) SROA on function (_ZSt5flushIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+BISECT: running pass (30) Early CSE on function (_ZSt5flushIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+BISECT: running pass (31) Simplify the CFG on function (_ZNKSt9basic_iosIcSt11char_traitsIcEE5widenEc)
+BISECT: running pass (32) SROA on function (_ZNKSt9basic_iosIcSt11char_traitsIcEE5widenEc)
+BISECT: running pass (33) Early CSE on function (_ZNKSt9basic_iosIcSt11char_traitsIcEE5widenEc)
+BISECT: running pass (34) Simplify the CFG on function (_ZSt13__check_facetISt5ctypeIcEERKT_PS3_)
+BISECT: running pass (35) SROA on function (_ZSt13__check_facetISt5ctypeIcEERKT_PS3_)
+BISECT: running pass (36) Early CSE on function (_ZSt13__check_facetISt5ctypeIcEERKT_PS3_)
+BISECT: running pass (37) Simplify the CFG on function (_ZNKSt5ctypeIcE5widenEc)
+BISECT: running pass (38) SROA on function (_ZNKSt5ctypeIcE5widenEc)
+BISECT: running pass (39) Early CSE on function (_ZNKSt5ctypeIcE5widenEc)
+BISECT: running pass (40) Simplify the CFG on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (41) SROA on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (42) Early CSE on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (43) Infer set function attributes on module (/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp)
+BISECT: running pass (44) Interprocedural Sparse Conditional Constant Propagation on module (/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp)
+BISECT: running pass (45) Called Value Propagation on module (/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp)
+BISECT: running pass (46) Deduce and propagate attributes on module (/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp)
+BISECT: running pass (47) Global Variable Optimizer on module (/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp)
+BISECT: running pass (48) Promote Memory to Register on function (__cxx_global_var_init)
+BISECT: running pass (49) Promote Memory to Register on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (50) Promote Memory to Register on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (51) Dead Argument Elimination on module (/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp)
+BISECT: running pass (52) Combine redundant instructions on function (__cxx_global_var_init)
+BISECT: running pass (53) Simplify the CFG on function (__cxx_global_var_init)
+BISECT: running pass (54) Combine redundant instructions on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (55) Simplify the CFG on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (56) Combine redundant instructions on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (57) Simplify the CFG on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (58) Remove unused exception handling info on SCC (<<null function>>)
+BISECT: running pass (59) Function Integration/Inlining on SCC (<<null function>>)
+BISECT: running pass (60) Deduce function attributes on SCC (<<null function>>)
+BISECT: running pass (61) Remove unused exception handling info on SCC (_ZNSt8ios_base4InitC1Ev)
+BISECT: running pass (62) Function Integration/Inlining on SCC (_ZNSt8ios_base4InitC1Ev)
+BISECT: running pass (63) Deduce function attributes on SCC (_ZNSt8ios_base4InitC1Ev)
+BISECT: running pass (64) Remove unused exception handling info on SCC (_ZNSt8ios_base4InitD1Ev)
+BISECT: running pass (65) Function Integration/Inlining on SCC (_ZNSt8ios_base4InitD1Ev)
+BISECT: running pass (66) Deduce function attributes on SCC (_ZNSt8ios_base4InitD1Ev)
+BISECT: running pass (67) Remove unused exception handling info on SCC (__cxa_atexit)
+BISECT: running pass (68) Function Integration/Inlining on SCC (__cxa_atexit)
+BISECT: running pass (69) Deduce function attributes on SCC (__cxa_atexit)
+BISECT: running pass (70) Remove unused exception handling info on SCC (_Znwm)
+BISECT: running pass (71) Function Integration/Inlining on SCC (_Znwm)
+BISECT: running pass (72) Deduce function attributes on SCC (_Znwm)
+BISECT: running pass (73) Remove unused exception handling info on SCC (__assert_fail)
+BISECT: running pass (74) Function Integration/Inlining on SCC (__assert_fail)
+BISECT: running pass (75) Deduce function attributes on SCC (__assert_fail)
+BISECT: running pass (76) Remove unused exception handling info on SCC (_Znam)
+BISECT: running pass (77) Function Integration/Inlining on SCC (_Znam)
+BISECT: running pass (78) Deduce function attributes on SCC (_Znam)
+BISECT: running pass (79) Remove unused exception handling info on SCC (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (80) Function Integration/Inlining on SCC (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (81) Deduce function attributes on SCC (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (82) SROA on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (83) Early CSE w/ MemorySSA on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (84) Speculatively execute instructions if target has divergent branches on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (85) Jump Threading on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (86) Value Propagation on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (87) Simplify the CFG on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (88) Combine redundant instructions on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (89) Tail Call Elimination on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (90) Simplify the CFG on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (91) Reassociate expressions on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (92) Rotate Loops on loop
+BISECT: running pass (93) Loop Invariant Code Motion on loop
+BISECT: running pass (94) Unswitch loops on loop
+BISECT: running pass (95) Rotate Loops on loop
+BISECT: running pass (96) Loop Invariant Code Motion on loop
+BISECT: running pass (97) Unswitch loops on loop
+BISECT: running pass (98) Rotate Loops on loop
+BISECT: running pass (99) Loop Invariant Code Motion on loop
+BISECT: running pass (100) Unswitch loops on loop
+BISECT: running pass (101) Rotate Loops on loop
+BISECT: running pass (102) Loop Invariant Code Motion on loop
+BISECT: running pass (103) Unswitch loops on loop
+BISECT: running pass (104) Rotate Loops on loop
+BISECT: running pass (105) Loop Invariant Code Motion on loop
+BISECT: running pass (106) Unswitch loops on loop
+BISECT: running pass (107) Rotate Loops on loop
+BISECT: running pass (108) Loop Invariant Code Motion on loop
+BISECT: running pass (109) Unswitch loops on loop
+BISECT: running pass (110) Simplify the CFG on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (111) Combine redundant instructions on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (112) Induction Variable Simplification on loop
+BISECT: running pass (113) Recognize loop idioms on loop
+BISECT: running pass (114) Delete dead loops on loop
+BISECT: running pass (115) Unroll loops on loop
+BISECT: running pass (116) Induction Variable Simplification on loop
+BISECT: running pass (117) Recognize loop idioms on loop
+BISECT: running pass (118) Delete dead loops on loop
+BISECT: running pass (119) Unroll loops on loop
+BISECT: running pass (120) Induction Variable Simplification on loop
+BISECT: running pass (121) Recognize loop idioms on loop
+BISECT: running pass (122) Delete dead loops on loop
+BISECT: running pass (123) Unroll loops on loop
+BISECT: running pass (124) Induction Variable Simplification on loop
+BISECT: running pass (125) Recognize loop idioms on loop
+BISECT: running pass (126) Delete dead loops on loop
+BISECT: running pass (127) Unroll loops on loop
+BISECT: running pass (128) Induction Variable Simplification on loop
+BISECT: running pass (129) Recognize loop idioms on loop
+BISECT: running pass (130) Delete dead loops on loop
+BISECT: running pass (131) Unroll loops on loop
+BISECT: running pass (132) Induction Variable Simplification on loop
+BISECT: running pass (133) Recognize loop idioms on loop
+BISECT: running pass (134) Delete dead loops on loop
+BISECT: running pass (135) Unroll loops on loop
+BISECT: running pass (136) MergedLoadStoreMotion on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (137) Global Value Numbering on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (138) MemCpy Optimization on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (139) Sparse Conditional Constant Propagation on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (140) Bit-Tracking Dead Code Elimination on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (141) Combine redundant instructions on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (142) Jump Threading on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (143) Value Propagation on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (144) Dead Store Elimination on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (145) Loop Invariant Code Motion on loop
+BISECT: running pass (146) Loop Invariant Code Motion on loop
+BISECT: running pass (147) Loop Invariant Code Motion on loop
+BISECT: running pass (148) Loop Invariant Code Motion on loop
+BISECT: running pass (149) Loop Invariant Code Motion on loop
+BISECT: running pass (150) Aggressive Dead Code Elimination on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (151) Simplify the CFG on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (152) Combine redundant instructions on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (153) Remove unused exception handling info on SCC (llvm.umul.with.overflow.i64)
+BISECT: running pass (154) Function Integration/Inlining on SCC (llvm.umul.with.overflow.i64)
+BISECT: running pass (155) Deduce function attributes on SCC (llvm.umul.with.overflow.i64)
+BISECT: running pass (156) Remove unused exception handling info on SCC (__cxx_global_var_init)
+BISECT: running pass (157) Function Integration/Inlining on SCC (__cxx_global_var_init)
+BISECT: running pass (158) Deduce function attributes on SCC (__cxx_global_var_init)
+BISECT: running pass (159) SROA on function (__cxx_global_var_init)
+BISECT: running pass (160) Early CSE w/ MemorySSA on function (__cxx_global_var_init)
+BISECT: running pass (161) Speculatively execute instructions if target has divergent branches on function (__cxx_global_var_init)
+BISECT: running pass (162) Jump Threading on function (__cxx_global_var_init)
+BISECT: running pass (163) Value Propagation on function (__cxx_global_var_init)
+BISECT: running pass (164) Simplify the CFG on function (__cxx_global_var_init)
+BISECT: running pass (165) Combine redundant instructions on function (__cxx_global_var_init)
+BISECT: running pass (166) Tail Call Elimination on function (__cxx_global_var_init)
+BISECT: running pass (167) Simplify the CFG on function (__cxx_global_var_init)
+BISECT: running pass (168) Reassociate expressions on function (__cxx_global_var_init)
+BISECT: running pass (169) Simplify the CFG on function (__cxx_global_var_init)
+BISECT: running pass (170) Combine redundant instructions on function (__cxx_global_var_init)
+BISECT: running pass (171) MergedLoadStoreMotion on function (__cxx_global_var_init)
+BISECT: running pass (172) Global Value Numbering on function (__cxx_global_var_init)
+BISECT: running pass (173) MemCpy Optimization on function (__cxx_global_var_init)
+BISECT: running pass (174) Sparse Conditional Constant Propagation on function (__cxx_global_var_init)
+BISECT: running pass (175) Bit-Tracking Dead Code Elimination on function (__cxx_global_var_init)
+BISECT: running pass (176) Combine redundant instructions on function (__cxx_global_var_init)
+BISECT: running pass (177) Jump Threading on function (__cxx_global_var_init)
+BISECT: running pass (178) Value Propagation on function (__cxx_global_var_init)
+BISECT: running pass (179) Dead Store Elimination on function (__cxx_global_var_init)
+BISECT: running pass (180) Aggressive Dead Code Elimination on function (__cxx_global_var_init)
+BISECT: running pass (181) Simplify the CFG on function (__cxx_global_var_init)
+BISECT: running pass (182) Combine redundant instructions on function (__cxx_global_var_init)
+BISECT: running pass (183) Remove unused exception handling info on SCC (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (184) Function Integration/Inlining on SCC (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (185) Deduce function attributes on SCC (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (186) SROA on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (187) Early CSE w/ MemorySSA on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (188) Speculatively execute instructions if target has divergent branches on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (189) Jump Threading on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (190) Value Propagation on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (191) Simplify the CFG on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (192) Combine redundant instructions on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (193) Tail Call Elimination on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (194) Simplify the CFG on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (195) Reassociate expressions on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (196) Simplify the CFG on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (197) Combine redundant instructions on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (198) MergedLoadStoreMotion on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (199) Global Value Numbering on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (200) MemCpy Optimization on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (201) Sparse Conditional Constant Propagation on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (202) Bit-Tracking Dead Code Elimination on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (203) Combine redundant instructions on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (204) Jump Threading on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (205) Value Propagation on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (206) Dead Store Elimination on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (207) Aggressive Dead Code Elimination on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (208) Simplify the CFG on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (209) Combine redundant instructions on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (210) Remove unused exception handling info on SCC (llvm.dbg.value)
+BISECT: running pass (211) Function Integration/Inlining on SCC (llvm.dbg.value)
+BISECT: running pass (212) Deduce function attributes on SCC (llvm.dbg.value)
+BISECT: running pass (213) Remove unused exception handling info on SCC (<<null function>>)
+BISECT: running pass (214) Function Integration/Inlining on SCC (<<null function>>)
+BISECT: running pass (215) Deduce function attributes on SCC (<<null function>>)
+BISECT: running pass (216) Eliminate Available Externally Globals on module (/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp)
+BISECT: running pass (217) Deduce function attributes in RPO on module (/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp)
+BISECT: running pass (218) Global Variable Optimizer on module (/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp)
+BISECT: running pass (219) Dead Global Elimination on module (/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp)
+BISECT: running pass (220) Float to int on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (221) Rotate Loops on loop
+BISECT: running pass (222) Rotate Loops on loop
+BISECT: running pass (223) Rotate Loops on loop
+BISECT: running pass (224) Rotate Loops on loop
+BISECT: running pass (225) Rotate Loops on loop
+BISECT: running pass (226) Loop Distribution on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (227) Loop Vectorization on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (228) Loop Load Elimination on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (229) Combine redundant instructions on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (230) Simplify the CFG on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (231) SLP Vectorizer on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (232) Combine redundant instructions on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (233) Unroll loops on loop
+BISECT: running pass (234) Unroll loops on loop
+BISECT: running pass (235) Unroll loops on loop
+BISECT: running pass (236) Unroll loops on loop
+BISECT: running pass (237) Unroll loops on loop
+BISECT: running pass (238) Combine redundant instructions on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (239) Loop Invariant Code Motion on loop
+BISECT: running pass (240) Loop Invariant Code Motion on loop
+BISECT: running pass (241) Loop Invariant Code Motion on loop
+BISECT: running pass (242) Loop Invariant Code Motion on loop
+BISECT: running pass (243) Loop Invariant Code Motion on loop
+BISECT: running pass (244) Warn about non-applied transformations on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (245) Alignment from assumptions on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (246) Float to int on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (247) Loop Distribution on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (248) Loop Vectorization on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (249) Loop Load Elimination on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (250) Combine redundant instructions on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (251) Simplify the CFG on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (252) SLP Vectorizer on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (253) Combine redundant instructions on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (254) Combine redundant instructions on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (255) Warn about non-applied transformations on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (256) Alignment from assumptions on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (257) Strip Unused Function Prototypes on module (/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp)
+BISECT: running pass (258) Dead Global Elimination on module (/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp)
+BISECT: running pass (259) Merge Duplicate Global Constants on module (/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp)
+BISECT: running pass (260) Loop Sink on loop
+BISECT: running pass (261) Loop Sink on loop
+BISECT: running pass (262) Loop Sink on loop
+BISECT: running pass (263) Loop Sink on loop
+BISECT: running pass (264) Loop Sink on loop
+BISECT: running pass (265) Remove redundant instructions on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (266) Hoist/decompose integer division and remainder on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (267) Simplify the CFG on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (268) Remove redundant instructions on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (269) Hoist/decompose integer division and remainder on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (270) Simplify the CFG on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (271) Loop Strength Reduction on loop
+BISECT: running pass (272) Loop Strength Reduction on loop
+BISECT: running pass (273) Loop Strength Reduction on loop
+BISECT: running pass (274) Loop Strength Reduction on loop
+BISECT: running pass (275) Loop Strength Reduction on loop
+BISECT: running pass (276) Merge contiguous icmps into a memcmp on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (277) Expand memcmp() to load/stores on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (278) Constant Hoisting on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (279) Partially inline calls to library functions on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (280) CodeGen Prepare on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (281) Merge contiguous icmps into a memcmp on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (282) Expand memcmp() to load/stores on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (283) Constant Hoisting on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (284) Partially inline calls to library functions on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (285) CodeGen Prepare on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: running pass (286) X86 DAG->DAG Instruction Selection on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (287) Local Dynamic TLS Access Clean-up on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (288) X86 Domain Reassignment Pass on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (289) Early Tail Duplication on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (290) Optimize machine instruction PHIs on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (291) Remove dead machine instructions on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (292) Early If-Conversion on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (293) X86 cmov Conversion on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (294) Early Machine Loop Invariant Code Motion on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (295) Machine Common Subexpression Elimination on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (296) Machine code sinking on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (297) Peephole Optimizations on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (298) Remove dead machine instructions on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (299) Live Range Shrink on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (300) X86 LEA Optimize on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (301) X86 Optimize Call Frame on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (302) X86 Avoid Store Forwarding Blocks on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (303) Two-Address instruction pass on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+### chris_isSafeToClobberEFLAGS MBB:
+bb.11 (%ir-block.134):
+; predecessors: %bb.10, %bb.14
+  successors: %bb.13(0x80000000); %bb.13(100.00%)
+
+  %63:gr64 = COPY %244:gr64
+  %62:gr32 = COPY %243:gr32
+  %60:gr64 = COPY %241:gr64
+  DBG_VALUE %62:gr32, $noreg, !"nnzrow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:107
+  DBG_VALUE %60:gr64, $noreg, !"curvalptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+  DBG_VALUE %62:gr32, $noreg, !"nnzrow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:107
+  DBG_VALUE %61:gr32, $noreg, !"sz", !DIExpression(), debug-location !1140; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:110
+  DBG_VALUE %60:gr64, $noreg, !"curvalptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+  DBG_VALUE %63:gr64, $noreg, !"curindptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:99
+  DBG_VALUE -1, $noreg, !"sy", !DIExpression(), debug-location !1144; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:111
+  DBG_VALUE %63:gr64, $noreg, !"curindptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:99
+  undef %280.sub_32bit:gr64_nosp = COPY %159:gr32
+  %262:gr64 = COPY %60:gr64
+  undef %272.sub_32bit:gr64_nosp = COPY %158:gr32
+  %261:gr32 = COPY %62:gr32
+  %260:gr64 = COPY %63:gr64
+  JMP_1 %bb.13, debug-location !1145; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:111:4
+
+###
+### chris_isSafeToClobberEFLAGS I:
+%262:gr64 = COPY %60:gr64
+
+###
+chris-before: %262:gr64 = COPY %60:gr64
+
+chris-begin: %63:gr64 = COPY %244:gr64
+
+chris-end: JMP_1 %bb.13, debug-location !1145; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:111:4
+
+chris-N down =: 4: %262:gr64 = COPY %60:gr64
+
+chris-N down =: 3: undef %272.sub_32bit:gr64_nosp = COPY %158:gr32
+
+chris-N down =: 2: %261:gr32 = COPY %62:gr32
+
+chris-N down =: 1: %260:gr64 = COPY %63:gr64
+
+chris-N up =: 4: undef %280.sub_32bit:gr64_nosp = COPY %159:gr32
+
+chris-N up =: 3: DBG_VALUE %63:gr64, $noreg, !"curindptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:99
+
+chris-N up =: 3: DBG_VALUE -1, $noreg, !"sy", !DIExpression(), debug-location !1144; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:111
+
+chris-N up =: 3: DBG_VALUE %63:gr64, $noreg, !"curindptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:99
+
+chris-N up =: 3: DBG_VALUE %60:gr64, $noreg, !"curvalptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+
+chris-N up =: 3: DBG_VALUE %61:gr32, $noreg, !"sz", !DIExpression(), debug-location !1140; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:110
+
+chris-N up =: 3: DBG_VALUE %62:gr32, $noreg, !"nnzrow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:107
+
+chris-N up =: 3: DBG_VALUE %60:gr64, $noreg, !"curvalptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+
+chris-N up =: 3: DBG_VALUE %62:gr32, $noreg, !"nnzrow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:107
+
+chris-N up =: 3: %60:gr64 = COPY %241:gr64
+
+chris-N up =: 2: %62:gr32 = COPY %243:gr32
+
+chris-N up =: 1: %63:gr64 = COPY %244:gr64
+
+chris-I: %63:gr64 = COPY %244:gr64
+
+chris-liveness: start block***********: %63:gr64 = COPY %244:gr64
+
+chris-liveness: return10 Dead
+### chris_isSafeToClobberEFLAGS MBB:
+bb.7 (%ir-block.91):
+; predecessors: %bb.6
+  successors: %bb.10(0x80000000); %bb.10(100.00%)
+
+  undef %268.sub_32bit:gr64_with_sub_8bit = LEA64_32r %266:gr64_with_sub_8bit, 1, %267:gr64_nosp, 0, $noreg
+  %268.sub_32bit:gr64_with_sub_8bit = IMUL32rr %268.sub_32bit:gr64_with_sub_8bit(tied-def 0), %109:gr32, implicit-def dead $eflags
+  %44:gr32 = COPY %22:gr32, debug-location !1131; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:108:3
+  %45:gr32 = COPY %23:gr32, debug-location !1131; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:108:3
+  %46:gr32 = COPY %24:gr32, debug-location !1131; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:108:3
+  %54:gr64_with_sub_8bit = COPY %155:gr64_with_sub_8bit
+  JMP_1 %bb.10, debug-location !1121; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:104:7
+
+###
+### chris_isSafeToClobberEFLAGS I:
+JMP_1 %bb.10, debug-location !1121; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:104:7
+
+###
+chris-before: JMP_1 %bb.10, debug-location !1121; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:104:7
+
+chris-begin: undef %268.sub_32bit:gr64_with_sub_8bit = LEA64_32r %266:gr64_with_sub_8bit, 1, %267:gr64_nosp, 0, $noreg
+
+chris-end: JMP_1 %bb.10, debug-location !1121; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:104:7
+
+chris-N down =: 4: JMP_1 %bb.10, debug-location !1121; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:104:7
+
+chris-liveness: return4 Dead
+BISECT: running pass (304) Machine Instruction Scheduler on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (305) Stack Slot Coloring on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (306) Machine Copy Propagation Pass on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (307) Machine Loop Invariant Code Motion on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (308) PostRA Machine Sink on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (309) Shrink Wrapping analysis on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (310) Control Flow Optimizer on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (311) Tail Duplication on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (312) Machine Copy Propagation Pass on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (313) Post RA top-down list latency scheduler on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (314) Branch Probability Basic Block Placement on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (315) ReachingDefAnalysis on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (316) X86 Execution Dependency Fix on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (317) BreakFalseDeps on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (318) X86 Byte/Word Instruction Fixup on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (319) X86 Atom pad short functions on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+BISECT: running pass (320) X86 LEA Fixup XX on function (_Z15generate_matrixiiiPP24HPC_Sparse_Matrix_STRUCTPPdS3_S3_)
+Start X86FixupLEAs
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $eax = LEA64_32r renamable $r12, 8, renamable $r12, 0, $noreg, implicit-def $rax, debug-location !1072; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:74:21
+
+optTwoAddrLEA: debug-after (I): renamable $eax = LEA64_32r renamable $r12, 8, renamable $r12, 0, $noreg, implicit-def $rax, debug-location !1072; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:74:21
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $eax = LEA64_32r renamable $r12, 8, renamable $r12, 0, $noreg, implicit-def $rax, debug-location !1072; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:74:21
+
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $eax = LEA64_32r killed renamable $rax, 2, renamable $rax, 0, $noreg, debug-location !1072; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:74:21
+
+optTwoAddrLEA: debug-after (I): renamable $eax = LEA64_32r killed renamable $rax, 2, renamable $rax, 0, $noreg, debug-location !1072; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:74:21
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $eax = LEA64_32r killed renamable $rax, 2, renamable $rax, 0, $noreg, debug-location !1072; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:74:21
+
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $rax = LEA64r renamable $rbx, 8, renamable $rbx, 0, $noreg, debug-location !1074; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:77:27
+
+optTwoAddrLEA: debug-after (I): renamable $rax = LEA64r renamable $rbx, 8, renamable $rbx, 0, $noreg, debug-location !1074; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:77:27
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $rax = LEA64r renamable $rbx, 8, renamable $rbx, 0, $noreg, debug-location !1074; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:77:27
+
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $rax = LEA64r killed renamable $rax, 2, renamable $rax, 0, $noreg, debug-location !1074; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:77:27
+
+optTwoAddrLEA: debug-after (I): renamable $rax = LEA64r killed renamable $rax, 2, renamable $rax, 0, $noreg, debug-location !1074; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:77:27
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $rax = LEA64r killed renamable $rax, 2, renamable $rax, 0, $noreg, debug-location !1074; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:77:27
+
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $eax = LEA64_32r renamable $r12, 1, $noreg, -1, $noreg, debug-location !1075; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:80:38
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.1 (%ir-block.15):
+; predecessors: %bb.0
+  successors: %bb.2(0x50000000), %bb.36(0x30000000); %bb.2(62.50%), %bb.36(37.50%)
+  liveins: $ebp, $r12, $r13, $r14, $rax
+  $r15 = MOV64rr killed $rax
+  renamable $eax = LEA64_32r renamable $r12, 8, renamable $r12, 0, $noreg, implicit-def $rax, debug-location !1072; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:74:21
+  renamable $eax = LEA64_32r killed renamable $rax, 2, renamable $rax, 0, $noreg, debug-location !1072; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:74:21
+  DBG_VALUE $rsp, 0, !"local_nnz", !DIExpression(DW_OP_plus_uconst, 20), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:74 indirect
+  MOV32mr $rsp, 1, $noreg, 20, $noreg, killed renamable $eax :: (store 4 into %stack.28)
+  renamable $rbx = MOVSX64rr32 renamable $r12d, debug-location !1073; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:77:41
+  renamable $rax = LEA64r renamable $rbx, 8, renamable $rbx, 0, $noreg, debug-location !1074; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:77:27
+  renamable $rax = LEA64r killed renamable $rax, 2, renamable $rax, 0, $noreg, debug-location !1074; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:77:27
+  DBG_VALUE 0, $noreg, !"start_row", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:79
+  DBG_VALUE $rsp, 0, !"total_nnz", !DIExpression(DW_OP_plus_uconst, 136), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:77 indirect
+  MOV64mr $rsp, 1, $noreg, 136, $noreg, killed renamable $rax :: (store 8 into %stack.29)
+  renamable $eax = LEA64_32r renamable $r12, 1, $noreg, -1, $noreg, debug-location !1075; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:80:38
+  DBG_VALUE $rsp, 0, !"stop_row", !DIExpression(DW_OP_plus_uconst, 84), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:80 indirect
+  MOV32mr $rsp, 1, $noreg, 84, $noreg, killed renamable $eax :: (store 4 into %stack.30)
+  renamable $rdi = LEA64r $noreg, 4, renamable $rbx, 0, $noreg, debug-location !1076; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:84:22
+  CALL64pcrel32 @_Znam, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax, debug-location !1076; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:84:22
+  MOV64mr renamable $r15, 1, $noreg, 48, $noreg, killed renamable $rax, debug-location !1078 :: (store 8 into %ir.23, !tbaa !1079); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:84:20
+  renamable $rbx = nuw nsw SHL64ri killed renamable $rbx(tied-def 0), 3, implicit-def dead $eflags, debug-location !1080; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:85:30
+  $rdi = MOV64rr $rbx, debug-location !1080; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:85:30
+  CALL64pcrel32 @_Znam, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax, debug-location !1080; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:85:30
+  MOV64mr renamable $r15, 1, $noreg, 56, $noreg, killed renamable $rax, debug-location !1082 :: (store 8 into %ir.27, !tbaa !1083); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:85:28
+  $rdi = MOV64rr $rbx, debug-location !1084; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:86:30
+  CALL64pcrel32 @_Znam, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax, debug-location !1084; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:86:30
+  MOV64mr renamable $r15, 1, $noreg, 64, $noreg, killed renamable $rax, debug-location !1086 :: (store 8 into %ir.30, !tbaa !1087); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:86:28
+  $rdi = MOV64rr $rbx, debug-location !1088; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:87:30
+  CALL64pcrel32 @_Znam, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax, debug-location !1088; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:87:30
+  MOV64mr killed renamable $r15, 1, $noreg, 72, $noreg, killed renamable $rax, debug-location !1090 :: (store 8 into %ir.33, !tbaa !1091); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:87:28
+  $rdi = MOV64rr $rbx, debug-location !1092; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:89:8
+  CALL64pcrel32 @_Znam, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax, debug-location !1092; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:89:8
+  renamable $rcx = MOV64rm $rsp, 1, $noreg, 128, $noreg :: (load 8 from %stack.15)
+  MOV64mr killed renamable $rcx, 1, $noreg, 0, $noreg, killed renamable $rax, debug-location !1093 :: (store 8 into %ir.35, !tbaa !1059); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:89:6
+  $rdi = MOV64rr $rbx, debug-location !1094; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:90:8
+  CALL64pcrel32 @_Znam, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax, debug-location !1094; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:90:8
+  MOV64mr renamable $r14, 1, $noreg, 0, $noreg, killed renamable $rax, debug-location !1095 :: (store 8 into %ir.37, !tbaa !1059); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:90:6
+  $rdi = MOV64rr killed $rbx, debug-location !1096; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:91:13
+  CALL64pcrel32 @_Znam, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax, debug-location !1096; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:91:13
+  $rcx = MOV64rr $rax, debug-location !1096; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:91:13
+  DBG_VALUE $rsp, 0, !"local_nnz", !DIExpression(DW_OP_plus_uconst, 20), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:74 indirect
+  DBG_VALUE $noreg, $noreg, !"local_nnz", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:74
+  renamable $r15 = MOVSX64rm32 $rsp, 1, $noreg, 20, $noreg, debug-location !1098 :: (load 4 from %stack.28); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:95:35
+  $edx = MOV32ri 8, implicit-def $rdx
+  $rax = MOV64rr $r15, debug-location !1099; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:95:24
+  MUL64r killed renamable $rdx, implicit-def $rax, implicit-def dead $rdx, implicit-def $eflags, implicit $rax, debug-location !1099; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:95:24
+  renamable $rdx = MOV64rm $rsp, 1, $noreg, 256, $noreg, debug-location !1097 :: (load 8 from %fixed-stack.6, align 16); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:91:11
+  MOV64mr killed renamable $rdx, 1, $noreg, 0, $noreg, killed renamable $rcx, debug-location !1097 :: (store 8 into %ir.39, !tbaa !1059); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:91:11
+  renamable $rbx = MOV64ri32 -1
+  renamable $rax = CMOV64rr killed renamable $rax(tied-def 0), renamable $rbx, 0, implicit $eflags, debug-location !1099; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:95:24
+  $rdi = MOV64rr killed $rax, debug-location !1099; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:95:24
+  CALL64pcrel32 @_Znam, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax, debug-location !1099; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:95:24
+  renamable $rcx = MOV64rm renamable $r13, 1, $noreg, 0, $noreg, debug-location !1100 :: (load 8 from %ir.3, !tbaa !1059); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:95:4
+  MOV64mr killed renamable $rcx, 1, $noreg, 80, $noreg, killed renamable $rax, debug-location !1102 :: (store 8 into %ir.48, !tbaa !1103); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:95:22
+  $ecx = MOV32ri 4, implicit-def $rcx
+  $rax = MOV64rr killed $r15, debug-location !1104; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:96:24
+  MUL64r killed renamable $rcx, implicit-def $rax, implicit-def dead $rdx, implicit-def $eflags, implicit $rax, debug-location !1104; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:96:24
+  renamable $rbx = CMOV64rr killed renamable $rbx(tied-def 0), killed renamable $rax, 1, implicit $eflags, debug-location !1104; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:96:24
+  $rdi = MOV64rr killed $rbx, debug-location !1104; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:96:24
+  CALL64pcrel32 @_Znam, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax, debug-location !1104; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:96:24
+  renamable $rcx = MOV64rm renamable $r13, 1, $noreg, 0, $noreg, debug-location !1105 :: (load 8 from %ir.3, !tbaa !1059); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:96:4
+  MOV64mr killed renamable $rcx, 1, $noreg, 88, $noreg, killed renamable $rax, debug-location !1107 :: (store 8 into %ir.56, !tbaa !1108); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:96:22
+  renamable $r11 = MOV64rm renamable $r13, 1, $noreg, 0, $noreg, debug-location !1109 :: (load 8 from %ir.3, !tbaa !1059); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:98:25
+  DBG_VALUE 0, $noreg, !"iz", !DIExpression(), debug-location !1110; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:102
+  DBG_VALUE 0, $noreg, !"nnzglobal", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:101
+  DBG_VALUE $noreg, $noreg, !"curindptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:99
+  DBG_VALUE $noreg, $noreg, !"curvalptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+  renamable $ecx = MOV32rm $rsp, 1, $noreg, 24, $noreg :: (load 4 from %stack.27)
+  TEST32rr killed renamable $ecx, renamable $ecx, implicit-def $eflags, debug-location !1111; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:20
+  JCC_1 %bb.36, 14, implicit $eflags, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+
+###
+### chris_isSafeToClobberEFLAGS I:
+renamable $eax = LEA64_32r renamable $r12, 1, $noreg, -1, $noreg, debug-location !1075; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:80:38
+
+###
+chris-before: renamable $eax = LEA64_32r renamable $r12, 1, $noreg, -1, $noreg, debug-location !1075; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:80:38
+
+chris-begin: $r15 = MOV64rr killed $rax
+
+chris-end: JCC_1 %bb.36, 14, implicit $eflags, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+
+chris-N down =: 4: renamable $eax = LEA64_32r renamable $r12, 1, $noreg, -1, $noreg, debug-location !1075; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:80:38
+
+chris-N down =: 3: DBG_VALUE $rsp, 0, !"stop_row", !DIExpression(DW_OP_plus_uconst, 84), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:80 indirect
+
+chris-N down =: 3: MOV32mr $rsp, 1, $noreg, 84, $noreg, killed renamable $eax :: (store 4 into %stack.30)
+
+chris-N down =: 2: renamable $rdi = LEA64r $noreg, 4, renamable $rbx, 0, $noreg, debug-location !1076; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:84:22
+
+chris-N down =: 1: CALL64pcrel32 @_Znam, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax, debug-location !1076; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:84:22
+
+chris-liveness: return2 Dead
+optTwoAddrLEA: debug-after (I): renamable $eax = LEA64_32r renamable $r12, 1, $noreg, -1, $noreg, debug-location !1075; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:80:38
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $eax = LEA64_32r renamable $r12, 1, $noreg, -1, $noreg, debug-location !1075; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:80:38
+
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $rdi = LEA64r $noreg, 4, renamable $rbx, 0, $noreg, debug-location !1076; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:84:22
+
+optTwoAddrLEA: debug-after (I): renamable $rdi = LEA64r $noreg, 4, renamable $rbx, 0, $noreg, debug-location !1076; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:84:22
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $rdi = LEA64r $noreg, 4, renamable $rbx, 0, $noreg, debug-location !1076; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:84:22
+
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $r9d = LEA64_32r renamable $r8, 1, $noreg, 1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.2 (%ir-block.59):
+; predecessors: %bb.1
+  successors: %bb.3(0x80000000); %bb.3(100.00%)
+  liveins: $ebp, $r11, $r12, $r13, $r14
+  renamable $rax = MOV64rm renamable $r11, 1, $noreg, 80, $noreg, debug-location !1114 :: (load 8 from %ir.62, !tbaa !1103); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:98:30
+  DBG_VALUE $rax, $noreg, !"curvalptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+  renamable $r15 = MOV64rm renamable $r11, 1, $noreg, 88, $noreg, debug-location !1113 :: (load 8 from %ir.60, !tbaa !1108); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:99:27
+  DBG_VALUE $r15, $noreg, !"curindptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:99
+  renamable $rsi = MOVSX64rr32 renamable $ebp, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+  MOV64mr $rsp, 1, $noreg, 192, $noreg, renamable $rsi :: (store 8 into %stack.2)
+  renamable $esi = MOV32rr renamable $esi, implicit killed $rsi, implicit-def $rsi, debug-location !1115; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  MOV64mr $rsp, 1, $noreg, 168, $noreg, killed renamable $rsi :: (store 8 into %stack.17)
+  renamable $edi = MOV32rm $rsp, 1, $noreg, 16, $noreg :: (load 4 from %stack.6)
+  $r8d = MOV32rr $edi, implicit-def $r8, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+  renamable $r8d = NOT32r renamable $r8d(tied-def 0), implicit killed $r8, implicit-def $r8, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+  renamable $r8d = IMUL32rr renamable $r8d(tied-def 0), renamable $ebp, implicit-def dead $eflags, implicit killed $r8, implicit-def $r8, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+  renamable $r9d = LEA64_32r renamable $r8, 1, $noreg, 1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+  renamable $r10d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+  renamable $esi = XOR32rr undef $esi(tied-def 0), undef $esi, implicit-def dead $eflags, implicit-def $rsi
+  renamable $xmm0 = MOVSDrm_alt $rip, 1, $noreg, %const.1, $noreg :: (load 8 from constant-pool)
+  renamable $xmm1 = MOVSDrm_alt $rip, 1, $noreg, %const.0, $noreg :: (load 8 from constant-pool)
+  MOV64mr $rsp, 1, $noreg, 160, $noreg, renamable $r8 :: (store 8 into %stack.18)
+  $ebx = MOV32rr $r8d, implicit killed $r8
+  MOV32mr $rsp, 1, $noreg, 12, $noreg, renamable $ebp :: (store 4 into %stack.1)
+  MOV64mr $rsp, 1, $noreg, 176, $noreg, killed renamable $r14 :: (store 8 into %stack.16)
+  MOV64mr $rsp, 1, $noreg, 32, $noreg, renamable $r13 :: (store 8 into %stack.8)
+  JMP_1 %bb.3
+
+###
+### chris_isSafeToClobberEFLAGS I:
+renamable $r9d = LEA64_32r renamable $r8, 1, $noreg, 1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+
+###
+chris-before: renamable $r9d = LEA64_32r renamable $r8, 1, $noreg, 1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+
+chris-begin: renamable $rax = MOV64rm renamable $r11, 1, $noreg, 80, $noreg, debug-location !1114 :: (load 8 from %ir.62, !tbaa !1103); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:98:30
+
+chris-end: JMP_1 %bb.3
+
+chris-N down =: 4: renamable $r9d = LEA64_32r renamable $r8, 1, $noreg, 1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+
+chris-N down =: 3: renamable $r10d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+
+chris-N down =: 2: renamable $esi = XOR32rr undef $esi(tied-def 0), undef $esi, implicit-def dead $eflags, implicit-def $rsi
+
+chris-liveness: return2 Dead
+optTwoAddrLEA: debug-after (I): renamable $r9d = LEA64_32r renamable $r8, 1, $noreg, 1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $r9d = LEA64_32r renamable $r8, 1, $noreg, 1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $r10d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.2 (%ir-block.59):
+; predecessors: %bb.1
+  successors: %bb.3(0x80000000); %bb.3(100.00%)
+  liveins: $ebp, $r11, $r12, $r13, $r14
+  renamable $rax = MOV64rm renamable $r11, 1, $noreg, 80, $noreg, debug-location !1114 :: (load 8 from %ir.62, !tbaa !1103); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:98:30
+  DBG_VALUE $rax, $noreg, !"curvalptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+  renamable $r15 = MOV64rm renamable $r11, 1, $noreg, 88, $noreg, debug-location !1113 :: (load 8 from %ir.60, !tbaa !1108); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:99:27
+  DBG_VALUE $r15, $noreg, !"curindptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:99
+  renamable $rsi = MOVSX64rr32 renamable $ebp, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+  MOV64mr $rsp, 1, $noreg, 192, $noreg, renamable $rsi :: (store 8 into %stack.2)
+  renamable $esi = MOV32rr renamable $esi, implicit killed $rsi, implicit-def $rsi, debug-location !1115; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  MOV64mr $rsp, 1, $noreg, 168, $noreg, killed renamable $rsi :: (store 8 into %stack.17)
+  renamable $edi = MOV32rm $rsp, 1, $noreg, 16, $noreg :: (load 4 from %stack.6)
+  $r8d = MOV32rr $edi, implicit-def $r8, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+  renamable $r8d = NOT32r renamable $r8d(tied-def 0), implicit killed $r8, implicit-def $r8, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+  renamable $r8d = IMUL32rr renamable $r8d(tied-def 0), renamable $ebp, implicit-def dead $eflags, implicit killed $r8, implicit-def $r8, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+  renamable $r9d = LEA64_32r renamable $r8, 1, $noreg, 1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+  renamable $r10d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+  renamable $esi = XOR32rr undef $esi(tied-def 0), undef $esi, implicit-def dead $eflags, implicit-def $rsi
+  renamable $xmm0 = MOVSDrm_alt $rip, 1, $noreg, %const.1, $noreg :: (load 8 from constant-pool)
+  renamable $xmm1 = MOVSDrm_alt $rip, 1, $noreg, %const.0, $noreg :: (load 8 from constant-pool)
+  MOV64mr $rsp, 1, $noreg, 160, $noreg, renamable $r8 :: (store 8 into %stack.18)
+  $ebx = MOV32rr $r8d, implicit killed $r8
+  MOV32mr $rsp, 1, $noreg, 12, $noreg, renamable $ebp :: (store 4 into %stack.1)
+  MOV64mr $rsp, 1, $noreg, 176, $noreg, killed renamable $r14 :: (store 8 into %stack.16)
+  MOV64mr $rsp, 1, $noreg, 32, $noreg, renamable $r13 :: (store 8 into %stack.8)
+  JMP_1 %bb.3
+
+###
+### chris_isSafeToClobberEFLAGS I:
+renamable $r10d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+
+###
+chris-before: renamable $r10d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+
+chris-begin: renamable $rax = MOV64rm renamable $r11, 1, $noreg, 80, $noreg, debug-location !1114 :: (load 8 from %ir.62, !tbaa !1103); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:98:30
+
+chris-end: JMP_1 %bb.3
+
+chris-N down =: 4: renamable $r10d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+
+chris-N down =: 3: renamable $esi = XOR32rr undef $esi(tied-def 0), undef $esi, implicit-def dead $eflags, implicit-def $rsi
+
+chris-liveness: return2 Dead
+optTwoAddrLEA: debug-after (I): renamable $r10d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $r10d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1112; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:102:3
+
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $esi = LEA64_32r killed renamable $rbx, 1, killed renamable $rsi, 0, $noreg, implicit-def $rsi
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.6 (%ir-block.91):
+; predecessors: %bb.5
+  successors: %bb.7(0x80000000); %bb.7(100.00%)
+  liveins: $ebp, $edi, $rax, $r11, $r12, $r13, $r15, $xmm0, $xmm1, $r8d, $r9d, $r10d
+  renamable $rsi = MOV64rm $rsp, 1, $noreg, 152, $noreg :: (load 8 from %stack.22)
+  renamable $rbx = MOV64rm $rsp, 1, $noreg, 48, $noreg :: (load 8 from %stack.0)
+  renamable $esi = LEA64_32r killed renamable $rbx, 1, killed renamable $rsi, 0, $noreg, implicit-def $rsi
+  renamable $esi = IMUL32rr renamable $esi(tied-def 0), killed renamable $ebp, implicit-def dead $eflags, implicit killed $rsi, implicit-def $rsi
+  MOV64mr $rsp, 1, $noreg, 184, $noreg, killed renamable $rsi :: (store 8 into %stack.14)
+  $ebx = MOV32rr killed $r10d, debug-location !1131; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:108:3
+  $esi = MOV32rr killed $r8d, debug-location !1131; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:108:3
+  renamable $r10d = XOR32rr undef $r10d(tied-def 0), undef $r10d, implicit-def dead $eflags, implicit-def $r10
+  JMP_1 %bb.7
+
+###
+### chris_isSafeToClobberEFLAGS I:
+renamable $esi = LEA64_32r killed renamable $rbx, 1, killed renamable $rsi, 0, $noreg, implicit-def $rsi
+
+###
+chris-before: renamable $esi = LEA64_32r killed renamable $rbx, 1, killed renamable $rsi, 0, $noreg, implicit-def $rsi
+
+chris-begin: renamable $rsi = MOV64rm $rsp, 1, $noreg, 152, $noreg :: (load 8 from %stack.22)
+
+chris-end: JMP_1 %bb.7
+
+chris-N down =: 4: renamable $esi = LEA64_32r killed renamable $rbx, 1, killed renamable $rsi, 0, $noreg, implicit-def $rsi
+
+chris-N down =: 3: renamable $esi = IMUL32rr renamable $esi(tied-def 0), killed renamable $ebp, implicit-def dead $eflags, implicit killed $rsi, implicit-def $rsi
+
+chris-liveness: return2 Dead
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $esi = LEA64_32r killed renamable $rsi, 1, renamable $r8, 0, $noreg, debug-location !1132; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:105:34
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.7 (%ir-block.112):
+; predecessors: %bb.6, %bb.33
+  successors: %bb.8(0x80000000); %bb.8(100.00%)
+  liveins: $ebx, $edi, $esi, $rax, $r10, $r11, $r12, $r13, $r15, $xmm0, $xmm1, $r9d
+  DBG_VALUE $rax, $noreg, !"curvalptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+  DBG_VALUE $r15, $noreg, !"curindptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:99
+  DBG_VALUE $r10, $noreg, !"ix", !DIExpression(), debug-location !1120; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:104
+  $r8d = MOV32rr $r10d, implicit-def $r8, debug-location !1132; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:105:34
+  $ebp = MOV32rr killed $r9d
+  $r14d = MOV32rr killed $esi
+  renamable $rsi = MOV64rm $rsp, 1, $noreg, 184, $noreg :: (load 8 from %stack.14)
+  renamable $esi = LEA64_32r killed renamable $rsi, 1, renamable $r8, 0, $noreg, debug-location !1132; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:105:34
+  DBG_VALUE 0, $noreg, !"nnzrow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:107
+  DBG_VALUE $esi, $noreg, !"currow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:106
+  DBG_VALUE $esi, $noreg, !"curlocalrow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:105
+  renamable $rdx = MOV64rm killed renamable $r11, 1, $noreg, 56, $noreg, debug-location !1133 :: (load 8 from %ir.122, !tbaa !1083); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:108:8
+  renamable $rcx = MOVSX64rr32 killed renamable $esi, debug-location !1134; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:108:2
+  MOV64mr killed renamable $rdx, 8, renamable $rcx, 0, $noreg, renamable $rax, debug-location !1135 :: (store 8 into %ir.125, !tbaa !1059); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:108:40
+  renamable $rdx = MOV64rm killed renamable $r13, 1, $noreg, 0, $noreg, debug-location !1136 :: (load 8 from %ir.3, !tbaa !1059); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:109:3
+  renamable $rdx = MOV64rm killed renamable $rdx, 1, $noreg, 64, $noreg, debug-location !1137 :: (load 8 from %ir.127, !tbaa !1087); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:109:8
+  MOV64mr $rsp, 1, $noreg, 40, $noreg, renamable $rcx :: (store 8 into %stack.7)
+  MOV64mr killed renamable $rdx, 8, killed renamable $rcx, 0, $noreg, renamable $r15, debug-location !1139 :: (store 8 into %ir.129, !tbaa !1059); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:109:40
+  DBG_VALUE -1, $noreg, !"sz", !DIExpression(), debug-location !1140; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:110
+  renamable $r11d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  renamable $r10 = nuw nsw ADD64ri8 killed renamable $r10(tied-def 0), 1, implicit-def dead $eflags, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  DBG_VALUE $r10, $noreg, !"ix", !DIExpression(), debug-location !1120; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:104
+  renamable $r9d = XOR32rr undef $r9d(tied-def 0), undef $r9d, implicit-def dead $eflags
+  renamable $ecx = MOV32ri -1
+  MOV32mr $rsp, 1, $noreg, 120, $noreg, renamable $ebx :: (store 4 into %stack.11)
+  $edx = MOV32rr killed $ebx, implicit-def $rdx
+  MOV64mr $rsp, 1, $noreg, 72, $noreg, killed renamable $rdx :: (store 8 into %stack.3)
+  MOV32mr $rsp, 1, $noreg, 116, $noreg, renamable $ebp :: (store 4 into %stack.12)
+  $edx = MOV32rr killed $ebp, implicit-def $rdx
+  MOV64mr $rsp, 1, $noreg, 56, $noreg, killed renamable $rdx :: (store 8 into %stack.5)
+  MOV32mr $rsp, 1, $noreg, 112, $noreg, renamable $r14d :: (store 4 into %stack.13)
+  $edx = MOV32rr killed $r14d, implicit-def $rdx
+  MOV64mr $rsp, 1, $noreg, 64, $noreg, killed renamable $rdx :: (store 8 into %stack.4)
+  renamable $r14 = MOV64rm $rsp, 1, $noreg, 160, $noreg :: (load 8 from %stack.18)
+  renamable $r14d = KILL renamable $r14d, implicit killed $r14, implicit-def $r14
+  JMP_1 %bb.8
+
+###
+### chris_isSafeToClobberEFLAGS I:
+renamable $esi = LEA64_32r killed renamable $rsi, 1, renamable $r8, 0, $noreg, debug-location !1132; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:105:34
+
+###
+chris-before: renamable $esi = LEA64_32r killed renamable $rsi, 1, renamable $r8, 0, $noreg, debug-location !1132; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:105:34
+
+chris-begin: DBG_VALUE $rax, $noreg, !"curvalptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+
+chris-end: JMP_1 %bb.8
+
+chris-N down =: 4: renamable $esi = LEA64_32r killed renamable $rsi, 1, renamable $r8, 0, $noreg, debug-location !1132; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:105:34
+
+chris-N down =: 3: DBG_VALUE 0, $noreg, !"nnzrow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:107
+
+chris-N down =: 3: DBG_VALUE $esi, $noreg, !"currow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:106
+
+chris-N down =: 3: DBG_VALUE $esi, $noreg, !"curlocalrow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:105
+
+chris-N down =: 3: renamable $rdx = MOV64rm killed renamable $r11, 1, $noreg, 56, $noreg, debug-location !1133 :: (load 8 from %ir.122, !tbaa !1083); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:108:8
+
+chris-N down =: 2: renamable $rcx = MOVSX64rr32 killed renamable $esi, debug-location !1134; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:108:2
+
+chris-N down =: 1: MOV64mr killed renamable $rdx, 8, renamable $rcx, 0, $noreg, renamable $rax, debug-location !1135 :: (store 8 into %ir.125, !tbaa !1059); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:108:40
+
+chris-N up =: 4: renamable $rsi = MOV64rm $rsp, 1, $noreg, 184, $noreg :: (load 8 from %stack.14)
+
+chris-N up =: 3: $r14d = MOV32rr killed $esi
+
+chris-N up =: 2: $ebp = MOV32rr killed $r9d
+
+chris-N up =: 1: $r8d = MOV32rr $r10d, implicit-def $r8, debug-location !1132; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:105:34
+
+chris-I: $r8d = MOV32rr $r10d, implicit-def $r8, debug-location !1132; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:105:34
+
+chris-liveness: return10 Unknown
+optTwoAddrLEA: debug-after (I): renamable $esi = LEA64_32r killed renamable $rsi, 1, renamable $r8, 0, $noreg, debug-location !1132; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:105:34
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $esi = LEA64_32r killed renamable $rsi, 1, renamable $r8, 0, $noreg, debug-location !1132; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:105:34
+
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $r11d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.7 (%ir-block.112):
+; predecessors: %bb.6, %bb.33
+  successors: %bb.8(0x80000000); %bb.8(100.00%)
+  liveins: $ebx, $edi, $esi, $rax, $r10, $r11, $r12, $r13, $r15, $xmm0, $xmm1, $r9d
+  DBG_VALUE $rax, $noreg, !"curvalptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+  DBG_VALUE $r15, $noreg, !"curindptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:99
+  DBG_VALUE $r10, $noreg, !"ix", !DIExpression(), debug-location !1120; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:104
+  $r8d = MOV32rr $r10d, implicit-def $r8, debug-location !1132; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:105:34
+  $ebp = MOV32rr killed $r9d
+  $r14d = MOV32rr killed $esi
+  renamable $rsi = MOV64rm $rsp, 1, $noreg, 184, $noreg :: (load 8 from %stack.14)
+  renamable $esi = LEA64_32r killed renamable $rsi, 1, renamable $r8, 0, $noreg, debug-location !1132; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:105:34
+  DBG_VALUE 0, $noreg, !"nnzrow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:107
+  DBG_VALUE $esi, $noreg, !"currow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:106
+  DBG_VALUE $esi, $noreg, !"curlocalrow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:105
+  renamable $rdx = MOV64rm killed renamable $r11, 1, $noreg, 56, $noreg, debug-location !1133 :: (load 8 from %ir.122, !tbaa !1083); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:108:8
+  renamable $rcx = MOVSX64rr32 killed renamable $esi, debug-location !1134; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:108:2
+  MOV64mr killed renamable $rdx, 8, renamable $rcx, 0, $noreg, renamable $rax, debug-location !1135 :: (store 8 into %ir.125, !tbaa !1059); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:108:40
+  renamable $rdx = MOV64rm killed renamable $r13, 1, $noreg, 0, $noreg, debug-location !1136 :: (load 8 from %ir.3, !tbaa !1059); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:109:3
+  renamable $rdx = MOV64rm killed renamable $rdx, 1, $noreg, 64, $noreg, debug-location !1137 :: (load 8 from %ir.127, !tbaa !1087); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:109:8
+  MOV64mr $rsp, 1, $noreg, 40, $noreg, renamable $rcx :: (store 8 into %stack.7)
+  MOV64mr killed renamable $rdx, 8, killed renamable $rcx, 0, $noreg, renamable $r15, debug-location !1139 :: (store 8 into %ir.129, !tbaa !1059); /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:109:40
+  DBG_VALUE -1, $noreg, !"sz", !DIExpression(), debug-location !1140; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:110
+  renamable $r11d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  renamable $r10 = nuw nsw ADD64ri8 killed renamable $r10(tied-def 0), 1, implicit-def dead $eflags, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  DBG_VALUE $r10, $noreg, !"ix", !DIExpression(), debug-location !1120; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:104
+  renamable $r9d = XOR32rr undef $r9d(tied-def 0), undef $r9d, implicit-def dead $eflags
+  renamable $ecx = MOV32ri -1
+  MOV32mr $rsp, 1, $noreg, 120, $noreg, renamable $ebx :: (store 4 into %stack.11)
+  $edx = MOV32rr killed $ebx, implicit-def $rdx
+  MOV64mr $rsp, 1, $noreg, 72, $noreg, killed renamable $rdx :: (store 8 into %stack.3)
+  MOV32mr $rsp, 1, $noreg, 116, $noreg, renamable $ebp :: (store 4 into %stack.12)
+  $edx = MOV32rr killed $ebp, implicit-def $rdx
+  MOV64mr $rsp, 1, $noreg, 56, $noreg, killed renamable $rdx :: (store 8 into %stack.5)
+  MOV32mr $rsp, 1, $noreg, 112, $noreg, renamable $r14d :: (store 4 into %stack.13)
+  $edx = MOV32rr killed $r14d, implicit-def $rdx
+  MOV64mr $rsp, 1, $noreg, 64, $noreg, killed renamable $rdx :: (store 8 into %stack.4)
+  renamable $r14 = MOV64rm $rsp, 1, $noreg, 160, $noreg :: (load 8 from %stack.18)
+  renamable $r14d = KILL renamable $r14d, implicit killed $r14, implicit-def $r14
+  JMP_1 %bb.8
+
+###
+### chris_isSafeToClobberEFLAGS I:
+renamable $r11d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+###
+chris-before: renamable $r11d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-begin: DBG_VALUE $rax, $noreg, !"curvalptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+
+chris-end: JMP_1 %bb.8
+
+chris-N down =: 4: renamable $r11d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-N down =: 3: renamable $r10 = nuw nsw ADD64ri8 killed renamable $r10(tied-def 0), 1, implicit-def dead $eflags, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-liveness: return2 Dead
+optTwoAddrLEA: debug-after (I): renamable $r11d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $r11d = LEA64_32r renamable $r8, 1, $noreg, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $ebp = LEA64_32r killed renamable $rsi, 1, renamable $rbx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.9 (%ir-block.161):
+; predecessors: %bb.8, %bb.31
+  successors: %bb.16(0x30000000), %bb.10(0x50000000); %bb.16(37.50%), %bb.10(62.50%)
+  liveins: $edi, $rax, $rbx, $rdx, $r8, $r10, $r12, $r14, $r15, $xmm0, $xmm1, $r9d, $r11d
+  DBG_VALUE $rax, $noreg, !"curvalptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+  DBG_VALUE $r15, $noreg, !"curindptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:99
+  DBG_VALUE $r9d, $noreg, !"nnzrow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:107
+  DBG_VALUE $ebx, $noreg, !"sy", !DIExpression(), debug-location !1144; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:111
+  DBG_VALUE $rax, $noreg, !"curvalptr", !DIExpression(DW_OP_plus_uconst, 8, DW_OP_stack_value), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+  DBG_VALUE -1, $noreg, !"sx", !DIExpression(), debug-location !1168; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:112
+  renamable $rsi = MOV64rm $rsp, 1, $noreg, 48, $noreg :: (load 8 from %stack.0)
+  renamable $ebp = LEA64_32r killed renamable $rsi, 1, renamable $rbx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  $esi = MOV32rr $r11d, debug-location !1171; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:30
+  dead renamable $esi = OR32rr killed renamable $esi(tied-def 0), renamable $ebp, implicit-def $eflags, debug-location !1171; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:30
+  JCC_1 %bb.16, 8, implicit $eflags, debug-location !1171; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:30
+
+###
+### chris_isSafeToClobberEFLAGS I:
+renamable $ebp = LEA64_32r killed renamable $rsi, 1, renamable $rbx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+###
+chris-before: renamable $ebp = LEA64_32r killed renamable $rsi, 1, renamable $rbx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-begin: DBG_VALUE $rax, $noreg, !"curvalptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+
+chris-end: JCC_1 %bb.16, 8, implicit $eflags, debug-location !1171; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:30
+
+chris-N down =: 4: renamable $ebp = LEA64_32r killed renamable $rsi, 1, renamable $rbx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-N down =: 3: $esi = MOV32rr $r11d, debug-location !1171; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:30
+
+chris-N down =: 2: dead renamable $esi = OR32rr killed renamable $esi(tied-def 0), renamable $ebp, implicit-def $eflags, debug-location !1171; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:30
+
+chris-liveness: return2 Dead
+optTwoAddrLEA: debug-after (I): renamable $ebp = LEA64_32r killed renamable $rsi, 1, renamable $rbx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $ebp = LEA64_32r killed renamable $rsi, 1, renamable $rbx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.10 (%ir-block.182):
+; predecessors: %bb.9
+  successors: %bb.11(0x60000000), %bb.16(0x20000000); %bb.11(75.00%), %bb.16(25.00%)
+  liveins: $ebp, $edi, $rax, $rbx, $rdx, $r8, $r10, $r12, $r14, $r15, $xmm0, $xmm1, $r9d, $r11d
+  renamable $rcx = MOV64rm $rsp, 1, $noreg, 72, $noreg :: (load 8 from %stack.3)
+  renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  CMP32rr renamable $esi, renamable $r12d, implicit-def $eflags, debug-location !1178; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:95
+  JCC_1 %bb.16, 13, implicit $eflags, debug-location !1177; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:72
+
+###
+### chris_isSafeToClobberEFLAGS I:
+renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+###
+chris-before: renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-begin: renamable $rcx = MOV64rm $rsp, 1, $noreg, 72, $noreg :: (load 8 from %stack.3)
+
+chris-end: JCC_1 %bb.16, 13, implicit $eflags, debug-location !1177; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:72
+
+chris-N down =: 4: renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-N down =: 3: CMP32rr renamable $esi, renamable $r12d, implicit-def $eflags, debug-location !1178; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:95
+
+chris-liveness: return2 Dead
+optTwoAddrLEA: debug-after (I): renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $edi = LEA64_32r renamable $r14, 1, renamable $rdx, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.13 (%ir-block.188):
+; predecessors: %bb.12
+  successors: %bb.14(0x30000000), %bb.15(0x50000000); %bb.14(37.50%), %bb.15(62.50%)
+  liveins: $ebp, $esi, $rax, $rbx, $rdx, $r8, $r10, $r12, $r14, $r15, $xmm0, $xmm1, $r9d, $r11d
+  renamable $edi = LEA64_32r renamable $r14, 1, renamable $rdx, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  $xmm2 = MOVAPDrr $xmm1, debug-location !1191; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  TEST32rr killed renamable $edi, renamable $edi, implicit-def $eflags, debug-location !1179; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:119:29
+  JCC_1 %bb.15, 5, implicit $eflags, debug-location !1184; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:119:23
+
+###
+### chris_isSafeToClobberEFLAGS I:
+renamable $edi = LEA64_32r renamable $r14, 1, renamable $rdx, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+###
+chris-before: renamable $edi = LEA64_32r renamable $r14, 1, renamable $rdx, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-begin: renamable $edi = LEA64_32r renamable $r14, 1, renamable $rdx, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-end: JCC_1 %bb.15, 5, implicit $eflags, debug-location !1184; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:119:23
+
+chris-N down =: 4: renamable $edi = LEA64_32r renamable $r14, 1, renamable $rdx, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-N down =: 3: $xmm2 = MOVAPDrr $xmm1, debug-location !1191; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-N down =: 2: TEST32rr killed renamable $edi, renamable $edi, implicit-def $eflags, debug-location !1179; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:119:29
+
+chris-liveness: return2 Dead
+optTwoAddrLEA: debug-after (I): renamable $edi = LEA64_32r renamable $r14, 1, renamable $rdx, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $edi = LEA64_32r renamable $r14, 1, renamable $rdx, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.13 (%ir-block.188):
+; predecessors: %bb.12
+  successors: %bb.14(0x30000000), %bb.15(0x50000000); %bb.14(37.50%), %bb.15(62.50%)
+  liveins: $ebp, $esi, $rax, $rbx, $rdx, $r8, $r10, $r12, $r14, $r15, $xmm0, $xmm1, $r9d, $r11d
+  renamable $edi = LEA64_32r renamable $r14, 1, renamable $rdx, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  $xmm2 = MOVAPDrr $xmm1, debug-location !1191; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  TEST32rr killed renamable $edi, renamable $edi, implicit-def $eflags, debug-location !1179; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:119:29
+  JCC_1 %bb.15, 5, implicit $eflags, debug-location !1184; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:119:23
+
+###
+### chris_isSafeToClobberEFLAGS I:
+renamable $edi = LEA64_32r renamable $r14, 1, renamable $rdx, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+###
+chris-before: renamable $edi = LEA64_32r renamable $r14, 1, renamable $rdx, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-begin: renamable $edi = LEA64_32r renamable $r14, 1, renamable $rdx, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-end: JCC_1 %bb.15, 5, implicit $eflags, debug-location !1184; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:119:23
+
+chris-N down =: 4: renamable $edi = LEA64_32r renamable $r14, 1, renamable $rdx, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-N down =: 3: $xmm2 = MOVAPDrr $xmm1, debug-location !1191; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-N down =: 2: TEST32rr killed renamable $edi, renamable $edi, implicit-def $eflags, debug-location !1179; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:119:29
+
+chris-liveness: return2 Dead
+FixLEA: Candidate to replace:  renamable $edi = LEA64_32r renamable $r14, 1, renamable $rdx, -1, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+FixLEA: Replaced by:   renamable $edi = LEA64_32r renamable $r14, 1, renamable $rdx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  $edi = ADD32ri8 $edi(tied-def 0), -1, implicit-def $eflags, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $r13d = LEA64_32r renamable $r14, 1, renamable $rdx, 0, $noreg, debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.16 (%ir-block.200):
+; predecessors: %bb.15, %bb.9, %bb.10, %bb.11, %bb.12
+  successors: %bb.23(0x30000000), %bb.17(0x50000000); %bb.23(37.50%), %bb.17(62.50%)
+  liveins: $ebp, $edi, $rax, $rbx, $rdx, $r8, $r10, $r12, $r14, $r15, $xmm0, $xmm1, $r9d, $r11d
+  renamable $r13d = LEA64_32r renamable $r14, 1, renamable $rdx, 0, $noreg, debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  DBG_VALUE 0, $noreg, !"sx", !DIExpression(), debug-location !1168; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:112
+  DBG_VALUE $rax, $noreg, !"curvalptr", !DIExpression(DW_OP_plus_uconst, 8, DW_OP_stack_value), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+  DBG_VALUE $r9d, $noreg, !"nnzrow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:107
+  DBG_VALUE $r15, $noreg, !"curindptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:99
+  DBG_VALUE $rax, $noreg, !"curvalptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+  $esi = MOV32rr $ebp, debug-location !1171; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:30
+  dead renamable $esi = OR32rr killed renamable $esi(tied-def 0), renamable $r8d, implicit-def $eflags, debug-location !1171; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:30
+  JCC_1 %bb.23, 8, implicit $eflags, debug-location !1171; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:30
+
+###
+### chris_isSafeToClobberEFLAGS I:
+renamable $r13d = LEA64_32r renamable $r14, 1, renamable $rdx, 0, $noreg, debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+###
+chris-before: renamable $r13d = LEA64_32r renamable $r14, 1, renamable $rdx, 0, $noreg, debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-begin: renamable $r13d = LEA64_32r renamable $r14, 1, renamable $rdx, 0, $noreg, debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-end: JCC_1 %bb.23, 8, implicit $eflags, debug-location !1171; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:30
+
+chris-N down =: 4: renamable $r13d = LEA64_32r renamable $r14, 1, renamable $rdx, 0, $noreg, debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-N down =: 3: DBG_VALUE 0, $noreg, !"sx", !DIExpression(), debug-location !1168; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:112
+
+chris-N down =: 3: DBG_VALUE $rax, $noreg, !"curvalptr", !DIExpression(DW_OP_plus_uconst, 8, DW_OP_stack_value), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+
+chris-N down =: 3: DBG_VALUE $r9d, $noreg, !"nnzrow", !DIExpression(), debug-location !1119; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:107
+
+chris-N down =: 3: DBG_VALUE $r15, $noreg, !"curindptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:99
+
+chris-N down =: 3: DBG_VALUE $rax, $noreg, !"curvalptr", !DIExpression(), debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0 line no:98
+
+chris-N down =: 3: $esi = MOV32rr $ebp, debug-location !1171; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:30
+
+chris-N down =: 2: dead renamable $esi = OR32rr killed renamable $esi(tied-def 0), renamable $r8d, implicit-def $eflags, debug-location !1171; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:30
+
+chris-liveness: return2 Dead
+optTwoAddrLEA: debug-after (I): renamable $r13d = LEA64_32r renamable $r14, 1, renamable $rdx, 0, $noreg, debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $r13d = LEA64_32r renamable $r14, 1, renamable $rdx, 0, $noreg, debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.17 (%ir-block.215):
+; predecessors: %bb.16
+  successors: %bb.18(0x60000000), %bb.23(0x20000000); %bb.18(75.00%), %bb.23(25.00%)
+  liveins: $ebp, $edi, $rax, $rbx, $rdx, $r8, $r10, $r12, $r14, $r15, $xmm0, $xmm1, $r9d, $r11d, $r13d
+  renamable $rcx = MOV64rm $rsp, 1, $noreg, 64, $noreg :: (load 8 from %stack.4)
+  renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  CMP32rr renamable $esi, renamable $r12d, implicit-def $eflags, debug-location !1178; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:95
+  JCC_1 %bb.23, 13, implicit $eflags, debug-location !1177; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:72
+
+###
+### chris_isSafeToClobberEFLAGS I:
+renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+###
+chris-before: renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-begin: renamable $rcx = MOV64rm $rsp, 1, $noreg, 64, $noreg :: (load 8 from %stack.4)
+
+chris-end: JCC_1 %bb.23, 13, implicit $eflags, debug-location !1177; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:72
+
+chris-N down =: 4: renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-N down =: 3: CMP32rr renamable $esi, renamable $r12d, implicit-def $eflags, debug-location !1178; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:95
+
+chris-liveness: return2 Dead
+optTwoAddrLEA: debug-after (I): renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1056; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+debug1: optTwoAddrLEA isSafeToClobberEFLAGS:renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+### chris_isSafeToClobberEFLAGS MBB:
+bb.25 (%ir-block.243):
+; predecessors: %bb.24
+  successors: %bb.26(0x60000000), %bb.31(0x20000000); %bb.26(75.00%), %bb.31(25.00%)
+  liveins: $ebp, $edi, $rax, $rbx, $rdx, $r8, $r10, $r12, $r14, $r15, $xmm0, $xmm1, $r9d, $r11d, $r13d
+  renamable $rcx = MOV64rm $rsp, 1, $noreg, 56, $noreg :: (load 8 from %stack.5)
+  renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+  CMP32rr renamable $esi, renamable $r12d, implicit-def $eflags, debug-location !1178; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:95
+  JCC_1 %bb.31, 13, implicit $eflags, debug-location !1177; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:72
+
+###
+### chris_isSafeToClobberEFLAGS I:
+renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+###
+chris-before: renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-begin: renamable $rcx = MOV64rm $rsp, 1, $noreg, 56, $noreg :: (load 8 from %stack.5)
+
+chris-end: JCC_1 %bb.31, 13, implicit $eflags, debug-location !1177; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:72
+
+chris-N down =: 4: renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+chris-N down =: 3: CMP32rr renamable $esi, renamable $r12d, implicit-def $eflags, debug-location !1178; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:117:95
+
+chris-liveness: return2 Dead
+optTwoAddrLEA: debug-after (I): renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+debug1: processInstrForSlow3OpLEA isSafeToClobberEFLAGS:renamable $esi = LEA64_32r killed renamable $rcx, 1, renamable $rdx, 0, $noreg, debug-location !1141; /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp:0
+
+End X86FixupLEAs
+BISECT: NOT running pass (321) X86 DAG->DAG Instruction Selection on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (322) Local Dynamic TLS Access Clean-up on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (323) X86 Domain Reassignment Pass on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (324) Early Tail Duplication on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (325) Optimize machine instruction PHIs on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (326) Remove dead machine instructions on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (327) Early If-Conversion on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (328) X86 cmov Conversion on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (329) Early Machine Loop Invariant Code Motion on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (330) Machine Common Subexpression Elimination on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (331) Machine code sinking on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (332) Peephole Optimizations on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (333) Remove dead machine instructions on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (334) Live Range Shrink on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (335) X86 LEA Optimize on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (336) X86 Optimize Call Frame on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (337) X86 Avoid Store Forwarding Blocks on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (338) Two-Address instruction pass on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (339) Machine Instruction Scheduler on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (340) Stack Slot Coloring on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (341) Machine Copy Propagation Pass on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (342) Machine Loop Invariant Code Motion on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (343) PostRA Machine Sink on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (344) Shrink Wrapping analysis on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (345) Control Flow Optimizer on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (346) Tail Duplication on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (347) Machine Copy Propagation Pass on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (348) Post RA top-down list latency scheduler on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (349) Branch Probability Basic Block Placement on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (350) ReachingDefAnalysis on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (351) X86 Execution Dependency Fix on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (352) BreakFalseDeps on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (353) X86 Byte/Word Instruction Fixup on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (354) X86 Atom pad short functions on function (_GLOBAL__sub_I_generate_matrix.cpp)
+BISECT: NOT running pass (355) X86 LEA Fixup XX on function (_GLOBAL__sub_I_generate_matrix.cpp)
