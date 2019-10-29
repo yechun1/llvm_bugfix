@@ -6,13 +6,11 @@ PATH=$PATH:/data/proj/compiler/llvm/llvm-project/build/bin
 
 
 ### Simplify Reproduce
-rm -rf out* log*
 #clang++ /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp -S -O2 -mllvm -opt-bisect-limit=317 -o out1.o 2>log1
 #clang++ /home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp -S -O2 -mllvm -opt-bisect-limit=320 -o out2.o -g 2>log2
 #objdump -d -j .text out1.o > out1.obj
 #objdump -d -j .text out2.o > out2.obj
 #diff -u out1.obj out2.obj
-#rm -rf out* test* log* tmp*
 
 
 ### Analyze1
@@ -29,6 +27,7 @@ rm -rf out* log*
 #  echo ""
 #done
 
+rm -rf out* test* tmp* log*
 
 ### Debug 1
 #FILE=/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp
@@ -36,17 +35,14 @@ rm -rf out* log*
 #clang++ -S $FILE -O2 -mllvm -opt-bisect-limit=320 -o out2.ll -g 2>log2
 
 
-### Debug2 - convert to ll
-FILE=/home/chris/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG/generate_matrix.cpp
-clang++ -S $FILE -O2 -mllvm -opt-bisect-limit=319 -o test1.s -g 2>ref1
-clang++ -S $FILE -O2 -mllvm -opt-bisect-limit=320 -o test2.s -g 2>ref2
-
-
-### Debug3 - design a test case based on leaFixup64.mir
-#llc example.mir -stop-before=x86-fixup-LEAs -o tmp1.mir
-#llc tmp1.mir -run-pass x86-fixup-LEAs -o out1.mir 2>log1
+### Debug2 - example.ll (from leaFixup64.mir)
 llc example1.mir -run-pass x86-fixup-LEAs -mcpu=corei7-avx -o out1.mir 2>log1
 llc example2.mir -run-pass x86-fixup-LEAs -mcpu=corei7-avx -o out2.mir 2>log2
+
+
+
+#llc example.mir -stop-before=x86-fixup-LEAs -o tmp1.mir
+#llc tmp1.mir -run-pass x86-fixup-LEAs -o out1.mir 2>log1
 
 #llvm-mca -mtriple=x86_64-unknown-unknown -mcpu=x86-64 -instruction-tables test1.s
 #llvm-mc test1.s -filetype obj -triple -o out.o
