@@ -1,4 +1,5 @@
 #
+#PATH=/data/proj/compiler/llvm/llvm-project/build_ndebug/bin:$PATH
 PATH=/data/proj/compiler/llvm/llvm-project/build/bin:$PATH
 whereis clang++
 #PATH=$PATH:/data/proj/compiler/llvm/llvm-project.release/build/bin
@@ -9,7 +10,7 @@ whereis clang++
 ### Reproduce
 #$HOME/llvm-project/clang/utils/check_cfc/clang++ -w -c -O1 $HOME/test-suite/MultiSource/Benchmarks/7zip/CPP/7zip/Archive/SwfHandler.cpp -o tmp.ll -I $HOME/test-suite/MultiSource/Benchmarks/7zip/CPP/myWindows -I $HOME/test-suite/MultiSource/Benchmarks/7zip/CPP -I $HOME/test-suite/MultiSource/Benchmarks/7zip/CPP/include_windows
 
-#rm -rf out* log*
+rm -rf out* log*
 
 ### Simplify Reproduce
 #clang++ -w -c -O1 $HOME/test-suite/MultiSource/Benchmarks/7zip/CPP/7zip/Archive/SwfHandler.cpp -o out1.o -I $HOME/test-suite/MultiSource/Benchmarks/7zip/CPP/myWindows -I $HOME/test-suite/MultiSource/Benchmarks/7zip/CPP -I $HOME/test-suite/MultiSource/Benchmarks/7zip/CPP/include_windows 2>log1
@@ -67,12 +68,24 @@ whereis clang++
 
 
 ### Debug2
+NUM=5453
 FILE=$HOME/test-suite/MultiSource/Benchmarks/7zip/CPP/7zip/Archive/SwfHandler.cpp
 INCLUDE="-I $HOME/test-suite/MultiSource/Benchmarks/7zip/CPP/myWindows -I $HOME/test-suite/MultiSource/Benchmarks/7zip/CPP -I $HOME/test-suite/MultiSource/Benchmarks/7zip/CPP/include_windows"
-#clang++ -S -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=5448 -o out1.s 2>log1
-#clang++ -S -g -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=5452 -o out2.s 2>log2
-clang++ -S -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=5449 -o out3.s 2>log3
-clang++ -S -g -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=5453 -o out4.s 2>log4
+# clang++ -c -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=$((NUM-1-4)) -o out1.o 2>log1
+# clang++ -c -g -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=$((NUM-1)) -o out2.o 2>log2
+ clang++ -c -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=$((NUM-4)) -o out3.o 2>log3
+ clang++ -c -g -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=$NUM -o out4.o 2>log4
+# objdump -d -j .text out1.o > out1.obj
+# objdump -d -j .text out2.o > out2.obj
+ objdump -d -j .text out3.o > out3.obj
+ objdump -d -j .text out4.o > out4.obj
+ rm -rf out*.o
+
+### Debug3
+#clang++ -S -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=$((NUM-5)) -o out1.s 2>log1
+#clang++ -S -g -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=$((NUM-1)) -o out2.s 2>log2
+#clang++ -S -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=$((NUM-4)) -o out3.s 2>log3
+#clang++ -S -g -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=$NUM -o out4.s 2>log4
 
 
 #####################################

@@ -1,0 +1,808 @@
+
+out3.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <_ZN8NArchive4NSwf8CHandler21GetNumberOfPropertiesEPj>:
+   0:	c7 06 03 00 00 00    	movl   $0x3,(%rsi)
+   6:	31 c0                	xor    %eax,%eax
+   8:	c3                   	retq   
+   9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000000010 <_ZN8NArchive4NSwf8CHandler15GetPropertyInfoEjPPwPjPt>:
+  10:	b8 57 00 07 80       	mov    $0x80070057,%eax
+  15:	83 fe 02             	cmp    $0x2,%esi
+  18:	77 22                	ja     3c <_ZN8NArchive4NSwf8CHandler15GetPropertyInfoEjPPwPjPt+0x2c>
+  1a:	89 f0                	mov    %esi,%eax
+  1c:	48 c1 e0 04          	shl    $0x4,%rax
+  20:	8b b0 00 00 00 00    	mov    0x0(%rax),%esi
+  26:	89 31                	mov    %esi,(%rcx)
+  28:	0f b7 80 00 00 00 00 	movzwl 0x0(%rax),%eax
+  2f:	66 41 89 00          	mov    %ax,(%r8)
+  33:	48 c7 02 00 00 00 00 	movq   $0x0,(%rdx)
+  3a:	31 c0                	xor    %eax,%eax
+  3c:	c3                   	retq   
+  3d:	0f 1f 00             	nopl   (%rax)
+
+0000000000000040 <_ZN8NArchive4NSwf8CHandler28GetNumberOfArchivePropertiesEPj>:
+  40:	c7 06 00 00 00 00    	movl   $0x0,(%rsi)
+  46:	31 c0                	xor    %eax,%eax
+  48:	c3                   	retq   
+  49:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000000050 <_ZN8NArchive4NSwf8CHandler22GetArchivePropertyInfoEjPPwPjPt>:
+  50:	b8 01 40 00 80       	mov    $0x80004001,%eax
+  55:	c3                   	retq   
+  56:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  5d:	00 00 00 
+
+0000000000000060 <_ZN8NArchive4NSwf8CHandler18GetArchivePropertyEjP14tagPROPVARIANT>:
+  60:	55                   	push   %rbp
+  61:	41 56                	push   %r14
+  63:	53                   	push   %rbx
+  64:	48 83 ec 10          	sub    $0x10,%rsp
+  68:	49 89 d6             	mov    %rdx,%r14
+  6b:	89 f5                	mov    %esi,%ebp
+  6d:	48 89 fb             	mov    %rdi,%rbx
+  70:	48 89 e7             	mov    %rsp,%rdi
+  73:	e8 00 00 00 00       	callq  78 <_ZN8NArchive4NSwf8CHandler18GetArchivePropertyEjP14tagPROPVARIANT+0x18>
+  78:	83 fd 2c             	cmp    $0x2c,%ebp
+  7b:	75 0c                	jne    89 <_ZN8NArchive4NSwf8CHandler18GetArchivePropertyEjP14tagPROPVARIANT+0x29>
+  7d:	48 8b 73 38          	mov    0x38(%rbx),%rsi
+  81:	48 89 e7             	mov    %rsp,%rdi
+  84:	e8 00 00 00 00       	callq  89 <_ZN8NArchive4NSwf8CHandler18GetArchivePropertyEjP14tagPROPVARIANT+0x29>
+  89:	48 89 e7             	mov    %rsp,%rdi
+  8c:	4c 89 f6             	mov    %r14,%rsi
+  8f:	e8 00 00 00 00       	callq  94 <_ZN8NArchive4NSwf8CHandler18GetArchivePropertyEjP14tagPROPVARIANT+0x34>
+  94:	48 89 e7             	mov    %rsp,%rdi
+  97:	e8 00 00 00 00       	callq  9c <_ZN8NArchive4NSwf8CHandler18GetArchivePropertyEjP14tagPROPVARIANT+0x3c>
+  9c:	31 c0                	xor    %eax,%eax
+  9e:	48 83 c4 10          	add    $0x10,%rsp
+  a2:	5b                   	pop    %rbx
+  a3:	41 5e                	pop    %r14
+  a5:	5d                   	pop    %rbp
+  a6:	c3                   	retq   
+  a7:	48 89 c3             	mov    %rax,%rbx
+  aa:	48 89 e7             	mov    %rsp,%rdi
+  ad:	e8 00 00 00 00       	callq  b2 <_ZN8NArchive4NSwf8CHandler18GetArchivePropertyEjP14tagPROPVARIANT+0x52>
+  b2:	48 89 df             	mov    %rbx,%rdi
+  b5:	e8 00 00 00 00       	callq  ba <_ZN8NArchive4NSwf8CHandler18GetArchivePropertyEjP14tagPROPVARIANT+0x5a>
+  ba:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+00000000000000c0 <_ZN8NArchive4NSwf8CHandler16GetNumberOfItemsEPj>:
+  c0:	53                   	push   %rbx
+  c1:	48 89 f3             	mov    %rsi,%rbx
+  c4:	48 83 c7 18          	add    $0x18,%rdi
+  c8:	e8 00 00 00 00       	callq  cd <_ZN8NArchive4NSwf8CHandler16GetNumberOfItemsEPj+0xd>
+  cd:	89 03                	mov    %eax,(%rbx)
+  cf:	31 c0                	xor    %eax,%eax
+  d1:	5b                   	pop    %rbx
+  d2:	c3                   	retq   
+  d3:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  da:	00 00 00 
+  dd:	0f 1f 00             	nopl   (%rax)
+
+00000000000000e0 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT>:
+  e0:	55                   	push   %rbp
+  e1:	41 57                	push   %r15
+  e3:	41 56                	push   %r14
+  e5:	53                   	push   %rbx
+  e6:	48 83 ec 38          	sub    $0x38,%rsp
+  ea:	49 89 ce             	mov    %rcx,%r14
+  ed:	89 d5                	mov    %edx,%ebp
+  ef:	41 89 f7             	mov    %esi,%r15d
+  f2:	48 89 fb             	mov    %rdi,%rbx
+  f5:	48 89 e7             	mov    %rsp,%rdi
+  f8:	e8 00 00 00 00       	callq  fd <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0x1d>
+  fd:	48 83 c3 18          	add    $0x18,%rbx
+ 101:	48 89 df             	mov    %rbx,%rdi
+ 104:	44 89 fe             	mov    %r15d,%esi
+ 107:	e8 00 00 00 00       	callq  10c <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0x2c>
+ 10c:	48 89 c3             	mov    %rax,%rbx
+ 10f:	8d 45 f9             	lea    -0x7(%rbp),%eax
+ 112:	83 f8 02             	cmp    $0x2,%eax
+ 115:	72 29                	jb     140 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0x60>
+ 117:	83 fd 03             	cmp    $0x3,%ebp
+ 11a:	74 3d                	je     159 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0x79>
+ 11c:	83 fd 1c             	cmp    $0x1c,%ebp
+ 11f:	75 70                	jne    191 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0xb1>
+ 121:	8b 03                	mov    (%rbx),%eax
+ 123:	48 83 f8 5b          	cmp    $0x5b,%rax
+ 127:	77 68                	ja     191 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0xb1>
+ 129:	48 8b 34 c5 00 00 00 	mov    0x0(,%rax,8),%rsi
+ 130:	00 
+ 131:	48 85 f6             	test   %rsi,%rsi
+ 134:	74 5b                	je     191 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0xb1>
+ 136:	48 89 e7             	mov    %rsp,%rdi
+ 139:	e8 00 00 00 00       	callq  13e <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0x5e>
+ 13e:	eb 51                	jmp    191 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0xb1>
+ 140:	48 83 c3 08          	add    $0x8,%rbx
+ 144:	48 89 df             	mov    %rbx,%rdi
+ 147:	e8 00 00 00 00       	callq  14c <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0x6c>
+ 14c:	48 89 e7             	mov    %rsp,%rdi
+ 14f:	48 89 c6             	mov    %rax,%rsi
+ 152:	e8 00 00 00 00       	callq  157 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0x77>
+ 157:	eb 38                	jmp    191 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0xb1>
+ 159:	48 8d 74 24 10       	lea    0x10(%rsp),%rsi
+ 15e:	44 89 ff             	mov    %r15d,%edi
+ 161:	e8 00 00 00 00       	callq  166 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0x86>
+ 166:	48 8d 7c 24 10       	lea    0x10(%rsp),%rdi
+ 16b:	e8 00 00 00 00       	callq  170 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0x90>
+ 170:	c6 44 04 10 2e       	movb   $0x2e,0x10(%rsp,%rax,1)
+ 175:	8b 3b                	mov    (%rbx),%edi
+ 177:	48 8d 34 04          	lea    (%rsp,%rax,1),%rsi
+ 17b:	48 83 c6 11          	add    $0x11,%rsi
+ 17f:	e8 00 00 00 00       	callq  184 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0xa4>
+ 184:	48 89 e7             	mov    %rsp,%rdi
+ 187:	48 8d 74 24 10       	lea    0x10(%rsp),%rsi
+ 18c:	e8 00 00 00 00       	callq  191 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0xb1>
+ 191:	48 89 e7             	mov    %rsp,%rdi
+ 194:	4c 89 f6             	mov    %r14,%rsi
+ 197:	e8 00 00 00 00       	callq  19c <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0xbc>
+ 19c:	48 89 e7             	mov    %rsp,%rdi
+ 19f:	e8 00 00 00 00       	callq  1a4 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0xc4>
+ 1a4:	31 c0                	xor    %eax,%eax
+ 1a6:	48 83 c4 38          	add    $0x38,%rsp
+ 1aa:	5b                   	pop    %rbx
+ 1ab:	41 5e                	pop    %r14
+ 1ad:	41 5f                	pop    %r15
+ 1af:	5d                   	pop    %rbp
+ 1b0:	c3                   	retq   
+ 1b1:	eb 04                	jmp    1b7 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0xd7>
+ 1b3:	eb 02                	jmp    1b7 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0xd7>
+ 1b5:	eb 00                	jmp    1b7 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0xd7>
+ 1b7:	48 89 c3             	mov    %rax,%rbx
+ 1ba:	48 89 e7             	mov    %rsp,%rdi
+ 1bd:	e8 00 00 00 00       	callq  1c2 <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0xe2>
+ 1c2:	48 89 df             	mov    %rbx,%rdi
+ 1c5:	e8 00 00 00 00       	callq  1ca <_ZN8NArchive4NSwf8CHandler11GetPropertyEjjP14tagPROPVARIANT+0xea>
+ 1ca:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+00000000000001d0 <_ZN8NArchive4NSwf8CHandler4OpenEP9IInStreamPKyP20IArchiveOpenCallback>:
+ 1d0:	48 89 ca             	mov    %rcx,%rdx
+ 1d3:	eb 0b                	jmp    1e0 <_ZN8NArchive4NSwf8CHandler8OpenSeq2EP19ISequentialInStreamP20IArchiveOpenCallback>
+ 1d5:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 1dc:	00 00 00 
+ 1df:	90                   	nop
+
+00000000000001e0 <_ZN8NArchive4NSwf8CHandler8OpenSeq2EP19ISequentialInStreamP20IArchiveOpenCallback>:
+ 1e0:	50                   	push   %rax
+ 1e1:	e8 aa 00 00 00       	callq  290 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback>
+ 1e6:	59                   	pop    %rcx
+ 1e7:	c3                   	retq   
+ 1e8:	48 89 c7             	mov    %rax,%rdi
+ 1eb:	e8 00 00 00 00       	callq  1f0 <_ZN8NArchive4NSwf8CHandler8OpenSeq2EP19ISequentialInStreamP20IArchiveOpenCallback+0x10>
+ 1f0:	e8 00 00 00 00       	callq  1f5 <_ZN8NArchive4NSwf8CHandler8OpenSeq2EP19ISequentialInStreamP20IArchiveOpenCallback+0x15>
+ 1f5:	b8 01 00 00 00       	mov    $0x1,%eax
+ 1fa:	59                   	pop    %rcx
+ 1fb:	c3                   	retq   
+ 1fc:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000000200 <_ZN8NArchive4NSwf10CBitReader8ReadBitsEj>:
+ 200:	55                   	push   %rbp
+ 201:	41 56                	push   %r14
+ 203:	53                   	push   %rbx
+ 204:	85 f6                	test   %esi,%esi
+ 206:	74 54                	je     25c <_ZN8NArchive4NSwf10CBitReader8ReadBitsEj+0x5c>
+ 208:	89 f5                	mov    %esi,%ebp
+ 20a:	49 89 fe             	mov    %rdi,%r14
+ 20d:	83 7f 08 00          	cmpl   $0x0,0x8(%rdi)
+ 211:	0f 94 c1             	sete   %cl
+ 214:	31 db                	xor    %ebx,%ebx
+ 216:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 21d:	00 00 00 
+ 220:	f6 c1 01             	test   $0x1,%cl
+ 223:	74 14                	je     239 <_ZN8NArchive4NSwf10CBitReader8ReadBitsEj+0x39>
+ 225:	49 8b 3e             	mov    (%r14),%rdi
+ 228:	e8 00 00 00 00       	callq  22d <_ZN8NArchive4NSwf10CBitReader8ReadBitsEj+0x2d>
+ 22d:	41 88 46 0c          	mov    %al,0xc(%r14)
+ 231:	41 c7 46 08 08 00 00 	movl   $0x8,0x8(%r14)
+ 238:	00 
+ 239:	41 8b 46 08          	mov    0x8(%r14),%eax
+ 23d:	39 c5                	cmp    %eax,%ebp
+ 23f:	76 1f                	jbe    260 <_ZN8NArchive4NSwf10CBitReader8ReadBitsEj+0x60>
+ 241:	89 c1                	mov    %eax,%ecx
+ 243:	d3 e3                	shl    %cl,%ebx
+ 245:	41 0f b6 4e 0c       	movzbl 0xc(%r14),%ecx
+ 24a:	09 cb                	or     %ecx,%ebx
+ 24c:	41 c7 46 08 00 00 00 	movl   $0x0,0x8(%r14)
+ 253:	00 
+ 254:	b1 01                	mov    $0x1,%cl
+ 256:	29 c5                	sub    %eax,%ebp
+ 258:	75 c6                	jne    220 <_ZN8NArchive4NSwf10CBitReader8ReadBitsEj+0x20>
+ 25a:	eb 2c                	jmp    288 <_ZN8NArchive4NSwf10CBitReader8ReadBitsEj+0x88>
+ 25c:	31 db                	xor    %ebx,%ebx
+ 25e:	eb 28                	jmp    288 <_ZN8NArchive4NSwf10CBitReader8ReadBitsEj+0x88>
+ 260:	89 e9                	mov    %ebp,%ecx
+ 262:	d3 e3                	shl    %cl,%ebx
+ 264:	29 e8                	sub    %ebp,%eax
+ 266:	41 89 46 08          	mov    %eax,0x8(%r14)
+ 26a:	41 0f b6 56 0c       	movzbl 0xc(%r14),%edx
+ 26f:	89 d6                	mov    %edx,%esi
+ 271:	89 c1                	mov    %eax,%ecx
+ 273:	d3 ee                	shr    %cl,%esi
+ 275:	bf ff ff ff ff       	mov    $0xffffffff,%edi
+ 27a:	d3 e7                	shl    %cl,%edi
+ 27c:	09 f3                	or     %esi,%ebx
+ 27e:	40 f6 d7             	not    %dil
+ 281:	40 20 d7             	and    %dl,%dil
+ 284:	41 88 7e 0c          	mov    %dil,0xc(%r14)
+ 288:	89 d8                	mov    %ebx,%eax
+ 28a:	5b                   	pop    %rbx
+ 28b:	41 5e                	pop    %r14
+ 28d:	5d                   	pop    %rbp
+ 28e:	c3                   	retq   
+ 28f:	90                   	nop
+
+0000000000000290 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback>:
+ 290:	55                   	push   %rbp
+ 291:	41 57                	push   %r15
+ 293:	41 56                	push   %r14
+ 295:	41 55                	push   %r13
+ 297:	41 54                	push   %r12
+ 299:	53                   	push   %rbx
+ 29a:	48 81 ec 88 00 00 00 	sub    $0x88,%rsp
+ 2a1:	48 89 54 24 28       	mov    %rdx,0x28(%rsp)
+ 2a6:	48 89 f3             	mov    %rsi,%rbx
+ 2a9:	48 89 7c 24 18       	mov    %rdi,0x18(%rsp)
+ 2ae:	48 8d 6c 24 58       	lea    0x58(%rsp),%rbp
+ 2b3:	48 89 ef             	mov    %rbp,%rdi
+ 2b6:	e8 00 00 00 00       	callq  2bb <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x2b>
+ 2bb:	48 89 ef             	mov    %rbp,%rdi
+ 2be:	be 00 00 10 00       	mov    $0x100000,%esi
+ 2c3:	e8 00 00 00 00       	callq  2c8 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x38>
+ 2c8:	c7 44 24 0c 0e 00 07 	movl   $0x8007000e,0xc(%rsp)
+ 2cf:	80 
+ 2d0:	84 c0                	test   %al,%al
+ 2d2:	0f 84 04 02 00 00    	je     4dc <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x24c>
+ 2d8:	48 8d 7c 24 58       	lea    0x58(%rsp),%rdi
+ 2dd:	48 89 de             	mov    %rbx,%rsi
+ 2e0:	e8 00 00 00 00       	callq  2e5 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x55>
+ 2e5:	48 8d 5c 24 58       	lea    0x58(%rsp),%rbx
+ 2ea:	48 89 df             	mov    %rbx,%rdi
+ 2ed:	e8 00 00 00 00       	callq  2f2 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x62>
+ 2f2:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 2f7:	48 89 ef             	mov    %rbp,%rdi
+ 2fa:	e8 00 00 00 00       	callq  2ff <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x6f>
+ 2ff:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 304:	48 89 ef             	mov    %rbp,%rdi
+ 307:	be 05 00 00 00       	mov    $0x5,%esi
+ 30c:	e8 ef fe ff ff       	callq  200 <_ZN8NArchive4NSwf10CBitReader8ReadBitsEj>
+ 311:	89 c3                	mov    %eax,%ebx
+ 313:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+ 318:	89 c6                	mov    %eax,%esi
+ 31a:	e8 e1 fe ff ff       	callq  200 <_ZN8NArchive4NSwf10CBitReader8ReadBitsEj>
+ 31f:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+ 324:	89 de                	mov    %ebx,%esi
+ 326:	e8 d5 fe ff ff       	callq  200 <_ZN8NArchive4NSwf10CBitReader8ReadBitsEj>
+ 32b:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+ 330:	89 de                	mov    %ebx,%esi
+ 332:	e8 c9 fe ff ff       	callq  200 <_ZN8NArchive4NSwf10CBitReader8ReadBitsEj>
+ 337:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+ 33c:	89 de                	mov    %ebx,%esi
+ 33e:	e8 bd fe ff ff       	callq  200 <_ZN8NArchive4NSwf10CBitReader8ReadBitsEj>
+ 343:	48 8d 7c 24 58       	lea    0x58(%rsp),%rdi
+ 348:	e8 e3 01 00 00       	callq  530 <_ZN8NArchive4NSwfL6Read16ER9CInBuffer>
+ 34d:	48 8d 7c 24 58       	lea    0x58(%rsp),%rdi
+ 352:	e8 d9 01 00 00       	callq  530 <_ZN8NArchive4NSwfL6Read16ER9CInBuffer>
+ 357:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+ 35c:	48 8d 58 18          	lea    0x18(%rax),%rbx
+ 360:	48 89 df             	mov    %rbx,%rdi
+ 363:	e8 00 00 00 00       	callq  368 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0xd8>
+ 368:	31 c0                	xor    %eax,%eax
+ 36a:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 36f:	4c 8d 7c 24 30       	lea    0x30(%rsp),%r15
+ 374:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 37b:	00 00 00 
+ 37e:	66 90                	xchg   %ax,%ax
+ 380:	48 8d 7c 24 58       	lea    0x58(%rsp),%rdi
+ 385:	e8 a6 01 00 00       	callq  530 <_ZN8NArchive4NSwfL6Read16ER9CInBuffer>
+ 38a:	44 0f b7 f0          	movzwl %ax,%r14d
+ 38e:	45 89 f5             	mov    %r14d,%r13d
+ 391:	41 83 e5 3f          	and    $0x3f,%r13d
+ 395:	41 83 fd 3f          	cmp    $0x3f,%r13d
+ 399:	75 0d                	jne    3a8 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x118>
+ 39b:	48 8d 7c 24 58       	lea    0x58(%rsp),%rdi
+ 3a0:	e8 fb 01 00 00       	callq  5a0 <_ZN8NArchive4NSwfL6Read32ER9CInBuffer>
+ 3a5:	41 89 c5             	mov    %eax,%r13d
+ 3a8:	48 8d 7c 24 58       	lea    0x58(%rsp),%rdi
+ 3ad:	41 c1 ee 06          	shr    $0x6,%r14d
+ 3b1:	0f 84 0f 01 00 00    	je     4c6 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x236>
+ 3b7:	e8 00 00 00 00       	callq  3bc <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x12c>
+ 3bc:	45 89 ec             	mov    %r13d,%r12d
+ 3bf:	4c 01 e0             	add    %r12,%rax
+ 3c2:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 3c7:	48 3d 00 00 00 40    	cmp    $0x40000000,%rax
+ 3cd:	0f 87 e9 00 00 00    	ja     4bc <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x22c>
+ 3d3:	48 89 df             	mov    %rbx,%rdi
+ 3d6:	e8 00 00 00 00       	callq  3db <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x14b>
+ 3db:	3d ff ff 7f 00       	cmp    $0x7fffff,%eax
+ 3e0:	0f 8f d6 00 00 00    	jg     4bc <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x22c>
+ 3e6:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 3e9:	0f 29 44 24 40       	movaps %xmm0,0x40(%rsp)
+ 3ee:	0f 29 44 24 30       	movaps %xmm0,0x30(%rsp)
+ 3f3:	4c 89 ff             	mov    %r15,%rdi
+ 3f6:	e8 00 00 00 00       	callq  3fb <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x16b>
+ 3fb:	48 89 df             	mov    %rbx,%rdi
+ 3fe:	4c 89 fe             	mov    %r15,%rsi
+ 401:	e8 00 00 00 00       	callq  406 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x176>
+ 406:	4c 89 fd             	mov    %r15,%rbp
+ 409:	4c 89 ff             	mov    %r15,%rdi
+ 40c:	e8 00 00 00 00       	callq  411 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x181>
+ 411:	48 89 df             	mov    %rbx,%rdi
+ 414:	e8 00 00 00 00       	callq  419 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x189>
+ 419:	49 89 c7             	mov    %rax,%r15
+ 41c:	44 89 30             	mov    %r14d,(%rax)
+ 41f:	49 83 c7 08          	add    $0x8,%r15
+ 423:	4c 89 ff             	mov    %r15,%rdi
+ 426:	4c 89 e6             	mov    %r12,%rsi
+ 429:	e8 00 00 00 00       	callq  42e <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x19e>
+ 42e:	4c 89 ff             	mov    %r15,%rdi
+ 431:	e8 00 00 00 00       	callq  436 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x1a6>
+ 436:	48 8d 7c 24 58       	lea    0x58(%rsp),%rdi
+ 43b:	48 89 c6             	mov    %rax,%rsi
+ 43e:	44 89 ea             	mov    %r13d,%edx
+ 441:	e8 00 00 00 00       	callq  446 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x1b6>
+ 446:	44 39 e8             	cmp    %r13d,%eax
+ 449:	75 71                	jne    4bc <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x22c>
+ 44b:	49 89 ef             	mov    %rbp,%r15
+ 44e:	48 83 7c 24 28 00    	cmpq   $0x0,0x28(%rsp)
+ 454:	74 5a                	je     4b0 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x220>
+ 456:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 45b:	48 05 00 00 10 00    	add    $0x100000,%rax
+ 461:	48 39 44 24 10       	cmp    %rax,0x10(%rsp)
+ 466:	72 48                	jb     4b0 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x220>
+ 468:	48 89 df             	mov    %rbx,%rdi
+ 46b:	e8 00 00 00 00       	callq  470 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x1e0>
+ 470:	48 98                	cltq   
+ 472:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 477:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 47c:	48 8b 07             	mov    (%rdi),%rax
+ 47f:	4c 89 fe             	mov    %r15,%rsi
+ 482:	48 8d 54 24 10       	lea    0x10(%rsp),%rdx
+ 487:	ff 50 30             	callq  *0x30(%rax)
+ 48a:	31 c9                	xor    %ecx,%ecx
+ 48c:	85 c0                	test   %eax,%eax
+ 48e:	0f 95 c2             	setne  %dl
+ 491:	74 08                	je     49b <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x20b>
+ 493:	88 d1                	mov    %dl,%cl
+ 495:	89 44 24 0c          	mov    %eax,0xc(%rsp)
+ 499:	eb 17                	jmp    4b2 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x222>
+ 49b:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 4a0:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 4a5:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 4ac:	00 00 00 
+ 4af:	90                   	nop
+ 4b0:	31 c9                	xor    %ecx,%ecx
+ 4b2:	85 c9                	test   %ecx,%ecx
+ 4b4:	0f 84 c6 fe ff ff    	je     380 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0xf0>
+ 4ba:	eb 20                	jmp    4dc <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x24c>
+ 4bc:	c7 44 24 0c 01 00 00 	movl   $0x1,0xc(%rsp)
+ 4c3:	00 
+ 4c4:	eb 16                	jmp    4dc <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x24c>
+ 4c6:	e8 00 00 00 00       	callq  4cb <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x23b>
+ 4cb:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4d0:	48 89 41 38          	mov    %rax,0x38(%rcx)
+ 4d4:	c7 44 24 0c 00 00 00 	movl   $0x0,0xc(%rsp)
+ 4db:	00 
+ 4dc:	48 8d 7c 24 58       	lea    0x58(%rsp),%rdi
+ 4e1:	e8 00 00 00 00       	callq  4e6 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x256>
+ 4e6:	8b 44 24 0c          	mov    0xc(%rsp),%eax
+ 4ea:	48 81 c4 88 00 00 00 	add    $0x88,%rsp
+ 4f1:	5b                   	pop    %rbx
+ 4f2:	41 5c                	pop    %r12
+ 4f4:	41 5d                	pop    %r13
+ 4f6:	41 5e                	pop    %r14
+ 4f8:	41 5f                	pop    %r15
+ 4fa:	5d                   	pop    %rbp
+ 4fb:	c3                   	retq   
+ 4fc:	eb 19                	jmp    517 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x287>
+ 4fe:	eb 17                	jmp    517 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x287>
+ 500:	eb 15                	jmp    517 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x287>
+ 502:	48 89 c3             	mov    %rax,%rbx
+ 505:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+ 50a:	e8 00 00 00 00       	callq  50f <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x27f>
+ 50f:	eb 09                	jmp    51a <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x28a>
+ 511:	eb 04                	jmp    517 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x287>
+ 513:	eb 02                	jmp    517 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x287>
+ 515:	eb 00                	jmp    517 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x287>
+ 517:	48 89 c3             	mov    %rax,%rbx
+ 51a:	48 8d 7c 24 58       	lea    0x58(%rsp),%rdi
+ 51f:	e8 00 00 00 00       	callq  524 <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x294>
+ 524:	48 89 df             	mov    %rbx,%rdi
+ 527:	e8 00 00 00 00       	callq  52c <_ZN8NArchive4NSwf8CHandler8OpenSeq3EP19ISequentialInStreamP20IArchiveOpenCallback+0x29c>
+ 52c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000000530 <_ZN8NArchive4NSwfL6Read16ER9CInBuffer>:
+ 530:	55                   	push   %rbp
+ 531:	41 57                	push   %r15
+ 533:	41 56                	push   %r14
+ 535:	53                   	push   %rbx
+ 536:	50                   	push   %rax
+ 537:	49 89 ff             	mov    %rdi,%r15
+ 53a:	31 ed                	xor    %ebp,%ebp
+ 53c:	4c 8d 74 24 07       	lea    0x7(%rsp),%r14
+ 541:	31 db                	xor    %ebx,%ebx
+ 543:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 54a:	00 00 00 
+ 54d:	0f 1f 00             	nopl   (%rax)
+ 550:	4c 89 ff             	mov    %r15,%rdi
+ 553:	4c 89 f6             	mov    %r14,%rsi
+ 556:	e8 00 00 00 00       	callq  55b <_ZN8NArchive4NSwfL6Read16ER9CInBuffer+0x2b>
+ 55b:	84 c0                	test   %al,%al
+ 55d:	74 20                	je     57f <_ZN8NArchive4NSwfL6Read16ER9CInBuffer+0x4f>
+ 55f:	0f b6 44 24 07       	movzbl 0x7(%rsp),%eax
+ 564:	89 e9                	mov    %ebp,%ecx
+ 566:	d3 e0                	shl    %cl,%eax
+ 568:	09 c3                	or     %eax,%ebx
+ 56a:	83 c5 08             	add    $0x8,%ebp
+ 56d:	83 fd 10             	cmp    $0x10,%ebp
+ 570:	75 de                	jne    550 <_ZN8NArchive4NSwfL6Read16ER9CInBuffer+0x20>
+ 572:	89 d8                	mov    %ebx,%eax
+ 574:	48 83 c4 08          	add    $0x8,%rsp
+ 578:	5b                   	pop    %rbx
+ 579:	41 5e                	pop    %r14
+ 57b:	41 5f                	pop    %r15
+ 57d:	5d                   	pop    %rbp
+ 57e:	c3                   	retq   
+ 57f:	bf 04 00 00 00       	mov    $0x4,%edi
+ 584:	e8 00 00 00 00       	callq  589 <_ZN8NArchive4NSwfL6Read16ER9CInBuffer+0x59>
+ 589:	c7 00 01 00 00 00    	movl   $0x1,(%rax)
+ 58f:	be 00 00 00 00       	mov    $0x0,%esi
+ 594:	48 89 c7             	mov    %rax,%rdi
+ 597:	31 d2                	xor    %edx,%edx
+ 599:	e8 00 00 00 00       	callq  59e <_ZN8NArchive4NSwfL6Read16ER9CInBuffer+0x6e>
+ 59e:	66 90                	xchg   %ax,%ax
+
+00000000000005a0 <_ZN8NArchive4NSwfL6Read32ER9CInBuffer>:
+ 5a0:	55                   	push   %rbp
+ 5a1:	41 57                	push   %r15
+ 5a3:	41 56                	push   %r14
+ 5a5:	53                   	push   %rbx
+ 5a6:	50                   	push   %rax
+ 5a7:	49 89 ff             	mov    %rdi,%r15
+ 5aa:	31 ed                	xor    %ebp,%ebp
+ 5ac:	4c 8d 74 24 07       	lea    0x7(%rsp),%r14
+ 5b1:	31 db                	xor    %ebx,%ebx
+ 5b3:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 5ba:	00 00 00 
+ 5bd:	0f 1f 00             	nopl   (%rax)
+ 5c0:	4c 89 ff             	mov    %r15,%rdi
+ 5c3:	4c 89 f6             	mov    %r14,%rsi
+ 5c6:	e8 00 00 00 00       	callq  5cb <_ZN8NArchive4NSwfL6Read32ER9CInBuffer+0x2b>
+ 5cb:	84 c0                	test   %al,%al
+ 5cd:	74 20                	je     5ef <_ZN8NArchive4NSwfL6Read32ER9CInBuffer+0x4f>
+ 5cf:	0f b6 44 24 07       	movzbl 0x7(%rsp),%eax
+ 5d4:	89 e9                	mov    %ebp,%ecx
+ 5d6:	d3 e0                	shl    %cl,%eax
+ 5d8:	09 c3                	or     %eax,%ebx
+ 5da:	83 c5 08             	add    $0x8,%ebp
+ 5dd:	83 fd 20             	cmp    $0x20,%ebp
+ 5e0:	75 de                	jne    5c0 <_ZN8NArchive4NSwfL6Read32ER9CInBuffer+0x20>
+ 5e2:	89 d8                	mov    %ebx,%eax
+ 5e4:	48 83 c4 08          	add    $0x8,%rsp
+ 5e8:	5b                   	pop    %rbx
+ 5e9:	41 5e                	pop    %r14
+ 5eb:	41 5f                	pop    %r15
+ 5ed:	5d                   	pop    %rbp
+ 5ee:	c3                   	retq   
+ 5ef:	bf 04 00 00 00       	mov    $0x4,%edi
+ 5f4:	e8 00 00 00 00       	callq  5f9 <_ZN8NArchive4NSwfL6Read32ER9CInBuffer+0x59>
+ 5f9:	c7 00 01 00 00 00    	movl   $0x1,(%rax)
+ 5ff:	be 00 00 00 00       	mov    $0x0,%esi
+ 604:	48 89 c7             	mov    %rax,%rdi
+ 607:	31 d2                	xor    %edx,%edx
+ 609:	e8 00 00 00 00       	callq  60e <_ZN8NArchive4NSwfL6Read32ER9CInBuffer+0x6e>
+ 60e:	66 90                	xchg   %ax,%ax
+
+0000000000000610 <_ZN8NArchive4NSwf8CHandler7OpenSeqEP19ISequentialInStream>:
+ 610:	31 d2                	xor    %edx,%edx
+ 612:	e9 c9 fb ff ff       	jmpq   1e0 <_ZN8NArchive4NSwf8CHandler8OpenSeq2EP19ISequentialInStreamP20IArchiveOpenCallback>
+ 617:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 61e:	00 00 
+
+0000000000000620 <_ZThn8_N8NArchive4NSwf8CHandler7OpenSeqEP19ISequentialInStream>:
+ 620:	48 83 c7 f8          	add    $0xfffffffffffffff8,%rdi
+ 624:	eb ea                	jmp    610 <_ZN8NArchive4NSwf8CHandler7OpenSeqEP19ISequentialInStream>
+ 626:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 62d:	00 00 00 
+
+0000000000000630 <_ZN8NArchive4NSwf8CHandler5CloseEv>:
+ 630:	31 c0                	xor    %eax,%eax
+ 632:	c3                   	retq   
+ 633:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 63a:	00 00 00 
+ 63d:	0f 1f 00             	nopl   (%rax)
+
+0000000000000640 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback>:
+ 640:	55                   	push   %rbp
+ 641:	41 57                	push   %r15
+ 643:	41 56                	push   %r14
+ 645:	41 55                	push   %r13
+ 647:	41 54                	push   %r12
+ 649:	53                   	push   %rbx
+ 64a:	48 83 ec 58          	sub    $0x58,%rsp
+ 64e:	4c 89 44 24 10       	mov    %r8,0x10(%rsp)
+ 653:	89 4c 24 18          	mov    %ecx,0x18(%rsp)
+ 657:	41 89 d6             	mov    %edx,%r14d
+ 65a:	49 89 f7             	mov    %rsi,%r15
+ 65d:	49 89 fc             	mov    %rdi,%r12
+ 660:	44 89 f0             	mov    %r14d,%eax
+ 663:	41 83 fe ff          	cmp    $0xffffffff,%r14d
+ 667:	75 0c                	jne    675 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x35>
+ 669:	eb 00                	jmp    66b <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x2b>
+ 66b:	49 8d 7c 24 18       	lea    0x18(%r12),%rdi
+ 670:	e8 00 00 00 00       	callq  675 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x35>
+ 675:	85 c0                	test   %eax,%eax
+ 677:	75 08                	jne    681 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x41>
+ 679:	45 31 ed             	xor    %r13d,%r13d
+ 67c:	e9 40 03 00 00       	jmpq   9c1 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x381>
+ 681:	89 c0                	mov    %eax,%eax
+ 683:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 688:	49 83 c4 18          	add    $0x18,%r12
+ 68c:	31 ed                	xor    %ebp,%ebp
+ 68e:	31 db                	xor    %ebx,%ebx
+ 690:	41 83 fe ff          	cmp    $0xffffffff,%r14d
+ 694:	75 06                	jne    69c <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x5c>
+ 696:	eb 00                	jmp    698 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x58>
+ 698:	89 ee                	mov    %ebp,%esi
+ 69a:	eb 04                	jmp    6a0 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x60>
+ 69c:	41 8b 34 af          	mov    (%r15,%rbp,4),%esi
+ 6a0:	4c 89 e7             	mov    %r12,%rdi
+ 6a3:	e8 00 00 00 00       	callq  6a8 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x68>
+ 6a8:	eb 00                	jmp    6aa <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x6a>
+ 6aa:	48 83 c0 08          	add    $0x8,%rax
+ 6ae:	48 89 c7             	mov    %rax,%rdi
+ 6b1:	e8 00 00 00 00       	callq  6b6 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x76>
+ 6b6:	48 01 c3             	add    %rax,%rbx
+ 6b9:	48 83 c5 01          	add    $0x1,%rbp
+ 6bd:	48 39 6c 24 28       	cmp    %rbp,0x28(%rsp)
+ 6c2:	74 15                	je     6d9 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x99>
+ 6c4:	eb ca                	jmp    690 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x50>
+ 6c6:	48 89 d3             	mov    %rdx,%rbx
+ 6c9:	48 89 c5             	mov    %rax,%rbp
+ 6cc:	eb 06                	jmp    6d4 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x94>
+ 6ce:	48 89 d3             	mov    %rdx,%rbx
+ 6d1:	48 89 c5             	mov    %rax,%rbp
+ 6d4:	e9 9b 02 00 00       	jmpq   974 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x334>
+ 6d9:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+ 6de:	48 8b 07             	mov    (%rdi),%rax
+ 6e1:	48 89 de             	mov    %rbx,%rsi
+ 6e4:	ff 50 28             	callq  *0x28(%rax)
+ 6e7:	eb 00                	jmp    6e9 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0xa9>
+ 6e9:	bf 48 00 00 00       	mov    $0x48,%edi
+ 6ee:	e8 00 00 00 00       	callq  6f3 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0xb3>
+ 6f3:	48 89 c5             	mov    %rax,%rbp
+ 6f6:	eb 00                	jmp    6f8 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0xb8>
+ 6f8:	48 89 ef             	mov    %rbp,%rdi
+ 6fb:	e8 00 00 00 00       	callq  700 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0xc0>
+ 700:	eb 00                	jmp    702 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0xc2>
+ 702:	48 8d 7c 24 38       	lea    0x38(%rsp),%rdi
+ 707:	48 89 ee             	mov    %rbp,%rsi
+ 70a:	e8 00 00 00 00       	callq  70f <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0xcf>
+ 70f:	eb 00                	jmp    711 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0xd1>
+ 711:	45 31 ed             	xor    %r13d,%r13d
+ 714:	48 89 6c 24 20       	mov    %rbp,0x20(%rsp)
+ 719:	48 89 ef             	mov    %rbp,%rdi
+ 71c:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+ 721:	31 d2                	xor    %edx,%edx
+ 723:	e8 00 00 00 00       	callq  728 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0xe8>
+ 728:	eb 00                	jmp    72a <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0xea>
+ 72a:	83 7c 24 28 00       	cmpl   $0x0,0x28(%rsp)
+ 72f:	0f 84 29 02 00 00    	je     95e <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x31e>
+ 735:	eb 00                	jmp    737 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0xf7>
+ 737:	4c 89 64 24 48       	mov    %r12,0x48(%rsp)
+ 73c:	4c 89 7c 24 40       	mov    %r15,0x40(%rsp)
+ 741:	44 89 74 24 34       	mov    %r14d,0x34(%rsp)
+ 746:	31 c0                	xor    %eax,%eax
+ 748:	83 7c 24 18 00       	cmpl   $0x0,0x18(%rsp)
+ 74d:	0f 95 c0             	setne  %al
+ 750:	89 44 24 1c          	mov    %eax,0x1c(%rsp)
+ 754:	31 db                	xor    %ebx,%ebx
+ 756:	45 31 e4             	xor    %r12d,%r12d
+ 759:	4c 8b 74 24 20       	mov    0x20(%rsp),%r14
+ 75e:	4d 89 66 38          	mov    %r12,0x38(%r14)
+ 762:	4d 89 66 30          	mov    %r12,0x30(%r14)
+ 766:	4c 89 f7             	mov    %r14,%rdi
+ 769:	e8 00 00 00 00       	callq  76e <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x12e>
+ 76e:	41 89 c5             	mov    %eax,%r13d
+ 771:	eb 00                	jmp    773 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x133>
+ 773:	45 85 ed             	test   %r13d,%r13d
+ 776:	74 44                	je     7bc <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x17c>
+ 778:	e9 e1 01 00 00       	jmpq   95e <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x31e>
+ 77d:	48 89 d3             	mov    %rdx,%rbx
+ 780:	48 89 c5             	mov    %rax,%rbp
+ 783:	e9 ec 01 00 00       	jmpq   974 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x334>
+ 788:	48 89 d3             	mov    %rdx,%rbx
+ 78b:	48 89 ef             	mov    %rbp,%rdi
+ 78e:	48 89 c5             	mov    %rax,%rbp
+ 791:	e8 00 00 00 00       	callq  796 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x156>
+ 796:	e9 d9 01 00 00       	jmpq   974 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x334>
+ 79b:	48 89 d3             	mov    %rdx,%rbx
+ 79e:	48 89 c5             	mov    %rax,%rbp
+ 7a1:	e9 ce 01 00 00       	jmpq   974 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x334>
+ 7a6:	48 89 d3             	mov    %rdx,%rbx
+ 7a9:	48 89 c5             	mov    %rax,%rbp
+ 7ac:	e9 b9 01 00 00       	jmpq   96a <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x32a>
+ 7b1:	48 89 d3             	mov    %rdx,%rbx
+ 7b4:	48 89 c5             	mov    %rax,%rbp
+ 7b7:	e9 ae 01 00 00       	jmpq   96a <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x32a>
+ 7bc:	83 7c 24 34 ff       	cmpl   $0xffffffff,0x34(%rsp)
+ 7c1:	48 89 5c 24 20       	mov    %rbx,0x20(%rsp)
+ 7c6:	75 04                	jne    7cc <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x18c>
+ 7c8:	eb 00                	jmp    7ca <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x18a>
+ 7ca:	eb 08                	jmp    7d4 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x194>
+ 7cc:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 7d1:	8b 1c 98             	mov    (%rax,%rbx,4),%ebx
+ 7d4:	48 8b 7c 24 48       	mov    0x48(%rsp),%rdi
+ 7d9:	89 de                	mov    %ebx,%esi
+ 7db:	e8 00 00 00 00       	callq  7e0 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x1a0>
+ 7e0:	49 89 c7             	mov    %rax,%r15
+ 7e3:	eb 00                	jmp    7e5 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x1a5>
+ 7e5:	49 83 c7 08          	add    $0x8,%r15
+ 7e9:	4c 89 ff             	mov    %r15,%rdi
+ 7ec:	e8 00 00 00 00       	callq  7f1 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x1b1>
+ 7f1:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 7f6:	48 8d 6c 24 08       	lea    0x8(%rsp),%rbp
+ 7fb:	48 89 ef             	mov    %rbp,%rdi
+ 7fe:	e8 00 00 00 00       	callq  803 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x1c3>
+ 803:	48 89 ef             	mov    %rbp,%rdi
+ 806:	e8 00 00 00 00       	callq  80b <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x1cb>
+ 80b:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+ 810:	48 8b 2f             	mov    (%rdi),%rbp
+ 813:	89 de                	mov    %ebx,%esi
+ 815:	48 89 c2             	mov    %rax,%rdx
+ 818:	8b 4c 24 1c          	mov    0x1c(%rsp),%ecx
+ 81c:	ff 55 38             	callq  *0x38(%rbp)
+ 81f:	41 89 c5             	mov    %eax,%r13d
+ 822:	eb 00                	jmp    824 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x1e4>
+ 824:	45 85 ed             	test   %r13d,%r13d
+ 827:	48 8b 5c 24 20       	mov    0x20(%rsp),%rbx
+ 82c:	74 1b                	je     849 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x209>
+ 82e:	e9 13 01 00 00       	jmpq   946 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x306>
+ 833:	48 89 d3             	mov    %rdx,%rbx
+ 836:	48 89 c5             	mov    %rax,%rbp
+ 839:	e9 2c 01 00 00       	jmpq   96a <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x32a>
+ 83e:	48 89 d3             	mov    %rdx,%rbx
+ 841:	48 89 c5             	mov    %rax,%rbp
+ 844:	e9 09 01 00 00       	jmpq   952 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x312>
+ 849:	83 7c 24 18 00       	cmpl   $0x0,0x18(%rsp)
+ 84e:	75 21                	jne    871 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x231>
+ 850:	eb 00                	jmp    852 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x212>
+ 852:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+ 857:	e8 00 00 00 00       	callq  85c <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x21c>
+ 85c:	84 c0                	test   %al,%al
+ 85e:	0f 85 bf 00 00 00    	jne    923 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x2e3>
+ 864:	eb 0b                	jmp    871 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x231>
+ 866:	48 89 d3             	mov    %rdx,%rbx
+ 869:	48 89 c5             	mov    %rax,%rbp
+ 86c:	e9 e1 00 00 00       	jmpq   952 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x312>
+ 871:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+ 876:	48 8b 07             	mov    (%rdi),%rax
+ 879:	8b 74 24 1c          	mov    0x1c(%rsp),%esi
+ 87d:	ff 50 40             	callq  *0x40(%rax)
+ 880:	41 89 c5             	mov    %eax,%r13d
+ 883:	eb 00                	jmp    885 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x245>
+ 885:	45 85 ed             	test   %r13d,%r13d
+ 888:	74 10                	je     89a <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x25a>
+ 88a:	e9 b7 00 00 00       	jmpq   946 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x306>
+ 88f:	48 89 d3             	mov    %rdx,%rbx
+ 892:	48 89 c5             	mov    %rax,%rbp
+ 895:	e9 b8 00 00 00       	jmpq   952 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x312>
+ 89a:	48 8d 6c 24 08       	lea    0x8(%rsp),%rbp
+ 89f:	48 89 ef             	mov    %rbp,%rdi
+ 8a2:	e8 00 00 00 00       	callq  8a7 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x267>
+ 8a7:	48 85 c0             	test   %rax,%rax
+ 8aa:	74 4c                	je     8f8 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x2b8>
+ 8ac:	eb 00                	jmp    8ae <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x26e>
+ 8ae:	48 89 ef             	mov    %rbp,%rdi
+ 8b1:	e8 00 00 00 00       	callq  8b6 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x276>
+ 8b6:	49 89 c5             	mov    %rax,%r13
+ 8b9:	4c 89 ff             	mov    %r15,%rdi
+ 8bc:	e8 00 00 00 00       	callq  8c1 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x281>
+ 8c1:	48 89 c3             	mov    %rax,%rbx
+ 8c4:	4c 89 ff             	mov    %r15,%rdi
+ 8c7:	e8 00 00 00 00       	callq  8cc <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x28c>
+ 8cc:	4c 89 ef             	mov    %r13,%rdi
+ 8cf:	48 89 de             	mov    %rbx,%rsi
+ 8d2:	48 89 c2             	mov    %rax,%rdx
+ 8d5:	e8 00 00 00 00       	callq  8da <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x29a>
+ 8da:	41 89 c5             	mov    %eax,%r13d
+ 8dd:	eb 00                	jmp    8df <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x29f>
+ 8df:	45 85 ed             	test   %r13d,%r13d
+ 8e2:	48 8b 5c 24 20       	mov    0x20(%rsp),%rbx
+ 8e7:	48 8d 6c 24 08       	lea    0x8(%rsp),%rbp
+ 8ec:	74 0a                	je     8f8 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x2b8>
+ 8ee:	eb 56                	jmp    946 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x306>
+ 8f0:	48 89 d3             	mov    %rdx,%rbx
+ 8f3:	48 89 c5             	mov    %rax,%rbp
+ 8f6:	eb 5a                	jmp    952 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x312>
+ 8f8:	48 89 ef             	mov    %rbp,%rdi
+ 8fb:	e8 00 00 00 00       	callq  900 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x2c0>
+ 900:	eb 00                	jmp    902 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x2c2>
+ 902:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+ 907:	48 8b 07             	mov    (%rdi),%rax
+ 90a:	31 f6                	xor    %esi,%esi
+ 90c:	ff 50 48             	callq  *0x48(%rax)
+ 90f:	41 89 c5             	mov    %eax,%r13d
+ 912:	eb 00                	jmp    914 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x2d4>
+ 914:	45 85 ed             	test   %r13d,%r13d
+ 917:	74 0a                	je     923 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x2e3>
+ 919:	eb 2b                	jmp    946 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x306>
+ 91b:	48 89 d3             	mov    %rdx,%rbx
+ 91e:	48 89 c5             	mov    %rax,%rbp
+ 921:	eb 2f                	jmp    952 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x312>
+ 923:	4c 03 64 24 50       	add    0x50(%rsp),%r12
+ 928:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+ 92d:	e8 00 00 00 00       	callq  932 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x2f2>
+ 932:	48 83 c3 01          	add    $0x1,%rbx
+ 936:	48 39 5c 24 28       	cmp    %rbx,0x28(%rsp)
+ 93b:	0f 85 1d fe ff ff    	jne    75e <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x11e>
+ 941:	45 31 ed             	xor    %r13d,%r13d
+ 944:	eb 18                	jmp    95e <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x31e>
+ 946:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+ 94b:	e8 00 00 00 00       	callq  950 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x310>
+ 950:	eb 0c                	jmp    95e <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x31e>
+ 952:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+ 957:	e8 00 00 00 00       	callq  95c <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x31c>
+ 95c:	eb 0c                	jmp    96a <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x32a>
+ 95e:	48 8d 7c 24 38       	lea    0x38(%rsp),%rdi
+ 963:	e8 00 00 00 00       	callq  968 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x328>
+ 968:	eb 57                	jmp    9c1 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x381>
+ 96a:	48 8d 7c 24 38       	lea    0x38(%rsp),%rdi
+ 96f:	e8 00 00 00 00       	callq  974 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x334>
+ 974:	48 89 ef             	mov    %rbp,%rdi
+ 977:	e8 00 00 00 00       	callq  97c <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x33c>
+ 97c:	48 89 c5             	mov    %rax,%rbp
+ 97f:	83 fb 02             	cmp    $0x2,%ebx
+ 982:	75 20                	jne    9a4 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x364>
+ 984:	eb 00                	jmp    986 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x346>
+ 986:	bf 08 00 00 00       	mov    $0x8,%edi
+ 98b:	e8 00 00 00 00       	callq  990 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x350>
+ 990:	48 89 28             	mov    %rbp,(%rax)
+ 993:	be 00 00 00 00       	mov    $0x0,%esi
+ 998:	48 89 c7             	mov    %rax,%rdi
+ 99b:	31 d2                	xor    %edx,%edx
+ 99d:	e8 00 00 00 00       	callq  9a2 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x362>
+ 9a2:	eb 2f                	jmp    9d3 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x393>
+ 9a4:	e8 00 00 00 00       	callq  9a9 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x369>
+ 9a9:	41 bd 0e 00 07 80    	mov    $0x8007000e,%r13d
+ 9af:	eb 10                	jmp    9c1 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x381>
+ 9b1:	48 89 c3             	mov    %rax,%rbx
+ 9b4:	e8 00 00 00 00       	callq  9b9 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x379>
+ 9b9:	48 89 df             	mov    %rbx,%rdi
+ 9bc:	e8 00 00 00 00       	callq  9c1 <_ZN8NArchive4NSwf8CHandler7ExtractEPKjjiP23IArchiveExtractCallback+0x381>
+ 9c1:	44 89 e8             	mov    %r13d,%eax
+ 9c4:	48 83 c4 58          	add    $0x58,%rsp
+ 9c8:	5b                   	pop    %rbx
+ 9c9:	41 5c                	pop    %r12
+ 9cb:	41 5d                	pop    %r13
+ 9cd:	41 5e                	pop    %r14
+ 9cf:	41 5f                	pop    %r15
+ 9d1:	5d                   	pop    %rbp
+ 9d2:	c3                   	retq   
+ 9d3:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+ 9da:	00 00 00 
+ 9dd:	0f 1f 00             	nopl   (%rax)
+
+00000000000009e0 <_ZN8NArchive4NSwfL9CreateArcEv>:
+ 9e0:	41 56                	push   %r14
+ 9e2:	53                   	push   %rbx
+ 9e3:	50                   	push   %rax
+ 9e4:	bf 40 00 00 00       	mov    $0x40,%edi
+ 9e9:	e8 00 00 00 00       	callq  9ee <_ZN8NArchive4NSwfL9CreateArcEv+0xe>
+ 9ee:	48 89 c3             	mov    %rax,%rbx
+ 9f1:	48 89 df             	mov    %rbx,%rdi
+ 9f4:	e8 00 00 00 00       	callq  9f9 <_ZN8NArchive4NSwfL9CreateArcEv+0x19>
+ 9f9:	eb 00                	jmp    9fb <_ZN8NArchive4NSwfL9CreateArcEv+0x1b>
+ 9fb:	48 89 d8             	mov    %rbx,%rax
+ 9fe:	48 83 c4 08          	add    $0x8,%rsp
+ a02:	5b                   	pop    %rbx
+ a03:	41 5e                	pop    %r14
+ a05:	c3                   	retq   
+ a06:	49 89 c6             	mov    %rax,%r14
+ a09:	48 89 df             	mov    %rbx,%rdi
+ a0c:	e8 00 00 00 00       	callq  a11 <_ZN8NArchive4NSwfL9CreateArcEv+0x31>
+ a11:	4c 89 f7             	mov    %r14,%rdi
+ a14:	e8 00 00 00 00       	callq  a19 <_ZN8NArchive4NSwfL9CreateArcEv+0x39>

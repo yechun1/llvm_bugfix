@@ -1,7 +1,8 @@
 ### debug
+  for (MachineBasicBlock &MBB : MF)
+    dbgs() << "out-: " << MBB << "\n";
 
-#define LLVM_DEBUG2(X) do { X; } while (false)
-#undef NDEBUG
+#define LLVM_DBG(X) do { X; } while (false)
 
 ###
 OPT=/data/proj/compiler/llvm/llvm-project/build/bin/opt
@@ -12,12 +13,10 @@ OPT_ORIG=/data/proj/compiler/llvm/llvm-project.orig/build/bin/opt
 # llvm-dev mail list
 http://llvm.1065342.n5.nabble.com/
 
-  for (MachineFunction::iterator MBBI = MF.begin(), E = MF.end();
-       MBBI != E; ++MBBI) {
+# start
+  for (MachineFunction::iterator MBBI = MF.begin(), E = MF.end(); MBBI != E; ++MBBI) {
     MachineBasicBlock *MBB = &*MBBI;
-    dbgs() << "###### chris-MBB: ######\n" << *MBB << "\n############\n"
+    dbgs() << "out-: " << *MBB << "\n";
   }
-
-  for (MachineBasicBlock::iterator MII = MBB->begin(), EE = MBB->end();
-    MII != EE; ++MII) {
+###
 

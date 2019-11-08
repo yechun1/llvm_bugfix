@@ -1,0 +1,6 @@
+https://godbolt.org/z/KeVedB
+
+
+bug: https://bugs.llvm.org/show_bug.cgi?id=42138
+
+fix: https://reviews.llvm.org/D66467
