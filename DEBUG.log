@@ -1,6 +1,6 @@
 ### debug
   for (MachineBasicBlock &MBB : MF)
-    dbgs() << "out-: " << MBB << "\n";
+    dbgs() << "chris-end-: " << MBB << "\n";
 
 #define LLVM_DBG(X) do { X; } while (false)
 

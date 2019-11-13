@@ -29,6 +29,7 @@ rm -rf out* log*
 #FILE=$HOME/test-suite/MultiSource/Benchmarks/7zip/CPP/7zip/Archive/SwfHandler.cpp
 #INCLUDE="-I $HOME/test-suite/MultiSource/Benchmarks/7zip/CPP/myWindows -I $HOME/test-suite/MultiSource/Benchmarks/7zip/CPP -I $HOME/test-suite/MultiSource/Benchmarks/7zip/CPP/include_windows"
 
+### Analyze1
 #  NUM=5453
 #  echo "################[DIFF: $NUM/ $((NUM-4))]################"
 #  clang++ -c -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=$((NUM-4)) -o out1.o 2>log1
@@ -39,6 +40,7 @@ rm -rf out* log*
 #  colordiff out1.obj out2.obj
 #  echo ""
 
+### Analyze2
 # min=2781
 # max=7350
 # find_string="%r8,0x10"
@@ -67,6 +69,7 @@ rm -rf out* log*
 # done
 
 
+### mark
 ### Debug2
 NUM=5453
 FILE=$HOME/test-suite/MultiSource/Benchmarks/7zip/CPP/7zip/Archive/SwfHandler.cpp
@@ -89,6 +92,34 @@ INCLUDE="-I $HOME/test-suite/MultiSource/Benchmarks/7zip/CPP/myWindows -I $HOME/
 
 
 #####################################
+### Analyze3
+# NUM1=5445
+# NUM0=$((NUM1-4))
+# clang++ -c -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=$((NUM0-1)) -o out1.o 2>log1
+# clang++ -c -g -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=$((NUM1-1)) -o out2.o 2>log2
+# clang++ -c -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=$NUM0 -o out3.o 2>log3
+# clang++ -c -g -O1 $FILE $INCLUDE -mllvm -opt-bisect-limit=$NUM1 -o out4.o 2>log4
+# objdump -d -j .text out1.o > out1.obj
+# objdump -d -j .text out2.o > out2.obj
+# objdump -d -j .text out3.o > out3.obj
+# objdump -d -j .text out4.o > out4.obj
+# rm -rf out*.o
+
+
+### Analyze4
+#clang++ -S -emit-llvm -Xclang -disable-O0-optnone $FILE $INCLUDE -o out1.ll
+#clang++ -S -g -emit-llvm -Xclang -disable-O0-optnone $FILE $INCLUDE -o out2.ll
+#pass=stack-slot-coloring
+##pass=peephole-opt
+#llc out1.ll -stop-before=$pass -o out1.mir 2>log1
+#llc out1.ll -stop-after=$pass -o out2.mir 2>log2
+#llc out2.ll -stop-before=$pass -o out3.mir 2>log3
+#llc out2.ll -stop-after=$pass -o out4.mir 2>log4
+##llc out4.ll -stop-after=peephole-opt -o out4.mir 2>log4
+##llc test1.mir -run-pass=peephole-opt out3.mir -o out4.mir
+##llc -print-after="peephole-opt" out4.ll -o out4.mir
+
+
 #####################################
 ### Debug2 - example.ll (from leaFixup64.mir)
 #llc example1.mir -run-pass x86-fixup-LEAs -mtriple=x86_64-gnu-unknown -mcpu=x86-64 -o - > out1.mir 2>&1
