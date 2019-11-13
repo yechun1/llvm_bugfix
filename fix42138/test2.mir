@@ -13,6 +13,7 @@ body:             |
     RET 0
 
   bb.2:
+    CFI_INSTRUCTION def_cfa_offset 8
     MOV8mi $r13, 1, $noreg, 0, $noreg, 0
     RET 0
 ...
