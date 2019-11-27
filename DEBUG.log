@@ -1,8 +1,9 @@
-### debug
+#define LLVM_DBG(X) do { X; } while (false)
+  for (MachineBasicBlock &MBB : MF)
+    dbgs() << "chris-begin-: " << MBB << "\n";
   for (MachineBasicBlock &MBB : MF)
     dbgs() << "chris-end-: " << MBB << "\n";
 
-#define LLVM_DBG(X) do { X; } while (false)
 
 ###
 OPT=/data/proj/compiler/llvm/llvm-project/build/bin/opt
@@ -16,7 +17,30 @@ http://llvm.1065342.n5.nabble.com/
 # start
   for (MachineFunction::iterator MBBI = MF.begin(), E = MF.end(); MBBI != E; ++MBBI) {
     MachineBasicBlock *MBB = &*MBBI;
-    dbgs() << "out-: " << *MBB << "\n";
+    dbgs() << "out-: " << &*MBBI << "\n";
   }
+
+  
+  dbgs() << "chris-begin-: \n";
+  LLVM_DBG(MF->print(dbgs()));
 ###
 
+#######################################################################
+### build ###
+#######################################################################
+git format-patch -U999999 @{u}
+#git show HEAD -U999999 > mypatch.patch
+
+# cmake -DLLVM_ENABLE_PROJECTS=clang -DLLVM_TARGETS_TO_BUILD=X86 -DCMAKE_BUILD_TYPE=Release -G "Unix Makefiles" ../llvm; make -j8
+# cmake -DLLVM_ENABLE_PROJECTS=clang -DLLVM_TARGETS_TO_BUILD=X86 -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" ../llvm; make -j8
+
+# make check-clang
+# make llc
+
+### test-suite ###
+#cmake -DCMAKE_C_COMPILER=/usr/bin/clang -C../test-suite/cmake/caches/O3.cmake ../test-suite
+#cmake -DCMAKE_C_COMPILER=/data/proj/compiler/llvm/llvm-project/build/bin/clang -C ../test-suite/cmake/caches/O3.cmake ../test-suite
+#######################################################################
+Re: Should GCC emit the same code for compilation with '-g' and without '-g'
+https://gcc.gnu.org/ml/gcc/2018-05/msg00011.html
+#######################################################################

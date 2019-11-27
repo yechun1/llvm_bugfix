@@ -1,0 +1,39 @@
+BISECT: running pass (391) Combine redundant instructions on function (_ZN8NArchive4NSwfL6Read16ER9CInBuffer)
+*** IR Dump After Combine redundant instructions ***
+; Function Attrs: uwtable
+define internal fastcc zeroext i16 @_ZN8NArchive4NSwfL6Read16ER9CInBuffer(%class.CInBuffer* dereferenceable(48) %0) unnamed_addr #2 {
+  %2 = alloca i8, align 1
+  br label %3
+
+3:                                                ; preds = %11, %1
+  %.08 = phi i16 [ 0, %1 ], [ %17, %11 ]
+  %.0 = phi i32 [ 0, %1 ], [ %18, %11 ]
+  %4 = icmp ult i32 %.0, 2
+  br i1 %4, label %6, label %5
+
+5:                                                ; preds = %3
+  ret i16 %.08
+
+6:                                                ; preds = %3
+  call void @llvm.lifetime.start.p0i8(i64 1, i8* nonnull %2) #13
+  %7 = call zeroext i1 @_ZN9CInBuffer8ReadByteERh(%class.CInBuffer* nonnull %0, i8* nonnull dereferenceable(1) %2)
+  br i1 %7, label %11, label %8
+
+8:                                                ; preds = %6
+  %9 = call i8* @__cxa_allocate_exception(i64 4) #13
+  %10 = bitcast i8* %9 to i32*
+  store i32 1, i32* %10, align 16
+  call void @__cxa_throw(i8* %9, i8* bitcast (i8** @_ZTIi to i8*), i8* null) #14
+  unreachable
+
+11:                                               ; preds = %6
+  %12 = load i8, i8* %2, align 1
+  %13 = zext i8 %12 to i32
+  %14 = shl nsw i32 %.0, 3
+  %15 = shl i32 %13, %14
+  %16 = trunc i32 %15 to i16
+  %17 = or i16 %.08, %16
+  call void @llvm.lifetime.end.p0i8(i64 1, i8* nonnull %2) #13
+  %18 = add nuw nsw i32 %.0, 1
+  br label %3
+}
