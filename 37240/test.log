@@ -1,2 +1,0 @@
-llc: Unknown command line argument '-debug-only=machine-scheduler'.  Try: 'llc --help'
-llc: Did you mean '  --debug-pass=machine-scheduler'?

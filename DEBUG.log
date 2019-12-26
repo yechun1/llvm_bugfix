@@ -31,8 +31,12 @@ http://llvm.1065342.n5.nabble.com/
 git format-patch -U999999 @{u}
 #git show HEAD -U999999 > mypatch.patch
 
-# cmake -DLLVM_ENABLE_PROJECTS=clang -DLLVM_TARGETS_TO_BUILD=X86 -DCMAKE_BUILD_TYPE=Release -G "Unix Makefiles" ../llvm; make -j8
-# cmake -DLLVM_ENABLE_PROJECTS=clang -DLLVM_TARGETS_TO_BUILD=X86 -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" ../llvm; make -j8
+### Release|Debug
+# cmake -DLLVM_ENABLE_PROJECTS=clang -DCMAKE_BUILD_TYPE=Release -G "Unix Makefiles" ../llvm; make -j8
+# cmake -DLLVM_ENABLE_PROJECTS=clang -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" ../llvm; make -j8
+
+# cmake -DLLVM_ENABLE_PROJECTS=clang -DLLVM_TARGETS_TO_BUILD="X86;AArch64;ARM" -DCMAKE_BUILD_TYPE=Release -G "Unix Makefiles" ../llvm; make -j8
+# cmake -DLLVM_ENABLE_ASSERTIONS=On -DLLVM_ENABLE_PROJECTS=clang -DCMAKE_BUILD_TYPE=Release -G "Unix Makefiles" ../llvm; make -j8
 
 # make check-clang
 # make llc

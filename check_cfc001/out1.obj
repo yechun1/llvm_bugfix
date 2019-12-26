@@ -1,0 +1,1305 @@
+
+out.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <_ZN23btConvexConvexAlgorithm10CreateFuncC1EP22btVoronoiSimplexSolverP30btConvexPenetrationDepthSolver>:
+       0:	41 57                	push   %r15
+       2:	41 56                	push   %r14
+       4:	53                   	push   %rbx
+       5:	49 89 d6             	mov    %rdx,%r14
+       8:	49 89 f7             	mov    %rsi,%r15
+       b:	48 89 fb             	mov    %rdi,%rbx
+       e:	48 89 df             	mov    %rbx,%rdi
+      11:	e8 00 00 00 00       	callq  16 <_ZN23btConvexConvexAlgorithm10CreateFuncC1EP22btVoronoiSimplexSolverP30btConvexPenetrationDepthSolver+0x16>
+      16:	48 b8 00 00 00 00 00 	movabs $0x0,%rax
+      1d:	00 00 00 
+      20:	48 05 10 00 00 00    	add    $0x10,%rax
+      26:	48 89 03             	mov    %rax,(%rbx)
+      29:	c7 43 20 00 00 00 00 	movl   $0x0,0x20(%rbx)
+      30:	c7 43 24 03 00 00 00 	movl   $0x3,0x24(%rbx)
+      37:	4c 89 7b 18          	mov    %r15,0x18(%rbx)
+      3b:	4c 89 73 10          	mov    %r14,0x10(%rbx)
+      3f:	5b                   	pop    %rbx
+      40:	41 5e                	pop    %r14
+      42:	41 5f                	pop    %r15
+      44:	c3                   	retq   
+      45:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+      4c:	00 00 00 
+      4f:	90                   	nop
+
+0000000000000050 <_ZN23btConvexConvexAlgorithm10CreateFuncD1Ev>:
+      50:	50                   	push   %rax
+      51:	e8 00 00 00 00       	callq  56 <_ZN23btConvexConvexAlgorithm10CreateFuncD1Ev+0x6>
+      56:	58                   	pop    %rax
+      57:	c3                   	retq   
+      58:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+      5f:	00 
+
+0000000000000060 <_ZN23btConvexConvexAlgorithm10CreateFuncD0Ev>:
+      60:	53                   	push   %rbx
+      61:	48 89 fb             	mov    %rdi,%rbx
+      64:	48 89 df             	mov    %rbx,%rdi
+      67:	e8 e4 ff ff ff       	callq  50 <_ZN23btConvexConvexAlgorithm10CreateFuncD1Ev>
+      6c:	48 89 df             	mov    %rbx,%rdi
+      6f:	e8 00 00 00 00       	callq  74 <_ZN23btConvexConvexAlgorithm10CreateFuncD0Ev+0x14>
+      74:	5b                   	pop    %rbx
+      75:	c3                   	retq   
+      76:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+      7d:	00 00 00 
+
+0000000000000080 <_ZN23btConvexConvexAlgorithmC1EP20btPersistentManifoldRK36btCollisionAlgorithmConstructionInfoP17btCollisionObjectS6_P22btVoronoiSimplexSolverP30btConvexPenetrationDepthSolverii>:
+      80:	55                   	push   %rbp
+      81:	41 57                	push   %r15
+      83:	41 56                	push   %r14
+      85:	41 55                	push   %r13
+      87:	41 54                	push   %r12
+      89:	53                   	push   %rbx
+      8a:	50                   	push   %rax
+      8b:	4d 89 ce             	mov    %r9,%r14
+      8e:	4d 89 c5             	mov    %r8,%r13
+      91:	48 89 cd             	mov    %rcx,%rbp
+      94:	49 89 f7             	mov    %rsi,%r15
+      97:	48 89 fb             	mov    %rdi,%rbx
+      9a:	48 89 df             	mov    %rbx,%rdi
+      9d:	48 89 d6             	mov    %rdx,%rsi
+      a0:	48 89 ea             	mov    %rbp,%rdx
+      a3:	4c 89 e9             	mov    %r13,%rcx
+      a6:	e8 00 00 00 00       	callq  ab <_ZN23btConvexConvexAlgorithmC1EP20btPersistentManifoldRK36btCollisionAlgorithmConstructionInfoP17btCollisionObjectS6_P22btVoronoiSimplexSolverP30btConvexPenetrationDepthSolverii+0x2b>
+      ab:	48 c7 03 00 00 00 00 	movq   $0x0,(%rbx)
+      b2:	49 89 dc             	mov    %rbx,%r12
+      b5:	49 83 c4 10          	add    $0x10,%r12
+      b9:	48 89 ef             	mov    %rbp,%rdi
+      bc:	e8 00 00 00 00       	callq  c1 <_ZN23btConvexConvexAlgorithmC1EP20btPersistentManifoldRK36btCollisionAlgorithmConstructionInfoP17btCollisionObjectS6_P22btVoronoiSimplexSolverP30btConvexPenetrationDepthSolverii+0x41>
+      c1:	48 8b 08             	mov    (%rax),%rcx
+      c4:	48 8b 49 20          	mov    0x20(%rcx),%rcx
+      c8:	48 89 c7             	mov    %rax,%rdi
+      cb:	ff d1                	callq  *%rcx
+      cd:	eb 00                	jmp    cf <_ZN23btConvexConvexAlgorithmC1EP20btPersistentManifoldRK36btCollisionAlgorithmConstructionInfoP17btCollisionObjectS6_P22btVoronoiSimplexSolverP30btConvexPenetrationDepthSolverii+0x4f>
+      cf:	4c 89 ef             	mov    %r13,%rdi
+      d2:	f3 0f 11 44 24 04    	movss  %xmm0,0x4(%rsp)
+      d8:	e8 00 00 00 00       	callq  dd <_ZN23btConvexConvexAlgorithmC1EP20btPersistentManifoldRK36btCollisionAlgorithmConstructionInfoP17btCollisionObjectS6_P22btVoronoiSimplexSolverP30btConvexPenetrationDepthSolverii+0x5d>
+      dd:	48 8b 08             	mov    (%rax),%rcx
+      e0:	48 8b 49 20          	mov    0x20(%rcx),%rcx
+      e4:	48 89 c7             	mov    %rax,%rdi
+      e7:	ff d1                	callq  *%rcx
+      e9:	0f 28 c8             	movaps %xmm0,%xmm1
+      ec:	f3 0f 10 44 24 04    	movss  0x4(%rsp),%xmm0
+      f2:	eb 00                	jmp    f4 <_ZN23btConvexConvexAlgorithmC1EP20btPersistentManifoldRK36btCollisionAlgorithmConstructionInfoP17btCollisionObjectS6_P22btVoronoiSimplexSolverP30btConvexPenetrationDepthSolverii+0x74>
+      f4:	4c 89 e7             	mov    %r12,%rdi
+      f7:	e8 00 00 00 00       	callq  fc <_ZN23btConvexConvexAlgorithmC1EP20btPersistentManifoldRK36btCollisionAlgorithmConstructionInfoP17btCollisionObjectS6_P22btVoronoiSimplexSolverP30btConvexPenetrationDepthSolverii+0x7c>
+      fc:	eb 00                	jmp    fe <_ZN23btConvexConvexAlgorithmC1EP20btPersistentManifoldRK36btCollisionAlgorithmConstructionInfoP17btCollisionObjectS6_P22btVoronoiSimplexSolverP30btConvexPenetrationDepthSolverii+0x7e>
+      fe:	4c 89 73 70          	mov    %r14,0x70(%rbx)
+     102:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+     107:	48 89 43 78          	mov    %rax,0x78(%rbx)
+     10b:	c6 83 80 00 00 00 00 	movb   $0x0,0x80(%rbx)
+     112:	4c 89 bb 88 00 00 00 	mov    %r15,0x88(%rbx)
+     119:	c6 83 90 00 00 00 00 	movb   $0x0,0x90(%rbx)
+     120:	8b 44 24 48          	mov    0x48(%rsp),%eax
+     124:	89 83 94 00 00 00    	mov    %eax,0x94(%rbx)
+     12a:	8b 44 24 50          	mov    0x50(%rsp),%eax
+     12e:	89 83 98 00 00 00    	mov    %eax,0x98(%rbx)
+     134:	48 83 c4 08          	add    $0x8,%rsp
+     138:	5b                   	pop    %rbx
+     139:	41 5c                	pop    %r12
+     13b:	41 5d                	pop    %r13
+     13d:	41 5e                	pop    %r14
+     13f:	41 5f                	pop    %r15
+     141:	5d                   	pop    %rbp
+     142:	c3                   	retq   
+     143:	48 89 c5             	mov    %rax,%rbp
+     146:	48 89 df             	mov    %rbx,%rdi
+     149:	e8 00 00 00 00       	callq  14e <_ZN23btConvexConvexAlgorithmC1EP20btPersistentManifoldRK36btCollisionAlgorithmConstructionInfoP17btCollisionObjectS6_P22btVoronoiSimplexSolverP30btConvexPenetrationDepthSolverii+0xce>
+     14e:	48 89 ef             	mov    %rbp,%rdi
+     151:	e8 00 00 00 00       	callq  156 <_ZN23btConvexConvexAlgorithmC1EP20btPersistentManifoldRK36btCollisionAlgorithmConstructionInfoP17btCollisionObjectS6_P22btVoronoiSimplexSolverP30btConvexPenetrationDepthSolverii+0xd6>
+     156:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+     15d:	00 00 00 
+
+0000000000000160 <_ZN23btConvexConvexAlgorithmD1Ev>:
+     160:	41 56                	push   %r14
+     162:	53                   	push   %rbx
+     163:	50                   	push   %rax
+     164:	48 89 fb             	mov    %rdi,%rbx
+     167:	48 b8 00 00 00 00 00 	movabs $0x0,%rax
+     16e:	00 00 00 
+     171:	48 05 10 00 00 00    	add    $0x10,%rax
+     177:	48 89 03             	mov    %rax,(%rbx)
+     17a:	80 bb 80 00 00 00 00 	cmpb   $0x0,0x80(%rbx)
+     181:	74 2f                	je     1b2 <_ZN23btConvexConvexAlgorithmD1Ev+0x52>
+     183:	48 8b b3 88 00 00 00 	mov    0x88(%rbx),%rsi
+     18a:	48 83 fe 00          	cmp    $0x0,%rsi
+     18e:	74 22                	je     1b2 <_ZN23btConvexConvexAlgorithmD1Ev+0x52>
+     190:	48 8b 7b 08          	mov    0x8(%rbx),%rdi
+     194:	48 8b 07             	mov    (%rdi),%rax
+     197:	48 8b 40 20          	mov    0x20(%rax),%rax
+     19b:	ff d0                	callq  *%rax
+     19d:	eb 13                	jmp    1b2 <_ZN23btConvexConvexAlgorithmD1Ev+0x52>
+     19f:	49 89 c6             	mov    %rax,%r14
+     1a2:	48 89 df             	mov    %rbx,%rdi
+     1a5:	e8 00 00 00 00       	callq  1aa <_ZN23btConvexConvexAlgorithmD1Ev+0x4a>
+     1aa:	4c 89 f7             	mov    %r14,%rdi
+     1ad:	e8 00 00 00 00       	callq  1b2 <_ZN23btConvexConvexAlgorithmD1Ev+0x52>
+     1b2:	48 89 df             	mov    %rbx,%rdi
+     1b5:	e8 00 00 00 00       	callq  1ba <_ZN23btConvexConvexAlgorithmD1Ev+0x5a>
+     1ba:	48 83 c4 08          	add    $0x8,%rsp
+     1be:	5b                   	pop    %rbx
+     1bf:	41 5e                	pop    %r14
+     1c1:	c3                   	retq   
+     1c2:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+     1c9:	00 00 00 
+     1cc:	0f 1f 40 00          	nopl   0x0(%rax)
+
+00000000000001d0 <_ZN23btConvexConvexAlgorithmD0Ev>:
+     1d0:	53                   	push   %rbx
+     1d1:	48 89 fb             	mov    %rdi,%rbx
+     1d4:	48 89 df             	mov    %rbx,%rdi
+     1d7:	e8 84 ff ff ff       	callq  160 <_ZN23btConvexConvexAlgorithmD1Ev>
+     1dc:	48 89 df             	mov    %rbx,%rdi
+     1df:	e8 00 00 00 00       	callq  1e4 <_ZN23btConvexConvexAlgorithmD0Ev+0x14>
+     1e4:	5b                   	pop    %rbx
+     1e5:	c3                   	retq   
+     1e6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+     1ed:	00 00 00 
+
+00000000000001f0 <_ZN23btConvexConvexAlgorithm19setLowLevelOfDetailEb>:
+     1f0:	40 80 e6 01          	and    $0x1,%sil
+     1f4:	40 88 b7 90 00 00 00 	mov    %sil,0x90(%rdi)
+     1fb:	c3                   	retq   
+     1fc:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000000200 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult>:
+     200:	55                   	push   %rbp
+     201:	41 57                	push   %r15
+     203:	41 56                	push   %r14
+     205:	41 55                	push   %r13
+     207:	41 54                	push   %r12
+     209:	53                   	push   %rbx
+     20a:	48 81 ec b8 04 00 00 	sub    $0x4b8,%rsp
+     211:	4d 89 c4             	mov    %r8,%r12
+     214:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+     219:	49 89 d7             	mov    %rdx,%r15
+     21c:	48 89 f5             	mov    %rsi,%rbp
+     21f:	49 89 fd             	mov    %rdi,%r13
+     222:	49 81 c5 88 00 00 00 	add    $0x88,%r13
+     229:	48 89 7c 24 10       	mov    %rdi,0x10(%rsp)
+     22e:	48 83 bf 88 00 00 00 	cmpq   $0x0,0x88(%rdi)
+     235:	00 
+     236:	75 20                	jne    258 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x58>
+     238:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+     23d:	48 8b 7b 08          	mov    0x8(%rbx),%rdi
+     241:	48 8b 07             	mov    (%rdi),%rax
+     244:	48 89 ee             	mov    %rbp,%rsi
+     247:	4c 89 fa             	mov    %r15,%rdx
+     24a:	ff 50 18             	callq  *0x18(%rax)
+     24d:	49 89 45 00          	mov    %rax,0x0(%r13)
+     251:	c6 83 80 00 00 00 01 	movb   $0x1,0x80(%rbx)
+     258:	49 8b 75 00          	mov    0x0(%r13),%rsi
+     25c:	4c 89 e7             	mov    %r12,%rdi
+     25f:	e8 00 00 00 00       	callq  264 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x64>
+     264:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+     269:	48 89 ef             	mov    %rbp,%rdi
+     26c:	e8 00 00 00 00       	callq  271 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x71>
+     271:	49 89 c6             	mov    %rax,%r14
+     274:	4c 89 ff             	mov    %r15,%rdi
+     277:	e8 00 00 00 00       	callq  27c <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7c>
+     27c:	48 89 c3             	mov    %rax,%rbx
+     27f:	48 8d bc 24 20 01 00 	lea    0x120(%rsp),%rdi
+     286:	00 
+     287:	e8 00 00 00 00       	callq  28c <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x8c>
+     28c:	48 8d bc 24 10 01 00 	lea    0x110(%rsp),%rdi
+     293:	00 
+     294:	e8 00 00 00 00       	callq  299 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x99>
+     299:	4c 89 f7             	mov    %r14,%rdi
+     29c:	e8 00 00 00 00       	callq  2a1 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0xa1>
+     2a1:	83 f8 0a             	cmp    $0xa,%eax
+     2a4:	0f 85 04 01 00 00    	jne    3ae <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x1ae>
+     2aa:	48 89 df             	mov    %rbx,%rdi
+     2ad:	e8 00 00 00 00       	callq  2b2 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0xb2>
+     2b2:	83 f8 0a             	cmp    $0xa,%eax
+     2b5:	0f 85 f3 00 00 00    	jne    3ae <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x1ae>
+     2bb:	49 8b 06             	mov    (%r14),%rax
+     2be:	4c 89 f7             	mov    %r14,%rdi
+     2c1:	ff 50 38             	callq  *0x38(%rax)
+     2c4:	48 8b 03             	mov    (%rbx),%rax
+     2c7:	48 89 df             	mov    %rbx,%rdi
+     2ca:	ff 50 38             	callq  *0x38(%rax)
+     2cd:	49 8b 7d 00          	mov    0x0(%r13),%rdi
+     2d1:	e8 00 00 00 00       	callq  2d6 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0xd6>
+     2d6:	f3 0f 11 44 24 24    	movss  %xmm0,0x24(%rsp)
+     2dc:	4c 89 f7             	mov    %r14,%rdi
+     2df:	e8 00 00 00 00       	callq  2e4 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0xe4>
+     2e4:	f3 0f 11 44 24 60    	movss  %xmm0,0x60(%rsp)
+     2ea:	4c 89 f7             	mov    %r14,%rdi
+     2ed:	e8 00 00 00 00       	callq  2f2 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0xf2>
+     2f2:	f3 0f 11 44 24 5c    	movss  %xmm0,0x5c(%rsp)
+     2f8:	48 89 df             	mov    %rbx,%rdi
+     2fb:	e8 00 00 00 00       	callq  300 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x100>
+     300:	f3 0f 11 44 24 54    	movss  %xmm0,0x54(%rsp)
+     306:	48 89 df             	mov    %rbx,%rdi
+     309:	e8 00 00 00 00       	callq  30e <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x10e>
+     30e:	f3 0f 11 44 24 50    	movss  %xmm0,0x50(%rsp)
+     314:	4c 89 f7             	mov    %r14,%rdi
+     317:	e8 00 00 00 00       	callq  31c <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x11c>
+     31c:	41 89 c6             	mov    %eax,%r14d
+     31f:	48 89 df             	mov    %rbx,%rdi
+     322:	e8 00 00 00 00       	callq  327 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x127>
+     327:	89 c5                	mov    %eax,%ebp
+     329:	48 8b 7c 24 18       	mov    0x18(%rsp),%rdi
+     32e:	e8 00 00 00 00       	callq  333 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x133>
+     333:	48 89 c3             	mov    %rax,%rbx
+     336:	4c 89 ff             	mov    %r15,%rdi
+     339:	e8 00 00 00 00       	callq  33e <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x13e>
+     33e:	48 8d bc 24 20 01 00 	lea    0x120(%rsp),%rdi
+     345:	00 
+     346:	48 8d b4 24 10 01 00 	lea    0x110(%rsp),%rsi
+     34d:	00 
+     34e:	f3 0f 10 44 24 60    	movss  0x60(%rsp),%xmm0
+     354:	f3 0f 10 4c 24 5c    	movss  0x5c(%rsp),%xmm1
+     35a:	f3 0f 10 54 24 54    	movss  0x54(%rsp),%xmm2
+     360:	f3 0f 10 5c 24 50    	movss  0x50(%rsp),%xmm3
+     366:	44 89 f2             	mov    %r14d,%edx
+     369:	89 e9                	mov    %ebp,%ecx
+     36b:	49 89 d8             	mov    %rbx,%r8
+     36e:	49 89 c1             	mov    %rax,%r9
+     371:	f3 0f 10 64 24 24    	movss  0x24(%rsp),%xmm4
+     377:	e8 34 07 00 00       	callq  ab0 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f>
+     37c:	f3 0f 10 4c 24 24    	movss  0x24(%rsp),%xmm1
+     382:	0f 2e c8             	ucomiss %xmm0,%xmm1
+     385:	76 1a                	jbe    3a1 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x1a1>
+     387:	49 8b 04 24          	mov    (%r12),%rax
+     38b:	4c 89 e7             	mov    %r12,%rdi
+     38e:	48 8d b4 24 20 01 00 	lea    0x120(%rsp),%rsi
+     395:	00 
+     396:	48 8d 94 24 10 01 00 	lea    0x110(%rsp),%rdx
+     39d:	00 
+     39e:	ff 50 20             	callq  *0x20(%rax)
+     3a1:	4c 89 e7             	mov    %r12,%rdi
+     3a4:	e8 00 00 00 00       	callq  3a9 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x1a9>
+     3a9:	e9 eb 06 00 00       	jmpq   a99 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x899>
+     3ae:	4c 89 64 24 38       	mov    %r12,0x38(%rsp)
+     3b3:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+     3b8:	48 81 c5 10 00 00 00 	add    $0x10,%rbp
+     3bf:	48 8b 7c 24 18       	mov    0x18(%rsp),%rdi
+     3c4:	e8 00 00 00 00       	callq  3c9 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x1c9>
+     3c9:	4c 89 ff             	mov    %r15,%rdi
+     3cc:	49 89 c4             	mov    %rax,%r12
+     3cf:	49 89 ff             	mov    %rdi,%r15
+     3d2:	e8 00 00 00 00       	callq  3d7 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x1d7>
+     3d7:	48 89 ef             	mov    %rbp,%rdi
+     3da:	4c 89 e6             	mov    %r12,%rsi
+     3dd:	48 89 c2             	mov    %rax,%rdx
+     3e0:	e8 00 00 00 00       	callq  3e5 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x1e5>
+     3e5:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+     3ea:	49 89 c4             	mov    %rax,%r12
+     3ed:	49 81 c4 28 00 00 00 	add    $0x28,%r12
+     3f4:	80 78 28 00          	cmpb   $0x0,0x28(%rax)
+     3f8:	74 14                	je     40e <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x20e>
+     3fa:	48 89 ef             	mov    %rbp,%rdi
+     3fd:	e8 00 00 00 00       	callq  402 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x202>
+     402:	0f 57 c9             	xorps  %xmm1,%xmm1
+     405:	0f 2e c8             	ucomiss %xmm0,%xmm1
+     408:	0f 82 73 06 00 00    	jb     a81 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x881>
+     40e:	48 8d bc 24 a0 01 00 	lea    0x1a0(%rsp),%rdi
+     415:	00 
+     416:	e8 00 00 00 00       	callq  41b <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x21b>
+     41b:	48 8d bc 24 40 01 00 	lea    0x140(%rsp),%rdi
+     422:	00 
+     423:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+     428:	48 8b 48 70          	mov    0x70(%rax),%rcx
+     42c:	4c 8b 40 78          	mov    0x78(%rax),%r8
+     430:	4c 89 f6             	mov    %r14,%rsi
+     433:	48 89 da             	mov    %rbx,%rdx
+     436:	e8 00 00 00 00       	callq  43b <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x23b>
+     43b:	48 8d bc 24 40 01 00 	lea    0x140(%rsp),%rdi
+     442:	00 
+     443:	4c 89 f6             	mov    %r14,%rsi
+     446:	e8 00 00 00 00       	callq  44b <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x24b>
+     44b:	48 8d bc 24 40 01 00 	lea    0x140(%rsp),%rdi
+     452:	00 
+     453:	48 89 de             	mov    %rbx,%rsi
+     456:	e8 00 00 00 00       	callq  45b <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x25b>
+     45b:	41 80 3c 24 00       	cmpb   $0x0,(%r12)
+     460:	74 1b                	je     47d <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x27d>
+     462:	f3 0f 10 05 00 00 00 	movss  0x0(%rip),%xmm0        # 46a <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x26a>
+     469:	00 
+     46a:	f3 0f 11 84 24 20 02 	movss  %xmm0,0x220(%rsp)
+     471:	00 00 
+     473:	eb 5c                	jmp    4d1 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x2d1>
+     475:	48 89 c3             	mov    %rax,%rbx
+     478:	e9 ef 05 00 00       	jmpq   a6c <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x86c>
+     47d:	49 8b 06             	mov    (%r14),%rax
+     480:	48 8b 40 58          	mov    0x58(%rax),%rax
+     484:	4c 89 f7             	mov    %r14,%rdi
+     487:	ff d0                	callq  *%rax
+     489:	f3 0f 11 44 24 58    	movss  %xmm0,0x58(%rsp)
+     48f:	eb 00                	jmp    491 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x291>
+     491:	48 8b 03             	mov    (%rbx),%rax
+     494:	48 8b 40 58          	mov    0x58(%rax),%rax
+     498:	48 89 df             	mov    %rbx,%rdi
+     49b:	ff d0                	callq  *%rax
+     49d:	eb 00                	jmp    49f <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x29f>
+     49f:	49 8b 7d 00          	mov    0x0(%r13),%rdi
+     4a3:	f3 0f 11 44 24 44    	movss  %xmm0,0x44(%rsp)
+     4a9:	e8 00 00 00 00       	callq  4ae <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x2ae>
+     4ae:	f3 0f 10 54 24 44    	movss  0x44(%rsp),%xmm2
+     4b4:	eb 00                	jmp    4b6 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x2b6>
+     4b6:	f3 0f 10 4c 24 58    	movss  0x58(%rsp),%xmm1
+     4bc:	f3 0f 58 ca          	addss  %xmm2,%xmm1
+     4c0:	f3 0f 58 c8          	addss  %xmm0,%xmm1
+     4c4:	f3 0f 59 c9          	mulss  %xmm1,%xmm1
+     4c8:	f3 0f 11 8c 24 20 02 	movss  %xmm1,0x220(%rsp)
+     4cf:	00 00 
+     4d1:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+     4d6:	48 8b 40 30          	mov    0x30(%rax),%rax
+     4da:	48 89 84 24 28 02 00 	mov    %rax,0x228(%rsp)
+     4e1:	00 
+     4e2:	48 8b 7c 24 18       	mov    0x18(%rsp),%rdi
+     4e7:	e8 00 00 00 00       	callq  4ec <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x2ec>
+     4ec:	4c 8d ac 24 a0 01 00 	lea    0x1a0(%rsp),%r13
+     4f3:	00 
+     4f4:	4c 89 ef             	mov    %r13,%rdi
+     4f7:	48 89 c6             	mov    %rax,%rsi
+     4fa:	e8 00 00 00 00       	callq  4ff <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x2ff>
+     4ff:	eb 00                	jmp    501 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x301>
+     501:	4c 89 ff             	mov    %r15,%rdi
+     504:	e8 00 00 00 00       	callq  509 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x309>
+     509:	48 8d bc 24 e0 01 00 	lea    0x1e0(%rsp),%rdi
+     510:	00 
+     511:	48 89 c6             	mov    %rax,%rsi
+     514:	e8 00 00 00 00       	callq  519 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x319>
+     519:	eb 00                	jmp    51b <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x31b>
+     51b:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+     520:	48 89 c8             	mov    %rcx,%rax
+     523:	48 83 c0 18          	add    $0x18,%rax
+     527:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+     52c:	48 8b 49 18          	mov    0x18(%rcx),%rcx
+     530:	48 8d bc 24 40 01 00 	lea    0x140(%rsp),%rdi
+     537:	00 
+     538:	48 8d b4 24 a0 01 00 	lea    0x1a0(%rsp),%rsi
+     53f:	00 
+     540:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+     545:	45 31 c0             	xor    %r8d,%r8d
+     548:	e8 00 00 00 00       	callq  54d <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x34d>
+     54d:	eb 00                	jmp    54f <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x34f>
+     54f:	48 8d bc 24 00 01 00 	lea    0x100(%rsp),%rdi
+     556:	00 
+     557:	e8 00 00 00 00       	callq  55c <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x35c>
+     55c:	48 8d bc 24 30 01 00 	lea    0x130(%rsp),%rdi
+     563:	00 
+     564:	e8 00 00 00 00       	callq  569 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x369>
+     569:	48 8d bc 24 80 00 00 	lea    0x80(%rsp),%rdi
+     570:	00 
+     571:	e8 00 00 00 00       	callq  576 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x376>
+     576:	41 80 3c 24 00       	cmpb   $0x0,(%r12)
+     57b:	0f 57 c0             	xorps  %xmm0,%xmm0
+     57e:	0f 84 a5 00 00 00    	je     629 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x429>
+     584:	48 8d bc 24 40 01 00 	lea    0x140(%rsp),%rdi
+     58b:	00 
+     58c:	e8 00 00 00 00       	callq  591 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x391>
+     591:	f3 0f 10 0d 00 00 00 	movss  0x0(%rip),%xmm1        # 599 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x399>
+     598:	00 
+     599:	0f 2e c1             	ucomiss %xmm1,%xmm0
+     59c:	77 05                	ja     5a3 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3a3>
+     59e:	e9 86 00 00 00       	jmpq   629 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x429>
+     5a3:	f3 0f 11 44 24 0c    	movss  %xmm0,0xc(%rsp)
+     5a9:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+     5ae:	f3 0f 10 40 2c       	movss  0x2c(%rax),%xmm0
+     5b3:	f3 0f 11 44 24 48    	movss  %xmm0,0x48(%rsp)
+     5b9:	48 8d bc 24 40 01 00 	lea    0x140(%rsp),%rdi
+     5c0:	00 
+     5c1:	e8 00 00 00 00       	callq  5c6 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3c6>
+     5c6:	48 89 c7             	mov    %rax,%rdi
+     5c9:	e8 00 00 00 00       	callq  5ce <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3ce>
+     5ce:	eb 00                	jmp    5d0 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3d0>
+     5d0:	f3 0f 10 54 24 0c    	movss  0xc(%rsp),%xmm2
+     5d6:	f3 0f 58 54 24 48    	addss  0x48(%rsp),%xmm2
+     5dc:	f3 0f 11 54 24 0c    	movss  %xmm2,0xc(%rsp)
+     5e2:	66 0f 13 84 24 80 00 	movlpd %xmm0,0x80(%rsp)
+     5e9:	00 00 
+     5eb:	66 0f 13 8c 24 88 00 	movlpd %xmm1,0x88(%rsp)
+     5f2:	00 00 
+     5f4:	48 8d bc 24 80 00 00 	lea    0x80(%rsp),%rdi
+     5fb:	00 
+     5fc:	48 8d b4 24 00 01 00 	lea    0x100(%rsp),%rsi
+     603:	00 
+     604:	48 8d 94 24 30 01 00 	lea    0x130(%rsp),%rdx
+     60b:	00 
+     60c:	e8 00 00 00 00       	callq  611 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x411>
+     611:	f3 0f 10 44 24 0c    	movss  0xc(%rsp),%xmm0
+     617:	eb 10                	jmp    629 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x429>
+     619:	48 89 c3             	mov    %rax,%rbx
+     61c:	e9 4b 04 00 00       	jmpq   a6c <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x86c>
+     621:	48 89 c3             	mov    %rax,%rbx
+     624:	e9 43 04 00 00       	jmpq   a6c <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x86c>
+     629:	f3 0f 11 44 24 0c    	movss  %xmm0,0xc(%rsp)
+     62f:	48 8b 7c 24 38       	mov    0x38(%rsp),%rdi
+     634:	e8 00 00 00 00       	callq  639 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x439>
+     639:	48 89 c7             	mov    %rax,%rdi
+     63c:	e8 00 00 00 00       	callq  641 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x441>
+     641:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+     646:	3b 81 98 00 00 00    	cmp    0x98(%rcx),%eax
+     64c:	0f 8d a9 03 00 00    	jge    9fb <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7fb>
+     652:	48 8d 44 24 2c       	lea    0x2c(%rsp),%rax
+     657:	49 8b 06             	mov    (%r14),%rax
+     65a:	48 8b 40 20          	mov    0x20(%rax),%rax
+     65e:	4c 89 f7             	mov    %r14,%rdi
+     661:	ff d0                	callq  *%rax
+     663:	eb 00                	jmp    665 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x465>
+     665:	f3 0f 11 44 24 4c    	movss  %xmm0,0x4c(%rsp)
+     66b:	48 8b 03             	mov    (%rbx),%rax
+     66e:	48 8b 40 20          	mov    0x20(%rax),%rax
+     672:	48 89 df             	mov    %rbx,%rdi
+     675:	ff d0                	callq  *%rax
+     677:	eb 00                	jmp    679 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x479>
+     679:	4d 89 ee             	mov    %r13,%r14
+     67c:	f3 0f 10 54 24 4c    	movss  0x4c(%rsp),%xmm2
+     682:	0f 2e c2             	ucomiss %xmm2,%xmm0
+     685:	41 0f 97 c5          	seta   %r13b
+     689:	f3 0f 10 0d 00 00 00 	movss  0x0(%rip),%xmm1        # 691 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x491>
+     690:	00 
+     691:	f3 0f 5d d0          	minss  %xmm0,%xmm2
+     695:	41 f6 dd             	neg    %r13b
+     698:	f3 0f 5e ca          	divss  %xmm2,%xmm1
+     69c:	f3 0f 10 05 00 00 00 	movss  0x0(%rip),%xmm0        # 6a4 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x4a4>
+     6a3:	00 
+     6a4:	f3 0f 5d c1          	minss  %xmm1,%xmm0
+     6a8:	f3 0f 11 44 24 2c    	movss  %xmm0,0x2c(%rsp)
+     6ae:	48 8d bc 24 30 02 00 	lea    0x230(%rsp),%rdi
+     6b5:	00 
+     6b6:	e8 00 00 00 00       	callq  6bb <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x4bb>
+     6bb:	eb 10                	jmp    6cd <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x4cd>
+     6bd:	48 89 c3             	mov    %rax,%rbx
+     6c0:	e9 34 03 00 00       	jmpq   9f9 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7f9>
+     6c5:	48 89 c3             	mov    %rax,%rbx
+     6c8:	e9 2c 03 00 00       	jmpq   9f9 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7f9>
+     6cd:	41 f6 c5 01          	test   $0x1,%r13b
+     6d1:	75 02                	jne    6d5 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x4d5>
+     6d3:	eb 1a                	jmp    6ef <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x4ef>
+     6d5:	48 8d bc 24 30 02 00 	lea    0x230(%rsp),%rdi
+     6dc:	00 
+     6dd:	4c 89 f6             	mov    %r14,%rsi
+     6e0:	e8 00 00 00 00       	callq  6e5 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x4e5>
+     6e5:	eb 1f                	jmp    706 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x506>
+     6e7:	48 89 c3             	mov    %rax,%rbx
+     6ea:	e9 0a 03 00 00       	jmpq   9f9 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7f9>
+     6ef:	48 8d bc 24 30 02 00 	lea    0x230(%rsp),%rdi
+     6f6:	00 
+     6f7:	48 8d b4 24 e0 01 00 	lea    0x1e0(%rsp),%rsi
+     6fe:	00 
+     6ff:	e8 00 00 00 00       	callq  704 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x504>
+     704:	eb 00                	jmp    706 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x506>
+     706:	31 c9                	xor    %ecx,%ecx
+     708:	eb 00                	jmp    70a <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x50a>
+     70a:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+     70f:	48 89 c3             	mov    %rax,%rbx
+     712:	48 81 c3 94 00 00 00 	add    $0x94,%rbx
+     719:	3b 88 94 00 00 00    	cmp    0x94(%rax),%ecx
+     71f:	0f 8d d2 02 00 00    	jge    9f7 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7f7>
+     725:	89 4c 24 28          	mov    %ecx,0x28(%rsp)
+     729:	48 8d bc 24 f0 00 00 	lea    0xf0(%rsp),%rdi
+     730:	00 
+     731:	48 8d b4 24 00 01 00 	lea    0x100(%rsp),%rsi
+     738:	00 
+     739:	48 8d 54 24 2c       	lea    0x2c(%rsp),%rdx
+     73e:	e8 00 00 00 00       	callq  743 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x543>
+     743:	eb 00                	jmp    745 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x545>
+     745:	48 8d 54 24 64       	lea    0x64(%rsp),%rdx
+     74a:	f3 0f 2a 44 24 28    	cvtsi2ssl 0x28(%rsp),%xmm0
+     750:	f3 0f 2a 0b          	cvtsi2ssl (%rbx),%xmm1
+     754:	f3 0f 10 15 00 00 00 	movss  0x0(%rip),%xmm2        # 75c <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x55c>
+     75b:	00 
+     75c:	f3 0f 5e d1          	divss  %xmm1,%xmm2
+     760:	f3 0f 59 d0          	mulss  %xmm0,%xmm2
+     764:	f3 0f 11 54 24 64    	movss  %xmm2,0x64(%rsp)
+     76a:	48 8d 7c 24 70       	lea    0x70(%rsp),%rdi
+     76f:	48 8d b4 24 80 00 00 	lea    0x80(%rsp),%rsi
+     776:	00 
+     777:	e8 00 00 00 00       	callq  77c <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x57c>
+     77c:	eb 00                	jmp    77e <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x57e>
+     77e:	41 f6 c5 01          	test   $0x1,%r13b
+     782:	75 05                	jne    789 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x589>
+     784:	e9 f5 00 00 00       	jmpq   87e <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x67e>
+     789:	48 8d 7c 24 70       	lea    0x70(%rsp),%rdi
+     78e:	e8 00 00 00 00       	callq  793 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x593>
+     793:	eb 00                	jmp    795 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x595>
+     795:	66 0f 13 84 24 c0 00 	movlpd %xmm0,0xc0(%rsp)
+     79c:	00 00 
+     79e:	66 0f 13 8c 24 c8 00 	movlpd %xmm1,0xc8(%rsp)
+     7a5:	00 00 
+     7a7:	48 8d b4 24 f0 00 00 	lea    0xf0(%rsp),%rsi
+     7ae:	00 
+     7af:	48 8d bc 24 c0 00 00 	lea    0xc0(%rsp),%rdi
+     7b6:	00 
+     7b7:	e8 00 00 00 00       	callq  7bc <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x5bc>
+     7bc:	eb 00                	jmp    7be <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x5be>
+     7be:	66 0f 13 84 24 d0 00 	movlpd %xmm0,0xd0(%rsp)
+     7c5:	00 00 
+     7c7:	66 0f 13 8c 24 d8 00 	movlpd %xmm1,0xd8(%rsp)
+     7ce:	00 00 
+     7d0:	48 8d 74 24 70       	lea    0x70(%rsp),%rsi
+     7d5:	48 8d bc 24 d0 00 00 	lea    0xd0(%rsp),%rdi
+     7dc:	00 
+     7dd:	e8 00 00 00 00       	callq  7e2 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x5e2>
+     7e2:	eb 00                	jmp    7e4 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x5e4>
+     7e4:	66 0f 13 84 24 e0 00 	movlpd %xmm0,0xe0(%rsp)
+     7eb:	00 00 
+     7ed:	66 0f 13 8c 24 e8 00 	movlpd %xmm1,0xe8(%rsp)
+     7f4:	00 00 
+     7f6:	48 8d bc 24 d0 02 00 	lea    0x2d0(%rsp),%rdi
+     7fd:	00 
+     7fe:	48 8d b4 24 e0 00 00 	lea    0xe0(%rsp),%rsi
+     805:	00 
+     806:	e8 00 00 00 00       	callq  80b <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x60b>
+     80b:	eb 00                	jmp    80d <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x60d>
+     80d:	48 8b 7c 24 18       	mov    0x18(%rsp),%rdi
+     812:	e8 00 00 00 00       	callq  817 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x617>
+     817:	48 89 c7             	mov    %rax,%rdi
+     81a:	e8 00 00 00 00       	callq  81f <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x61f>
+     81f:	48 8d bc 24 00 03 00 	lea    0x300(%rsp),%rdi
+     826:	00 
+     827:	48 8d b4 24 d0 02 00 	lea    0x2d0(%rsp),%rsi
+     82e:	00 
+     82f:	48 89 c2             	mov    %rax,%rdx
+     832:	e8 00 00 00 00       	callq  837 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x637>
+     837:	eb 00                	jmp    839 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x639>
+     839:	48 8d b4 24 00 03 00 	lea    0x300(%rsp),%rsi
+     840:	00 
+     841:	4c 89 f7             	mov    %r14,%rdi
+     844:	e8 00 00 00 00       	callq  849 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x649>
+     849:	4c 89 ff             	mov    %r15,%rdi
+     84c:	e8 00 00 00 00       	callq  851 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x651>
+     851:	48 8d bc 24 e0 01 00 	lea    0x1e0(%rsp),%rdi
+     858:	00 
+     859:	48 89 c6             	mov    %rax,%rsi
+     85c:	e8 00 00 00 00       	callq  861 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x661>
+     861:	e9 fc 00 00 00       	jmpq   962 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x762>
+     866:	48 89 c3             	mov    %rax,%rbx
+     869:	e9 87 01 00 00       	jmpq   9f5 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7f5>
+     86e:	48 89 c3             	mov    %rax,%rbx
+     871:	e9 7f 01 00 00       	jmpq   9f5 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7f5>
+     876:	48 89 c3             	mov    %rax,%rbx
+     879:	e9 77 01 00 00       	jmpq   9f5 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7f5>
+     87e:	48 8b 7c 24 18       	mov    0x18(%rsp),%rdi
+     883:	e8 00 00 00 00       	callq  888 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x688>
+     888:	4c 89 f7             	mov    %r14,%rdi
+     88b:	48 89 c6             	mov    %rax,%rsi
+     88e:	e8 00 00 00 00       	callq  893 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x693>
+     893:	eb 00                	jmp    895 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x695>
+     895:	48 8d 7c 24 70       	lea    0x70(%rsp),%rdi
+     89a:	e8 00 00 00 00       	callq  89f <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x69f>
+     89f:	eb 00                	jmp    8a1 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x6a1>
+     8a1:	66 0f 13 84 24 90 00 	movlpd %xmm0,0x90(%rsp)
+     8a8:	00 00 
+     8aa:	66 0f 13 8c 24 98 00 	movlpd %xmm1,0x98(%rsp)
+     8b1:	00 00 
+     8b3:	48 8d b4 24 f0 00 00 	lea    0xf0(%rsp),%rsi
+     8ba:	00 
+     8bb:	48 8d bc 24 90 00 00 	lea    0x90(%rsp),%rdi
+     8c2:	00 
+     8c3:	e8 00 00 00 00       	callq  8c8 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x6c8>
+     8c8:	eb 00                	jmp    8ca <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x6ca>
+     8ca:	66 0f 13 84 24 a0 00 	movlpd %xmm0,0xa0(%rsp)
+     8d1:	00 00 
+     8d3:	66 0f 13 8c 24 a8 00 	movlpd %xmm1,0xa8(%rsp)
+     8da:	00 00 
+     8dc:	48 8d 74 24 70       	lea    0x70(%rsp),%rsi
+     8e1:	48 8d bc 24 a0 00 00 	lea    0xa0(%rsp),%rdi
+     8e8:	00 
+     8e9:	e8 00 00 00 00       	callq  8ee <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x6ee>
+     8ee:	eb 00                	jmp    8f0 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x6f0>
+     8f0:	66 0f 13 84 24 b0 00 	movlpd %xmm0,0xb0(%rsp)
+     8f7:	00 00 
+     8f9:	66 0f 13 8c 24 b8 00 	movlpd %xmm1,0xb8(%rsp)
+     900:	00 00 
+     902:	48 8d bc 24 70 02 00 	lea    0x270(%rsp),%rdi
+     909:	00 
+     90a:	48 8d b4 24 b0 00 00 	lea    0xb0(%rsp),%rsi
+     911:	00 
+     912:	e8 00 00 00 00       	callq  917 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x717>
+     917:	eb 00                	jmp    919 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x719>
+     919:	4c 89 ff             	mov    %r15,%rdi
+     91c:	e8 00 00 00 00       	callq  921 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x721>
+     921:	48 89 c7             	mov    %rax,%rdi
+     924:	e8 00 00 00 00       	callq  929 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x729>
+     929:	48 8d bc 24 a0 02 00 	lea    0x2a0(%rsp),%rdi
+     930:	00 
+     931:	48 8d b4 24 70 02 00 	lea    0x270(%rsp),%rsi
+     938:	00 
+     939:	48 89 c2             	mov    %rax,%rdx
+     93c:	e8 00 00 00 00       	callq  941 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x741>
+     941:	eb 00                	jmp    943 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x743>
+     943:	48 8d bc 24 e0 01 00 	lea    0x1e0(%rsp),%rdi
+     94a:	00 
+     94b:	48 8d b4 24 a0 02 00 	lea    0x2a0(%rsp),%rsi
+     952:	00 
+     953:	e8 00 00 00 00       	callq  958 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x758>
+     958:	eb 08                	jmp    962 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x762>
+     95a:	48 89 c3             	mov    %rax,%rbx
+     95d:	e9 93 00 00 00       	jmpq   9f5 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7f5>
+     962:	48 8d bc 24 30 03 00 	lea    0x330(%rsp),%rdi
+     969:	00 
+     96a:	48 8b 44 24 68       	mov    0x68(%rsp),%rax
+     96f:	48 8b 00             	mov    (%rax),%rax
+     972:	48 89 04 24          	mov    %rax,(%rsp)
+     976:	45 0f b6 cd          	movzbl %r13b,%r9d
+     97a:	41 83 e1 01          	and    $0x1,%r9d
+     97e:	4c 8d 84 24 30 02 00 	lea    0x230(%rsp),%r8
+     985:	00 
+     986:	48 8b 74 24 38       	mov    0x38(%rsp),%rsi
+     98b:	4c 89 f2             	mov    %r14,%rdx
+     98e:	48 8d 8c 24 e0 01 00 	lea    0x1e0(%rsp),%rcx
+     995:	00 
+     996:	e8 00 00 00 00       	callq  99b <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x79b>
+     99b:	eb 00                	jmp    99d <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x79d>
+     99d:	48 8b 44 24 68       	mov    0x68(%rsp),%rax
+     9a2:	48 8b 08             	mov    (%rax),%rcx
+     9a5:	48 8d bc 24 40 01 00 	lea    0x140(%rsp),%rdi
+     9ac:	00 
+     9ad:	48 8d b4 24 a0 01 00 	lea    0x1a0(%rsp),%rsi
+     9b4:	00 
+     9b5:	48 8d 94 24 30 03 00 	lea    0x330(%rsp),%rdx
+     9bc:	00 
+     9bd:	45 31 c0             	xor    %r8d,%r8d
+     9c0:	e8 00 00 00 00       	callq  9c5 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7c5>
+     9c5:	eb 00                	jmp    9c7 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7c7>
+     9c7:	48 8d bc 24 30 03 00 	lea    0x330(%rsp),%rdi
+     9ce:	00 
+     9cf:	e8 00 00 00 00       	callq  9d4 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7d4>
+     9d4:	8b 4c 24 28          	mov    0x28(%rsp),%ecx
+     9d8:	83 c1 01             	add    $0x1,%ecx
+     9db:	e9 2a fd ff ff       	jmpq   70a <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x50a>
+     9e0:	48 89 c3             	mov    %rax,%rbx
+     9e3:	eb 10                	jmp    9f5 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7f5>
+     9e5:	48 89 c3             	mov    %rax,%rbx
+     9e8:	48 8d bc 24 30 03 00 	lea    0x330(%rsp),%rdi
+     9ef:	00 
+     9f0:	e8 00 00 00 00       	callq  9f5 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7f5>
+     9f5:	eb 02                	jmp    9f9 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7f9>
+     9f7:	eb 02                	jmp    9fb <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7fb>
+     9f9:	eb 71                	jmp    a6c <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x86c>
+     9fb:	f3 0f 10 05 00 00 00 	movss  0x0(%rip),%xmm0        # a03 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x803>
+     a02:	00 
+     a03:	41 80 3c 24 00       	cmpb   $0x0,(%r12)
+     a08:	0f 95 c0             	setne  %al
+     a0b:	f3 0f 10 4c 24 0c    	movss  0xc(%rsp),%xmm1
+     a11:	0f 2e c8             	ucomiss %xmm0,%xmm1
+     a14:	0f 97 c1             	seta   %cl
+     a17:	20 c8                	and    %cl,%al
+     a19:	a8 01                	test   $0x1,%al
+     a1b:	75 02                	jne    a1f <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x81f>
+     a1d:	eb 3e                	jmp    a5d <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x85d>
+     a1f:	48 8d bc 24 40 01 00 	lea    0x140(%rsp),%rdi
+     a26:	00 
+     a27:	e8 00 00 00 00       	callq  a2c <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x82c>
+     a2c:	49 89 c6             	mov    %rax,%r14
+     a2f:	48 8b 7c 24 18       	mov    0x18(%rsp),%rdi
+     a34:	e8 00 00 00 00       	callq  a39 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x839>
+     a39:	48 89 c3             	mov    %rax,%rbx
+     a3c:	4c 89 ff             	mov    %r15,%rdi
+     a3f:	e8 00 00 00 00       	callq  a44 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x844>
+     a44:	48 89 ef             	mov    %rbp,%rdi
+     a47:	4c 89 f6             	mov    %r14,%rsi
+     a4a:	f3 0f 10 44 24 0c    	movss  0xc(%rsp),%xmm0
+     a50:	48 89 da             	mov    %rbx,%rdx
+     a53:	48 89 c1             	mov    %rax,%rcx
+     a56:	e8 00 00 00 00       	callq  a5b <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x85b>
+     a5b:	eb 00                	jmp    a5d <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x85d>
+     a5d:	48 8d bc 24 40 01 00 	lea    0x140(%rsp),%rdi
+     a64:	00 
+     a65:	e8 00 00 00 00       	callq  a6a <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x86a>
+     a6a:	eb 15                	jmp    a81 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x881>
+     a6c:	48 8d bc 24 40 01 00 	lea    0x140(%rsp),%rdi
+     a73:	00 
+     a74:	e8 00 00 00 00       	callq  a79 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x879>
+     a79:	48 89 df             	mov    %rbx,%rdi
+     a7c:	e8 00 00 00 00       	callq  a81 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x881>
+     a81:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+     a86:	80 b8 80 00 00 00 00 	cmpb   $0x0,0x80(%rax)
+     a8d:	74 0a                	je     a99 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x899>
+     a8f:	48 8b 7c 24 38       	mov    0x38(%rsp),%rdi
+     a94:	e8 00 00 00 00       	callq  a99 <_ZN23btConvexConvexAlgorithm16processCollisionEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x899>
+     a99:	48 81 c4 b8 04 00 00 	add    $0x4b8,%rsp
+     aa0:	5b                   	pop    %rbx
+     aa1:	41 5c                	pop    %r12
+     aa3:	41 5d                	pop    %r13
+     aa5:	41 5e                	pop    %r14
+     aa7:	41 5f                	pop    %r15
+     aa9:	5d                   	pop    %rbp
+     aaa:	c3                   	retq   
+     aab:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000000ab0 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f>:
+     ab0:	55                   	push   %rbp
+     ab1:	41 57                	push   %r15
+     ab3:	41 56                	push   %r14
+     ab5:	41 55                	push   %r13
+     ab7:	41 54                	push   %r12
+     ab9:	53                   	push   %rbx
+     aba:	48 81 ec f8 00 00 00 	sub    $0xf8,%rsp
+     ac1:	f3 0f 11 64 24 28    	movss  %xmm4,0x28(%rsp)
+     ac7:	4c 89 cb             	mov    %r9,%rbx
+     aca:	4c 89 c5             	mov    %r8,%rbp
+     acd:	41 89 cf             	mov    %ecx,%r15d
+     ad0:	41 89 d6             	mov    %edx,%r14d
+     ad3:	f3 0f 11 54 24 20    	movss  %xmm2,0x20(%rsp)
+     ad9:	f3 0f 11 4c 24 24    	movss  %xmm1,0x24(%rsp)
+     adf:	f3 0f 11 44 24 1c    	movss  %xmm0,0x1c(%rsp)
+     ae5:	48 89 74 24 40       	mov    %rsi,0x40(%rsp)
+     aea:	49 89 fd             	mov    %rdi,%r13
+     aed:	4c 8d a4 24 a0 00 00 	lea    0xa0(%rsp),%r12
+     af4:	00 
+     af5:	f3 0f 11 5c 24 14    	movss  %xmm3,0x14(%rsp)
+     afb:	48 89 ef             	mov    %rbp,%rdi
+     afe:	e8 00 00 00 00       	callq  b03 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x53>
+     b03:	48 89 c7             	mov    %rax,%rdi
+     b06:	44 89 f6             	mov    %r14d,%esi
+     b09:	e8 00 00 00 00       	callq  b0e <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x5e>
+     b0e:	66 0f 13 84 24 a0 00 	movlpd %xmm0,0xa0(%rsp)
+     b15:	00 00 
+     b17:	66 0f 13 8c 24 a8 00 	movlpd %xmm1,0xa8(%rsp)
+     b1e:	00 00 
+     b20:	4c 8d b4 24 c0 00 00 	lea    0xc0(%rsp),%r14
+     b27:	00 
+     b28:	48 89 ef             	mov    %rbp,%rdi
+     b2b:	e8 00 00 00 00       	callq  b30 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x80>
+     b30:	0f 10 00             	movups (%rax),%xmm0
+     b33:	0f 29 84 24 c0 00 00 	movaps %xmm0,0xc0(%rsp)
+     b3a:	00 
+     b3b:	48 89 df             	mov    %rbx,%rdi
+     b3e:	e8 00 00 00 00       	callq  b43 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x93>
+     b43:	48 89 c7             	mov    %rax,%rdi
+     b46:	44 89 fe             	mov    %r15d,%esi
+     b49:	4d 89 e7             	mov    %r12,%r15
+     b4c:	e8 00 00 00 00       	callq  b51 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0xa1>
+     b51:	66 0f 13 84 24 90 00 	movlpd %xmm0,0x90(%rsp)
+     b58:	00 00 
+     b5a:	66 0f 13 8c 24 98 00 	movlpd %xmm1,0x98(%rsp)
+     b61:	00 00 
+     b63:	48 8d ac 24 b0 00 00 	lea    0xb0(%rsp),%rbp
+     b6a:	00 
+     b6b:	48 89 df             	mov    %rbx,%rdi
+     b6e:	e8 00 00 00 00       	callq  b73 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0xc3>
+     b73:	0f 10 00             	movups (%rax),%xmm0
+     b76:	0f 29 84 24 b0 00 00 	movaps %xmm0,0xb0(%rsp)
+     b7d:	00 
+     b7e:	48 89 ef             	mov    %rbp,%rdi
+     b81:	4c 89 f6             	mov    %r14,%rsi
+     b84:	e8 00 00 00 00       	callq  b89 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0xd9>
+     b89:	66 0f 13 84 24 80 00 	movlpd %xmm0,0x80(%rsp)
+     b90:	00 00 
+     b92:	66 0f 13 8c 24 88 00 	movlpd %xmm1,0x88(%rsp)
+     b99:	00 00 
+     b9b:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+     ba0:	e8 00 00 00 00       	callq  ba5 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0xf5>
+     ba5:	48 8d bc 24 e8 00 00 	lea    0xe8(%rsp),%rdi
+     bac:	00 
+     bad:	e8 00 00 00 00       	callq  bb2 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x102>
+     bb2:	48 8d 7c 24 70       	lea    0x70(%rsp),%rdi
+     bb7:	e8 00 00 00 00       	callq  bbc <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x10c>
+     bbc:	48 8d 4c 24 4c       	lea    0x4c(%rsp),%rcx
+     bc1:	4c 8d 44 24 48       	lea    0x48(%rsp),%r8
+     bc6:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+     bcb:	48 8d b4 24 e8 00 00 	lea    0xe8(%rsp),%rsi
+     bd2:	00 
+     bd3:	48 8d 54 24 70       	lea    0x70(%rsp),%rdx
+     bd8:	4c 8d 8c 24 80 00 00 	lea    0x80(%rsp),%r9
+     bdf:	00 
+     be0:	4c 89 3c 24          	mov    %r15,(%rsp)
+     be4:	f3 0f 10 44 24 1c    	movss  0x1c(%rsp),%xmm0
+     bea:	48 8d 84 24 90 00 00 	lea    0x90(%rsp),%rax
+     bf1:	00 
+     bf2:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+     bf7:	f3 0f 10 4c 24 20    	movss  0x20(%rsp),%xmm1
+     bfd:	e8 1e 05 00 00       	callq  1120 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f>
+     c02:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+     c07:	e8 00 00 00 00       	callq  c0c <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x15c>
+     c0c:	f3 0f 5c 44 24 24    	subss  0x24(%rsp),%xmm0
+     c12:	f3 0f 5c 44 24 14    	subss  0x14(%rsp),%xmm0
+     c18:	0f 2e 44 24 28       	ucomiss 0x28(%rsp),%xmm0
+     c1d:	76 05                	jbe    c24 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x174>
+     c1f:	e9 d5 00 00 00       	jmpq   cf9 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x249>
+     c24:	f3 0f 11 44 24 18    	movss  %xmm0,0x18(%rsp)
+     c2a:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+     c2f:	e8 00 00 00 00       	callq  c34 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x184>
+     c34:	f3 0f 10 0d 00 00 00 	movss  0x0(%rip),%xmm1        # c3c <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x18c>
+     c3b:	00 
+     c3c:	0f 2e c8             	ucomiss %xmm0,%xmm1
+     c3f:	4c 8d 64 24 60       	lea    0x60(%rsp),%r12
+     c44:	4c 8d 74 24 50       	lea    0x50(%rsp),%r14
+     c49:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+     c4e:	72 22                	jb     c72 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x1c2>
+     c50:	48 8d bc 24 d8 00 00 	lea    0xd8(%rsp),%rdi
+     c57:	00 
+     c58:	e8 00 00 00 00       	callq  c5d <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x1ad>
+     c5d:	4c 89 ff             	mov    %r15,%rdi
+     c60:	4c 89 ee             	mov    %r13,%rsi
+     c63:	48 8d 94 24 d8 00 00 	lea    0xd8(%rsp),%rdx
+     c6a:	00 
+     c6b:	e8 00 00 00 00       	callq  c70 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x1c0>
+     c70:	eb 32                	jmp    ca4 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x1f4>
+     c72:	e8 00 00 00 00       	callq  c77 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x1c7>
+     c77:	f3 0f 10 0d 00 00 00 	movss  0x0(%rip),%xmm1        # c7f <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x1cf>
+     c7e:	00 
+     c7f:	f3 0f 5e c8          	divss  %xmm0,%xmm1
+     c83:	f3 0f 11 4c 24 2c    	movss  %xmm1,0x2c(%rsp)
+     c89:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+     c8e:	48 8d 74 24 2c       	lea    0x2c(%rsp),%rsi
+     c93:	e8 00 00 00 00       	callq  c98 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x1e8>
+     c98:	66 41 0f 13 45 00    	movlpd %xmm0,0x0(%r13)
+     c9e:	66 41 0f 13 4d 08    	movlpd %xmm1,0x8(%r13)
+     ca4:	48 89 df             	mov    %rbx,%rdi
+     ca7:	e8 00 00 00 00       	callq  cac <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x1fc>
+     cac:	48 8d 74 24 70       	lea    0x70(%rsp),%rsi
+     cb1:	48 89 c7             	mov    %rax,%rdi
+     cb4:	e8 00 00 00 00       	callq  cb9 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x209>
+     cb9:	66 0f 13 44 24 60    	movlpd %xmm0,0x60(%rsp)
+     cbf:	66 0f 13 4c 24 68    	movlpd %xmm1,0x68(%rsp)
+     cc5:	48 8d 74 24 14       	lea    0x14(%rsp),%rsi
+     cca:	4c 89 ef             	mov    %r13,%rdi
+     ccd:	e8 00 00 00 00       	callq  cd2 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x222>
+     cd2:	66 0f 13 44 24 50    	movlpd %xmm0,0x50(%rsp)
+     cd8:	66 0f 13 4c 24 58    	movlpd %xmm1,0x58(%rsp)
+     cde:	4c 89 e7             	mov    %r12,%rdi
+     ce1:	4c 89 f6             	mov    %r14,%rsi
+     ce4:	e8 00 00 00 00       	callq  ce9 <_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f+0x239>
+     ce9:	66 0f 13 45 00       	movlpd %xmm0,0x0(%rbp)
+     cee:	66 0f 13 4d 08       	movlpd %xmm1,0x8(%rbp)
+     cf3:	f3 0f 10 44 24 18    	movss  0x18(%rsp),%xmm0
+     cf9:	48 81 c4 f8 00 00 00 	add    $0xf8,%rsp
+     d00:	5b                   	pop    %rbx
+     d01:	41 5c                	pop    %r12
+     d03:	41 5d                	pop    %r13
+     d05:	41 5e                	pop    %r14
+     d07:	41 5f                	pop    %r15
+     d09:	5d                   	pop    %rbp
+     d0a:	c3                   	retq   
+     d0b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000000d10 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult>:
+     d10:	41 57                	push   %r15
+     d12:	41 56                	push   %r14
+     d14:	41 55                	push   %r13
+     d16:	41 54                	push   %r12
+     d18:	53                   	push   %rbx
+     d19:	48 81 ec 40 05 00 00 	sub    $0x540,%rsp
+     d20:	49 89 d6             	mov    %rdx,%r14
+     d23:	49 89 f4             	mov    %rsi,%r12
+     d26:	4c 89 e7             	mov    %r12,%rdi
+     d29:	e8 00 00 00 00       	callq  d2e <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x1e>
+     d2e:	48 89 c7             	mov    %rax,%rdi
+     d31:	e8 00 00 00 00       	callq  d36 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x26>
+     d36:	48 89 c3             	mov    %rax,%rbx
+     d39:	4c 89 e7             	mov    %r12,%rdi
+     d3c:	e8 00 00 00 00       	callq  d41 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x31>
+     d41:	48 89 c7             	mov    %rax,%rdi
+     d44:	e8 00 00 00 00       	callq  d49 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x39>
+     d49:	48 89 df             	mov    %rbx,%rdi
+     d4c:	48 89 c6             	mov    %rax,%rsi
+     d4f:	e8 00 00 00 00       	callq  d54 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x44>
+     d54:	66 0f 13 44 24 20    	movlpd %xmm0,0x20(%rsp)
+     d5a:	66 0f 13 4c 24 28    	movlpd %xmm1,0x28(%rsp)
+     d60:	48 8d 7c 24 20       	lea    0x20(%rsp),%rdi
+     d65:	e8 00 00 00 00       	callq  d6a <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x5a>
+     d6a:	f3 0f 11 44 24 0c    	movss  %xmm0,0xc(%rsp)
+     d70:	4c 89 f7             	mov    %r14,%rdi
+     d73:	e8 00 00 00 00       	callq  d78 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x68>
+     d78:	48 89 c7             	mov    %rax,%rdi
+     d7b:	e8 00 00 00 00       	callq  d80 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x70>
+     d80:	48 89 c3             	mov    %rax,%rbx
+     d83:	4c 89 f7             	mov    %r14,%rdi
+     d86:	e8 00 00 00 00       	callq  d8b <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x7b>
+     d8b:	48 89 c7             	mov    %rax,%rdi
+     d8e:	e8 00 00 00 00       	callq  d93 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x83>
+     d93:	48 89 df             	mov    %rbx,%rdi
+     d96:	48 89 c6             	mov    %rax,%rsi
+     d99:	e8 00 00 00 00       	callq  d9e <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x8e>
+     d9e:	66 0f 13 44 24 10    	movlpd %xmm0,0x10(%rsp)
+     da4:	66 0f 13 4c 24 18    	movlpd %xmm1,0x18(%rsp)
+     daa:	48 8d 7c 24 10       	lea    0x10(%rsp),%rdi
+     daf:	e8 00 00 00 00       	callq  db4 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0xa4>
+     db4:	f3 0f 11 44 24 08    	movss  %xmm0,0x8(%rsp)
+     dba:	4c 89 e7             	mov    %r12,%rdi
+     dbd:	e8 00 00 00 00       	callq  dc2 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0xb2>
+     dc2:	0f 2e 44 24 0c       	ucomiss 0xc(%rsp),%xmm0
+     dc7:	76 1c                	jbe    de5 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0xd5>
+     dc9:	4c 89 f7             	mov    %r14,%rdi
+     dcc:	e8 00 00 00 00       	callq  dd1 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0xc1>
+     dd1:	0f 2e 44 24 08       	ucomiss 0x8(%rsp),%xmm0
+     dd6:	76 0d                	jbe    de5 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0xd5>
+     dd8:	f3 0f 10 05 00 00 00 	movss  0x0(%rip),%xmm0        # de0 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0xd0>
+     ddf:	00 
+     de0:	e9 1c 03 00 00       	jmpq   1101 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3f1>
+     de5:	f6 04 25 00 00 00 00 	testb  $0x1,0x0
+     dec:	01 
+     ded:	74 0d                	je     dfc <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0xec>
+     def:	f3 0f 10 05 00 00 00 	movss  0x0(%rip),%xmm0        # df7 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0xe7>
+     df6:	00 
+     df7:	e9 05 03 00 00       	jmpq   1101 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3f1>
+     dfc:	4c 89 e7             	mov    %r12,%rdi
+     dff:	e8 00 00 00 00       	callq  e04 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0xf4>
+     e04:	49 89 c7             	mov    %rax,%r15
+     e07:	48 8d 9c 24 b0 00 00 	lea    0xb0(%rsp),%rbx
+     e0e:	00 
+     e0f:	4c 89 f7             	mov    %r14,%rdi
+     e12:	e8 00 00 00 00       	callq  e17 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x107>
+     e17:	48 89 df             	mov    %rbx,%rdi
+     e1a:	e8 00 00 00 00       	callq  e1f <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x10f>
+     e1f:	48 8d bc 24 b0 01 00 	lea    0x1b0(%rsp),%rdi
+     e26:	00 
+     e27:	e8 00 00 00 00       	callq  e2c <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x11c>
+     e2c:	eb 00                	jmp    e2e <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x11e>
+     e2e:	48 8d bc 24 d8 03 00 	lea    0x3d8(%rsp),%rdi
+     e35:	00 
+     e36:	e8 00 00 00 00       	callq  e3b <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x12b>
+     e3b:	eb 00                	jmp    e3d <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x12d>
+     e3d:	48 8d 7c 24 50       	lea    0x50(%rsp),%rdi
+     e42:	48 8d 94 24 b0 00 00 	lea    0xb0(%rsp),%rdx
+     e49:	00 
+     e4a:	48 8d 8c 24 d8 03 00 	lea    0x3d8(%rsp),%rcx
+     e51:	00 
+     e52:	4c 89 fe             	mov    %r15,%rsi
+     e55:	e8 00 00 00 00       	callq  e5a <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x14a>
+     e5a:	eb 00                	jmp    e5c <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x14c>
+     e5c:	4c 89 e7             	mov    %r12,%rdi
+     e5f:	e8 00 00 00 00       	callq  e64 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x154>
+     e64:	49 89 c7             	mov    %rax,%r15
+     e67:	4c 89 e7             	mov    %r12,%rdi
+     e6a:	e8 00 00 00 00       	callq  e6f <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x15f>
+     e6f:	49 89 c5             	mov    %rax,%r13
+     e72:	4c 89 f7             	mov    %r14,%rdi
+     e75:	e8 00 00 00 00       	callq  e7a <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x16a>
+     e7a:	48 89 c3             	mov    %rax,%rbx
+     e7d:	4c 89 f7             	mov    %r14,%rdi
+     e80:	e8 00 00 00 00       	callq  e85 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x175>
+     e85:	48 8d 7c 24 50       	lea    0x50(%rsp),%rdi
+     e8a:	4c 8d 8c 24 b0 01 00 	lea    0x1b0(%rsp),%r9
+     e91:	00 
+     e92:	4c 89 fe             	mov    %r15,%rsi
+     e95:	4c 89 ea             	mov    %r13,%rdx
+     e98:	48 89 d9             	mov    %rbx,%rcx
+     e9b:	49 89 c0             	mov    %rax,%r8
+     e9e:	e8 00 00 00 00       	callq  ea3 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x193>
+     ea3:	eb 00                	jmp    ea5 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x195>
+     ea5:	f3 0f 10 0d 00 00 00 	movss  0x0(%rip),%xmm1        # ead <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x19d>
+     eac:	00 
+     ead:	a8 01                	test   $0x1,%al
+     eaf:	75 05                	jne    eb6 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x1a6>
+     eb1:	e9 8e 00 00 00       	jmpq   f44 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x234>
+     eb6:	4c 89 e7             	mov    %r12,%rdi
+     eb9:	e8 00 00 00 00       	callq  ebe <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x1ae>
+     ebe:	0f 28 c8             	movaps %xmm0,%xmm1
+     ec1:	48 8d 9c 24 b0 01 00 	lea    0x1b0(%rsp),%rbx
+     ec8:	00 
+     ec9:	48 81 c3 a8 00 00 00 	add    $0xa8,%rbx
+     ed0:	f3 0f 10 84 24 58 02 	movss  0x258(%rsp),%xmm0
+     ed7:	00 00 
+     ed9:	0f 2e c8             	ucomiss %xmm0,%xmm1
+     edc:	76 34                	jbe    f12 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x202>
+     ede:	4c 89 e7             	mov    %r12,%rdi
+     ee1:	e8 00 00 00 00       	callq  ee6 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x1d6>
+     ee6:	eb 2a                	jmp    f12 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x202>
+     ee8:	48 89 c3             	mov    %rax,%rbx
+     eeb:	e9 69 01 00 00       	jmpq   1059 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x349>
+     ef0:	48 89 c3             	mov    %rax,%rbx
+     ef3:	e9 54 01 00 00       	jmpq   104c <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x33c>
+     ef8:	48 89 c3             	mov    %rax,%rbx
+     efb:	e9 4c 01 00 00       	jmpq   104c <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x33c>
+     f00:	48 89 c3             	mov    %rax,%rbx
+     f03:	48 8d 7c 24 50       	lea    0x50(%rsp),%rdi
+     f08:	e8 00 00 00 00       	callq  f0d <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x1fd>
+     f0d:	e9 3a 01 00 00       	jmpq   104c <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x33c>
+     f12:	4c 89 f7             	mov    %r14,%rdi
+     f15:	e8 00 00 00 00       	callq  f1a <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x20a>
+     f1a:	0f 28 c8             	movaps %xmm0,%xmm1
+     f1d:	f3 0f 10 03          	movss  (%rbx),%xmm0
+     f21:	0f 2e c8             	ucomiss %xmm0,%xmm1
+     f24:	76 08                	jbe    f2e <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x21e>
+     f26:	4c 89 f7             	mov    %r14,%rdi
+     f29:	e8 00 00 00 00       	callq  f2e <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x21e>
+     f2e:	f3 0f 10 0d 00 00 00 	movss  0x0(%rip),%xmm1        # f36 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x226>
+     f35:	00 
+     f36:	f3 0f 10 03          	movss  (%rbx),%xmm0
+     f3a:	0f 2e c8             	ucomiss %xmm0,%xmm1
+     f3d:	76 05                	jbe    f44 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x234>
+     f3f:	0f 28 c8             	movaps %xmm0,%xmm1
+     f42:	eb 00                	jmp    f44 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x234>
+     f44:	f3 0f 11 4c 24 04    	movss  %xmm1,0x4(%rsp)
+     f4a:	48 8d 7c 24 50       	lea    0x50(%rsp),%rdi
+     f4f:	e8 00 00 00 00       	callq  f54 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x244>
+     f54:	48 8d bc 24 b0 01 00 	lea    0x1b0(%rsp),%rdi
+     f5b:	00 
+     f5c:	e8 00 00 00 00       	callq  f61 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x251>
+     f61:	48 8d bc 24 b0 00 00 	lea    0xb0(%rsp),%rdi
+     f68:	00 
+     f69:	e8 00 00 00 00       	callq  f6e <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x25e>
+     f6e:	4c 89 f7             	mov    %r14,%rdi
+     f71:	e8 00 00 00 00       	callq  f76 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x266>
+     f76:	49 89 c7             	mov    %rax,%r15
+     f79:	48 8d 5c 24 70       	lea    0x70(%rsp),%rbx
+     f7e:	4c 89 e7             	mov    %r12,%rdi
+     f81:	e8 00 00 00 00       	callq  f86 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x276>
+     f86:	48 89 df             	mov    %rbx,%rdi
+     f89:	e8 00 00 00 00       	callq  f8e <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x27e>
+     f8e:	48 8d bc 24 f0 00 00 	lea    0xf0(%rsp),%rdi
+     f95:	00 
+     f96:	e8 00 00 00 00       	callq  f9b <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x28b>
+     f9b:	eb 00                	jmp    f9d <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x28d>
+     f9d:	48 8d bc 24 70 02 00 	lea    0x270(%rsp),%rdi
+     fa4:	00 
+     fa5:	e8 00 00 00 00       	callq  faa <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x29a>
+     faa:	eb 00                	jmp    fac <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x29c>
+     fac:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+     fb1:	48 8d 74 24 70       	lea    0x70(%rsp),%rsi
+     fb6:	48 8d 8c 24 70 02 00 	lea    0x270(%rsp),%rcx
+     fbd:	00 
+     fbe:	4c 89 fa             	mov    %r15,%rdx
+     fc1:	e8 00 00 00 00       	callq  fc6 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x2b6>
+     fc6:	eb 00                	jmp    fc8 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x2b8>
+     fc8:	4c 89 e7             	mov    %r12,%rdi
+     fcb:	e8 00 00 00 00       	callq  fd0 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x2c0>
+     fd0:	49 89 c7             	mov    %rax,%r15
+     fd3:	4c 89 e7             	mov    %r12,%rdi
+     fd6:	e8 00 00 00 00       	callq  fdb <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x2cb>
+     fdb:	49 89 c5             	mov    %rax,%r13
+     fde:	4c 89 f7             	mov    %r14,%rdi
+     fe1:	e8 00 00 00 00       	callq  fe6 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x2d6>
+     fe6:	48 89 c3             	mov    %rax,%rbx
+     fe9:	4c 89 f7             	mov    %r14,%rdi
+     fec:	e8 00 00 00 00       	callq  ff1 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x2e1>
+     ff1:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+     ff6:	4c 8d 8c 24 f0 00 00 	lea    0xf0(%rsp),%r9
+     ffd:	00 
+     ffe:	4c 89 fe             	mov    %r15,%rsi
+    1001:	4c 89 ea             	mov    %r13,%rdx
+    1004:	48 89 d9             	mov    %rbx,%rcx
+    1007:	49 89 c0             	mov    %rax,%r8
+    100a:	e8 00 00 00 00       	callq  100f <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x2ff>
+    100f:	eb 00                	jmp    1011 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x301>
+    1011:	a8 01                	test   $0x1,%al
+    1013:	75 05                	jne    101a <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x30a>
+    1015:	e9 a5 00 00 00       	jmpq   10bf <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3af>
+    101a:	4c 89 e7             	mov    %r12,%rdi
+    101d:	e8 00 00 00 00       	callq  1022 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x312>
+    1022:	0f 28 c8             	movaps %xmm0,%xmm1
+    1025:	48 8d 9c 24 f0 00 00 	lea    0xf0(%rsp),%rbx
+    102c:	00 
+    102d:	48 81 c3 a8 00 00 00 	add    $0xa8,%rbx
+    1034:	f3 0f 10 84 24 98 01 	movss  0x198(%rsp),%xmm0
+    103b:	00 00 
+    103d:	0f 2e c8             	ucomiss %xmm0,%xmm1
+    1040:	76 4a                	jbe    108c <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x37c>
+    1042:	4c 89 e7             	mov    %r12,%rdi
+    1045:	e8 00 00 00 00       	callq  104a <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x33a>
+    104a:	eb 40                	jmp    108c <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x37c>
+    104c:	48 8d bc 24 b0 01 00 	lea    0x1b0(%rsp),%rdi
+    1053:	00 
+    1054:	e8 00 00 00 00       	callq  1059 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x349>
+    1059:	48 8d bc 24 b0 00 00 	lea    0xb0(%rsp),%rdi
+    1060:	00 
+    1061:	e8 00 00 00 00       	callq  1066 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x356>
+    1066:	e9 a7 00 00 00       	jmpq   1112 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x402>
+    106b:	48 89 c3             	mov    %rax,%rbx
+    106e:	e9 82 00 00 00       	jmpq   10f5 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3e5>
+    1073:	48 89 c3             	mov    %rax,%rbx
+    1076:	eb 70                	jmp    10e8 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3d8>
+    1078:	48 89 c3             	mov    %rax,%rbx
+    107b:	eb 6b                	jmp    10e8 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3d8>
+    107d:	48 89 c3             	mov    %rax,%rbx
+    1080:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+    1085:	e8 00 00 00 00       	callq  108a <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x37a>
+    108a:	eb 5c                	jmp    10e8 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3d8>
+    108c:	4c 89 f7             	mov    %r14,%rdi
+    108f:	e8 00 00 00 00       	callq  1094 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x384>
+    1094:	0f 28 c8             	movaps %xmm0,%xmm1
+    1097:	f3 0f 10 03          	movss  (%rbx),%xmm0
+    109b:	0f 2e c8             	ucomiss %xmm0,%xmm1
+    109e:	76 08                	jbe    10a8 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x398>
+    10a0:	4c 89 f7             	mov    %r14,%rdi
+    10a3:	e8 00 00 00 00       	callq  10a8 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x398>
+    10a8:	f3 0f 10 03          	movss  (%rbx),%xmm0
+    10ac:	f3 0f 10 4c 24 04    	movss  0x4(%rsp),%xmm1
+    10b2:	0f 2e c8             	ucomiss %xmm0,%xmm1
+    10b5:	76 08                	jbe    10bf <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3af>
+    10b7:	f3 0f 11 44 24 04    	movss  %xmm0,0x4(%rsp)
+    10bd:	eb 00                	jmp    10bf <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3af>
+    10bf:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+    10c4:	e8 00 00 00 00       	callq  10c9 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3b9>
+    10c9:	48 8d bc 24 f0 00 00 	lea    0xf0(%rsp),%rdi
+    10d0:	00 
+    10d1:	e8 00 00 00 00       	callq  10d6 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3c6>
+    10d6:	48 8d 7c 24 70       	lea    0x70(%rsp),%rdi
+    10db:	e8 00 00 00 00       	callq  10e0 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3d0>
+    10e0:	f3 0f 10 44 24 04    	movss  0x4(%rsp),%xmm0
+    10e6:	eb 19                	jmp    1101 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3f1>
+    10e8:	48 8d bc 24 f0 00 00 	lea    0xf0(%rsp),%rdi
+    10ef:	00 
+    10f0:	e8 00 00 00 00       	callq  10f5 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3e5>
+    10f5:	48 8d 7c 24 70       	lea    0x70(%rsp),%rdi
+    10fa:	e8 00 00 00 00       	callq  10ff <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x3ef>
+    10ff:	eb 11                	jmp    1112 <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x402>
+    1101:	48 81 c4 40 05 00 00 	add    $0x540,%rsp
+    1108:	5b                   	pop    %rbx
+    1109:	41 5c                	pop    %r12
+    110b:	41 5d                	pop    %r13
+    110d:	41 5e                	pop    %r14
+    110f:	41 5f                	pop    %r15
+    1111:	c3                   	retq   
+    1112:	48 89 df             	mov    %rbx,%rdi
+    1115:	e8 00 00 00 00       	callq  111a <_ZN23btConvexConvexAlgorithm21calculateTimeOfImpactEP17btCollisionObjectS1_RK16btDispatcherInfoP16btManifoldResult+0x40a>
+    111a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000001120 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f>:
+    1120:	55                   	push   %rbp
+    1121:	41 57                	push   %r15
+    1123:	41 56                	push   %r14
+    1125:	41 55                	push   %r13
+    1127:	41 54                	push   %r12
+    1129:	53                   	push   %rbx
+    112a:	48 83 ec 48          	sub    $0x48,%rsp
+    112e:	f3 0f 11 4c 24 0c    	movss  %xmm1,0xc(%rsp)
+    1134:	f3 0f 11 44 24 14    	movss  %xmm0,0x14(%rsp)
+    113a:	4d 89 cc             	mov    %r9,%r12
+    113d:	4c 89 44 24 28       	mov    %r8,0x28(%rsp)
+    1142:	48 89 cd             	mov    %rcx,%rbp
+    1145:	48 89 54 24 18       	mov    %rdx,0x18(%rsp)
+    114a:	48 89 74 24 20       	mov    %rsi,0x20(%rsp)
+    114f:	49 89 ff             	mov    %rdi,%r15
+    1152:	4c 8b b4 24 88 00 00 	mov    0x88(%rsp),%r14
+    1159:	00 
+    115a:	48 8b 9c 24 80 00 00 	mov    0x80(%rsp),%rbx
+    1161:	00 
+    1162:	48 89 df             	mov    %rbx,%rdi
+    1165:	4c 89 f6             	mov    %r14,%rsi
+    1168:	e8 00 00 00 00       	callq  116d <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x4d>
+    116d:	f3 0f 11 44 24 34    	movss  %xmm0,0x34(%rsp)
+    1173:	48 89 df             	mov    %rbx,%rdi
+    1176:	4c 89 e6             	mov    %r12,%rsi
+    1179:	e8 00 00 00 00       	callq  117e <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x5e>
+    117e:	f3 0f 11 44 24 10    	movss  %xmm0,0x10(%rsp)
+    1184:	4c 89 f7             	mov    %r14,%rdi
+    1187:	4d 89 e5             	mov    %r12,%r13
+    118a:	4c 89 e6             	mov    %r12,%rsi
+    118d:	e8 00 00 00 00       	callq  1192 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x72>
+    1192:	f3 0f 10 64 24 34    	movss  0x34(%rsp),%xmm4
+    1198:	f3 0f 10 0d 00 00 00 	movss  0x0(%rip),%xmm1        # 11a0 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x80>
+    119f:	00 
+    11a0:	0f 28 d4             	movaps %xmm4,%xmm2
+    11a3:	f3 0f 59 d2          	mulss  %xmm2,%xmm2
+    11a7:	f3 0f 5c ca          	subss  %xmm2,%xmm1
+    11ab:	0f 57 d2             	xorps  %xmm2,%xmm2
+    11ae:	0f 2e ca             	ucomiss %xmm2,%xmm1
+    11b1:	75 3b                	jne    11ee <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0xce>
+    11b3:	7a 39                	jp     11ee <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0xce>
+    11b5:	0f 57 c9             	xorps  %xmm1,%xmm1
+    11b8:	f3 0f 11 4d 00       	movss  %xmm1,0x0(%rbp)
+    11bd:	4c 8b 74 24 18       	mov    0x18(%rsp),%r14
+    11c2:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+    11c7:	4d 89 ec             	mov    %r13,%r12
+    11ca:	4c 8b 6c 24 20       	mov    0x20(%rsp),%r13
+    11cf:	48 8b bc 24 80 00 00 	mov    0x80(%rsp),%rdi
+    11d6:	00 
+    11d7:	f3 0f 10 5c 24 14    	movss  0x14(%rsp),%xmm3
+    11dd:	f3 0f 10 54 24 0c    	movss  0xc(%rsp),%xmm2
+    11e3:	f3 0f 10 6c 24 10    	movss  0x10(%rsp),%xmm5
+    11e9:	e9 86 00 00 00       	jmpq   1274 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x154>
+    11ee:	0f 28 d8             	movaps %xmm0,%xmm3
+    11f1:	f3 0f 59 dc          	mulss  %xmm4,%xmm3
+    11f5:	f3 0f 10 6c 24 10    	movss  0x10(%rsp),%xmm5
+    11fb:	0f 28 d5             	movaps %xmm5,%xmm2
+    11fe:	f3 0f 5c d3          	subss  %xmm3,%xmm2
+    1202:	f3 0f 5e d1          	divss  %xmm1,%xmm2
+    1206:	f3 0f 11 55 00       	movss  %xmm2,0x0(%rbp)
+    120b:	f3 0f 10 5c 24 14    	movss  0x14(%rsp),%xmm3
+    1211:	66 0f 7e d8          	movd   %xmm3,%eax
+    1215:	35 00 00 00 80       	xor    $0x80000000,%eax
+    121a:	66 0f 6e c8          	movd   %eax,%xmm1
+    121e:	0f 2e ca             	ucomiss %xmm2,%xmm1
+    1221:	76 27                	jbe    124a <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x12a>
+    1223:	f3 0f 11 4d 00       	movss  %xmm1,0x0(%rbp)
+    1228:	4c 8b 74 24 18       	mov    0x18(%rsp),%r14
+    122d:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+    1232:	4d 89 ec             	mov    %r13,%r12
+    1235:	4c 8b 6c 24 20       	mov    0x20(%rsp),%r13
+    123a:	48 8b bc 24 80 00 00 	mov    0x80(%rsp),%rdi
+    1241:	00 
+    1242:	f3 0f 10 54 24 0c    	movss  0xc(%rsp),%xmm2
+    1248:	eb 2a                	jmp    1274 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x154>
+    124a:	0f 2e d3             	ucomiss %xmm3,%xmm2
+    124d:	4c 8b 74 24 18       	mov    0x18(%rsp),%r14
+    1252:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+    1257:	4d 89 ec             	mov    %r13,%r12
+    125a:	4c 8b 6c 24 20       	mov    0x20(%rsp),%r13
+    125f:	48 8b bc 24 80 00 00 	mov    0x80(%rsp),%rdi
+    1266:	00 
+    1267:	f3 0f 10 54 24 0c    	movss  0xc(%rsp),%xmm2
+    126d:	76 05                	jbe    1274 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x154>
+    126f:	f3 0f 11 5d 00       	movss  %xmm3,0x0(%rbp)
+    1274:	0f 28 cc             	movaps %xmm4,%xmm1
+    1277:	f3 0f 59 4d 00       	mulss  0x0(%rbp),%xmm1
+    127c:	f3 0f 5c c8          	subss  %xmm0,%xmm1
+    1280:	f3 0f 11 0b          	movss  %xmm1,(%rbx)
+    1284:	66 0f 7e d0          	movd   %xmm2,%eax
+    1288:	35 00 00 00 80       	xor    $0x80000000,%eax
+    128d:	66 0f 6e c0          	movd   %eax,%xmm0
+    1291:	0f 2e c1             	ucomiss %xmm1,%xmm0
+    1294:	76 36                	jbe    12cc <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x1ac>
+    1296:	f3 0f 11 03          	movss  %xmm0,(%rbx)
+    129a:	f3 0f 59 c4          	mulss  %xmm4,%xmm0
+    129e:	f3 0f 58 c5          	addss  %xmm5,%xmm0
+    12a2:	f3 0f 11 45 00       	movss  %xmm0,0x0(%rbp)
+    12a7:	66 0f 7e d8          	movd   %xmm3,%eax
+    12ab:	35 00 00 00 80       	xor    $0x80000000,%eax
+    12b0:	66 0f 6e c8          	movd   %eax,%xmm1
+    12b4:	0f 2e c8             	ucomiss %xmm0,%xmm1
+    12b7:	76 07                	jbe    12c0 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x1a0>
+    12b9:	f3 0f 11 4d 00       	movss  %xmm1,0x0(%rbp)
+    12be:	eb 45                	jmp    1305 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x1e5>
+    12c0:	0f 2e c3             	ucomiss %xmm3,%xmm0
+    12c3:	76 40                	jbe    1305 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x1e5>
+    12c5:	f3 0f 11 5d 00       	movss  %xmm3,0x0(%rbp)
+    12ca:	eb 39                	jmp    1305 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x1e5>
+    12cc:	0f 2e ca             	ucomiss %xmm2,%xmm1
+    12cf:	76 34                	jbe    1305 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x1e5>
+    12d1:	f3 0f 11 13          	movss  %xmm2,(%rbx)
+    12d5:	f3 0f 59 d4          	mulss  %xmm4,%xmm2
+    12d9:	f3 0f 58 d5          	addss  %xmm5,%xmm2
+    12dd:	f3 0f 11 55 00       	movss  %xmm2,0x0(%rbp)
+    12e2:	66 0f 7e d8          	movd   %xmm3,%eax
+    12e6:	35 00 00 00 80       	xor    $0x80000000,%eax
+    12eb:	66 0f 6e c0          	movd   %eax,%xmm0
+    12ef:	0f 2e c2             	ucomiss %xmm2,%xmm0
+    12f2:	76 07                	jbe    12fb <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x1db>
+    12f4:	f3 0f 11 45 00       	movss  %xmm0,0x0(%rbp)
+    12f9:	eb 0a                	jmp    1305 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x1e5>
+    12fb:	0f 2e d3             	ucomiss %xmm3,%xmm2
+    12fe:	76 05                	jbe    1305 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x1e5>
+    1300:	f3 0f 11 5d 00       	movss  %xmm3,0x0(%rbp)
+    1305:	48 89 ee             	mov    %rbp,%rsi
+    1308:	e8 00 00 00 00       	callq  130d <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x1ed>
+    130d:	66 41 0f 13 45 00    	movlpd %xmm0,0x0(%r13)
+    1313:	66 41 0f 13 4d 08    	movlpd %xmm1,0x8(%r13)
+    1319:	48 8b bc 24 88 00 00 	mov    0x88(%rsp),%rdi
+    1320:	00 
+    1321:	48 89 de             	mov    %rbx,%rsi
+    1324:	e8 00 00 00 00       	callq  1329 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x209>
+    1329:	66 41 0f 13 06       	movlpd %xmm0,(%r14)
+    132e:	66 41 0f 13 4e 08    	movlpd %xmm1,0x8(%r14)
+    1334:	4c 89 e7             	mov    %r12,%rdi
+    1337:	4c 89 ee             	mov    %r13,%rsi
+    133a:	e8 00 00 00 00       	callq  133f <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x21f>
+    133f:	66 0f 13 44 24 38    	movlpd %xmm0,0x38(%rsp)
+    1345:	66 0f 13 4c 24 40    	movlpd %xmm1,0x40(%rsp)
+    134b:	48 8d 7c 24 38       	lea    0x38(%rsp),%rdi
+    1350:	4c 89 f6             	mov    %r14,%rsi
+    1353:	e8 00 00 00 00       	callq  1358 <_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f+0x238>
+    1358:	66 41 0f 13 07       	movlpd %xmm0,(%r15)
+    135d:	66 41 0f 13 4f 08    	movlpd %xmm1,0x8(%r15)
+    1363:	48 83 c4 48          	add    $0x48,%rsp
+    1367:	5b                   	pop    %rbx
+    1368:	41 5c                	pop    %r12
+    136a:	41 5d                	pop    %r13
+    136c:	41 5e                	pop    %r14
+    136e:	41 5f                	pop    %r15
+    1370:	5d                   	pop    %rbp
+    1371:	c3                   	retq   
