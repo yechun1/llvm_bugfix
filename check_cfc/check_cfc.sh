@@ -2,8 +2,8 @@
 
 # Run: ./check_cfc.sh 1>test.log 2>test_err.log
 
-#export PATH=$PATH:/data/proj/compiler/llvm/llvm-project/build/bin
-CLANG=/data/proj/compiler/llvm/llvm-project/clang/utils/check_cfc/clang++
+export PATH=/data/proj/compiler/llvm/llvm-project.release/build/bin:$PATH
+CLANG=/data/proj/compiler/llvm/llvm-project.release/clang/utils/check_cfc/clang++
 
 FILES=`find /data/proj/compiler/llvm/test-suite/ -name "*.cpp" -o -name "*.cc"`
 
@@ -37,15 +37,16 @@ INCLUDES="-I/data/proj/compiler/llvm/test-suite/MicroBenchmarks/ImageProcessing/
 
 
 # run check_cfc with "-O1/-O2/-O3" to compile ".cpp/.cc" files
+
+rm -rf test.log
 for file in $FILES
 do
-  echo "##########"
+  echo "##########" >> test.log
   for OPT_LEVEL in -O1 -O2 -O3
   do
-    echo "Run: $CLANG $file -w -c $OPT_LEVEL $INCLUDES -o tmp.ll"
-    $CLANG $file -w -c $OPT_LEVEL $INCLUDES -o tmp.ll
+    echo "$CLANG $file -w -c $OPT_LEVEL $INCLUDES -o tmp.ll" >> test.log
+    $CLANG $file -w -c $OPT_LEVEL $INCLUDES -o tmp.ll 2>>test.log
   done
-  echo "##########"
 echo ""
 done
 

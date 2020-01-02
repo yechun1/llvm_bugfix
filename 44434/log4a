@@ -1,0 +1,305 @@
+# *** IR Dump After Fast Register Allocator ***:
+# Machine code for function _ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f: NoPHIs, TracksLiveness, NoVRegs
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP+8]
+  fi#1: size=16, align=8, at location [SP+8]
+  fi#2: size=16, align=16, at location [SP+8]
+  fi#3: size=16, align=8, at location [SP+8]
+  fi#4: size=16, align=16, at location [SP+8]
+  fi#5: size=16, align=8, at location [SP+8]
+  fi#6: size=16, align=8, at location [SP+8]
+  fi#7: size=16, align=8, at location [SP+8]
+  fi#8: size=16, align=8, at location [SP+8]
+  fi#9: size=4, align=4, at location [SP+8]
+  fi#10: size=4, align=4, at location [SP+8]
+  fi#11: size=16, align=8, at location [SP+8]
+  fi#12: size=4, align=4, at location [SP+8]
+  fi#13: size=16, align=8, at location [SP+8]
+  fi#14: size=16, align=8, at location [SP+8]
+  fi#15: size=8, align=8, at location [SP+8]
+  fi#16: size=4, align=4, at location [SP+8]
+  fi#17: size=8, align=8, at location [SP+8]
+  fi#18: size=8, align=8, at location [SP+8]
+  fi#19: size=4, align=4, at location [SP+8]
+  fi#20: size=4, align=4, at location [SP+8]
+  fi#21: size=4, align=4, at location [SP+8]
+  fi#22: size=4, align=4, at location [SP+8]
+  fi#23: size=4, align=4, at location [SP+8]
+  fi#24: size=8, align=8, at location [SP+8]
+  fi#25: size=8, align=8, at location [SP+8]
+  fi#26: size=8, align=8, at location [SP+8]
+  fi#27: size=8, align=8, at location [SP+8]
+  fi#28: size=8, align=8, at location [SP+8]
+  fi#29: size=8, align=8, at location [SP+8]
+  fi#30: size=8, align=8, at location [SP+8]
+  fi#31: size=8, align=8, at location [SP+8]
+  fi#32: size=8, align=8, at location [SP+8]
+  fi#33: size=8, align=8, at location [SP+8]
+  fi#34: size=8, align=8, at location [SP+8]
+  fi#35: size=8, align=8, at location [SP+8]
+  fi#36: size=8, align=8, at location [SP+8]
+  fi#37: size=8, align=8, at location [SP+8]
+  fi#38: size=4, align=4, at location [SP+8]
+  fi#39: size=4, align=4, at location [SP+8]
+Constant Pool:
+  cp#0: 0x3D10000000000000, align=4
+  cp#1: -1.000000e+00, align=4
+Function Live Ins: $rdi, $rsi, $xmm0, $xmm1, $xmm2, $xmm3, $edx, $ecx, $r8, $r9, $xmm4
+
+bb.0 (%ir-block.11):
+  successors: %bb.2, %bb.1
+  liveins: $rdi, $rsi, $xmm0, $xmm1, $xmm2, $xmm3, $edx, $ecx, $r8, $r9, $xmm4
+  DBG_VALUE $xmm3, $noreg, !"capsuleRadiusB", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:120
+  DBG_VALUE $r8, $noreg, !"transformA", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:123
+  DBG_VALUE $edx, $noreg, !"capsuleAxisA", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:121
+  DBG_VALUE $r9, $noreg, !"transformB", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:124
+  DBG_VALUE $ecx, $noreg, !"capsuleAxisB", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:122
+  DBG_VALUE renamable $r9, $noreg, !"transformB", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:124
+  DBG_VALUE renamable $r8, $noreg, !"transformA", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:123
+  DBG_VALUE renamable $ecx, $noreg, !"capsuleAxisB", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:122
+  DBG_VALUE renamable $edx, $noreg, !"capsuleAxisA", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:121
+  DBG_VALUE renamable $xmm3, $noreg, !"capsuleRadiusB", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:120
+  renamable $rax = LEA64r %stack.1, 1, $noreg, 0, $noreg
+  renamable $r10 = LEA64r %stack.3, 1, $noreg, 0, $noreg
+  renamable $r11 = LEA64r %stack.5, 1, $noreg, 0, $noreg
+  renamable $rbx = LEA64r %stack.13, 1, $noreg, 0, $noreg
+  renamable $r14 = LEA64r %stack.14, 1, $noreg, 0, $noreg
+  MOVSSmr %stack.0, 1, $noreg, 0, $noreg, killed renamable $xmm3 :: (store 4 into %ir.12, !tbaa !2011)
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2168; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:127:36
+  MOV64mr %stack.15, 1, $noreg, 0, $noreg, killed $rdi :: (store 8 into %stack.15)
+  $rdi = COPY renamable $r8, debug-location !2168; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:127:36
+  MOVSSmr %stack.16, 1, $noreg, 0, $noreg, killed $xmm4 :: (store 4 into %stack.16)
+  MOV64mr %stack.17, 1, $noreg, 0, $noreg, killed $r9 :: (store 8 into %stack.17)
+  DBG_VALUE %stack.17, 0, !"transformB", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:124
+  MOV64mr %stack.18, 1, $noreg, 0, $noreg, killed $r8 :: (store 8 into %stack.18)
+  DBG_VALUE %stack.18, 0, !"transformA", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:123
+  MOV32mr %stack.19, 1, $noreg, 0, $noreg, killed $ecx :: (store 4 into %stack.19)
+  DBG_VALUE %stack.19, 0, !"capsuleAxisB", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:122
+  MOV32mr %stack.20, 1, $noreg, 0, $noreg, killed $edx :: (store 4 into %stack.20)
+  DBG_VALUE %stack.20, 0, !"capsuleAxisA", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:121
+  MOVSSmr %stack.21, 1, $noreg, 0, $noreg, killed $xmm2 :: (store 4 into %stack.21)
+  MOVSSmr %stack.22, 1, $noreg, 0, $noreg, killed $xmm1 :: (store 4 into %stack.22)
+  MOVSSmr %stack.23, 1, $noreg, 0, $noreg, killed $xmm0 :: (store 4 into %stack.23)
+  MOV64mr %stack.24, 1, $noreg, 0, $noreg, killed $rsi :: (store 8 into %stack.24)
+  MOV64mr %stack.25, 1, $noreg, 0, $noreg, killed $rax :: (store 8 into %stack.25)
+  MOV64mr %stack.26, 1, $noreg, 0, $noreg, killed $r10 :: (store 8 into %stack.26)
+  MOV64mr %stack.27, 1, $noreg, 0, $noreg, killed $r11 :: (store 8 into %stack.27)
+  MOV64mr %stack.28, 1, $noreg, 0, $noreg, killed $rbx :: (store 8 into %stack.28)
+  MOV64mr %stack.29, 1, $noreg, 0, $noreg, killed $r14 :: (store 8 into %stack.29)
+  CALL64pcrel32 @_ZNK11btTransform8getBasisEv, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax, debug-location !2168; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:127:36
+  ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2168; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:127:36
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2169; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:127:47
+  $rdi = COPY killed renamable $rax, debug-location !2169; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:127:47
+  $esi = MOV32rm %stack.20, 1, $noreg, 0, $noreg :: (load 4 from %stack.20)
+  DBG_VALUE $esi, $noreg, !"capsuleAxisA", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:121
+  CALL64pcrel32 @_ZNK11btMatrix3x39getColumnEi, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit killed $esi, implicit-def $rsp, implicit-def $ssp, implicit-def $xmm0, implicit-def $xmm1, debug-location !2169; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:127:47
+  ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2169; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:127:47
+  MOVLPDmr %stack.1, 1, $noreg, 0, $noreg, killed renamable $xmm0, debug-location !2169 :: (store 8 into %ir.30); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:127:47
+  MOVLPDmr %stack.1, 1, $noreg, 8, $noreg, killed renamable $xmm1, debug-location !2169 :: (store 8 into %ir.32); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:127:47
+  renamable $rsi = LEA64r %stack.2, 1, $noreg, 0, $noreg
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2172; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:128:38
+  $rdi = MOV64rm %stack.18, 1, $noreg, 0, $noreg :: (load 8 from %stack.18)
+  MOV64mr %stack.30, 1, $noreg, 0, $noreg, killed $rsi :: (store 8 into %stack.30)
+  CALL64pcrel32 @_ZNK11btTransform9getOriginEv, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax, debug-location !2172; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:128:38
+  ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2172; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:128:38
+  renamable $xmm0 = MOVUPSrm killed renamable $rax, 1, $noreg, 0, $noreg, debug-location !2173 :: (dereferenceable load 16 from %ir.36, align 4); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:128:27
+  MOVAPSmr %stack.2, 1, $noreg, 0, $noreg, killed renamable $xmm0, debug-location !2173 :: (store 16 into %ir.34); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:128:27
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2178; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:129:36
+  $rdi = MOV64rm %stack.17, 1, $noreg, 0, $noreg :: (load 8 from %stack.17)
+  CALL64pcrel32 @_ZNK11btTransform8getBasisEv, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax, debug-location !2178; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:129:36
+  ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2178; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:129:36
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2179; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:129:47
+  $rdi = COPY killed renamable $rax, debug-location !2179; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:129:47
+  $esi = MOV32rm %stack.19, 1, $noreg, 0, $noreg :: (load 4 from %stack.19)
+  DBG_VALUE $esi, $noreg, !"capsuleAxisB", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:122
+  CALL64pcrel32 @_ZNK11btMatrix3x39getColumnEi, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit killed $esi, implicit-def $rsp, implicit-def $ssp, implicit-def $xmm0, implicit-def $xmm1, debug-location !2179; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:129:47
+  ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2179; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:129:47
+  MOVLPDmr %stack.3, 1, $noreg, 0, $noreg, killed renamable $xmm0, debug-location !2179 :: (store 8 into %ir.40); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:129:47
+  MOVLPDmr %stack.3, 1, $noreg, 8, $noreg, killed renamable $xmm1, debug-location !2179 :: (store 8 into %ir.42); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:129:47
+  renamable $rdi = LEA64r %stack.4, 1, $noreg, 0, $noreg
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2182; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:130:38
+  $rax = MOV64rm %stack.17, 1, $noreg, 0, $noreg :: (load 8 from %stack.17)
+  MOV64mr %stack.31, 1, $noreg, 0, $noreg, killed $rdi :: (store 8 into %stack.31)
+  $rdi = COPY killed renamable $rax, debug-location !2182; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:130:38
+  CALL64pcrel32 @_ZNK11btTransform9getOriginEv, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax, debug-location !2182; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:130:38
+  ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2182; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:130:38
+  renamable $xmm0 = MOVUPSrm killed renamable $rax, 1, $noreg, 0, $noreg, debug-location !2183 :: (dereferenceable load 16 from %ir.46, align 4); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:130:27
+  MOVAPSmr %stack.4, 1, $noreg, 0, $noreg, killed renamable $xmm0, debug-location !2183 :: (store 16 into %ir.44); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:130:27
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2186; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:134:39
+  $rdi = MOV64rm %stack.31, 1, $noreg, 0, $noreg :: (load 8 from %stack.31)
+  $rsi = MOV64rm %stack.30, 1, $noreg, 0, $noreg :: (load 8 from %stack.30)
+  CALL64pcrel32 @_ZmiRK9btVector3S1_, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit killed $rsi, implicit-def $rsp, implicit-def $ssp, implicit-def $xmm0, implicit-def $xmm1, debug-location !2186; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:134:39
+  ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2186; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:134:39
+  MOVLPDmr %stack.5, 1, $noreg, 0, $noreg, killed renamable $xmm0, debug-location !2186 :: (store 8 into %ir.49); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:134:39
+  MOVLPDmr %stack.5, 1, $noreg, 8, $noreg, killed renamable $xmm1, debug-location !2186 :: (store 8 into %ir.51); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:134:39
+  renamable $rax = LEA64r %stack.6, 1, $noreg, 0, $noreg, debug-location !2187; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:138:2
+  renamable $rsi = COPY renamable $rax, debug-location !2187; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:138:2
+  DBG_VALUE renamable $rax, $noreg, !"ptsVector", !DIExpression(DW_OP_deref), debug-location !2188; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:138:12 line no:138
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2188; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:138:12
+  $rdi = COPY killed renamable $rax, debug-location !2188; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:138:12
+  MOV64mr %stack.32, 1, $noreg, 0, $noreg, killed $rsi :: (store 8 into %stack.32)
+  CALL64pcrel32 @_ZN9btVector3C2Ev, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, debug-location !2188; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:138:12
+  ADJCALLSTACKUP64 0, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2188; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:138:12
+  renamable $rax = LEA64r %stack.7, 1, $noreg, 0, $noreg, debug-location !2189; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:140:2
+  renamable $rsi = COPY renamable $rax, debug-location !2189; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:140:2
+  DBG_VALUE renamable $rax, $noreg, !"offsetA", !DIExpression(DW_OP_deref), debug-location !2190; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:140:12 line no:140
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2190; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:140:12
+  $rdi = COPY killed renamable $rax, debug-location !2190; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:140:12
+  MOV64mr %stack.33, 1, $noreg, 0, $noreg, killed $rsi :: (store 8 into %stack.33)
+  CALL64pcrel32 @_ZN9btVector3C2Ev, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, debug-location !2190; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:140:12
+  ADJCALLSTACKUP64 0, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2190; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:140:12
+  renamable $rax = LEA64r %stack.8, 1, $noreg, 0, $noreg, debug-location !2189; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:140:2
+  renamable $rsi = COPY renamable $rax, debug-location !2189; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:140:2
+  DBG_VALUE renamable $rax, $noreg, !"offsetB", !DIExpression(DW_OP_deref), debug-location !2191; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:140:21 line no:140
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2191; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:140:21
+  $rdi = COPY killed renamable $rax, debug-location !2191; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:140:21
+  MOV64mr %stack.34, 1, $noreg, 0, $noreg, killed $rsi :: (store 8 into %stack.34)
+  CALL64pcrel32 @_ZN9btVector3C2Ev, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, debug-location !2191; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:140:21
+  ADJCALLSTACKUP64 0, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2191; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:140:21
+  renamable $rax = LEA64r %stack.9, 1, $noreg, 0, $noreg, debug-location !2192; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:141:2
+  renamable $rsi = COPY renamable $rax, debug-location !2192; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:141:2
+  renamable $rdi = LEA64r %stack.10, 1, $noreg, 0, $noreg, debug-location !2192; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:141:2
+  renamable $r8 = COPY renamable $rdi, debug-location !2192; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:141:2
+  DBG_VALUE renamable $rax, $noreg, !"tA", !DIExpression(DW_OP_deref), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:141
+  DBG_VALUE renamable $rdi, $noreg, !"tB", !DIExpression(DW_OP_deref), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:141
+  ADJCALLSTACKDOWN64 16, 0, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2193; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:143:2
+  renamable $r9 = LEA64r %stack.6, 1, $noreg, 0, $noreg, debug-location !2193; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:143:2
+  MOV64mr %stack.35, 1, $noreg, 0, $noreg, killed $rdi :: (store 8 into %stack.35)
+  DBG_VALUE %stack.35, 0, !"tB", !DIExpression(DW_OP_deref), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:141
+  $rdi = COPY killed renamable $r9, debug-location !2193; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:143:2
+  renamable $r9 = LEA64r %stack.7, 1, $noreg, 0, $noreg, debug-location !2193; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:143:2
+  MOV64mr %stack.36, 1, $noreg, 0, $noreg, killed $rsi :: (store 8 into %stack.36)
+  $rsi = COPY killed renamable $r9, debug-location !2193; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:143:2
+  renamable $rdx = LEA64r %stack.8, 1, $noreg, 0, $noreg, debug-location !2193; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:143:2
+  $rcx = COPY killed renamable $rax, debug-location !2193; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:143:2
+  $rax = MOV64rm %stack.35, 1, $noreg, 0, $noreg :: (load 8 from %stack.35)
+  MOV64mr %stack.37, 1, $noreg, 0, $noreg, killed $r8 :: (store 8 into %stack.37)
+  $r8 = COPY killed renamable $rax, debug-location !2193; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:143:2
+  $r9 = MOV64rm %stack.27, 1, $noreg, 0, $noreg :: (load 8 from %stack.27)
+  $r10 = MOV64rm %stack.25, 1, $noreg, 0, $noreg :: (load 8 from %stack.25)
+  MOV64mr $rsp, 1, $noreg, 0, $noreg, killed renamable $r10, debug-location !2193 :: (store 8 into stack); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:143:2
+  $xmm0 = MOVSSrm_alt %stack.23, 1, $noreg, 0, $noreg :: (load 4 from %stack.23)
+  $r11 = MOV64rm %stack.26, 1, $noreg, 0, $noreg :: (load 8 from %stack.26)
+  MOV64mr $rsp, 1, $noreg, 8, $noreg, killed renamable $r11, debug-location !2193 :: (store 8 into stack + 8); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:143:2
+  $xmm1 = MOVSSrm_alt %stack.21, 1, $noreg, 0, $noreg :: (load 4 from %stack.21)
+  CALL64pcrel32 @_ZL21segmentsClosestPointsR9btVector3S0_S0_RfS1_RKS_S3_fS3_f, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit killed $rsi, implicit killed $rdx, implicit killed $rcx, implicit killed $r8, implicit killed $r9, implicit killed $xmm0, implicit killed $xmm1, debug-location !2193; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:143:2
+  ADJCALLSTACKUP64 16, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2193; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:143:2
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2194; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:146:32
+  renamable $rdi = LEA64r %stack.6, 1, $noreg, 0, $noreg, debug-location !2194; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:146:32
+  CALL64pcrel32 @_ZNK9btVector36lengthEv, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit-def $xmm0, debug-location !2194; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:146:32
+  ADJCALLSTACKUP64 0, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2194; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:146:32
+  $xmm1 = MOVSSrm_alt %stack.22, 1, $noreg, 0, $noreg :: (load 4 from %stack.22)
+  renamable $xmm0 = SUBSSrr renamable $xmm0(tied-def 0), renamable $xmm1, implicit $mxcsr, debug-location !2195; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:146:41
+  renamable $xmm2 = MOVSSrm_alt %stack.0, 1, $noreg, 0, $noreg, debug-location !2196 :: (load 4 from %ir.12, !tbaa !2011); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:146:60
+  DBG_VALUE renamable $xmm2, $noreg, !"capsuleRadiusB", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:120
+  renamable $xmm0 = SUBSSrr renamable $xmm0(tied-def 0), killed renamable $xmm2, implicit $mxcsr, debug-location !2197; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:146:58
+  DBG_VALUE renamable $xmm0, $noreg, !"distance", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:146
+  $xmm2 = MOVSSrm_alt %stack.16, 1, $noreg, 0, $noreg :: (load 4 from %stack.16)
+  UCOMISSrr renamable $xmm0, renamable $xmm2, implicit-def $eflags, implicit $mxcsr, debug-location !2198; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:148:16
+  DBG_VALUE $noreg, $noreg, !"normalOnB", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:115
+  DBG_VALUE $noreg, $noreg, !"pointOnB", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:116
+  DBG_VALUE $noreg, $noreg, !"capsuleLengthA", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:117
+  DBG_VALUE $noreg, $noreg, !"capsuleRadiusA", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:118
+  DBG_VALUE $noreg, $noreg, !"capsuleLengthB", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:119
+  DBG_VALUE $noreg, $noreg, !"distanceThreshold", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:125
+  MOVSSmr %stack.38, 1, $noreg, 0, $noreg, killed $xmm0 :: (store 4 into %stack.38)
+  DBG_VALUE %stack.38, 0, !"distance", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:146
+  JCC_1 %bb.2, 6, implicit $eflags, debug-location !2200; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:148:7
+
+bb.1 (%ir-block.63):
+; predecessors: %bb.0
+  successors: %bb.6
+
+  JMP_1 %bb.6, debug-location !2201; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:149:3
+
+bb.2 (%ir-block.64):
+; predecessors: %bb.0
+  successors: %bb.4, %bb.3
+
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2202; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:151:30
+  renamable $rdi = LEA64r %stack.6, 1, $noreg, 0, $noreg, debug-location !2202; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:151:30
+  CALL64pcrel32 @_ZNK9btVector37length2Ev, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit-def $xmm0, debug-location !2202; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:151:30
+  ADJCALLSTACKUP64 0, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2202; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:151:30
+  renamable $xmm1 = MOVSSrm_alt $rip, 1, $noreg, %const.0, $noreg
+  DBG_VALUE renamable $xmm0, $noreg, !"lenSqr", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:151
+  UCOMISSrr killed renamable $xmm1, renamable $xmm0, implicit-def $eflags, implicit $mxcsr, debug-location !2203; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:152:12
+  MOVSSmr %stack.39, 1, $noreg, 0, $noreg, killed $xmm0 :: (store 4 into %stack.39)
+  DBG_VALUE %stack.39, 0, !"lenSqr", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:151
+  JCC_1 %bb.4, 2, implicit $eflags, debug-location !2204; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:152:6
+
+bb.3 (%ir-block.67):
+; predecessors: %bb.2
+  successors: %bb.5
+
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2206; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:155:13
+  renamable $rdi = LEA64r %stack.11, 1, $noreg, 0, $noreg, debug-location !2206; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:155:13
+  DBG_VALUE renamable $rdi, $noreg, !"q", !DIExpression(DW_OP_deref), debug-location !2206; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:155:13 line no:155
+  CALL64pcrel32 @_ZN9btVector3C2Ev, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, debug-location !2206; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:155:13
+  ADJCALLSTACKUP64 0, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2206; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:155:13
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2207; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:156:3
+  $rdi = MOV64rm %stack.25, 1, $noreg, 0, $noreg :: (load 8 from %stack.25)
+  $rsi = MOV64rm %stack.15, 1, $noreg, 0, $noreg :: (load 8 from %stack.15)
+  renamable $rdx = LEA64r %stack.11, 1, $noreg, 0, $noreg, debug-location !2207; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:156:3
+  CALL64pcrel32 @_Z13btPlaneSpace1RK9btVector3RS_S2_, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit killed $rsi, implicit killed $rdx, debug-location !2207; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:156:3
+  ADJCALLSTACKUP64 0, 0, implicit-def $rsp, implicit-def $eflags, implicit-def $ssp, implicit $rsp, implicit $ssp, debug-location !2207; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:156:3
+  JMP_1 %bb.5, debug-location !2209; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:157:2
+
+bb.4 (%ir-block.69):
+; predecessors: %bb.2
+  successors: %bb.5
+
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2212; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:160:26
+  $xmm0 = MOVSSrm_alt %stack.39, 1, $noreg, 0, $noreg :: (load 4 from %stack.39)
+  CALL64pcrel32 @_Z6btSqrtf, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $xmm0, implicit-def $rsp, implicit-def $ssp, implicit-def $xmm0, debug-location !2212; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:160:26
+  ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2212; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:160:26
+  renamable $xmm1 = MOVSSrm_alt $rip, 1, $noreg, %const.1, $noreg :: (load 4 from constant-pool)
+  renamable $xmm1 = DIVSSrr renamable $xmm1(tied-def 0), killed renamable $xmm0, implicit $mxcsr, debug-location !2210; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:160:25
+  MOVSSmr %stack.12, 1, $noreg, 0, $noreg, killed renamable $xmm1, debug-location !2210 :: (store 4 into %ir.24, !tbaa !2011); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:160:25
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2213; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:160:24
+  renamable $rdi = LEA64r %stack.6, 1, $noreg, 0, $noreg
+  renamable $rsi = LEA64r %stack.12, 1, $noreg, 0, $noreg
+  CALL64pcrel32 @_ZmlRK9btVector3RKf, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit killed $rsi, implicit-def $rsp, implicit-def $ssp, implicit-def $xmm0, implicit-def $xmm1, debug-location !2213; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:160:24
+  ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2213; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:160:24
+  $rax = MOV64rm %stack.15, 1, $noreg, 0, $noreg :: (load 8 from %stack.15)
+  MOVLPDmr renamable $rax, 1, $noreg, 0, $noreg, killed renamable $xmm0, debug-location !2214 :: (store 8 into %ir..sroa.04.0..sroa_cast, align 4); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:160:13
+  MOVLPDmr killed renamable $rax, 1, $noreg, 8, $noreg, killed renamable $xmm1, debug-location !2214 :: (store 8 into %ir..sroa.46.0..sroa_cast, align 4); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:160:13
+
+bb.5 (%ir-block.76):
+; predecessors: %bb.3, %bb.4
+  successors: %bb.6
+
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2217; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:24
+  $rdi = MOV64rm %stack.17, 1, $noreg, 0, $noreg :: (load 8 from %stack.17)
+  CALL64pcrel32 @_ZNK11btTransform9getOriginEv, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax, debug-location !2217; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:24
+  ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2217; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:24
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2218; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:35
+  renamable $rsi = LEA64r %stack.8, 1, $noreg, 0, $noreg
+  $rdi = COPY killed renamable $rax, debug-location !2218; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:35
+  CALL64pcrel32 @_ZplRK9btVector3S1_, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit killed $rsi, implicit-def $rsp, implicit-def $ssp, implicit-def $xmm0, implicit-def $xmm1, debug-location !2218; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:35
+  ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2218; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:35
+  MOVLPDmr %stack.13, 1, $noreg, 0, $noreg, killed renamable $xmm0, debug-location !2218 :: (store 8 into %ir.80); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:35
+  MOVLPDmr %stack.13, 1, $noreg, 8, $noreg, killed renamable $xmm1, debug-location !2218 :: (store 8 into %ir.82); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:35
+  DBG_VALUE %stack.0, $noreg, !"capsuleRadiusB", !DIExpression(DW_OP_deref), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:120
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2220; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:56
+  renamable $rsi = LEA64r %stack.0, 1, $noreg, 0, $noreg
+  $rdi = MOV64rm %stack.15, 1, $noreg, 0, $noreg :: (load 8 from %stack.15)
+  CALL64pcrel32 @_ZmlRK9btVector3RKf, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit killed $rsi, implicit-def $rsp, implicit-def $ssp, implicit-def $xmm0, implicit-def $xmm1, debug-location !2220; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:56
+  ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2220; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:56
+  MOVLPDmr %stack.14, 1, $noreg, 0, $noreg, killed renamable $xmm0, debug-location !2220 :: (store 8 into %ir.86); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:56
+  MOVLPDmr %stack.14, 1, $noreg, 8, $noreg, killed renamable $xmm1, debug-location !2220 :: (store 8 into %ir.88); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:56
+  ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2221; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:44
+  $rdi = MOV64rm %stack.28, 1, $noreg, 0, $noreg :: (load 8 from %stack.28)
+  $rsi = MOV64rm %stack.29, 1, $noreg, 0, $noreg :: (load 8 from %stack.29)
+  CALL64pcrel32 @_ZplRK9btVector3S1_, <regmask $bh $bl $bp $bph $bpl $bx $ebp $ebx $hbp $hbx $rbp $rbx $r12 $r13 $r14 $r15 $r12b $r13b $r14b $r15b $r12bh $r13bh $r14bh $r15bh $r12d $r13d $r14d $r15d $r12w $r13w $r14w $r15w $r12wh and 3 more...>, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit killed $rsi, implicit-def $rsp, implicit-def $ssp, implicit-def $xmm0, implicit-def $xmm1, debug-location !2221; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:44
+  ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp, debug-location !2221; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:44
+  $rax = MOV64rm %stack.24, 1, $noreg, 0, $noreg :: (load 8 from %stack.24)
+  MOVLPDmr renamable $rax, 1, $noreg, 0, $noreg, killed renamable $xmm0, debug-location !2222 :: (store 8 into %ir..sroa.0.0..sroa_cast, align 4); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:11
+  MOVLPDmr renamable $rax, 1, $noreg, 8, $noreg, killed renamable $xmm1, debug-location !2222 :: (store 8 into %ir..sroa.4.0..sroa_cast, align 4); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:162:11
+
+bb.6 (%ir-block.93):
+; predecessors: %bb.5, %bb.1
+
+  $xmm0 = MOVSSrm_alt %stack.38, 1, $noreg, 0, $noreg :: (load 4 from %stack.38)
+  RETQ implicit killed $xmm0, debug-location !2224; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:165:1
+
+# End machine code for function _ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f.

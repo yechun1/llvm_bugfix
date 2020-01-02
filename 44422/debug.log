@@ -1,0 +1,8 @@
+
+ MCP: Replacing $rbp
+       with $r8
+       in renamable $rbp = nuw LEA64r %stack.4.input, 1, $noreg, 64, $noreg
+       from renamable $r8 = COPY killed renamable $rbp
+  MCP: After replacement: renamable $r8 = nuw LEA64r %stack.4.input, 1, $noreg, 64, $noreg
+  
+

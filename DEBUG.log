@@ -1,7 +1,6 @@
 #define LLVM_DBG(X) do { X; } while (false)
   for (MachineBasicBlock &MBB : MF)
     dbgs() << "chris-begin-: " << MBB << "\n";
-  for (MachineBasicBlock &MBB : MF)
     dbgs() << "chris-end-: " << MBB << "\n";
 
 

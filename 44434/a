@@ -1,0 +1,271 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0 225648  5548 ?        Ss    2019   1:10 /lib/systemd/systemd --system --deserialize 18
+root         2  0.0  0.0      0     0 ?        S     2019   0:00 [kthreadd]
+root         4  0.0  0.0      0     0 ?        I<    2019   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        I<    2019   0:00 [mm_percpu_wq]
+root         7  0.0  0.0      0     0 ?        S     2019   0:05 [ksoftirqd/0]
+root         8  0.0  0.0      0     0 ?        I     2019  10:13 [rcu_sched]
+root         9  0.0  0.0      0     0 ?        I     2019   0:00 [rcu_bh]
+root        10  0.0  0.0      0     0 ?        S     2019   0:01 [migration/0]
+root        11  0.0  0.0      0     0 ?        S     2019   0:05 [watchdog/0]
+root        12  0.0  0.0      0     0 ?        S     2019   0:00 [cpuhp/0]
+root        13  0.0  0.0      0     0 ?        S     2019   0:00 [cpuhp/1]
+root        14  0.0  0.0      0     0 ?        S     2019   0:05 [watchdog/1]
+root        15  0.0  0.0      0     0 ?        S     2019   0:01 [migration/1]
+root        16  0.0  0.0      0     0 ?        S     2019   0:04 [ksoftirqd/1]
+root        18  0.0  0.0      0     0 ?        I<    2019   0:00 [kworker/1:0H]
+root        19  0.0  0.0      0     0 ?        S     2019   0:00 [cpuhp/2]
+root        20  0.0  0.0      0     0 ?        S     2019   0:05 [watchdog/2]
+root        21  0.0  0.0      0     0 ?        S     2019   0:01 [migration/2]
+root        22  0.0  0.0      0     0 ?        S     2019   0:04 [ksoftirqd/2]
+root        24  0.0  0.0      0     0 ?        I<    2019   0:00 [kworker/2:0H]
+root        25  0.0  0.0      0     0 ?        S     2019   0:00 [cpuhp/3]
+root        26  0.0  0.0      0     0 ?        S     2019   0:04 [watchdog/3]
+root        27  0.0  0.0      0     0 ?        S     2019   0:01 [migration/3]
+root        28  0.0  0.0      0     0 ?        S     2019   0:04 [ksoftirqd/3]
+root        30  0.0  0.0      0     0 ?        I<    2019   0:00 [kworker/3:0H]
+root        31  0.0  0.0      0     0 ?        S     2019   0:00 [cpuhp/4]
+root        32  0.0  0.0      0     0 ?        S     2019   0:04 [watchdog/4]
+root        33  0.0  0.0      0     0 ?        S     2019   0:01 [migration/4]
+root        34  0.0  0.0      0     0 ?        S     2019   0:04 [ksoftirqd/4]
+root        36  0.0  0.0      0     0 ?        I<    2019   0:00 [kworker/4:0H]
+root        37  0.0  0.0      0     0 ?        S     2019   0:00 [cpuhp/5]
+root        38  0.0  0.0      0     0 ?        S     2019   0:05 [watchdog/5]
+root        39  0.0  0.0      0     0 ?        S     2019   0:01 [migration/5]
+root        40  0.0  0.0      0     0 ?        S     2019   1:51 [ksoftirqd/5]
+root        42  0.0  0.0      0     0 ?        I<    2019   0:00 [kworker/5:0H]
+root        43  0.0  0.0      0     0 ?        S     2019   0:00 [cpuhp/6]
+root        44  0.0  0.0      0     0 ?        S     2019   0:05 [watchdog/6]
+root        45  0.0  0.0      0     0 ?        S     2019   0:00 [migration/6]
+root        46  0.0  0.0      0     0 ?        S     2019   0:04 [ksoftirqd/6]
+root        48  0.0  0.0      0     0 ?        I<    2019   0:00 [kworker/6:0H]
+root        49  0.0  0.0      0     0 ?        S     2019   0:00 [cpuhp/7]
+root        50  0.0  0.0      0     0 ?        S     2019   0:05 [watchdog/7]
+root        51  0.0  0.0      0     0 ?        S     2019   0:01 [migration/7]
+root        52  0.0  0.0      0     0 ?        S     2019   0:06 [ksoftirqd/7]
+root        54  0.0  0.0      0     0 ?        I<    2019   0:00 [kworker/7:0H]
+root        55  0.0  0.0      0     0 ?        S     2019   0:00 [kdevtmpfs]
+root        56  0.0  0.0      0     0 ?        I<    2019   0:00 [netns]
+root        57  0.0  0.0      0     0 ?        S     2019   0:00 [rcu_tasks_kthre]
+root        58  0.0  0.0      0     0 ?        S     2019   0:00 [kauditd]
+root        62  0.0  0.0      0     0 ?        S     2019   0:03 [khungtaskd]
+root        63  0.0  0.0      0     0 ?        S     2019   0:00 [oom_reaper]
+root        64  0.0  0.0      0     0 ?        I<    2019   0:00 [writeback]
+root        65  0.0  0.0      0     0 ?        S     2019   0:00 [kcompactd0]
+root        66  0.0  0.0      0     0 ?        SN    2019   0:00 [ksmd]
+root        67  0.0  0.0      0     0 ?        SN    2019   0:16 [khugepaged]
+root        68  0.0  0.0      0     0 ?        I<    2019   0:00 [crypto]
+root        69  0.0  0.0      0     0 ?        I<    2019   0:00 [kintegrityd]
+root        70  0.0  0.0      0     0 ?        I<    2019   0:00 [kblockd]
+root        73  0.0  0.0      0     0 ?        I<    2019   0:00 [ata_sff]
+root        74  0.0  0.0      0     0 ?        I<    2019   0:00 [md]
+root        75  0.0  0.0      0     0 ?        I<    2019   0:00 [edac-poller]
+root        76  0.0  0.0      0     0 ?        I<    2019   0:00 [devfreq_wq]
+root        77  0.0  0.0      0     0 ?        I<    2019   0:00 [watchdogd]
+root        81  0.0  0.0      0     0 ?        S     2019   0:41 [kswapd0]
+root        82  0.0  0.0      0     0 ?        I<    2019   0:00 [kworker/u17:0]
+root        83  0.0  0.0      0     0 ?        S     2019   0:00 [ecryptfs-kthrea]
+root       125  0.0  0.0      0     0 ?        I<    2019   0:00 [kthrotld]
+root       126  0.0  0.0      0     0 ?        I<    2019   0:00 [acpi_thermal_pm]
+root       131  0.0  0.0      0     0 ?        I<    2019   0:00 [ipv6_addrconf]
+root       141  0.0  0.0      0     0 ?        I<    2019   0:00 [kstrp]
+root       158  0.0  0.0      0     0 ?        I<    2019   0:00 [charger_manager]
+root       212  0.0  0.0      0     0 ?        S     2019   0:00 [scsi_eh_0]
+root       213  0.0  0.0      0     0 ?        I<    2019   0:00 [scsi_tmf_0]
+root       214  0.0  0.0      0     0 ?        S     2019   0:00 [scsi_eh_1]
+root       215  0.0  0.0      0     0 ?        I<    2019   0:00 [scsi_tmf_1]
+root       216  0.0  0.0      0     0 ?        S     2019   0:00 [scsi_eh_2]
+root       217  0.0  0.0      0     0 ?        I<    2019   0:00 [scsi_tmf_2]
+root       218  0.0  0.0      0     0 ?        S     2019   0:00 [scsi_eh_3]
+root       219  0.0  0.0      0     0 ?        I<    2019   0:00 [scsi_tmf_3]
+root       220  0.0  0.0      0     0 ?        S     2019   0:00 [scsi_eh_4]
+root       221  0.0  0.0      0     0 ?        I<    2019   0:00 [scsi_tmf_4]
+root       222  0.0  0.0      0     0 ?        S     2019   0:00 [scsi_eh_5]
+root       223  0.0  0.0      0     0 ?        I<    2019   0:00 [scsi_tmf_5]
+root       230  0.0  0.0      0     0 ?        I<    2019   0:00 [e1000e]
+root       235  0.0  0.0      0     0 ?        I<    2019   0:49 [kworker/6:1H]
+root       261  0.0  0.0      0     0 ?        S     2019   0:28 [jbd2/sda2-8]
+root       262  0.0  0.0      0     0 ?        I<    2019   0:00 [ext4-rsv-conver]
+root       276  0.0  0.0      0     0 ?        I<    2019   0:09 [kworker/3:1H]
+root       277  0.0  0.0      0     0 ?        I<    2019   0:14 [kworker/2:1H]
+root       326  0.0  0.0      0     0 ?        I<    2019   0:20 [kworker/7:1H]
+root       336  0.0  0.0      0     0 ?        S<    2019   0:00 [loop0]
+root       341  0.0  0.0      0     0 ?        S<    2019   0:00 [loop1]
+root       342  0.0  0.0      0     0 ?        I<    2019   0:02 [kworker/5:1H]
+root       343  0.0  0.0      0     0 ?        S<    2019   0:00 [loop2]
+root       344  0.0  0.0      0     0 ?        S<    2019   0:00 [loop3]
+root       345  0.0  0.0      0     0 ?        I<    2019   0:06 [kworker/4:1H]
+root       346  0.0  0.0      0     0 ?        S<    2019   0:00 [loop4]
+root       347  0.0  0.0      0     0 ?        S<    2019   0:00 [loop5]
+root       348  0.0  0.0      0     0 ?        I<    2019   0:15 [kworker/0:1H]
+root       349  0.0  0.0      0     0 ?        S<    2019   0:00 [loop6]
+root       384  0.0  0.0      0     0 ?        I<    2019   0:19 [kworker/1:1H]
+root       435  0.0  0.0      0     0 ?        S     2019   0:00 [irq/28-mei_me]
+root       495  0.0  0.0      0     0 ?        S     2019   0:00 [scsi_eh_6]
+root       496  0.0  0.0      0     0 ?        I<    2019   0:00 [scsi_tmf_6]
+root       497  0.0  0.0      0     0 ?        S     2019  11:22 [usb-storage]
+root       499  0.0  0.0      0     0 ?        I<    2019   0:00 [nvkm-disp]
+root       502  0.0  0.0      0     0 ?        I<    2019   0:00 [ttm_swap]
+avahi      768  0.0  0.0  47860  2216 ?        Ss    2019  17:16 avahi-daemon: running [llvm-desktop.local]
+root       769  0.0  0.0 294752  2772 ?        Ssl   2019   0:39 /usr/lib/accountsservice/accounts-daemon
+root       770  0.0  0.0 503412  4260 ?        Ssl   2019   4:28 /usr/lib/udisks2/udisksd
+root       772  0.0  0.0 186996   180 ?        Ssl   2019   2:02 /usr/sbin/thermald --no-daemon --dbus-enable
+avahi      774  0.0  0.0  47076    24 ?        S     2019   0:00 avahi-daemon: chroot helper
+root       779  0.0  0.0 177644     4 ?        Ssl   2019   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+syslog     781  0.0  0.0 263036  1196 ?        Ssl   2019   0:06 /usr/sbin/rsyslogd -n
+root       783  0.0  0.0 2042672 12064 ?       Ssl   2019   3:59 /usr/lib/snapd/snapd
+root       784  0.0  0.0   4552    28 ?        Ss    2019   0:47 /usr/sbin/acpid
+message+   786  0.0  0.0  51820  3632 ?        Ss    2019   0:14 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root       819  0.0  0.0  45228    68 ?        Ss    2019   0:10 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root       821  0.0  0.0  38428   576 ?        Ss    2019   0:06 /usr/sbin/cron -f
+root       822  0.0  0.0  70700  2472 ?        Ss    2019   0:17 /lib/systemd/systemd-logind
+root       836  0.0  0.0 110484   116 ?        Ssl   2019   2:34 /usr/sbin/irqbalance --foreground
+root       838  0.0  0.0 434324  1576 ?        Ssl   2019   0:00 /usr/sbin/ModemManager --filter-policy=strict
+root       841  0.0  0.0 565760  7004 ?        Ssl   2019   0:57 /usr/sbin/NetworkManager --no-daemon
+root       874  0.0  0.0 304048  5432 ?        Ssl   2019   0:05 /usr/lib/policykit-1/polkitd --no-debug
+root       933  0.0  0.0 194340     0 ?        Ssl   2019   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root       947  0.0  0.0  72296  1084 ?        Ss    2019   0:00 /usr/sbin/sshd -D
+root       950  0.0  0.0 308188  1852 ?        Ssl   2019   0:00 /usr/sbin/gdm3
+root       968  0.0  0.0 422108  7684 ?        Sl    2019   0:01 gdm-session-worker [pam/gdm-autologin]
+chris      976  0.0  0.0  77096  3532 ?        Ss    2019   0:04 /lib/systemd/systemd --user
+chris      977  0.0  0.0 113952     4 ?        S     2019   0:00 (sd-pam)
+chris      988  0.0  0.0 1361364 4888 ?        Ssl   2019   1:01 /usr/bin/ubuntu-report service
+chris      996  0.0  0.0 288384  2120 ?        SLl   2019   0:01 /usr/bin/gnome-keyring-daemon --daemonize --login
+chris     1000  0.0  0.0 212132   452 tty1     Ssl+  2019   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+chris     1002  0.1  0.2 501088 76412 tty1     Sl+   2019  75:33 /usr/lib/xorg/Xorg vt1 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+chris     1007  0.0  0.0  52764  4588 ?        Ss    2019   0:13 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+chris     1010  0.0  0.0 559512  2500 tty1     Sl+   2019   0:03 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+chris     1086  0.0  0.0      0     0 tty1     Z+    2019   0:00 [xbrlapi] <defunct>
+chris     1105  0.0  0.0  11304    40 ?        Ss    2019   0:09 /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+chris     1108  0.0  0.0 349364   144 ?        Ssl   2019   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+chris     1113  0.0  0.0  49924   848 ?        S     2019   0:04 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+chris     1115  0.0  0.0 220708  1900 ?        Sl    2019   0:27 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+root      1120  0.0  0.0  25992  1612 ?        S     2019   0:04 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-enp0s25.pid -lf /var/lib/NetworkManager/dhclient-d65e4541-5e6c-3eca-afee-ed88c2022922-enp0s25.lease -cf /var/lib/NetworkManager/dhclient-enp0s25.conf enp0s25
+kernoops  1158  0.0  0.0  56940   552 ?        Ss    2019   0:34 /usr/sbin/kerneloops --test
+kernoops  1160  0.0  0.0  56940   108 ?        Ss    2019   0:34 /usr/sbin/kerneloops
+chris     1172  0.3  0.5 4077328 165988 tty1   Sl+   2019 204:13 /usr/bin/gnome-shell
+root      1220  0.0  0.0 322396  3792 ?        Ssl   2019   0:10 /usr/lib/upower/upowerd
+chris     1246  0.0  0.0 292100  1680 ?        Ssl   2019   0:01 /usr/lib/gvfs/gvfsd
+chris     1251  0.0  0.0 489984   184 ?        Sl    2019   0:07 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+chris     1262  0.0  0.0 1100760 4980 ?        S<l   2019   0:14 /usr/bin/pulseaudio --start --log-target=syslog
+rtkit     1263  0.0  0.0 183504     0 ?        SNsl  2019   0:30 /usr/lib/rtkit/rtkit-daemon
+chris     1281  0.0  0.1 471348 46384 tty1     Sl    2019  38:27 ibus-daemon --xim --panel disable
+chris     1284  0.0  0.0 271564   212 ?        Ssl   2019   0:00 /usr/libexec/xdg-permission-store
+chris     1289  0.0  0.0 280752   904 tty1     Sl    2019   0:00 /usr/lib/ibus/ibus-dconf
+chris     1291  0.0  0.0 352484 13668 tty1     Sl    2019   0:16 /usr/lib/ibus/ibus-x11 --kill-daemon
+chris     1293  0.0  0.0 278692  1908 ?        Sl    2019   0:00 /usr/lib/ibus/ibus-portal
+chris     1305  0.0  0.0 689900  1996 ?        Sl    2019   0:00 /usr/lib/gnome-shell/gnome-shell-calendar-server
+chris     1311  0.0  0.0 1372156 3752 ?        Ssl   2019   0:00 /usr/lib/evolution/evolution-source-registry
+chris     1317  0.0  0.0 776256  1564 ?        Sl    2019   0:00 /usr/lib/gnome-online-accounts/goa-daemon
+root      1322  0.0  0.0 296872   836 ?        Ssl   2019   0:00 /usr/lib/x86_64-linux-gnu/boltd
+chris     1323  0.0  0.0 306700  3680 ?        Ssl   2019   0:47 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+chris     1330  0.0  0.0 275876  1528 ?        Ssl   2019   0:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+chris     1334  0.0  0.0 274048   604 ?        Ssl   2019   0:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+chris     1345  0.0  0.0 303360  1832 ?        Sl    2019   0:54 /usr/lib/gnome-online-accounts/goa-identity-service
+chris     1350  0.0  0.0 288796   808 ?        Ssl   2019   0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+chris     1354  0.0  0.0 378816  2072 ?        Ssl   2019   0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+root      1359  0.0  0.1 448556 29184 ?        Ssl   2019   0:36 /usr/lib/packagekit/packagekitd
+chris     1362  0.0  0.0 517224  5736 tty1     Sl+   2019   0:11 /usr/lib/gnome-settings-daemon/gsd-power
+chris     1363  0.0  0.0 349324  1564 tty1     Sl+   2019   0:01 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+chris     1364  0.0  0.0 423348  1016 tty1     Sl+   2019   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+chris     1365  0.0  0.0 275736  1668 tty1     Sl+   2019   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+chris     1366  0.0  0.0 452844  3644 tty1     Sl+   2019   0:01 /usr/lib/gnome-settings-daemon/gsd-sharing
+chris     1369  0.0  0.0 377948   308 tty1     Sl+   2019   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+chris     1375  0.0  0.0 494832  4656 tty1     Sl+   2019   0:08 /usr/lib/gnome-settings-daemon/gsd-xsettings
+chris     1385  0.0  0.0 428616  3620 tty1     Sl+   2019   0:06 /usr/lib/gnome-settings-daemon/gsd-wacom
+chris     1386  0.0  0.0 332864  1476 tty1     Sl+   2019   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+chris     1392  0.0  0.0 278164  1504 tty1     Sl+   2019   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+chris     1394  0.0  0.0 343624  3424 tty1     Sl+   2019   0:06 /usr/lib/gnome-settings-daemon/gsd-clipboard
+chris     1398  0.0  0.0 469744  1412 tty1     Sl+   2019   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+chris     1405  0.0  0.0 364532  1820 tty1     Sl+   2019   1:32 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+chris     1406  0.1  0.0 530764 17116 tty1     Sl+   2019  70:50 /usr/lib/gnome-settings-daemon/gsd-color
+chris     1407  0.0  0.0 866856  4424 tty1     Sl+   2019   0:10 /usr/lib/gnome-settings-daemon/gsd-media-keys
+chris     1410  0.0  0.0 278168   712 tty1     Sl+   2019   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+chris     1416  0.0  0.0 506500  5960 tty1     Sl+   2019   0:06 /usr/lib/gnome-settings-daemon/gsd-keyboard
+chris     1439  0.0  0.0 508768  1284 tty1     Sl+   2019   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+chris     1462  0.0  0.0 271936  2128 tty1     Sl+   2019   0:02 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+colord    1463  0.0  0.0 939808  3576 ?        Ssl   2019   0:00 /usr/lib/colord/colord
+chris     1464  0.0  0.1 780272 30072 tty1     Sl+   2019   0:10 nautilus-desktop
+chris     1486  0.0  0.0 892168   616 ?        Ssl   2019   0:00 /usr/lib/evolution/evolution-calendar-factory
+chris     1489  0.0  0.0 368120  3220 ?        Sl    2019   0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.22 /org/gtk/gvfs/exec_spaw/0
+chris     1505  0.0  0.0 188012   984 ?        Sl    2019   0:00 /usr/lib/dconf/dconf-service
+chris     1511  0.0  0.0 205160  1836 tty1     Sl    2019   6:56 /usr/lib/ibus/ibus-engine-simple
+chris     1522  0.0  0.0 1135968 2372 ?        Sl    2019   0:01 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1486x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1486/2
+chris     1531  0.0  0.0 732688   312 ?        Ssl   2019   0:00 /usr/lib/evolution/evolution-addressbook-factory
+chris     1544  0.0  0.0 869740  2132 ?        Sl    2019   0:00 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx1531x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/1531/2
+chris     1573  0.0  0.1 1332952 28876 tty1    SLl+  2019   1:20 /usr/bin/gnome-software --gapplication-service
+chris     1575  0.0  0.0 647156 12612 tty1     Sl+   2019   0:54 update-notifier
+root      1596  0.0  0.0 550700  3588 ?        Ssl   2019   1:46 /usr/lib/fwupd/fwupd
+chris     1678  0.0  0.0 789608  2892 tty1     Sl+   2019   0:00 /usr/lib/deja-dup/deja-dup-monitor
+chris     1697  0.0  0.2 874756 78420 ?        Rsl   2019  39:30 /usr/lib/gnome-terminal/gnome-terminal-server
+chris     1711  0.0  0.0  32940  6008 pts/0    Ss+   2019   0:03 bash
+chris     2762  0.0  0.0  33028  4004 pts/1    Ss    2019   0:04 bash
+root      2960  0.0  0.0 265424  8192 ?        Sl    2019   0:00 gdm-session-worker [pam/gdm-password]
+root      3417  0.0  0.0 265424  7980 ?        Sl    2019   0:00 gdm-session-worker [pam/gdm-password]
+systemd+  3595  0.0  0.0  70760  1172 ?        Ss    2019   0:21 /lib/systemd/systemd-resolved
+root      3600  0.0  0.0 111104 27468 ?        S<s   2019   0:34 /lib/systemd/systemd-journald
+chris     3854  0.0  0.5 755784 154224 tty1    SNl+  2019   0:04 /usr/bin/python3 /usr/bin/update-manager --no-update --no-focus-on-map
+chris     5343  0.0  0.0  82728  1852 ?        Ss    2019   0:00 /usr/lib/bluetooth/obexd
+root      5367  0.0  0.0 265424  8016 ?        Sl    2019   0:00 gdm-session-worker [pam/gdm-password]
+root      5691  0.0  0.0      0     0 ?        I     2019   0:00 [kworker/2:2]
+root      5694  0.0  0.0  46144  1548 ?        Ss    2019   0:04 /lib/systemd/systemd-udevd
+chris     7500  0.0  0.0 224488 23236 pts/1    S+   1月01   0:01 vim lib/CodeGen/MachineCopyPropagation.cpp
+root     11134  0.0  0.0      0     0 ?        I     2019   0:17 [kworker/7:2]
+chris    13583  0.0  0.0  30068  4168 pts/5    Ss+   2019   0:01 bash
+root     14521  0.0  0.0      0     0 ?        I     2019   0:08 [kworker/4:2]
+chris    14935  0.0  0.0  29956  5600 pts/3    Ss+  1月01   0:00 bash
+whoopsie 16128  0.0  0.0 388452  6468 ?        Ssl   2019   0:00 /usr/bin/whoopsie -f
+root     17514  0.0  0.0      0     0 ?        I    1月01   0:03 [kworker/5:0]
+root     18241  0.0  0.0      0     0 ?        I    1月01   0:00 [kworker/1:2]
+root     18425  0.0  0.0 107688  7904 ?        Ss   00:09   0:00 /usr/sbin/cupsd -l
+root     18426  0.0  0.0 303524 11064 ?        Ssl  00:09   0:00 /usr/sbin/cups-browsed
+root     18495  0.0  0.0      0     0 ?        I    00:14   0:00 [kworker/7:0]
+root     18527  0.0  0.0      0     0 ?        I     2019   0:22 [kworker/6:1]
+root     18684  0.0  0.0      0     0 ?        I    03:14   0:00 [kworker/4:1]
+root     18748  0.0  0.0      0     0 ?        I    04:10   0:00 [kworker/5:2]
+root     18795  0.0  0.0      0     0 ?        I    05:01   0:00 [kworker/2:1]
+root     18953  0.0  0.0      0     0 ?        I    06:24   0:00 [kworker/6:2]
+root     19036  0.0  0.0      0     0 ?        I    06:35   0:00 [kworker/3:1]
+root     19138  0.0  0.0      0     0 ?        I    08:04   0:00 [kworker/0:0]
+root     19154  0.0  0.0      0     0 ?        I    08:16   0:00 [kworker/u16:1]
+root     19236  0.0  0.0      0     0 ?        I    08:43   0:00 [kworker/u16:3]
+chris    19286  0.4  1.1 3207656 335304 tty1   Sl+  09:05   0:10 /usr/lib/firefox/firefox -new-window
+chris    19347  0.1  0.7 2780472 227144 tty1   Sl+  09:05   0:02 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 1 -prefMapSize 204808 -parentBuildID 20191031085722 -greomni /usr/lib/firefox/omni.ja -appomni /usr/lib/firefox/browser/omni.ja -appdir /usr/lib/firefox/browser 19286 true tab
+chris    19400  0.0  0.3 2619540 104416 tty1   Sl+  09:05   0:00 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 6206 -prefMapSize 204808 -parentBuildID 20191031085722 -greomni /usr/lib/firefox/omni.ja -appomni /usr/lib/firefox/browser/omni.ja -appdir /usr/lib/firefox/browser 19286 true tab
+chris    19450  0.0  0.2 2574280 80920 tty1    Sl+  09:05   0:00 /usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 6337 -prefMapSize 204808 -parentBuildID 20191031085722 -greomni /usr/lib/firefox/omni.ja -appomni /usr/lib/firefox/browser/omni.ja -appdir /usr/lib/firefox/browser 19286 true tab
+chris    19673  0.0  0.0  30740  6504 pts/11   Ss+   2019   0:03 bash
+chris    19942  0.0  0.0  29956  5380 pts/7    Ss   09:38   0:00 bash
+chris    19967  0.0  0.0  20280  3588 pts/7    S+   09:39   0:00 /bin/bash ./check_cfc.sh
+root     21619  0.0  0.0      0     0 ?        I    09:43   0:00 [kworker/u16:0]
+root     21728  0.0  0.0      0     0 ?        I     2019   0:01 [kworker/3:2]
+root     21823  0.0  0.0      0     0 ?        I    09:43   0:00 [kworker/u16:2]
+chris    21997  0.0  0.0 359636  4624 ?        Sl    2019   0:00 /usr/lib/gvfs/gvfsd-http --spawner :1.22 /org/gtk/gvfs/exec_spaw/14
+chris    22357  3.0  0.0  47044 13280 pts/7    S+   09:44   0:00 python /data/proj/compiler/llvm/llvm-project.release/clang/utils/check_cfc/clang++ /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP/7zip/Archive/FatHandler.cpp -w -c -O1 -I/data/proj/compiler/llvm/test-suite/MicroBenchmarks/ImageProcessing/utils -I/data/proj/compiler/llvm/test-suite/MicroBenchmarks/libs/benchmark-1.3.0/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Applications/hbd -I/data/proj/compiler/llvm/test-suite/MultiSource/Applications/hexxagon -I/data/proj/compiler/llvm/test-suite/MultiSource/Applications/kimwitu++ -I/data/proj/compiler/llvm/test-suite/MultiSource/Applications/lambda-0.1.3 -I/data/proj/compiler/llvm/test-suite/MultiSource/Applications/treecc -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/C -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP/Common -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP/include_windows -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP/myWindows -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/miniFE -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/MallocBench/gs -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/MallocBench/perl -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/mediabench/gsm/toast -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/mediabench/mpeg2/mpeg2dec -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/MiBench/office-ispell -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/MiBench/telecomm-gsm -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Prolangs-C++/city -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP -I/usr/include/wx-3.0 -I/usr/lib/x86_64-linux-gnu/wx/include/base-unicode-3.0 -o tmp.ll
+chris    22362  0.0  0.1 131388 40844 pts/7    S+   09:44   0:00 clang++ /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP/7zip/Archive/FatHandler.cpp -w -c -O1 -I/data/proj/compiler/llvm/test-suite/MicroBenchmarks/ImageProcessing/utils -I/data/proj/compiler/llvm/test-suite/MicroBenchmarks/libs/benchmark-1.3.0/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Applications/hbd -I/data/proj/compiler/llvm/test-suite/MultiSource/Applications/hexxagon -I/data/proj/compiler/llvm/test-suite/MultiSource/Applications/kimwitu++ -I/data/proj/compiler/llvm/test-suite/MultiSource/Applications/lambda-0.1.3 -I/data/proj/compiler/llvm/test-suite/MultiSource/Applications/treecc -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/C -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP/Common -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP/include_windows -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP/myWindows -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/miniFE -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/MallocBench/gs -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/MallocBench/perl -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/mediabench/gsm/toast -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/mediabench/mpeg2/mpeg2dec -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/MiBench/office-ispell -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/MiBench/telecomm-gsm -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Prolangs-C++/city -I/data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP -I/usr/include/wx-3.0 -I/usr/lib/x86_64-linux-gnu/wx/include/base-unicode-3.0 -o /tmp/tmp8uICBn.o -g
+chris    22363 34.0  0.2 145084 83676 pts/7    R+   09:44   0:00 /data/proj/compiler/llvm/llvm-project.release/build/bin/clang-10 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -main-file-name FatHandler.cpp -mrelocation-model static -mthread-model posix -mframe-pointer=none -fmath-errno -fno-rounding-math -masm-verbose -mconstructor-aliases -munwind-tables -target-cpu x86-64 -dwarf-column-info -fno-split-dwarf-inlining -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -resource-dir /data/proj/compiler/llvm/llvm-project.release/build/lib/clang/10.0.0 -I /data/proj/compiler/llvm/test-suite/MicroBenchmarks/ImageProcessing/utils -I /data/proj/compiler/llvm/test-suite/MicroBenchmarks/libs/benchmark-1.3.0/include -I /data/proj/compiler/llvm/test-suite/MultiSource/Applications/hbd -I /data/proj/compiler/llvm/test-suite/MultiSource/Applications/hexxagon -I /data/proj/compiler/llvm/test-suite/MultiSource/Applications/kimwitu++ -I /data/proj/compiler/llvm/test-suite/MultiSource/Applications/lambda-0.1.3 -I /data/proj/compiler/llvm/test-suite/MultiSource/Applications/treecc -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/C -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP/Common -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP/include_windows -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP/myWindows -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Bullet/include -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/HPCCG -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/DOE-ProxyApps-C++/miniFE -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/MallocBench/gs -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/MallocBench/perl -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/mediabench/gsm/toast -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/mediabench/mpeg2/mpeg2dec -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/MiBench/office-ispell -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/MiBench/telecomm-gsm -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/Prolangs-C++/city -I /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP -I /usr/include/wx-3.0 -I /usr/lib/x86_64-linux-gnu/wx/include/base-unicode-3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../../include/c++/7.4.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../../include/x86_64-linux-gnu/c++/7.4.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../../include/x86_64-linux-gnu/c++/7.4.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../../include/c++/7.4.0/backward -internal-isystem /usr/local/include -internal-isystem /data/proj/compiler/llvm/llvm-project.release/build/lib/clang/10.0.0/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -O1 -w -fdeprecated-macro -fdebug-compilation-dir /data/proj/compiler/llvm/llvm_bugfix/44422 -ferror-limit 19 -fmessage-length 0 -fgnuc-version=4.2.1 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -faddrsig -o /tmp/tmp8uICBn.o -x c++ /data/proj/compiler/llvm/test-suite/MultiSource/Benchmarks/7zip/CPP/7zip/Archive/FatHandler.cpp
+chris    22364  0.0  0.0  46772  3708 pts/4    R+   09:44   0:00 ps -aux
+root     22510  0.0  0.0 265424  2700 ?        Sl    2019   0:00 gdm-session-worker [pam/gdm-password]
+root     24492  0.0  0.0      0     0 ?        I<    2019   0:00 [xfsalloc]
+root     24493  0.0  0.0      0     0 ?        I<    2019   0:00 [xfs_mru_cache]
+root     24496  0.0  0.0      0     0 ?        S     2019   0:00 [jfsIO]
+root     24497  0.0  0.0      0     0 ?        S     2019   0:00 [jfsCommit]
+root     24498  0.0  0.0      0     0 ?        S     2019   0:00 [jfsCommit]
+root     24499  0.0  0.0      0     0 ?        S     2019   0:00 [jfsCommit]
+root     24500  0.0  0.0      0     0 ?        S     2019   0:00 [jfsCommit]
+root     24501  0.0  0.0      0     0 ?        S     2019   0:00 [jfsCommit]
+root     24502  0.0  0.0      0     0 ?        S     2019   0:00 [jfsCommit]
+root     24503  0.0  0.0      0     0 ?        S     2019   0:00 [jfsCommit]
+root     24504  0.0  0.0      0     0 ?        S     2019   0:00 [jfsCommit]
+root     24505  0.0  0.0      0     0 ?        S     2019   0:00 [jfsSync]
+chris    25832  0.0  0.1 1002600 49164 ?       Sl    2019   0:41 /usr/bin/nautilus --gapplication-service
+root     27692  0.0  0.0 265424  2688 ?        Sl    2019   0:00 gdm-session-worker [pam/gdm-password]
+root     27911  0.0  0.0      0     0 ?        I     2019   0:05 [kworker/1:0]
+root     28046  0.0  0.0      0     0 ?        I     2019   0:21 [kworker/0:2]
+chris    28689  0.0  0.0  29956  4160 pts/4    Ss    2019   0:00 bash
+chris    28809  0.0  0.0  30888  4952 pts/6    Ss+   2019   0:00 bash
+chris    29812  0.0  0.0 204708  1696 ?        Ssl   2019   0:02 /usr/lib/gvfs/gvfsd-metadata
+root     31389  0.0  0.0 265424  8352 ?        Sl    2019   0:00 gdm-session-worker [pam/gdm-password]
+root     31473  0.0  0.0 265424  8148 ?        Sl    2019   0:00 gdm-session-worker [pam/gdm-password]
+chris    31607  0.0  0.0 517988  2164 ?        Sl    2019   0:01 /usr/lib/gvfs/gvfsd-network --spawner :1.22 /org/gtk/gvfs/exec_spaw/2
+chris    31667  0.0  0.0 381424  2300 ?        Sl    2019   0:00 /usr/lib/gvfs/gvfsd-dnssd --spawner :1.22 /org/gtk/gvfs/exec_spaw/13
+chris    31873  0.0  0.0  30880  3464 pts/2    Ss+   2019   0:02 bash

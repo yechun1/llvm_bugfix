@@ -1,0 +1,38 @@
+
+ MCP: Replacing $rbp
+       with $r8
+       in renamable $rbp = nuw LEA64r %stack.4.input, 1, $noreg, 64, $noreg
+       from renamable $r8 = COPY killed renamable $rbp
+  MCP: After replacement: renamable $r8 = nuw LEA64r %stack.4.input, 1, $noreg, 64, $noreg
+  
+
+######
+# 669
+# BISECT: running pass (669) Combine redundant instructions on function (_ZL22capsuleCapsuleDistanceR9btVector3S0_ffffiiRK11btTransformS3_f)
+######
+
+#Before X86 DAG->DAG Instruction Selection:
+  %60 = load float, float* %12, align 4, !dbg !2196, !tbaa !2011
+  call void @llvm.dbg.value(metadata float %60, metadata !2144, metadata !DIExpression()), !dbg !2165
+  %61 = fsub float %59, %60
+
+
+# After X86 DAG->DAG Instruction Selection:
+  %29:fr32 = MOVSSrm_alt %stack.0, 1, $noreg, 0, $noreg, debug-location
+  DBG_VALUE %29:fr32, $noreg, !"capsuleRadiusB", !DIExpression()
+  %28:fr32 = SUBSSrr killed %31:fr32(tied-def 0), killed %29:fr32, implicit $mxcsr
+
+
+# Expectation after SelectionDAGISel:
+  %28:fr32 = SUBSSrm killed %30:fr32(tied-def 0), %stack.0, 1, $noreg, 0, $noreg, implicit $mxcsr :: (load 4 from %ir.12, !tbaa !46)
+
+
+
+
+
+
+
+  renamable $xmm2 = MOVSSrm_alt %stack.0, 1, $noreg, 0, $noreg, debug-location !2196 :: (load 4 from %ir.12, !tbaa !2011); /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:146:60
+  DBG_VALUE renamable $xmm2, $noreg, !"capsuleRadiusB", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:120
+  renamable $xmm0 = SUBSSrr renamable $xmm0(tied-def 0), killed renamable $xmm2, implicit $mxcsr, debug-location !2197; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:146:58
+  DBG_VALUE renamable $xmm0, $noreg, !"distance", !DIExpression(), debug-location !2165; /home/chris/test-suite/MultiSource/Benchmarks/Bullet/btConvexConvexAlgorithm.cpp:0 line no:146
